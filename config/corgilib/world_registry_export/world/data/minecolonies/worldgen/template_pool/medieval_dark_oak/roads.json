@@ -1,0 +1,48 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "minecolonies:medieval_dark_oak/roads_crossroads_01",
+				"processors": "minecolonies:medieval_dark_oak/street",
+				"projection": "terrain_matching"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "minecolonies:medieval_dark_oak/roads_straight_01",
+				"processors": "minecolonies:medieval_dark_oak/street",
+				"projection": "terrain_matching"
+			},
+			"weight": 6
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "minecolonies:medieval_dark_oak/roads_turn_01",
+				"processors": "minecolonies:medieval_dark_oak/street",
+				"projection": "terrain_matching"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "minecolonies:medieval_dark_oak/square",
+				"processors": "minecolonies:medieval_dark_oak/decoration",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 3
+		}
+	],
+	"fallback": "minecolonies:medieval_dark_oak/terminators",
+	"name": "minecolonies:medieval_dark_oak/roads"
+}

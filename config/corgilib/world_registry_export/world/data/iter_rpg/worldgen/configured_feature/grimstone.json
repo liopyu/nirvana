@@ -1,0 +1,42 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 32,
+		"targets": [
+			{
+				"state": {
+					"Name": "iter_rpg:grimstone"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:netherrack"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			},
+			{
+				"state": {
+					"Name": "iter_rpg:grimstone"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:soul_soil"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			},
+			{
+				"state": {
+					"Name": "iter_rpg:grimstone"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:soul_sand"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			}
+		]
+	},
+	"type": "iter_rpg:grimstone"
+}

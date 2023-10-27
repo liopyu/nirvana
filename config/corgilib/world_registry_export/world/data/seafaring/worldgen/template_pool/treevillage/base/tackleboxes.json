@@ -1,0 +1,42 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/tackleboxes/tacklebox1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 20
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/tackleboxes/tacklebox2",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 20
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/tackleboxes/tacklebox3",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 20
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/tackleboxes/tacklebox4",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 10
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "seafaring:treevillage/base/tackleboxes"
+}

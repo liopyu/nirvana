@@ -1,0 +1,55 @@
+{
+	"config": {
+		"allowed_placement": {
+			"blocks": "minecraft:air",
+			"type": "minecraft:matching_blocks"
+		},
+		"direction": "up",
+		"layers": [
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:pointed_dripstone",
+						"Properties": {
+							"thickness": "base",
+							"vertical_direction": "up",
+							"waterlogged": "false"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:pointed_dripstone",
+						"Properties": {
+							"thickness": "frustum",
+							"vertical_direction": "up",
+							"waterlogged": "false"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:pointed_dripstone",
+						"Properties": {
+							"thickness": "tip",
+							"vertical_direction": "up",
+							"waterlogged": "false"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			}
+		],
+		"prioritize_tip": true
+	},
+	"type": "minecraft:block_column"
+}

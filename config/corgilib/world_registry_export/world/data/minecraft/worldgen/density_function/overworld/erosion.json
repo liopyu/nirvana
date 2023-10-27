@@ -1,0 +1,29 @@
+{
+	"argument": {
+		"input": {
+			"input": "tectonic:overworld/noise/continents",
+			"max_exclusive": -0.6,
+			"min_inclusive": -64.0,
+			"type": "minecraft:range_choice",
+			"when_in_range": {
+				"noise": "tectonic:island",
+				"type": "minecraft:noise",
+				"xz_scale": 0.25,
+				"y_scale": 0.0
+			},
+			"when_out_of_range": {
+				"noise": "minecraft:erosion",
+				"shift_x": "minecraft:shift_x",
+				"shift_y": 0.0,
+				"shift_z": "minecraft:shift_z",
+				"type": "minecraft:shifted_noise",
+				"xz_scale": 0.25,
+				"y_scale": 0.0
+			}
+		},
+		"max": 1.0,
+		"min": -1.0,
+		"type": "minecraft:clamp"
+	},
+	"type": "minecraft:flat_cache"
+}

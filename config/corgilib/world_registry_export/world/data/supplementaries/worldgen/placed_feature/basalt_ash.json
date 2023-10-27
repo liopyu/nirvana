@@ -1,0 +1,27 @@
+{
+	"feature": "supplementaries:basalt_ash",
+	"placement": [
+		{
+			"height": {
+				"max_inclusive": {
+					"above_bottom": 102
+				},
+				"min_inclusive": {
+					"above_bottom": 29
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"count": 15,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

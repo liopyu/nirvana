@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "wythers:vegetation/placed_tree/giant_azalea",
+		"features": [
+			{
+				"chance": 0.5,
+				"feature": "wythers:vegetation/placed_tree/giant_azalea"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

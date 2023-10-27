@@ -1,0 +1,92 @@
+{
+	"config": {
+		"half_height": 1,
+		"radius": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_inclusive": 6,
+				"min_inclusive": 4
+			}
+		},
+		"state_provider": {
+			"fallback": {
+				"state": {
+					"Name": "minecraft:sand"
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"rules": [
+				{
+					"if_true": {
+						"predicate": {
+							"predicates": [
+								{
+									"blocks": "minecraft:air",
+									"offset": [
+										0,
+										1,
+										0
+									],
+									"type": "minecraft:matching_blocks"
+								},
+								{
+									"fluids": "minecraft:water",
+									"offset": [
+										0,
+										1,
+										0
+									],
+									"type": "minecraft:matching_fluids"
+								}
+							],
+							"type": "minecraft:any_of"
+						},
+						"type": "minecraft:not"
+					},
+					"then": {
+						"state": {
+							"Name": "minecraft:stone"
+						},
+						"type": "minecraft:simple_state_provider"
+					}
+				},
+				{
+					"if_true": {
+						"predicates": [
+							{
+								"blocks": "minecraft:air",
+								"offset": [
+									0,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							{
+								"fluids": "minecraft:water",
+								"offset": [
+									0,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_fluids"
+							}
+						],
+						"type": "minecraft:any_of"
+					},
+					"then": {
+						"state": {
+							"Name": "minecraft:sandstone"
+						},
+						"type": "minecraft:simple_state_provider"
+					}
+				}
+			]
+		},
+		"target": {
+			"blocks": "#tectonic:disk_no_heightmap_replaceable",
+			"type": "minecraft:matching_blocks"
+		}
+	},
+	"type": "minecraft:disk"
+}

@@ -1,0 +1,61 @@
+{
+	"config": {
+		"debug_settings": {
+			"air_state": {
+				"Name": "minecraft:glass"
+			},
+			"barrier_state": {
+				"Name": "minecraft:lime_concrete"
+			},
+			"lava_state": {
+				"Name": "minecraft:orange_stained_glass"
+			},
+			"water_state": {
+				"Name": "minecraft:blue_stained_glass"
+			}
+		},
+		"floor_level": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_exclusive": -0.4000000059604645,
+				"min_inclusive": -1.0
+			}
+		},
+		"horizontal_radius_multiplier": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_exclusive": 1.7000000476837158,
+				"min_inclusive": 1.5
+			}
+		},
+		"lava_level": {
+			"above_bottom": 8
+		},
+		"probability": 0.10000000149011612,
+		"replaceable": "#minecraft:overworld_carver_replaceables",
+		"vertical_radius_multiplier": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_exclusive": 0.800000011920929,
+				"min_inclusive": 0.550000011920929
+			}
+		},
+		"y": {
+			"max_inclusive": {
+				"absolute": 180
+			},
+			"min_inclusive": {
+				"above_bottom": 8
+			},
+			"type": "minecraft:uniform"
+		},
+		"yScale": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_exclusive": 0.5799999833106995,
+				"min_inclusive": 0.47999998927116394
+			}
+		}
+	},
+	"type": "minecraft:cave"
+}

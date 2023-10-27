@@ -1,0 +1,9 @@
+{
+	"equivalent_fluids": [
+		"cofh_core:honey"
+	],
+	"flowing_texture": "cofh_core:block/fluids/honey_flow",
+	"still_texture": "cofh_core:block/fluids/honey_still",
+	"translation_key": "fluid_type.cofh_core.honey",
+	"use_texture_from": "cofh_core:honey"
+}

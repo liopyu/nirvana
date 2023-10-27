@@ -1,0 +1,28 @@
+{
+	"config": {
+		"default": {
+			"feature": {
+				"config": {
+					"features": "#tectonic:trees/oak_badlands"
+				},
+				"type": "minecraft:simple_random_selector"
+			},
+			"placement": []
+		},
+		"features": [
+			{
+				"chance": 0.15000000596046448,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": "#tectonic:trees/oak_bush"
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

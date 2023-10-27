@@ -1,0 +1,29 @@
+{
+	"feature": "bro:desert/pillar_normal",
+	"placement": [
+		{
+			"chance": 10,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"count": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 47,
+					"min_inclusive": 30
+				}
+			},
+			"type": "minecraft:count"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

@@ -1,0 +1,222 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/path",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 94
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/path_alt",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 94
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/path_1",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 94
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/path_1_alt",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 94
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/pathlong_1",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 90
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/pathlong_2",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 90
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/pathlong_3",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/trap/trap_1",
+				"processors": "hopo:jungle/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/trap/trap_2",
+				"processors": "hopo:jungle/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/trap/trap_3",
+				"processors": "hopo:jungle/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/trap/trap_4",
+				"processors": "hopo:jungle/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/trap/trap_5",
+				"processors": "hopo:jungle/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/entrance",
+				"processors": "hopo:jungle/degradedentrance",
+				"projection": "rigid"
+			},
+			"weight": 97
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/entrance_alt",
+				"processors": "hopo:jungle/degradedentrance",
+				"projection": "rigid"
+			},
+			"weight": 97
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/entrance_1",
+				"processors": "hopo:jungle/degradedentrance",
+				"projection": "rigid"
+			},
+			"weight": 97
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/entrance_1_alt",
+				"processors": "hopo:jungle/degradedentrance",
+				"projection": "rigid"
+			},
+			"weight": 97
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/turn",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 90
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/turn_1",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 90
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/turn_2",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 90
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/down",
+				"processors": "hopo:jungle/degraded",
+				"projection": "rigid"
+			},
+			"weight": 25
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/down_2",
+				"processors": "hopo:jungle/degradeddown",
+				"projection": "rigid"
+			},
+			"weight": 25
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/down_3",
+				"processors": "hopo:jungle/degradeddown",
+				"projection": "rigid"
+			},
+			"weight": 29
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/down_4",
+				"processors": "hopo:jungle/degradeddown",
+				"projection": "rigid"
+			},
+			"weight": 33
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/jungle/down_5",
+				"processors": "hopo:jungle/degradeddown",
+				"projection": "rigid"
+			},
+			"weight": 36
+		}
+	],
+	"fallback": "hopo:jungle_mineshaft",
+	"name": "hopo:jungle_mineshaft"
+}

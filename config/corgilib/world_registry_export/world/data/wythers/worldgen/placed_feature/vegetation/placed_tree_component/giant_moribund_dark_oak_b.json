@@ -1,0 +1,40 @@
+{
+	"feature": {
+		"config": {
+			"default": "wythers:vegetation/placed_tree_component/giant_moribund_dark_oak_branches",
+			"features": [
+				{
+					"chance": 0.25,
+					"feature": "wythers:vegetation/placed_tree_component/giant_moribund_dark_oak_branches"
+				},
+				{
+					"chance": 0.25,
+					"feature": "wythers:vegetation/placed_tree_component/giant_moribund_dark_oak_branches_high"
+				},
+				{
+					"chance": 0.5,
+					"feature": "wythers:vegetation/placed_tree_component/giant_dark_oak_trunk"
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 3,
+			"type": "minecraft:count"
+		},
+		{
+			"predicate": {
+				"offset": [
+					0,
+					-1,
+					0
+				],
+				"tag": "minecraft:dirt",
+				"type": "minecraft:matching_block_tag"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

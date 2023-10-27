@@ -1,0 +1,21 @@
+{
+	"feature": "wythers:terrain/configured_random_patch/windswept_savanna_sand",
+	"placement": [
+		{
+			"count": 30,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"absolute": 62
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

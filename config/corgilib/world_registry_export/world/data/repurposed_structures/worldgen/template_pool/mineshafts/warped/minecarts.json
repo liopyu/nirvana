@@ -1,0 +1,20 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:minecarts/warped_mineshaft_minecart",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 224
+		}
+	],
+	"fallback": "repurposed_structures:mineshafts/warped/minecarts",
+	"name": "repurposed_structures:mineshafts/warped/minecarts"
+}

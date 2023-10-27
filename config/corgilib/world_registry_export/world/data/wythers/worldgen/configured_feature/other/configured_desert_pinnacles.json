@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "wythers:vegetation/placed_tree/desert_pinnacle",
+		"features": [
+			{
+				"chance": 0.6000000238418579,
+				"feature": "wythers:vegetation/placed_tree/desert_pinnacle"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

@@ -1,0 +1,31 @@
+{
+	"color": "ff385dc6",
+	"containers": [
+		{
+			"capacity": 1,
+			"empty": "minecraft:glass_bottle",
+			"filled": [
+				"minecraft:potion",
+				"minecraft:splash_potion",
+				"minecraft:lingering_potion"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"create:potion",
+		"cofh_core:potion"
+	],
+	"flowing_texture": "create:fluid/potion_flow",
+	"food": {
+		"divider": 1,
+		"item": "minecraft:potion"
+	},
+	"preserved_tags_from_item": [
+		"Potion",
+		"Bottle",
+		"CustomPotionEffects"
+	],
+	"still_texture": "create:fluid/potion_still",
+	"translation_key": "item.minecraft.potion",
+	"use_texture_from": "create:potion"
+}

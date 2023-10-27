@@ -1,0 +1,20 @@
+{
+	"config": {
+		"feature": {
+			"feature": "wythers:other/configured_block_column/mature_wheat",
+			"placement": [
+				{
+					"predicate": {
+						"blocks": "minecraft:dirt_path",
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 64,
+		"xz_spread": 7,
+		"y_spread": 3
+	},
+	"type": "minecraft:random_patch"
+}

@@ -1,0 +1,18 @@
+{
+	"config": {
+		"decor_state": {
+			"Name": "minecraft:air"
+		},
+		"hat_state": {
+			"Name": "minecraft:air"
+		},
+		"planted": false,
+		"stem_state": {
+			"Name": "minecraft:terracotta"
+		},
+		"valid_base_block": {
+			"Name": "minecraft:terracotta"
+		}
+	},
+	"type": "minecraft:huge_fungus"
+}

@@ -1,0 +1,14 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:decor/ocean_ancient_city_structure_plants",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:ancient_cities/ocean/plants",
+	"name": "repurposed_structures:ancient_cities/ocean/plants"
+}

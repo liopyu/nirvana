@@ -1,0 +1,219 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 32,
+      "offer_item": {
+        "count": 2,
+        "item": "minecraft:gunpowder"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "iter_rpg:coin"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 8,
+      "offer_item": {
+        "count": 1,
+        "item": "tetra:geode"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:diamond"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 8,
+      "offer_item": {
+        "count": 2,
+        "item": "mekanism:dust_diamond"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:diamond"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "offer_item": {
+        "count": 6,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:turtle_egg"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 4,
+      "offer_item": {
+        "count": 8,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:pufferfish_bucket"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 2,
+        "item": "mekanism:ingot_uranium"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "mekanism:raw_uranium"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 2,
+        "item": "mekanism:ingot_osmium"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "mekanism:raw_osmium"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 2,
+        "item": "mekanism:ingot_tin"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "mekanism:raw_tin"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 2,
+        "item": "mekanism:ingot_lead"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "mekanism:raw_lead"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:sponge"
+      },
+      "payment_item": {
+        "count": 8,
+        "item": "iter_rpg:coin"
+      },
+      "price_multiplier": 0.0
+    },
+    
+    
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 64,
+      "offer_item": {
+        "count": 2,
+        "item": "minecraft:terracotta"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:clay"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 32,
+      "offer_item": {
+        "count": 2,
+        "item": "minecraft:book"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:leather"
+      },
+      "price_multiplier": 0.0,
+      "secondary_payment_item": {
+        "count": 3,
+        "item": "minecraft:paper"
+      }
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 4,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "numismaticoverhaul:silver_coin"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 32,
+        "item": "numismaticoverhaul:bronze_coin"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 20,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 2,
+        "item": "minecraft:amethyst_shard"
+      },
+      "price_multiplier": 0.0
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "idas:desert_camp/desert_camp",
+				"processors": "idas:waterlogging_fix_processor",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "idas:desert_camp/desert_camp"
+}

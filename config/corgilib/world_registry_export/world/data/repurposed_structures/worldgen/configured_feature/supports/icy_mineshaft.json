@@ -1,0 +1,17 @@
+{
+	"config": {
+		"arch_blocks": [
+			"minecraft:packed_ice"
+		],
+		"arch_only": true,
+		"fence_state": {
+			"Name": "minecraft:ice"
+		},
+		"is_water_based": false,
+		"pillar_state": {
+			"Name": "minecraft:packed_ice"
+		},
+		"target_floor_block": "minecraft:packed_ice"
+	},
+	"type": "repurposed_structures:mineshaft_supports"
+}

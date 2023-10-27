@@ -1,0 +1,81 @@
+{
+	"config": {
+		"allowed_placement": {
+			"blocks": "minecraft:air",
+			"type": "minecraft:matching_blocks"
+		},
+		"direction": "up",
+		"layers": [
+			{
+				"height": {
+					"type": "minecraft:uniform",
+					"value": {
+						"max_inclusive": 13,
+						"min_inclusive": 3
+					}
+				},
+				"provider": {
+					"state": {
+						"Name": "minecraft:bamboo",
+						"Properties": {
+							"age": "1",
+							"leaves": "none",
+							"stage": "1"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:bamboo",
+						"Properties": {
+							"age": "1",
+							"leaves": "small",
+							"stage": "1"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": 2,
+				"provider": {
+					"state": {
+						"Name": "minecraft:bamboo",
+						"Properties": {
+							"age": "1",
+							"leaves": "large",
+							"stage": "1"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": {
+					"type": "minecraft:uniform",
+					"value": {
+						"max_inclusive": 4,
+						"min_inclusive": 3
+					}
+				},
+				"provider": {
+					"state": {
+						"Name": "minecraft:azalea_leaves",
+						"Properties": {
+							"distance": "1",
+							"persistent": "false",
+							"waterlogged": "false"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			}
+		],
+		"prioritize_tip": true
+	},
+	"type": "minecraft:block_column"
+}

@@ -1,0 +1,33 @@
+{
+	"feature": "iter_rpg:reefstone_boulder",
+	"placement": [
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "OCEAN_FLOOR_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"max_water_depth": 8,
+			"type": "minecraft:surface_water_depth_filter"
+		},
+		{
+			"chance": 5,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		},
+		{
+			"predicate": {
+				"blocks": [
+					"minecraft:air",
+					"minecraft:water"
+				],
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

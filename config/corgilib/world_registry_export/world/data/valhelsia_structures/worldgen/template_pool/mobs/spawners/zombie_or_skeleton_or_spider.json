@@ -1,0 +1,33 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:mobs/spawners/zombie",
+				"processors": "valhelsia_structures:mobs/spawners/zombie_or_skeleton_or_spider",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:mobs/spawners/skeleton",
+				"processors": "valhelsia_structures:mobs/spawners/zombie_or_skeleton_or_spider",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:mobs/spawners/spider",
+				"processors": "valhelsia_structures:mobs/spawners/zombie_or_skeleton_or_spider",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "valhelsia_structures:mobs/spawners/zombie_or_skeleton_or_spider"
+}

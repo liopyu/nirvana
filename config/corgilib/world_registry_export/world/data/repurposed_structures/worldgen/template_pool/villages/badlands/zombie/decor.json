@@ -1,0 +1,63 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/badlands/decor/lamp_1",
+				"processors": "repurposed_structures:villages/badlands/zombify_decor",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/badlands/decor/lamp_2",
+				"processors": "repurposed_structures:villages/badlands/zombify_decor",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/badlands/decor/lamp_3",
+				"processors": "repurposed_structures:villages/badlands/zombify_decor",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:patch_cactus_decorated",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:patch_dead_bush",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "minecraft:pile_hay",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 10
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:villages/badlands/zombie/decor"
+}

@@ -1,0 +1,63 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/swamp/decor/lamp_post_01",
+				"processors": "repurposed_structures:villages/swamp/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/swamp/decor/lamp_post_02",
+				"processors": "repurposed_structures:villages/swamp/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/swamp/decor/lamp_post_03",
+				"processors": "repurposed_structures:villages/swamp/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:swamp_tree_checked",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:flower_swamp",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "minecraft:pile_pumpkin",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 2
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:villages/swamp/decor"
+}

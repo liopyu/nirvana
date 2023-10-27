@@ -1,0 +1,55 @@
+{
+	"feature": "wythers:vegetation/configured_bushes_chaparral",
+	"placement": [
+		{
+			"count": 60,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 80
+				},
+				"min_inclusive": {
+					"absolute": 70
+				},
+				"type": "minecraft:biased_to_bottom"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"max_water_depth": 0,
+			"type": "minecraft:surface_water_depth_filter"
+		},
+		{
+			"predicate": {
+				"predicates": [
+					{
+						"blocks": "minecraft:air",
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": [
+							"minecraft:grass_block",
+							"minecraft:packed_mud"
+						],
+						"offset": [
+							0,
+							-1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					}
+				],
+				"type": "minecraft:all_of"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

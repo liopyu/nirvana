@@ -1,0 +1,18 @@
+{
+	"biomes": "#repurposed_structures:has_structure/shipwrecks/end",
+	"burying_type": "LOWEST_SIDE",
+	"cannot_spawn_in_liquid": false,
+	"min_y_allowed": 35,
+	"pools_that_ignore_boundaries": [],
+	"project_start_to_heightmap": "WORLD_SURFACE_WG",
+	"size": 1,
+	"spawn_overrides": { },
+	"start_height": {
+		"absolute": -3
+	},
+	"start_pool": "repurposed_structures:shipwrecks/end",
+	"step": "surface_structures",
+	"terrain_height_radius_check": 1,
+	"type": "repurposed_structures:generic_jigsaw_structure",
+	"use_bounding_box_hack": false
+}

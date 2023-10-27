@@ -1,0 +1,147 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/builder1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/builder2",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/deliveryman1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/deliveryman2",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/cook1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/farmer1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/farmer2",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/tavern1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/guardtower1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 12
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/guardtower2",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/residence1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/residence2",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/miner1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/miner2",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:warpednetherlands/warehouse1",
+				"processors": "minecolonies:warpednetherlands/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 20
+		}
+	],
+	"fallback": "minecolonies:warpednetherlands/roads",
+	"name": "minecolonies:warpednetherlands/buildings"
+}

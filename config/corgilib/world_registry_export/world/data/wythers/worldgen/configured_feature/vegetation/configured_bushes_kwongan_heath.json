@@ -1,0 +1,196 @@
+{
+	"config": {
+		"default": {
+			"feature": "wythers:vegetation/configured_tree/acacia_scrub",
+			"placement": [
+				{
+					"predicate": {
+						"blocks": "minecraft:air",
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				},
+				{
+					"predicate": {
+						"blocks": [
+							"minecraft:grass_block",
+							"minecraft:packed_mud",
+							"minecraft:sand",
+							"minecraft:red_sand"
+						],
+						"offset": [
+							0,
+							-1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"features": [
+			{
+				"chance": 0.009999999776482582,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/forest_acacia",
+					"placement": [
+						{
+							"predicate": {
+								"blocks": "minecraft:air",
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						},
+						{
+							"predicate": {
+								"blocks": [
+									"minecraft:grass_block",
+									"minecraft:packed_mud",
+									"minecraft:sand",
+									"minecraft:red_sand"
+								],
+								"offset": [
+									0,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						}
+					]
+				}
+			},
+			{
+				"chance": 0.009999999776482582,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/olive",
+					"placement": [
+						{
+							"predicate": {
+								"blocks": "minecraft:air",
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						},
+						{
+							"predicate": {
+								"blocks": [
+									"minecraft:grass_block",
+									"minecraft:packed_mud",
+									"minecraft:sand",
+									"minecraft:red_sand"
+								],
+								"offset": [
+									0,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						}
+					]
+				}
+			},
+			{
+				"chance": 0.30000001192092896,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/birch_scrub",
+					"placement": [
+						{
+							"predicate": {
+								"blocks": "minecraft:air",
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						},
+						{
+							"predicate": {
+								"blocks": [
+									"minecraft:grass_block",
+									"minecraft:packed_mud",
+									"minecraft:sand",
+									"minecraft:red_sand"
+								],
+								"offset": [
+									0,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						}
+					]
+				}
+			},
+			{
+				"chance": 0.20000000298023224,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/azalea_scrub",
+					"placement": [
+						{
+							"predicate": {
+								"blocks": "minecraft:air",
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						},
+						{
+							"predicate": {
+								"blocks": [
+									"minecraft:grass_block",
+									"minecraft:packed_mud",
+									"minecraft:sand",
+									"minecraft:red_sand"
+								],
+								"offset": [
+									0,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						}
+					]
+				}
+			},
+			{
+				"chance": 0.30000001192092896,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/jungle_scrub",
+					"placement": [
+						{
+							"predicate": {
+								"blocks": "minecraft:air",
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						},
+						{
+							"predicate": {
+								"blocks": [
+									"minecraft:grass_block",
+									"minecraft:packed_mud",
+									"minecraft:sand",
+									"minecraft:red_sand"
+								],
+								"offset": [
+									0,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							"type": "minecraft:block_predicate_filter"
+						}
+					]
+				}
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

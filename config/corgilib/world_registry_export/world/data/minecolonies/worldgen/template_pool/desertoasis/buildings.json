@@ -1,0 +1,138 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/builder1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/builder2",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/cook1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/farmer1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/deliveryman1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 8
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/lumberjack1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/tavern1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/guardtower1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 12
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/guardtower2",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/residence1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/residence2",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/miner1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 8
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/miner2",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:desertoasis/warehouse1",
+				"processors": "minecolonies:desertoasis/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 20
+		}
+	],
+	"fallback": "minecolonies:desertoasis/roads",
+	"name": "minecolonies:desertoasis/buildings"
+}

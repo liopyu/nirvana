@@ -1,0 +1,33 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:igloos/stone/ladder_short",
+				"processors": "repurposed_structures:igloos/stone",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:igloos/stone/ladder_medium",
+				"processors": "repurposed_structures:igloos/stone",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:igloos/stone/ladder_long",
+				"processors": "repurposed_structures:igloos/stone",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:igloos/stone/middle"
+}

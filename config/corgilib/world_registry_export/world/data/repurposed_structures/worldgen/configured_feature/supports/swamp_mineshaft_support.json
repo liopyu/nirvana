@@ -1,0 +1,28 @@
+{
+	"config": {
+		"arch_blocks": [
+			"minecraft:mangrove_log"
+		],
+		"arch_only": false,
+		"fence_state": {
+			"Name": "minecraft:mud_brick_wall",
+			"Properties": {
+				"east": "none",
+				"north": "none",
+				"south": "none",
+				"up": "true",
+				"waterlogged": "false",
+				"west": "none"
+			}
+		},
+		"is_water_based": false,
+		"pillar_state": {
+			"Name": "minecraft:mangrove_log",
+			"Properties": {
+				"axis": "y"
+			}
+		},
+		"target_floor_block": "minecraft:mangrove_planks"
+	},
+	"type": "repurposed_structures:mineshaft_supports"
+}

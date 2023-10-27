@@ -1,0 +1,21 @@
+{
+	"feature": "panthalassa:mosasaurus_spawn",
+	"placement": [
+		{
+			"noise_factor": 1.0,
+			"noise_offset": 1.0,
+			"noise_to_count_ratio": 0,
+			"type": "minecraft:noise_based_count"
+		},
+		{
+			"chance": 5,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

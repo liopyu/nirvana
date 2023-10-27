@@ -1,0 +1,14 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:decor/jungle_fortress_structure_vines",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:fortresses/jungle/vines",
+	"name": "repurposed_structures:fortresses/jungle/vines"
+}

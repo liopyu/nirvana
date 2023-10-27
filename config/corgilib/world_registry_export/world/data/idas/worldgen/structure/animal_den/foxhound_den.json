@@ -1,0 +1,16 @@
+{
+	"biomes": "#idas:has_structure/nether_biomes",
+	"cannot_spawn_in_liquid": false,
+	"land_search_direction": "HIGHEST_LAND",
+	"pools_that_ignore_boundaries": [],
+	"size": 1,
+	"spawn_overrides": { },
+	"start_height": {
+		"absolute": 0
+	},
+	"start_pool": "idas:animal_den/foxhound_den",
+	"step": "surface_structures",
+	"terrain_adaptation": "beard_box",
+	"type": "integrated_api:nether_structure",
+	"use_bounding_box_hack": true
+}

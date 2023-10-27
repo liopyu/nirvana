@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:pyramids/flower_forest_body",
+				"processors": "repurposed_structures:pyramids/flower_forest",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:pyramids/flower_forest_flowers",
+	"name": "repurposed_structures:pyramids/flower_forest"
+}

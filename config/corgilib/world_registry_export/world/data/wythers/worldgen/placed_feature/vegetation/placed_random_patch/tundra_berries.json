@@ -1,0 +1,19 @@
+{
+	"feature": "wythers:vegetation/configured_random_patch/sweet_berries",
+	"placement": [
+		{
+			"chance": 3,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "WORLD_SURFACE",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

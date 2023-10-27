@@ -1,0 +1,18 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.800000011920929,
+		"size": 13,
+		"targets": [
+			{
+				"state": {
+					"Name": "minecraft:lapis_ore"
+				},
+				"target": {
+					"predicate_type": "minecraft:tag_match",
+					"tag": "cavernous:biome_solids/ice/all"
+				}
+			}
+		]
+	},
+	"type": "minecraft:ore"
+}

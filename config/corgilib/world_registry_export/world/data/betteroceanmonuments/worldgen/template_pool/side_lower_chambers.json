@@ -1,0 +1,160 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_maze_0_left",
+				"max_count": 1,
+				"name": "maze_0",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_maze_1_left",
+				"max_count": 1,
+				"name": "maze_1",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_maze_2_left",
+				"max_count": 1,
+				"name": "maze_2",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_maze_0_right",
+				"max_count": 1,
+				"name": "maze_0",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_maze_1_right",
+				"max_count": 1,
+				"name": "maze_1",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_maze_2_right",
+				"max_count": 1,
+				"name": "maze_2",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_vents_left_0",
+				"max_count": 1,
+				"name": "side_lower_chamber_open",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_vents_left_1",
+				"max_count": 1,
+				"name": "side_lower_chamber_open",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_vents_right_0",
+				"max_count": 1,
+				"name": "side_lower_chamber_open",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_vents_right_1",
+				"max_count": 1,
+				"name": "side_lower_chamber_open",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_dripstone_left_0",
+				"max_count": 1,
+				"name": "side_lower_chamber_open",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_dripstone_right_0",
+				"max_count": 1,
+				"name": "side_lower_chamber_open",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_rare_left_0",
+				"max_count": 1,
+				"name": "side_lower_chamber_open",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "yungsapi:max_count_single_element",
+				"location": "betteroceanmonuments:side_lower_chamber/side_lower_chamber_rare_right_0",
+				"max_count": 1,
+				"name": "side_lower_chamber_open",
+				"processors": "betteroceanmonuments:main",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "betteroceanmonuments:side_lower_chambers"
+}

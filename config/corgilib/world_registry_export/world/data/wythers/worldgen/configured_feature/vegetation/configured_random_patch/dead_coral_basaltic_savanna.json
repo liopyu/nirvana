@@ -1,0 +1,63 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"to_place": {
+						"entries": [
+							{
+								"data": {
+									"Name": "minecraft:dead_brain_coral",
+									"Properties": {
+										"waterlogged": "false"
+									}
+								},
+								"weight": 1
+							},
+							{
+								"data": {
+									"Name": "minecraft:dead_fire_coral",
+									"Properties": {
+										"waterlogged": "false"
+									}
+								},
+								"weight": 1
+							}
+						],
+						"type": "minecraft:weighted_state_provider"
+					}
+				},
+				"type": "minecraft:simple_block"
+			},
+			"placement": [
+				{
+					"predicate": {
+						"blocks": [
+							"minecraft:gravel",
+							"minecraft:mud",
+							"minecraft:smooth_basalt"
+						],
+						"offset": [
+							0,
+							-1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				},
+				{
+					"predicate": {
+						"blocks": "minecraft:air",
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 32,
+		"xz_spread": 7,
+		"y_spread": 3
+	},
+	"type": "minecraft:random_patch"
+}

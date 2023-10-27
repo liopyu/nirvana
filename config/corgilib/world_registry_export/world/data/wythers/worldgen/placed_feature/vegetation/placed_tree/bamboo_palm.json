@@ -1,0 +1,21 @@
+{
+	"feature": "wythers:vegetation/configured_tree/bamboo_palm",
+	"placement": [
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:dead_bush"
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"predicate": {
+				"blocks": "minecraft:air",
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

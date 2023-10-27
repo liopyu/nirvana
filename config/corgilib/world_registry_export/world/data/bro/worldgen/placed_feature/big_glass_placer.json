@@ -1,0 +1,43 @@
+{
+	"feature": "bro:big_glass_placer",
+	"placement": [
+		{
+			"count": {
+				"distribution": [
+					{
+						"data": 5,
+						"weight": 50
+					},
+					{
+						"data": 6,
+						"weight": 50
+					}
+				],
+				"type": "minecraft:weighted_list"
+			},
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "WORLD_SURFACE_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"predicate": {
+				"blocks": "minecraft:grass_block",
+				"offset": [
+					0,
+					-1,
+					0
+				],
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

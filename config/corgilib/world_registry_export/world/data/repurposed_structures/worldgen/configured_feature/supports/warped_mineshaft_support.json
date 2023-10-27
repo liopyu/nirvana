@@ -1,0 +1,29 @@
+{
+	"config": {
+		"arch_blocks": [
+			"minecraft:warped_planks",
+			"minecraft:shroomlight",
+			"minecraft:warped_hyphae"
+		],
+		"arch_only": false,
+		"fence_state": {
+			"Name": "minecraft:warped_fence",
+			"Properties": {
+				"east": "false",
+				"north": "false",
+				"south": "false",
+				"waterlogged": "false",
+				"west": "false"
+			}
+		},
+		"is_water_based": false,
+		"pillar_state": {
+			"Name": "minecraft:warped_hyphae",
+			"Properties": {
+				"axis": "y"
+			}
+		},
+		"target_floor_block": "minecraft:warped_planks"
+	},
+	"type": "repurposed_structures:mineshaft_supports"
+}

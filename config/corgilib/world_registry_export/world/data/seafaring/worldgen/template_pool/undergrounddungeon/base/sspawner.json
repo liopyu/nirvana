@@ -1,0 +1,51 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:undergrounddungeon/base/sspawner1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:undergrounddungeon/base/sspawner2",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:undergrounddungeon/base/sspawner3",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:undergrounddungeon/base/sspawner4",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:undergrounddungeon/base/sspawner5",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "seafaring:undergrounddungeon/base/sspawner"
+}

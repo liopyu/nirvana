@@ -1,0 +1,20 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 32,
+		"targets": [
+			{
+				"state": {
+					"Name": "theabyss:infected_peat"
+				},
+				"target": {
+					"block_state": {
+						"Name": "theabyss:infected_grass"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			}
+		]
+	},
+	"type": "theabyss:infected_peat"
+}

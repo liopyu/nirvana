@@ -1,0 +1,20 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 31,
+		"targets": [
+			{
+				"state": {
+					"Name": "theabyss:gravel"
+				},
+				"target": {
+					"block_state": {
+						"Name": "theabyss:infected_grass"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			}
+		]
+	},
+	"type": "theabyss:gravel"
+}

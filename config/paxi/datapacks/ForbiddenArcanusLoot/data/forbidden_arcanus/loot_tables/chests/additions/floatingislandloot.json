@@ -1,0 +1,223 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+      {
+        "rolls": {
+          "type": "minecraft:uniform",
+          "min": 1.0,
+          "max": 1.0
+        },
+        "bonus_rolls": 0.0,
+        "entries": [
+          {
+            "weight": 8,
+            "type": "minecraft:empty"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 5,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 5.0
+                },
+                "add": false
+              }
+            ],
+            "name": "kubejs:allay_essence"
+          },
+          
+          {
+            "type": "minecraft:item",
+            "weight": 5,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 5.0
+                },
+                "add": false
+              }
+            ],
+            "name": "kubejs:ylf_essence"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 7,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 1.0
+                },
+                "add": false
+              }
+            ],
+            "name": "alcocraftplus:mug_of_nether_star_lager"
+          }
+          
+        ]
+      },
+      {
+        "rolls": {
+          "type": "minecraft:uniform",
+          "min": 2.0,
+          "max": 3.0
+        },
+        "bonus_rolls": 1.0,
+        "entries": [
+          
+          
+          {
+            "type": "placebo:stack_entry",
+            "weight": 1,
+            "quality": 10,
+            "min": 1,
+            "max": 1,
+            "stack": {
+              "item": "minecraft:potion",
+              "count": 1,
+              "nbt": "{Potion:\"minecraft:long_slow_falling\"}"
+            }
+          },
+          
+          {
+            "type": "placebo:stack_entry",
+            "weight": 2,
+            "quality": 10,
+            "min": 1,
+            "max": 1,
+            "stack": {
+              "item": "minecraft:potion",
+              "count": 1,
+              "nbt": "{Potion:\"minecraft:slow_falling\"}"
+            }
+          }
+          
+          
+        ]
+      },
+      
+      {
+        "rolls": {
+          "type": "minecraft:uniform",
+          "min": 1.0,
+          "max": 3.0
+        },
+        "bonus_rolls": 0.7,
+        "entries": [
+          
+          
+          {
+            "type": "minecraft:item",
+            "weight": 5,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 1.0
+                },
+                "add": false
+              }
+            ],
+            "name": "iter_rpg:air_rune"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 5,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 3.0
+                },
+                "add": false
+              }
+            ],
+            "name": "iter_rpg:sky_ingot"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 8,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 3.0,
+                  "max": 7.0
+                },
+                "add": false
+              }
+            ],
+            "name": "minecraft:phantom_membrane"
+          },
+          
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 3.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:air_essence"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 3.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:wilden_wing"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 8,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 6.0,
+                  "max": 15.0
+                },
+                "add": false
+              }
+            ],
+            "name": "minecraft:feather"
+          }
+        ]
+      }
+      
+    ]
+  }

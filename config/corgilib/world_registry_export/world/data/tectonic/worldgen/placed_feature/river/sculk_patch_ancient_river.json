@@ -1,0 +1,43 @@
+{
+	"feature": "tectonic:river/sculk_patch_ancient_river",
+	"placement": [
+		{
+			"count": 8,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 74
+				},
+				"min_inclusive": {
+					"absolute": 46
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:random_offset",
+			"xz_spread": 0,
+			"y_spread": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 3,
+					"min_inclusive": -3
+				}
+			}
+		},
+		{
+			"heightmap": "OCEAN_FLOOR_WG",
+			"max_inclusive": -32,
+			"type": "minecraft:surface_relative_threshold_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

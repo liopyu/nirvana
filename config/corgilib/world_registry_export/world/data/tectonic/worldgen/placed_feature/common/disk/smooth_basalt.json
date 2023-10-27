@@ -1,0 +1,42 @@
+{
+	"feature": "tectonic:common/disk/single/smooth_basalt",
+	"placement": [
+		{
+			"count": 64,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"absolute": -55
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"predicate": {
+				"predicates": [
+					{
+						"fluids": "#minecraft:lava",
+						"type": "minecraft:matching_fluids"
+					},
+					{
+						"predicate": {
+							"fluids": "#minecraft:lava",
+							"offset": [
+								0,
+								-1,
+								0
+							],
+							"type": "minecraft:matching_fluids"
+						},
+						"type": "minecraft:not"
+					}
+				],
+				"type": "minecraft:all_of"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

@@ -1,0 +1,222 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/path",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 94
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/path_alt",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 94
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/path_1",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 94
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/path_1_alt",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 94
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/pathlong_1",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 90
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/pathlong_2",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 90
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/pathlong_3",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/trap/trap_1",
+				"processors": "hopo:acacia/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/trap/trap_2",
+				"processors": "hopo:acacia/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/trap/trap_3",
+				"processors": "hopo:acacia/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 17
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/trap/trap_4",
+				"processors": "hopo:acacia/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 17
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/trap/trap_5",
+				"processors": "hopo:acacia/degradedtrap",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/entrance",
+				"processors": "hopo:acacia/degradedentrance",
+				"projection": "rigid"
+			},
+			"weight": 97
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/entrance_alt",
+				"processors": "hopo:acacia/degradedentrance",
+				"projection": "rigid"
+			},
+			"weight": 97
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/entrance_1",
+				"processors": "hopo:acacia/degradedentrance",
+				"projection": "rigid"
+			},
+			"weight": 97
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/entrance_1_alt",
+				"processors": "hopo:acacia/degradedentrance",
+				"projection": "rigid"
+			},
+			"weight": 97
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/turn",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 85
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/turn_1",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 92
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/turn_2",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 92
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/down",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 22
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/down_2",
+				"processors": "hopo:acacia/degradeddown",
+				"projection": "rigid"
+			},
+			"weight": 22
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/down_3",
+				"processors": "hopo:acacia/degradeddown",
+				"projection": "rigid"
+			},
+			"weight": 25
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/down_4",
+				"processors": "hopo:acacia/degradeddown",
+				"projection": "rigid"
+			},
+			"weight": 20
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/down_5",
+				"processors": "hopo:acacia/degradeddown",
+				"projection": "rigid"
+			},
+			"weight": 38
+		}
+	],
+	"fallback": "hopo:acacia_mineshaft",
+	"name": "hopo:acacia_mineshaft"
+}

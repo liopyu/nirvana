@@ -1,0 +1,30 @@
+{
+	"feature": {
+		"config": {
+			"default": "wythers:vegetation/placed_fungus/giant_muscaria",
+			"features": [
+				{
+					"chance": 0.699999988079071,
+					"feature": "wythers:vegetation/placed_fungus/medium_muscaria"
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"chance": 2,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "WORLD_SURFACE_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

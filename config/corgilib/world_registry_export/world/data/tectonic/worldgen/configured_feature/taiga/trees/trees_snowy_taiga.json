@@ -1,0 +1,28 @@
+{
+	"config": {
+		"default": {
+			"feature": {
+				"config": {
+					"features": "#tectonic:trees/spruce_snowy_standard"
+				},
+				"type": "minecraft:simple_random_selector"
+			},
+			"placement": []
+		},
+		"features": [
+			{
+				"chance": 0.05000000074505806,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": "#tectonic:trees/spruce_snowy_dead"
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

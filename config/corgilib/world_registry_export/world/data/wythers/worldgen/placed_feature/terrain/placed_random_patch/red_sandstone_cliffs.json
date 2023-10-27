@@ -1,0 +1,24 @@
+{
+	"feature": "wythers:terrain/configured_random_patch/red_sandstone_cliffs",
+	"placement": [
+		{
+			"count": 128,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "OCEAN_FLOOR_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:random_offset",
+			"xz_spread": 0,
+			"y_spread": 0
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

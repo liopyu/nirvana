@@ -1,0 +1,300 @@
+{
+    "type": "minecraft:chest",
+    "pools": [
+      {
+        "rolls": {
+          "type": "minecraft:uniform",
+          "min": 0.0,
+          "max": 2.0
+        },
+        "bonus_rolls": 0.0,
+        "entries": [
+          {
+            "type": "placebo:stack_entry",
+            "weight": 5,
+            "quality": 10,
+            "min": 1,
+            "max": 1,
+            "stack": {
+              "item": "minecraft:potion",
+              "count": 1,
+              "nbt": "{Potion:\"minecraft:strong_regeneration\"}"
+            }
+          },
+          {
+            "type": "placebo:stack_entry",
+            "weight": 5,
+            "quality": 10,
+            "min": 1,
+            "max": 1,
+            "stack": {
+              "item": "minecraft:potion",
+              "count": 1,
+              "nbt": "{Potion:\"ars_nouveau:mana_regen_potion\"}"
+            }
+          },
+          {
+            "type": "placebo:stack_entry",
+            "weight": 5,
+            "quality": 10,
+            "min": 1,
+            "max": 1,
+            "stack": {
+              "item": "minecraft:potion",
+              "count": 1,
+              "nbt": "{Potion:\"ars_nouveau:spell_damage_potion\"}"
+            }
+          },
+          {
+            "type": "placebo:stack_entry",
+            "weight": 5,
+            "quality": 10,
+            "min": 1,
+            "max": 1,
+            "stack": {
+              "item": "minecraft:potion",
+              "count": 1,
+              "nbt": "{Potion:\"ars_nouveau:shielding_potion\"}"
+            }
+          }
+
+        ]
+      },
+      {
+        "rolls": {
+          "type": "minecraft:uniform",
+          "min": 1.0,
+          "max": 2.0
+        },
+        "bonus_rolls": 1.0,
+        "entries": [
+          {
+            "weight": 3,
+            "type": "minecraft:empty"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 2.0,
+                  "max": 5.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:sourcestone"
+          },
+          
+
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 2.0,
+                  "max": 7.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:source_berry"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 1,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 2.0
+                },
+                "add": false
+              }
+            ],
+            "name": "minecraft:diamond"
+          }
+          
+        ]
+      },
+      {
+        "rolls": {
+          "type": "minecraft:uniform",
+          "min": 1.0,
+          "max": 2.0
+        },
+        "bonus_rolls": 1.0,
+        "entries": [
+          {
+            "weight": 15,
+            "type": "minecraft:empty"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 8,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 2.0,
+                  "max": 12.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:blue_archwood_log"
+          },
+          
+          {
+            "type": "minecraft:item",
+            "weight": 7,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 11.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:purple_archwood_log"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 2.0,
+                  "max": 11.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:red_archwood_log"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 10,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 10.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:green_archwood_log"
+          }
+          
+        ]
+      },
+      
+      {
+        "rolls": {
+          "type": "minecraft:uniform",
+          "min": 1.0,
+          "max": 2.0
+        },
+        "bonus_rolls": 0.7,
+        "entries": [
+          
+          {
+            "weight": 8,
+            "type": "minecraft:empty"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 1,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 2.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:magebloom_crop"
+          },
+          
+          
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 3.0
+                },
+                "add": false
+              }
+            ],
+            "name": "ars_nouveau:source_gem"
+          },
+          
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 13.0
+                },
+                "add": false
+              }
+            ],
+            "name": "numismaticoverhaul:bronze_coin"
+          },
+          {
+            "type": "minecraft:item",
+            "weight": 3,
+            "quality": 3,
+            "functions": [
+              {
+                "function": "minecraft:set_count",
+                "count": {
+                  "type": "minecraft:uniform",
+                  "min": 1.0,
+                  "max": 3.0
+                },
+                "add": false
+              }
+            ],
+            "name": "numismaticoverhaul:silver_coin"
+          }
+        ]
+      }
+      
+    ]
+  }

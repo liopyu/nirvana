@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "bygonenether:catacomb/tail",
+				"processors": "bygonenether:catacomb/withered_blackstone",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "bygonenether:catacomb/tail"
+}

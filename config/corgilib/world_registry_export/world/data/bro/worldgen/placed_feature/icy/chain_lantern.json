@@ -1,0 +1,28 @@
+{
+	"feature": "bro:icy/chain_lantern",
+	"placement": [
+		{
+			"count": 1,
+			"type": "minecraft:count_on_every_layer"
+		},
+		{
+			"count": {
+				"distribution": [
+					{
+						"data": 1,
+						"weight": 100
+					},
+					{
+						"data": 2,
+						"weight": 0
+					}
+				],
+				"type": "minecraft:weighted_list"
+			},
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		}
+	]
+}

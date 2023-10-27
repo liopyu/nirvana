@@ -1,0 +1,12 @@
+{
+	"config": {
+		"radius": 0,
+		"state": {
+			"Name": "minecraft:shroomlight"
+		},
+		"target": {
+			"Name": "minecraft:air"
+		}
+	},
+	"type": "minecraft:netherrack_replace_blobs"
+}

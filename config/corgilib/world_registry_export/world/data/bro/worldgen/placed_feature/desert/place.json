@@ -1,0 +1,29 @@
+{
+	"feature": "bro:desert/place",
+	"placement": [
+		{
+			"max_water_depth": 4,
+			"type": "minecraft:surface_water_depth_filter"
+		},
+		{
+			"count": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 5,
+					"min_inclusive": 4
+				}
+			},
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "OCEAN_FLOOR_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

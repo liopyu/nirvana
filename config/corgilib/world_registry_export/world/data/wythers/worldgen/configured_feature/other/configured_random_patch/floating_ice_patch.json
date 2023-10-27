@@ -1,0 +1,68 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"to_place": {
+						"entries": [
+							{
+								"data": {
+									"Name": "minecraft:ice"
+								},
+								"weight": 10
+							},
+							{
+								"data": {
+									"Name": "minecraft:water",
+									"Properties": {
+										"level": "0"
+									}
+								},
+								"weight": 1
+							}
+						],
+						"type": "minecraft:weighted_state_provider"
+					}
+				},
+				"type": "minecraft:simple_block"
+			},
+			"placement": [
+				{
+					"predicate": {
+						"blocks": "minecraft:air",
+						"offset": [
+							0,
+							1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				},
+				{
+					"predicate": {
+						"fluids": "minecraft:water",
+						"type": "minecraft:matching_fluids"
+					},
+					"type": "minecraft:block_predicate_filter"
+				},
+				{
+					"predicate": {
+						"fluids": "minecraft:water",
+						"offset": [
+							0,
+							-1,
+							0
+						],
+						"type": "minecraft:matching_fluids"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 128,
+		"xz_spread": 3,
+		"y_spread": 1
+	},
+	"type": "minecraft:random_patch"
+}

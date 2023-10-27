@@ -1,0 +1,80 @@
+{
+	"input": {
+		"argument1": {
+			"argument1": {
+				"argument1": {
+					"argument1": {
+						"from_value": 0.1,
+						"from_y": 48,
+						"to_value": 0.0,
+						"to_y": 56,
+						"type": "minecraft:y_clamped_gradient"
+					},
+					"argument2": {
+						"from_value": 0.0,
+						"from_y": 68,
+						"to_value": 0.1,
+						"to_y": 76,
+						"type": "minecraft:y_clamped_gradient"
+					},
+					"type": "minecraft:add"
+				},
+				"argument2": -0.45,
+				"type": "minecraft:add"
+			},
+			"argument2": {
+				"noise": "tectonic:pillar",
+				"shift_x": {
+					"argument1": "minecraft:shift_x",
+					"argument2": {
+						"argument1": {
+							"from_value": -80.0,
+							"from_y": 48,
+							"to_value": 80.0,
+							"to_y": 76,
+							"type": "minecraft:y_clamped_gradient"
+						},
+						"argument2": {
+							"noise": "tectonic:pillar_shift_x",
+							"type": "minecraft:noise",
+							"xz_scale": 0.25,
+							"y_scale": 0.0
+						},
+						"type": "minecraft:mul"
+					},
+					"type": "minecraft:add"
+				},
+				"shift_y": 0.0,
+				"shift_z": {
+					"argument1": "minecraft:shift_z",
+					"argument2": {
+						"argument1": {
+							"from_value": -80.0,
+							"from_y": 48,
+							"to_value": 80.0,
+							"to_y": 76,
+							"type": "minecraft:y_clamped_gradient"
+						},
+						"argument2": {
+							"noise": "tectonic:pillar_shift_x",
+							"type": "minecraft:noise",
+							"xz_scale": 0.25,
+							"y_scale": 0.0
+						},
+						"type": "minecraft:mul"
+					},
+					"type": "minecraft:add"
+				},
+				"type": "minecraft:shifted_noise",
+				"xz_scale": 15.0,
+				"y_scale": 0.3
+			},
+			"type": "minecraft:add"
+		},
+		"argument2": -100.0,
+		"type": "minecraft:mul"
+	},
+	"max": 1.0,
+	"min": 0.0,
+	"type": "minecraft:clamp"
+}

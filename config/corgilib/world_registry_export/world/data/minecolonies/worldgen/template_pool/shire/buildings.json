@@ -1,0 +1,156 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/builder1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/builder2",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/courieralt1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/courieralt2",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/restaurant1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/restaurant2",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/farm1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/farm2",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/tavern1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/guardtower1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 12
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/guardtower2",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/house1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/house2",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/mine1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/mine2",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:shire/warehouse1",
+				"processors": "minecolonies:shire/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 20
+		}
+	],
+	"fallback": "minecolonies:shire/roads",
+	"name": "minecolonies:shire/buildings"
+}

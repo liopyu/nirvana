@@ -1,0 +1,26 @@
+{
+	"config": {
+		"half_height": 0,
+		"radius": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_inclusive": 4,
+				"min_inclusive": 3
+			}
+		},
+		"state_provider": {
+			"fallback": {
+				"state": {
+					"Name": "minecraft:packed_mud"
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"rules": []
+		},
+		"target": {
+			"blocks": "minecraft:grass_block",
+			"type": "minecraft:matching_blocks"
+		}
+	},
+	"type": "minecraft:disk"
+}

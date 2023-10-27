@@ -1,0 +1,21 @@
+{
+	"feature": "tectonic:river/ice",
+	"placement": [
+		{
+			"count": 24,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"absolute": 62
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

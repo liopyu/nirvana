@@ -1,0 +1,18 @@
+{
+	"config": {
+		"default": {
+			"feature": "wythers:vegetation/configured_tree/cottonwood_azalea_leaf",
+			"placement": []
+		},
+		"features": [
+			{
+				"chance": 0.699999988079071,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/cottonwood_oak_leaf",
+					"placement": []
+				}
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

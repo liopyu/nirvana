@@ -1,0 +1,9 @@
+{
+	"config": {
+		"attempts": 10,
+		"height_range": 5,
+		"length": 3,
+		"xz_range": 3
+	},
+	"type": "repurposed_structures:structure_vines"
+}

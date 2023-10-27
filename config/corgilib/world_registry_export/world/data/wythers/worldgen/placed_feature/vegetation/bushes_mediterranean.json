@@ -1,0 +1,49 @@
+{
+	"feature": "wythers:vegetation/configured_bushes_mediterranean",
+	"placement": [
+		{
+			"noise_factor": 50.0,
+			"noise_offset": 0.0,
+			"noise_to_count_ratio": 30,
+			"type": "minecraft:noise_based_count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "WORLD_SURFACE_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"max_water_depth": 0,
+			"type": "minecraft:surface_water_depth_filter"
+		},
+		{
+			"predicate": {
+				"predicates": [
+					{
+						"blocks": "minecraft:air",
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": [
+							"minecraft:grass_block",
+							"minecraft:packed_mud"
+						],
+						"offset": [
+							0,
+							-1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					}
+				],
+				"type": "minecraft:all_of"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

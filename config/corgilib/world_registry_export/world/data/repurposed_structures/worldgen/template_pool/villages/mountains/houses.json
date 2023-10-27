@@ -1,0 +1,264 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/animal_pen_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/armorer_house_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/armorer_house_2",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/butcher_shop_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/cartographer_house_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/fisher_cottage_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/fletcher_house_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/large_farm_1",
+				"processors": "repurposed_structures:villages/mountains/crop_randomizer",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/large_farm_2",
+				"processors": "repurposed_structures:villages/mountains/crop_randomizer",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/library_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/masons_house_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/medium_house_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/medium_house_2",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/medium_house_3",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/medium_house_4",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/shepherds_house_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/small_farm_1",
+				"processors": "repurposed_structures:villages/mountains/crop_randomizer",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/small_house_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/small_house_2",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/small_house_3",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/small_house_4",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/small_house_5",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/tannery_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/temple_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/tool_smith_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/weaponsmith_1",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/houses/weaponsmith_2",
+				"processors": "repurposed_structures:villages/mountains/mossify",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "waystones:village/common/waystone",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 3
+		}
+	],
+	"fallback": "repurposed_structures:villages/mountains/terminators",
+	"name": "repurposed_structures:villages/mountains/houses"
+}

@@ -1,0 +1,30 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hexfortress:decor/stair_step/random_objects_4_steps",
+				"processors": "hexfortress:decor/pots_30",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hexfortress:decor/stair_step/random_objects_4_steps",
+				"processors": "hexfortress:decor/explosive_barrels_30",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 6
+		}
+	],
+	"fallback": "hexfortress:decor/stair_4_steps",
+	"name": "hexfortress:decor/stair_4_steps"
+}

@@ -1,0 +1,99 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/decor/lamp_post_1",
+				"processors": "repurposed_structures:villages/mountains/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/decor/decoration_1",
+				"processors": "repurposed_structures:villages/mountains/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/decor/decoration_2",
+				"processors": "repurposed_structures:villages/mountains/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/decor/decoration_3",
+				"processors": "repurposed_structures:villages/mountains/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/decor/decoration_4",
+				"processors": "repurposed_structures:villages/mountains/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/decor/decoration_5",
+				"processors": "repurposed_structures:villages/mountains/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/mountains/decor/decoration_6",
+				"processors": "repurposed_structures:villages/mountains/pillar_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "minecraft:pine",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:flower_default",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:pile_cobblestone",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 2
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:villages/mountains/decor"
+}

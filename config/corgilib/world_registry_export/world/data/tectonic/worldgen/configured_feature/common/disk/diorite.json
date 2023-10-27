@@ -1,0 +1,59 @@
+{
+	"config": {
+		"half_height": 3,
+		"radius": 4,
+		"state_provider": {
+			"fallback": {
+				"noise": {
+					"amplitudes": [
+						1.0,
+						1.0,
+						2.0,
+						2.0,
+						1.0,
+						1.0,
+						0.0,
+						0.0,
+						0.0
+					],
+					"firstOctave": -9
+				},
+				"scale": 1.0,
+				"seed": 6789,
+				"states": [
+					{
+						"Name": "minecraft:gravel"
+					},
+					{
+						"Name": "minecraft:diorite"
+					}
+				],
+				"type": "minecraft:noise_provider"
+			},
+			"rules": [
+				{
+					"if_true": {
+						"fluids": "#minecraft:water",
+						"offset": [
+							0,
+							5,
+							0
+						],
+						"type": "minecraft:matching_fluids"
+					},
+					"then": {
+						"state": {
+							"Name": "minecraft:gravel"
+						},
+						"type": "minecraft:simple_state_provider"
+					}
+				}
+			]
+		},
+		"target": {
+			"blocks": "#tectonic:disk_primary_replaceable",
+			"type": "minecraft:matching_blocks"
+		}
+	},
+	"type": "minecraft:disk"
+}

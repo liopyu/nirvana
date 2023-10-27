@@ -1,0 +1,35 @@
+{
+	"feature": "wythers:vegetation/configured_tree/giant_dark_oak",
+	"placement": [
+		{
+			"count": 4,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING_NO_LEAVES",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"max_water_depth": 0,
+			"type": "minecraft:surface_water_depth_filter"
+		},
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:oak_sapling",
+					"Properties": {
+						"stage": "0"
+					}
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

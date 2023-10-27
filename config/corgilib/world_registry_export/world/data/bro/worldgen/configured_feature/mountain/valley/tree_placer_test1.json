@@ -1,0 +1,20 @@
+{
+	"config": {
+		"default": "bro:na",
+		"features": [
+			{
+				"chance": 0.4000000059604645,
+				"feature": "bro:mountain/valley/weird_root"
+			},
+			{
+				"chance": 0.4000000059604645,
+				"feature": "bro:mountain/valley/weird_root2"
+			},
+			{
+				"chance": 0.20000000298023224,
+				"feature": "bro:mountain/valley/weird_root3"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

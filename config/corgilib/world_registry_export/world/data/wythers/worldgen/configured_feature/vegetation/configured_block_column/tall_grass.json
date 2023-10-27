@@ -1,0 +1,36 @@
+{
+	"config": {
+		"allowed_placement": {
+			"type": "minecraft:true"
+		},
+		"direction": "up",
+		"layers": [
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:tall_grass",
+						"Properties": {
+							"half": "lower"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:tall_grass",
+						"Properties": {
+							"half": "upper"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			}
+		],
+		"prioritize_tip": true
+	},
+	"type": "minecraft:block_column"
+}

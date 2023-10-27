@@ -1,0 +1,18 @@
+{
+	"config": {
+		"decor_state": {
+			"Name": "minecraft:air"
+		},
+		"hat_state": {
+			"Name": "minecraft:air"
+		},
+		"planted": false,
+		"stem_state": {
+			"Name": "minecraft:smooth_red_sandstone"
+		},
+		"valid_base_block": {
+			"Name": "minecraft:red_sand"
+		}
+	},
+	"type": "minecraft:huge_fungus"
+}

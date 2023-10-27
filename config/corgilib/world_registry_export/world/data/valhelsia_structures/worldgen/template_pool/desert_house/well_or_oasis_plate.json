@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:desert_house/well_or_oasis_plate",
+				"processors": "valhelsia_structures:desert_house/well_or_oasis_plate",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "valhelsia_structures:desert_house/well_or_oasis_plate"
+}

@@ -1,0 +1,57 @@
+{
+	"feature": {
+		"config": {
+			"default": {
+				"feature": "theabyss:nightgrove_tree/4",
+				"placement": []
+			},
+			"features": [
+				{
+					"chance": 0.125,
+					"feature": {
+						"feature": "theabyss:nightgrove_tree/1",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.15000000596046448,
+					"feature": {
+						"feature": "theabyss:nightgrove_tree/2",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.02500000037252903,
+					"feature": {
+						"feature": "theabyss:nightgrove_tree/3",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.10000000149011612,
+					"feature": {
+						"feature": "theabyss:nightgrove_tree/4",
+						"placement": []
+					}
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 8,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

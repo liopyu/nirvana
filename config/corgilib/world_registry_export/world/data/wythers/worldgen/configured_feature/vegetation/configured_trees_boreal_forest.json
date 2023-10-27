@@ -1,0 +1,20 @@
+{
+	"config": {
+		"default": "wythers:vegetation/placed_tree/azalea_conifer",
+		"features": [
+			{
+				"chance": 0.30000001192092896,
+				"feature": "wythers:vegetation/placed_tree/pine"
+			},
+			{
+				"chance": 0.25,
+				"feature": "wythers:vegetation/placed_tree/maple_tall"
+			},
+			{
+				"chance": 0.25,
+				"feature": "wythers:vegetation/placed_tree/birch"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

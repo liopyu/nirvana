@@ -1,0 +1,20 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:decor/icy_ruins_powder_snow",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:ruins/land_icy/snow_pile",
+	"name": "repurposed_structures:ruins/land_icy/snow_pile"
+}

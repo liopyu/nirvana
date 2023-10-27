@@ -1,0 +1,71 @@
+{
+	"config": {
+		"default": {
+			"feature": {
+				"config": {
+					"features": "#tectonic:trees/spruce_snowy_standard"
+				},
+				"type": "minecraft:simple_random_selector"
+			},
+			"placement": []
+		},
+		"features": [
+			{
+				"chance": 0.05000000074505806,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": "#tectonic:trees/spruce_snowy_dead"
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			},
+			{
+				"chance": 0.20000000298023224,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": [
+								{
+									"feature": {
+										"config": {
+											"features": "#tectonic:trees/special/sequoia"
+										},
+										"type": "minecraft:simple_random_selector"
+									},
+									"placement": []
+								},
+								{
+									"feature": {
+										"config": {
+											"features": "#tectonic:trees/spruce_fancy_spruce"
+										},
+										"type": "minecraft:simple_random_selector"
+									},
+									"placement": []
+								}
+							]
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			},
+			{
+				"chance": 0.05000000074505806,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": "#tectonic:trees/spruce_bush"
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

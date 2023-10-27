@@ -1,0 +1,27 @@
+{
+	"feature": "denseores:ore_dense_iron_small",
+	"placement": [
+		{
+			"count": 20,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"above_bottom": 448
+				},
+				"min_inclusive": {
+					"above_bottom": 144
+				},
+				"type": "minecraft:trapezoid"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

@@ -1,0 +1,96 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_2",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_3",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_4",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_5",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_6",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_7",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_8",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_9",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/base/treebase1_10",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "seafaring:treevillage/base/treebase"
+}

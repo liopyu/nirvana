@@ -1,0 +1,105 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"to_place": {
+						"entries": [
+							{
+								"data": {
+									"Name": "minecraft:small_dripleaf",
+									"Properties": {
+										"facing": "north",
+										"half": "lower",
+										"waterlogged": "true"
+									}
+								},
+								"weight": 1
+							},
+							{
+								"data": {
+									"Name": "minecraft:small_dripleaf",
+									"Properties": {
+										"facing": "south",
+										"half": "lower",
+										"waterlogged": "true"
+									}
+								},
+								"weight": 1
+							},
+							{
+								"data": {
+									"Name": "minecraft:small_dripleaf",
+									"Properties": {
+										"facing": "west",
+										"half": "lower",
+										"waterlogged": "true"
+									}
+								},
+								"weight": 1
+							},
+							{
+								"data": {
+									"Name": "minecraft:small_dripleaf",
+									"Properties": {
+										"facing": "east",
+										"half": "lower",
+										"waterlogged": "true"
+									}
+								},
+								"weight": 1
+							}
+						],
+						"type": "minecraft:weighted_state_provider"
+					}
+				},
+				"type": "minecraft:simple_block"
+			},
+			"placement": [
+				{
+					"predicate": {
+						"blocks": "minecraft:air",
+						"offset": [
+							0,
+							1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				},
+				{
+					"predicate": {
+						"fluids": "minecraft:water",
+						"type": "minecraft:matching_fluids"
+					},
+					"type": "minecraft:block_predicate_filter"
+				},
+				{
+					"predicate": {
+						"blocks": [
+							"minecraft:dirt",
+							"minecraft:mud",
+							"minecraft:coarse_dirt",
+							"minecraft:grass_block",
+							"minecraft:podzol",
+							"minecraft:red_sand",
+							"minecraft:sand"
+						],
+						"offset": [
+							0,
+							-1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 32,
+		"xz_spread": 5,
+		"y_spread": 1
+	},
+	"type": "minecraft:random_patch"
+}

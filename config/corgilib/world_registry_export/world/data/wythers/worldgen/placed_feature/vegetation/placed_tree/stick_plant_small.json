@@ -1,0 +1,21 @@
+{
+	"feature": "wythers:vegetation/configured_tree/stick_plant_small",
+	"placement": [
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:fern"
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"predicate": {
+				"blocks": "minecraft:air",
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

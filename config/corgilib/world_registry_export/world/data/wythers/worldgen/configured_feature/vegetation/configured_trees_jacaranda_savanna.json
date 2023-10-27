@@ -1,0 +1,20 @@
+{
+	"config": {
+		"default": "wythers:vegetation/placed_tree/grassland_palm",
+		"features": [
+			{
+				"chance": 0.30000001192092896,
+				"feature": "wythers:vegetation/placed_tree/azalea_oak"
+			},
+			{
+				"chance": 0.30000001192092896,
+				"feature": "wythers:vegetation/placed_tree/jacaranda"
+			},
+			{
+				"chance": 0.4000000059604645,
+				"feature": "wythers:vegetation/placed_tree/flowering_azalea_bush"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

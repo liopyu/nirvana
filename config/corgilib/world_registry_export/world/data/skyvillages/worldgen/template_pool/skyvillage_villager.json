@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "skyvillages:villager",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 100
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "skyvillages:skyvillage_villager"
+}

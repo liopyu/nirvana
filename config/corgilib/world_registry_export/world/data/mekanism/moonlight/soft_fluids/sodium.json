@@ -1,0 +1,21 @@
+{
+	"color": "ffe9fef4",
+	"containers": [
+		{
+			"capacity": 4,
+			"empty": "minecraft:bucket",
+			"empty_sound": "minecraft:item.bucket.empty",
+			"fill_sound": "minecraft:item.bucket.fill",
+			"filled": [
+				"mekanism:sodium_bucket"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"mekanism:sodium"
+	],
+	"flowing_texture": "mekanism:liquid/liquid_flow",
+	"still_texture": "mekanism:liquid/liquid",
+	"translation_key": "block.mekanism.sodium",
+	"use_texture_from": "mekanism:sodium"
+}

@@ -1,0 +1,28 @@
+{
+  "parent": "ars_nouveau:novice_spell_book",
+  "criteria": {
+    "example": {
+      "trigger": "minecraft:impossible"
+    }
+  },
+  "display": {
+    "announce_to_chat": true,
+    "description": {
+      "text": "Start your magical skill tree!",
+      "color": "gold",
+      "bold": false,
+      "underlined": false
+  },
+    "frame": "challenge",
+    "hidden": false,
+    "icon": {
+      "item": "minecraft:pufferfish"
+    },
+    "show_toast": true,
+    "title": {
+      "text": "Magical Enhancement!",
+      "bold": true,
+      "color": "dark_purple"
+  }
+}
+}

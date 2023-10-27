@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "bro:na",
+		"features": [
+			{
+				"chance": 0.5,
+				"feature": "bro:forest/wreck"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

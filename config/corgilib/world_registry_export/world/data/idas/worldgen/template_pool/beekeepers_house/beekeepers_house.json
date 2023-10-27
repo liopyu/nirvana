@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "idas:beekeepers_house/beekeepers_house",
+				"processors": "idas:waterlogging_fix_processor",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "idas:beekeepers_house/beekeepers_house"
+}

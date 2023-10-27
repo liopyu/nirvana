@@ -1,0 +1,42 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecraft:illager_mansion/mansion_main_hall1",
+				"processors": "minecraft:illager_manor_generic_degradation",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecraft:illager_mansion/mansion_main_hall2",
+				"processors": "minecraft:illager_manor_generic_degradation",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecraft:illager_mansion/mansion_main_hall3",
+				"processors": "minecraft:illager_manor_generic_degradation",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecraft:illager_mansion/mansion_main_hall4",
+				"processors": "minecraft:illager_manor_generic_degradation",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "minecraft:illager_mansion/illager_mansion_main"
+}

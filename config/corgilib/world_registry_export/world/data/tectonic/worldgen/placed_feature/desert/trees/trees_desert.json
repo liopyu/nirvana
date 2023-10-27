@@ -1,0 +1,23 @@
+{
+	"feature": "tectonic:desert/trees/trees_desert",
+	"placement": [
+		{
+			"chance": 250,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "OCEAN_FLOOR",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"max_water_depth": 0,
+			"type": "minecraft:surface_water_depth_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

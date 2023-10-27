@@ -1,0 +1,48 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "minecolonies:caledonia/roads_crossroads_01",
+				"processors": "minecolonies:caledonia/street",
+				"projection": "terrain_matching"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "minecolonies:caledonia/roads_straight_01",
+				"processors": "minecolonies:caledonia/street",
+				"projection": "terrain_matching"
+			},
+			"weight": 6
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "minecolonies:caledonia/roads_turn_01",
+				"processors": "minecolonies:caledonia/street",
+				"projection": "terrain_matching"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "minecolonies:caledonia/square",
+				"processors": "minecolonies:caledonia/decoration",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 3
+		}
+	],
+	"fallback": "minecolonies:caledonia/terminators",
+	"name": "minecolonies:caledonia/roads"
+}

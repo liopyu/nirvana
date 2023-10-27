@@ -1,0 +1,23 @@
+{
+	"feature": "theabyss:skeleton_head_variant_1",
+	"placement": [
+		{
+			"count": 32,
+			"type": "minecraft:count"
+		},
+		{
+			"chance": 32,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

@@ -1,0 +1,27 @@
+{
+	"config": {
+		"arch_blocks": [
+			"minecraft:stripped_spruce_log"
+		],
+		"arch_only": true,
+		"fence_state": {
+			"Name": "minecraft:spruce_fence",
+			"Properties": {
+				"east": "false",
+				"north": "false",
+				"south": "false",
+				"waterlogged": "false",
+				"west": "false"
+			}
+		},
+		"is_water_based": false,
+		"pillar_state": {
+			"Name": "minecraft:spruce_log",
+			"Properties": {
+				"axis": "y"
+			}
+		},
+		"target_floor_block": "minecraft:spruce_planks"
+	},
+	"type": "repurposed_structures:mineshaft_supports"
+}

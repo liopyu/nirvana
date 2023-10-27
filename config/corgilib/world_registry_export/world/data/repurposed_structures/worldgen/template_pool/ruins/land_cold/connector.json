@@ -1,0 +1,21 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:ruins/land_cold/connector",
+				"processors": "repurposed_structures:ruins/land_cold_randomize",
+				"projection": "terrain_matching"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 3
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:ruins/land_cold/connector"
+}

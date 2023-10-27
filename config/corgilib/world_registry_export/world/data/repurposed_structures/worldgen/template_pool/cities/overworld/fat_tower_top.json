@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:cities/overworld/fat_tower_top",
+				"processors": "repurposed_structures:cities/overworld_randomize",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:cities/overworld/fat_tower_top",
+	"name": "repurposed_structures:cities/overworld/fat_tower_top"
+}

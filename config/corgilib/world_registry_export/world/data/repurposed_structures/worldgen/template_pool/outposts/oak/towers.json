@@ -1,0 +1,24 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/oak/watchtower",
+				"processors": "repurposed_structures:outposts/weakly_mossify",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/oak/watchtower_aged",
+				"processors": "repurposed_structures:outposts/strongly_mossify",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:outposts/oak/towers"
+}

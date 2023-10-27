@@ -1,0 +1,88 @@
+{
+	"config": {
+		"decorators": [],
+		"dirt_provider": {
+			"state": {
+				"Name": "minecraft:smooth_red_sandstone"
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"foliage_placer": {
+			"height": 0,
+			"offset": 0,
+			"radius": 0,
+			"type": "minecraft:fancy_foliage_placer"
+		},
+		"foliage_provider": {
+			"state": {
+				"Name": "minecraft:air"
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"force_dirt": true,
+		"ignore_vines": true,
+		"minimum_size": {
+			"limit": 1,
+			"lower_size": 0,
+			"type": "minecraft:two_layers_feature_size",
+			"upper_size": 2
+		},
+		"root_placer": {
+			"above_root_placement": {
+				"above_root_placement_chance": 0.30000001192092896,
+				"above_root_provider": {
+					"state": {
+						"Name": "minecraft:grass"
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			"mangrove_root_placement": {
+				"can_grow_through": "#minecraft:mangrove_roots_can_grow_through",
+				"max_root_length": 10,
+				"max_root_width": 3,
+				"muddy_roots_in": [
+					"minecraft:mud",
+					"minecraft:muddy_mangrove_roots"
+				],
+				"muddy_roots_provider": {
+					"state": {
+						"Name": "minecraft:muddy_mangrove_roots",
+						"Properties": {
+							"axis": "y"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				},
+				"random_skew_chance": 0.25
+			},
+			"root_provider": {
+				"state": {
+					"Name": "minecraft:smooth_red_sandstone"
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"trunk_offset_y": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 4,
+					"min_inclusive": 2
+				}
+			},
+			"type": "minecraft:mangrove_root_placer"
+		},
+		"trunk_placer": {
+			"base_height": 3,
+			"height_rand_a": 1,
+			"height_rand_b": 0,
+			"type": "minecraft:straight_trunk_placer"
+		},
+		"trunk_provider": {
+			"state": {
+				"Name": "minecraft:smooth_red_sandstone"
+			},
+			"type": "minecraft:simple_state_provider"
+		}
+	},
+	"type": "minecraft:tree"
+}

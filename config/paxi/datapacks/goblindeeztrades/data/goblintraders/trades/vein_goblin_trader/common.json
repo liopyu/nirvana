@@ -1,0 +1,89 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 24,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:carrot"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 14,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:fire_fragment"
+      },
+      "payment_item": {
+        "count": 3,
+        "item": "iter_rpg:coin"
+      },
+      "price_multiplier": 0.0
+    },
+    
+    {
+      "type": "goblintraders:basic",
+      "experience": 200,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "item": "healingflasks:healing_flask"
+      },
+      "payment_item": {
+        "count": 2,
+        "item": "minecraft:wither_skeleton_skull"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 32,
+      "offer_item": {
+        "count": 4,
+        "item": "minecraft:glowstone_dust"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:glowstone"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 64,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 64,
+        "item": "minecraft:netherrack"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "offer_item": {
+        "count": 2,
+        "item": "minecraft:nether_wart"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "iter_rpg:coin"
+      },
+      "price_multiplier": 0.0
+    }
+  ]
+}

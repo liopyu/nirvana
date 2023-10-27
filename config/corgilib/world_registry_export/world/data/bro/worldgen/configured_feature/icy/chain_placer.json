@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "bro:na",
+		"features": [
+			{
+				"chance": 1.0,
+				"feature": "bro:icy/chain_lantern"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

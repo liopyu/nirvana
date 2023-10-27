@@ -1,0 +1,38 @@
+{
+	"config": {
+		"default": {
+			"feature": "wythers:vegetation/configured_tree/pine",
+			"placement": [
+				{
+					"predicate": {
+						"state": {
+							"Name": "minecraft:fern"
+						},
+						"type": "minecraft:would_survive"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"features": [
+			{
+				"chance": 0.05000000074505806,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/maple_tall",
+					"placement": [
+						{
+							"predicate": {
+								"state": {
+									"Name": "minecraft:fern"
+								},
+								"type": "minecraft:would_survive"
+							},
+							"type": "minecraft:block_predicate_filter"
+						}
+					]
+				}
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

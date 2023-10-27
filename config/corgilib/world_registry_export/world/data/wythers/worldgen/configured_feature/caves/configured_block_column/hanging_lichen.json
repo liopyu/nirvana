@@ -1,0 +1,20 @@
+{
+	"config": {
+		"default": "wythers:caves/placed_block_column/hanging_lichen_south",
+		"features": [
+			{
+				"chance": 0.25,
+				"feature": "wythers:caves/placed_block_column/hanging_lichen_east"
+			},
+			{
+				"chance": 0.25,
+				"feature": "wythers:caves/placed_block_column/hanging_lichen_west"
+			},
+			{
+				"chance": 0.25,
+				"feature": "wythers:caves/placed_block_column/hanging_lichen_north"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

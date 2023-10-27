@@ -1,0 +1,26 @@
+{
+	"config": {
+		"half_height": 1,
+		"radius": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_inclusive": 1,
+				"min_inclusive": 1
+			}
+		},
+		"state_provider": {
+			"fallback": {
+				"state": {
+					"Name": "minecraft:yellow_terracotta"
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"rules": []
+		},
+		"target": {
+			"blocks": "minecraft:orange_terracotta",
+			"type": "minecraft:matching_blocks"
+		}
+	},
+	"type": "minecraft:disk"
+}

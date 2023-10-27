@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "wythers:vegetation/placed_tree/giant_swamp_oak",
+		"features": [
+			{
+				"chance": 0.10000000149011612,
+				"feature": "wythers:vegetation/placed_tree/giant_moribund_dark_oak"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

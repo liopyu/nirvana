@@ -1,0 +1,21 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/townhall1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 20
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "minecolonies:start_pool"
+}

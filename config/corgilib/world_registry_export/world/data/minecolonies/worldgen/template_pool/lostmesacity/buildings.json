@@ -1,0 +1,138 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/builder1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/builder2",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/cook1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/farmer1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/lumberjack1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/lumberjack2",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/tavern1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/guardtower1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 12
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/guardtower2",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/residence1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/residence2",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/miner1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 8
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/miner2",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:lostmesacity/warehouse1",
+				"processors": "minecolonies:lostmesacity/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 20
+		}
+	],
+	"fallback": "minecolonies:lostmesacity/roads",
+	"name": "minecolonies:lostmesacity/buildings"
+}

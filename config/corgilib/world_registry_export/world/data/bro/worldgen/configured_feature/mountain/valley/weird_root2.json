@@ -1,0 +1,318 @@
+{
+	"config": {
+		"decorators": [
+			{
+				"block_provider": {
+					"entries": [
+						{
+							"data": {
+								"Name": "minecraft:flowering_azalea_leaves",
+								"Properties": {
+									"distance": "7",
+									"persistent": "true",
+									"waterlogged": "false"
+								}
+							},
+							"weight": 50
+						},
+						{
+							"data": {
+								"Name": "minecraft:azalea_leaves",
+								"Properties": {
+									"distance": "7",
+									"persistent": "true",
+									"waterlogged": "false"
+								}
+							},
+							"weight": 50
+						},
+						{
+							"data": {
+								"Name": "minecraft:moss_block"
+							},
+							"weight": 20
+						},
+						{
+							"data": {
+								"Name": "minecraft:air"
+							},
+							"weight": 30
+						},
+						{
+							"data": {
+								"Name": "minecraft:shroomlight"
+							},
+							"weight": 1
+						}
+					],
+					"type": "minecraft:weighted_state_provider"
+				},
+				"directions": [
+					"down"
+				],
+				"exclusion_radius_xz": 1,
+				"exclusion_radius_y": 8,
+				"probability": 0.25,
+				"required_empty_blocks": 1,
+				"type": "minecraft:attached_to_leaves"
+			},
+			{
+				"probability": 0.25,
+				"type": "minecraft:leave_vine"
+			},
+			{
+				"provider": {
+					"entries": [
+						{
+							"data": {
+								"Name": "minecraft:grass_block",
+								"Properties": {
+									"snowy": "false"
+								}
+							},
+							"weight": 8
+						},
+						{
+							"data": {
+								"Name": "minecraft:moss_block"
+							},
+							"weight": 4
+						},
+						{
+							"data": {
+								"Name": "minecraft:spruce_wood",
+								"Properties": {
+									"axis": "x"
+								}
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:spruce_wood",
+								"Properties": {
+									"axis": "z"
+								}
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:stripped_spruce_wood",
+								"Properties": {
+									"axis": "z"
+								}
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:stripped_spruce_wood",
+								"Properties": {
+									"axis": "x"
+								}
+							},
+							"weight": 1
+						}
+					],
+					"type": "minecraft:weighted_state_provider"
+				},
+				"type": "minecraft:alter_ground"
+			}
+		],
+		"dirt_provider": {
+			"state": {
+				"Name": "minecraft:dirt"
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"foliage_placer": {
+			"offset": 0,
+			"radius": 3,
+			"type": "minecraft:acacia_foliage_placer"
+		},
+		"foliage_provider": {
+			"entries": [
+				{
+					"data": {
+						"Name": "minecraft:azalea_leaves",
+						"Properties": {
+							"distance": "7",
+							"persistent": "true",
+							"waterlogged": "false"
+						}
+					},
+					"weight": 50
+				},
+				{
+					"data": {
+						"Name": "minecraft:flowering_azalea_leaves",
+						"Properties": {
+							"distance": "7",
+							"persistent": "true",
+							"waterlogged": "false"
+						}
+					},
+					"weight": 50
+				},
+				{
+					"data": {
+						"Name": "minecraft:moss_block"
+					},
+					"weight": 20
+				},
+				{
+					"data": {
+						"Name": "minecraft:air"
+					},
+					"weight": 30
+				},
+				{
+					"data": {
+						"Name": "minecraft:shroomlight"
+					},
+					"weight": 1
+				}
+			],
+			"type": "minecraft:weighted_state_provider"
+		},
+		"force_dirt": false,
+		"ignore_vines": false,
+		"minimum_size": {
+			"limit": 1,
+			"lower_size": 0,
+			"type": "minecraft:two_layers_feature_size",
+			"upper_size": 1
+		},
+		"root_placer": {
+			"above_root_placement": {
+				"above_root_placement_chance": 0.0,
+				"above_root_provider": {
+					"entries": [
+						{
+							"data": {
+								"Name": "minecraft:air"
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:moss_carpet"
+							},
+							"weight": 1
+						}
+					],
+					"type": "minecraft:weighted_state_provider"
+				}
+			},
+			"mangrove_root_placement": {
+				"can_grow_through": "minecraft:coarse_dirt",
+				"max_root_length": 1,
+				"max_root_width": 1,
+				"muddy_roots_in": "minecraft:grass_block",
+				"muddy_roots_provider": {
+					"entries": [
+						{
+							"data": {
+								"Name": "minecraft:moss_block"
+							},
+							"weight": 2
+						},
+						{
+							"data": {
+								"Name": "minecraft:stripped_spruce_wood",
+								"Properties": {
+									"axis": "x"
+								}
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:stripped_spruce_wood",
+								"Properties": {
+									"axis": "z"
+								}
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:grass_block",
+								"Properties": {
+									"snowy": "false"
+								}
+							},
+							"weight": 4
+						}
+					],
+					"type": "minecraft:weighted_state_provider"
+				},
+				"random_skew_chance": 0.0
+			},
+			"root_provider": {
+				"entries": [
+					{
+						"data": {
+							"Name": "minecraft:stripped_spruce_wood",
+							"Properties": {
+								"axis": "y"
+							}
+						},
+						"weight": 1
+					},
+					{
+						"data": {
+							"Name": "minecraft:spruce_wood",
+							"Properties": {
+								"axis": "y"
+							}
+						},
+						"weight": 2
+					}
+				],
+				"type": "minecraft:weighted_state_provider"
+			},
+			"trunk_offset_y": 0,
+			"type": "minecraft:mangrove_root_placer"
+		},
+		"trunk_placer": {
+			"base_height": 18,
+			"bend_length": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 2,
+					"min_inclusive": 1
+				}
+			},
+			"height_rand_a": 1,
+			"height_rand_b": 2,
+			"min_height_for_leaves": 16,
+			"type": "minecraft:bending_trunk_placer"
+		},
+		"trunk_provider": {
+			"entries": [
+				{
+					"data": {
+						"Name": "minecraft:spruce_wood",
+						"Properties": {
+							"axis": "y"
+						}
+					},
+					"weight": 2
+				},
+				{
+					"data": {
+						"Name": "minecraft:stripped_spruce_wood",
+						"Properties": {
+							"axis": "y"
+						}
+					},
+					"weight": 1
+				}
+			],
+			"type": "minecraft:weighted_state_provider"
+		}
+	},
+	"type": "minecraft:tree"
+}

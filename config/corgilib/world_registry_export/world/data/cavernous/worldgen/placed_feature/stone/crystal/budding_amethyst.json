@@ -1,0 +1,15 @@
+{
+	"feature": "cavernous:stone/crystal/budding_amethyst",
+	"placement": [
+		{
+			"count": 150,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

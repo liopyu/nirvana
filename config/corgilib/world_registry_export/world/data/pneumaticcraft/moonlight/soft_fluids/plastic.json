@@ -1,0 +1,20 @@
+{
+	"containers": [
+		{
+			"capacity": 4,
+			"empty": "minecraft:bucket",
+			"empty_sound": "minecraft:item.bucket.empty",
+			"fill_sound": "minecraft:item.bucket.fill",
+			"filled": [
+				"pneumaticcraft:plastic_bucket"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"pneumaticcraft:plastic"
+	],
+	"flowing_texture": "pneumaticcraft:block/fluid/plastic_flow",
+	"still_texture": "pneumaticcraft:block/fluid/plastic_still",
+	"translation_key": "fluid_type.pneumaticcraft.plastic",
+	"use_texture_from": "pneumaticcraft:plastic"
+}

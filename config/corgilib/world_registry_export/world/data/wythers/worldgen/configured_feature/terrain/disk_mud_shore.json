@@ -1,0 +1,23 @@
+{
+	"config": {
+		"half_height": 2,
+		"radius": 4,
+		"state_provider": {
+			"fallback": {
+				"state": {
+					"Name": "minecraft:mud"
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"rules": []
+		},
+		"target": {
+			"blocks": [
+				"minecraft:dirt",
+				"minecraft:muddy_mangrove_roots"
+			],
+			"type": "minecraft:matching_blocks"
+		}
+	},
+	"type": "minecraft:disk"
+}

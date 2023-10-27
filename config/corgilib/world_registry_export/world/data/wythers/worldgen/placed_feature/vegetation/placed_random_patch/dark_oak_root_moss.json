@@ -1,0 +1,19 @@
+{
+	"feature": "wythers:vegetation/configured_random_patch/dark_oak_root_moss",
+	"placement": [
+		{
+			"count": 20,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "OCEAN_FLOOR_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

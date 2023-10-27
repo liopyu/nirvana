@@ -1,0 +1,27 @@
+{
+	"feature": "born_in_chaos_v1:black_argillite",
+	"placement": [
+		{
+			"count": 3,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 17
+				},
+				"min_inclusive": {
+					"absolute": -17
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

@@ -1,0 +1,115 @@
+{
+	"config": {
+		"depth": 2,
+		"extra_bottom_block_chance": 1.0,
+		"extra_edge_column_chance": 1.0,
+		"ground_state": {
+			"state": {
+				"Name": "minecraft:oak_leaves",
+				"Properties": {
+					"distance": "7",
+					"persistent": "true",
+					"waterlogged": "false"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"replaceable": "#bro:leaves",
+		"surface": "ceiling",
+		"vegetation_chance": 1.0,
+		"vegetation_feature": {
+			"feature": {
+				"config": {
+					"allowed_placement": {
+						"blocks": "minecraft:air",
+						"type": "minecraft:matching_blocks"
+					},
+					"direction": "down",
+					"layers": [
+						{
+							"height": {
+								"distribution": [
+									{
+										"data": {
+											"type": "minecraft:uniform",
+											"value": {
+												"max_inclusive": 149,
+												"min_inclusive": 59
+											}
+										},
+										"weight": 1
+									}
+								],
+								"type": "minecraft:weighted_list"
+							},
+							"provider": {
+								"entries": [
+									{
+										"data": {
+											"Name": "minecraft:chain",
+											"Properties": {
+												"axis": "y",
+												"waterlogged": "false"
+											}
+										},
+										"weight": 1
+									}
+								],
+								"type": "minecraft:weighted_state_provider"
+							}
+						},
+						{
+							"height": 1,
+							"provider": {
+								"entries": [
+									{
+										"data": {
+											"Name": "minecraft:shroomlight"
+										},
+										"weight": 5
+									},
+									{
+										"data": {
+											"Name": "minecraft:sea_lantern"
+										},
+										"weight": 5
+									}
+								],
+								"type": "minecraft:weighted_state_provider"
+							}
+						}
+					],
+					"prioritize_tip": true
+				},
+				"type": "minecraft:block_column"
+			},
+			"placement": [
+				{
+					"count": {
+						"distribution": [
+							{
+								"data": 100,
+								"weight": 0
+							},
+							{
+								"data": 150,
+								"weight": 100
+							}
+						],
+						"type": "minecraft:weighted_list"
+					},
+					"type": "minecraft:count"
+				}
+			]
+		},
+		"vertical_range": 3,
+		"xz_radius": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_inclusive": 1,
+				"min_inclusive": 1
+			}
+		}
+	},
+	"type": "minecraft:vegetation_patch"
+}

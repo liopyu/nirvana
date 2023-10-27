@@ -1,0 +1,64 @@
+{
+	"config": {
+		"default": {
+			"feature": {
+				"config": {
+					"features": "#tectonic:trees/jungle_standard"
+				},
+				"type": "minecraft:simple_random_selector"
+			},
+			"placement": []
+		},
+		"features": [
+			{
+				"chance": 0.16666999459266663,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": "#tectonic:trees/jungle_fancy"
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			},
+			{
+				"chance": 0.20000000298023224,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": "#tectonic:trees/jungle_bush"
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			},
+			{
+				"chance": 0.30000001192092896,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": "#tectonic:trees/jungle_oak"
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			},
+			{
+				"chance": 0.20000000298023224,
+				"feature": {
+					"feature": {
+						"config": {
+							"features": "#tectonic:trees/oak_standard"
+						},
+						"type": "minecraft:simple_random_selector"
+					},
+					"placement": []
+				}
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

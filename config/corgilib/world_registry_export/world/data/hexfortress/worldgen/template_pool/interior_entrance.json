@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hexfortress:interior/center",
+				"processors": "hexfortress:decor/random_nether_brick_pile_less",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "hexfortress:interior_entrance",
+	"name": "hexfortress:interior_entrance"
+}

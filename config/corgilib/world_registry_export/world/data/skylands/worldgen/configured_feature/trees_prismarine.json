@@ -1,0 +1,20 @@
+{
+	"config": {
+		"default": "skylands:prismarine_tree_bubble",
+		"features": [
+			{
+				"chance": 0.25,
+				"feature": "skylands:prismarine_tree_fire"
+			},
+			{
+				"chance": 0.25,
+				"feature": "skylands:prismarine_tree_horn"
+			},
+			{
+				"chance": 0.25,
+				"feature": "skylands:prismarine_tree_tube"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

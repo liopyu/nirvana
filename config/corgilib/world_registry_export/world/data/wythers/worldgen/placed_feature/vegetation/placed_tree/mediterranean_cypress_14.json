@@ -1,0 +1,202 @@
+{
+	"feature": {
+		"config": {
+			"default": {
+				"feature": {
+					"config": {
+						"decorators": [],
+						"dirt_provider": {
+							"state": {
+								"Name": "minecraft:dirt"
+							},
+							"type": "minecraft:simple_state_provider"
+						},
+						"foliage_placer": {
+							"height": 7,
+							"offset": 6,
+							"radius": 0,
+							"type": "minecraft:fancy_foliage_placer"
+						},
+						"foliage_provider": {
+							"state": {
+								"Name": "minecraft:spruce_leaves",
+								"Properties": {
+									"distance": "6",
+									"persistent": "false",
+									"waterlogged": "false"
+								}
+							},
+							"type": "minecraft:simple_state_provider"
+						},
+						"force_dirt": true,
+						"ignore_vines": true,
+						"minimum_size": {
+							"limit": 1,
+							"lower_size": 1,
+							"type": "minecraft:two_layers_feature_size",
+							"upper_size": 1
+						},
+						"trunk_placer": {
+							"base_height": 7,
+							"height_rand_a": 0,
+							"height_rand_b": 0,
+							"type": "minecraft:straight_trunk_placer"
+						},
+						"trunk_provider": {
+							"state": {
+								"Name": "minecraft:stripped_spruce_log",
+								"Properties": {
+									"axis": "y"
+								}
+							},
+							"type": "minecraft:simple_state_provider"
+						}
+					},
+					"type": "minecraft:tree"
+				},
+				"placement": []
+			},
+			"features": [
+				{
+					"chance": 0.5,
+					"feature": {
+						"feature": {
+							"config": {
+								"decorators": [],
+								"dirt_provider": {
+									"state": {
+										"Name": "minecraft:dirt"
+									},
+									"type": "minecraft:simple_state_provider"
+								},
+								"foliage_placer": {
+									"height": 8,
+									"offset": 1,
+									"radius": 1,
+									"type": "minecraft:fancy_foliage_placer"
+								},
+								"foliage_provider": {
+									"state": {
+										"Name": "minecraft:spruce_leaves",
+										"Properties": {
+											"distance": "6",
+											"persistent": "false",
+											"waterlogged": "false"
+										}
+									},
+									"type": "minecraft:simple_state_provider"
+								},
+								"force_dirt": true,
+								"ignore_vines": true,
+								"minimum_size": {
+									"limit": 1,
+									"lower_size": 1,
+									"type": "minecraft:two_layers_feature_size",
+									"upper_size": 1
+								},
+								"trunk_placer": {
+									"base_height": 7,
+									"height_rand_a": 0,
+									"height_rand_b": 0,
+									"type": "minecraft:straight_trunk_placer"
+								},
+								"trunk_provider": {
+									"state": {
+										"Name": "minecraft:stripped_spruce_log",
+										"Properties": {
+											"axis": "y"
+										}
+									},
+									"type": "minecraft:simple_state_provider"
+								}
+							},
+							"type": "minecraft:tree"
+						},
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.20000000298023224,
+					"feature": {
+						"feature": {
+							"config": {
+								"decorators": [],
+								"dirt_provider": {
+									"state": {
+										"Name": "minecraft:dirt"
+									},
+									"type": "minecraft:simple_state_provider"
+								},
+								"foliage_placer": {
+									"foliage_height": 2,
+									"leaf_placement_attempts": 100,
+									"offset": 0,
+									"radius": 2,
+									"type": "minecraft:random_spread_foliage_placer"
+								},
+								"foliage_provider": {
+									"state": {
+										"Name": "minecraft:spruce_leaves",
+										"Properties": {
+											"distance": "6",
+											"persistent": "false",
+											"waterlogged": "false"
+										}
+									},
+									"type": "minecraft:simple_state_provider"
+								},
+								"force_dirt": true,
+								"ignore_vines": true,
+								"minimum_size": {
+									"limit": 1,
+									"lower_size": 1,
+									"type": "minecraft:two_layers_feature_size",
+									"upper_size": 1
+								},
+								"trunk_placer": {
+									"base_height": 3,
+									"height_rand_a": 0,
+									"height_rand_b": 0,
+									"type": "minecraft:straight_trunk_placer"
+								},
+								"trunk_provider": {
+									"state": {
+										"Name": "minecraft:stripped_spruce_log",
+										"Properties": {
+											"axis": "y"
+										}
+									},
+									"type": "minecraft:simple_state_provider"
+								}
+							},
+							"type": "minecraft:tree"
+						},
+						"placement": []
+					}
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 10,
+			"type": "minecraft:count"
+		},
+		{
+			"predicate": {
+				"blocks": [
+					"minecraft:grass_block",
+					"minecraft:dirt"
+				],
+				"offset": [
+					0,
+					-1,
+					0
+				],
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

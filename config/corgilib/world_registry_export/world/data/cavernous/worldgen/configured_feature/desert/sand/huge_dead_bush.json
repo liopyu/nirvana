@@ -1,0 +1,63 @@
+{
+	"config": {
+		"decorators": [],
+		"dirt_provider": {
+			"state": {
+				"Name": "minecraft:dirt"
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"foliage_placer": {
+			"height": 0,
+			"offset": 0,
+			"radius": 0,
+			"type": "minecraft:blob_foliage_placer"
+		},
+		"foliage_provider": {
+			"state": {
+				"Name": "minecraft:air"
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"force_dirt": false,
+		"ignore_vines": true,
+		"minimum_size": {
+			"limit": 1,
+			"lower_size": 0,
+			"type": "minecraft:two_layers_feature_size",
+			"upper_size": 1
+		},
+		"trunk_placer": {
+			"base_height": 3,
+			"can_grow_through": "minecraft:air",
+			"extra_branch_length": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 3,
+					"min_inclusive": 1
+				}
+			},
+			"extra_branch_steps": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 3,
+					"min_inclusive": 1
+				}
+			},
+			"height_rand_a": 4,
+			"height_rand_b": 2,
+			"place_branch_per_log_probability": 0.8500000238418579,
+			"type": "minecraft:upwards_branching_trunk_placer"
+		},
+		"trunk_provider": {
+			"state": {
+				"Name": "minecraft:oak_wood",
+				"Properties": {
+					"axis": "y"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		}
+	},
+	"type": "minecraft:tree"
+}

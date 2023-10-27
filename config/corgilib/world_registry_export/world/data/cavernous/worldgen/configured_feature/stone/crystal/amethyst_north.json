@@ -1,0 +1,107 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"to_place": {
+						"entries": [
+							{
+								"data": {
+									"Name": "minecraft:small_amethyst_bud",
+									"Properties": {
+										"facing": "north",
+										"waterlogged": "false"
+									}
+								},
+								"weight": 50
+							},
+							{
+								"data": {
+									"Name": "minecraft:medium_amethyst_bud",
+									"Properties": {
+										"facing": "north",
+										"waterlogged": "false"
+									}
+								},
+								"weight": 40
+							},
+							{
+								"data": {
+									"Name": "minecraft:large_amethyst_bud",
+									"Properties": {
+										"facing": "north",
+										"waterlogged": "false"
+									}
+								},
+								"weight": 30
+							},
+							{
+								"data": {
+									"Name": "minecraft:amethyst_cluster",
+									"Properties": {
+										"facing": "north",
+										"waterlogged": "false"
+									}
+								},
+								"weight": 20
+							}
+						],
+						"type": "minecraft:weighted_state_provider"
+					}
+				},
+				"type": "minecraft:simple_block"
+			},
+			"placement": [
+				{
+					"predicate": {
+						"predicates": [
+							{
+								"blocks": "minecraft:air",
+								"type": "minecraft:matching_blocks"
+							},
+							{
+								"predicates": [
+									{
+										"blocks": "minecraft:amethyst_block",
+										"offset": [
+											0,
+											0,
+											1
+										],
+										"type": "minecraft:matching_blocks"
+									},
+									{
+										"blocks": "minecraft:budding_amethyst",
+										"offset": [
+											0,
+											0,
+											1
+										],
+										"type": "minecraft:matching_blocks"
+									}
+								],
+								"type": "minecraft:any_of"
+							},
+							{
+								"state": {
+									"Name": "minecraft:amethyst_cluster",
+									"Properties": {
+										"facing": "north",
+										"waterlogged": "false"
+									}
+								},
+								"type": "minecraft:would_survive"
+							}
+						],
+						"type": "minecraft:all_of"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 50,
+		"xz_spread": 8,
+		"y_spread": 3
+	},
+	"type": "minecraft:random_patch"
+}

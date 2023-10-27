@@ -1,0 +1,14 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "bygonenether:mob_feature_warped_enderman",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "bygonenether:citadel/warped_enderman",
+	"name": "bygonenether:citadel/warped_enderman"
+}

@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mansions/hostile_mobs/evoker",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:mansions/mangrove/mobs/evokers",
+	"name": "repurposed_structures:mansions/mangrove/mobs/evokers"
+}

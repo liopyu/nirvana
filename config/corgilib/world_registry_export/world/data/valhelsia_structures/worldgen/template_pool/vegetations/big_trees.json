@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:vegetations/big_tree",
+				"processors": "valhelsia_structures:vegetations/big_trees",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "valhelsia_structures:vegetations/big_trees"
+}

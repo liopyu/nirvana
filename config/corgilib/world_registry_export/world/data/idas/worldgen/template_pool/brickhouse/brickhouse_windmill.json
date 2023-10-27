@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "idas:brickhouse/brickhouse_windmill",
+				"processors": "idas:generic_processor",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "idas:brickhouse/brickhouse_windmill"
+}

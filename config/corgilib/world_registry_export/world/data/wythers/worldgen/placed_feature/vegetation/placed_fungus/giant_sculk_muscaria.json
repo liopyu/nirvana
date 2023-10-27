@@ -1,0 +1,18 @@
+{
+	"feature": "wythers:vegetation/configured_fungus/giant_sculk_muscaria",
+	"placement": [
+		{
+			"heightmap": "WORLD_SURFACE_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:fern"
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

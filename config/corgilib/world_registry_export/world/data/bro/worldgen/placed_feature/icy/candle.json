@@ -1,0 +1,38 @@
+{
+	"feature": "bro:icy/candle_base",
+	"placement": [
+		{
+			"count": {
+				"distribution": [
+					{
+						"data": 256,
+						"weight": 100
+					},
+					{
+						"data": 256,
+						"weight": 0
+					}
+				],
+				"type": "minecraft:weighted_list"
+			},
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"noise_factor": 120.0,
+			"noise_offset": 1.0,
+			"noise_to_count_ratio": 5,
+			"type": "minecraft:noise_based_count"
+		},
+		{
+			"chance": 400,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"heightmap": "WORLD_SURFACE_WG",
+			"type": "minecraft:heightmap"
+		}
+	]
+}

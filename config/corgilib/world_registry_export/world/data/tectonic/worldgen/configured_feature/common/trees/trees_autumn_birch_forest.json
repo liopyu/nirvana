@@ -1,0 +1,6 @@
+{
+	"config": {
+		"features": "#tectonic:trees/special/birch_autumn"
+	},
+	"type": "minecraft:simple_random_selector"
+}

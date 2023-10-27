@@ -1,0 +1,68 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 1000,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:netherite_scrap"
+        
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "panthalassa:kronosaurus_skull"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 600,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "item": "quark:diamond_heart"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "panthalassa:archelon_shell"
+      },
+      "secondary_payment_item": {
+        "count": 1,
+        "item": "minecraft:nether_star"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "enchantments": [
+        {
+          "id": "minecraft:fortune",
+          "level": 5
+        },
+        {
+          "id": "minecraft:unbreaking",
+          "level": 5
+        }
+      ],
+      "experience": 1000,
+      "max_trades": 1,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:diamond_pickaxe",
+        "nbt": "{Damage:0}"
+      },
+      "payment_item": {
+        "count": 5,
+        "item": "minecraft:dragon_head"
+      },
+      "price_multiplier": 0.0,
+      "secondary_payment_item": {
+        "count": 1,
+        "item": "minecraft:diamond_pickaxe",
+        "nbt": "{Damage:0}"
+      }
+    }
+  ]
+}

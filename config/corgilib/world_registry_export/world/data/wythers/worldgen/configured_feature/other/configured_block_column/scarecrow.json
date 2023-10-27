@@ -1,0 +1,82 @@
+{
+	"config": {
+		"allowed_placement": {
+			"blocks": "minecraft:air",
+			"type": "minecraft:matching_blocks"
+		},
+		"direction": "up",
+		"layers": [
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:oak_fence",
+						"Properties": {
+							"east": "false",
+							"north": "false",
+							"south": "false",
+							"waterlogged": "false",
+							"west": "false"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:green_wool"
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": 1,
+				"provider": {
+					"entries": [
+						{
+							"data": {
+								"Name": "minecraft:jack_o_lantern",
+								"Properties": {
+									"facing": "north"
+								}
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:jack_o_lantern",
+								"Properties": {
+									"facing": "south"
+								}
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:jack_o_lantern",
+								"Properties": {
+									"facing": "west"
+								}
+							},
+							"weight": 1
+						},
+						{
+							"data": {
+								"Name": "minecraft:jack_o_lantern",
+								"Properties": {
+									"facing": "east"
+								}
+							},
+							"weight": 1
+						}
+					],
+					"type": "minecraft:weighted_state_provider"
+				}
+			}
+		],
+		"prioritize_tip": true
+	},
+	"type": "minecraft:block_column"
+}

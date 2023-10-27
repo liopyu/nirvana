@@ -1,0 +1,9 @@
+{
+	"config": {
+		"maxCount": 1,
+		"minCount": 1,
+		"spawnWeight": 100,
+		"type": "panthalassa:basilosaurus"
+	},
+	"type": "panthalassa:panthalassa_spawner"
+}

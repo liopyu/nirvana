@@ -1,0 +1,28 @@
+{
+	"carvers": { },
+	"creature_spawn_probability": 0.0,
+	"downfall": 0.4000000059604645,
+	"effects": {
+		"fog_color": 7039851,
+		"foliage_color": 2960685,
+		"grass_color": 4539717,
+		"particle": {
+			"options": {
+				"type": "minecraft:warped_spore"
+			},
+			"probability": 0.014999999664723873
+		},
+		"sky_color": 0,
+		"water_color": 9539985,
+		"water_fog_color": 1776411
+	},
+	"features": [
+		[ "minecraft:spring_water" ],
+		[ "minecraft:ore_coal_lower", "minecraft:ore_copper", "minecraft:ore_iron_middle", "minecraft:ore_gravel" ],
+		[ "deepwhisperer:grey_tree" ]
+	],
+	"precipitation": "none",
+	"spawn_costs": { },
+	"spawners": { },
+	"temperature": 0.699999988079071
+}

@@ -1,0 +1,20 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 7,
+		"targets": [
+			{
+				"state": {
+					"Name": "theabyss:infused_magma"
+				},
+				"target": {
+					"block_state": {
+						"Name": "theabyss:stone"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			}
+		]
+	},
+	"type": "theabyss:infused_magma"
+}

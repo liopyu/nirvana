@@ -1,0 +1,137 @@
+{
+	"feature": "wythers:vegetation/configured_block_column/saguaros",
+	"placement": [
+		{
+			"predicate": {
+				"predicates": [
+					{
+						"blocks": "minecraft:air",
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": [
+							"minecraft:red_sand",
+							"minecraft:sand"
+						],
+						"offset": [
+							0,
+							-1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							2,
+							0,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							-2,
+							0,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							0,
+							0,
+							2
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							0,
+							0,
+							-2
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							1,
+							0,
+							1
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							1,
+							0,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							1,
+							1,
+							-1
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							0,
+							0,
+							1
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							0,
+							0,
+							-1
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							-1,
+							0,
+							1
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							-1,
+							0,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							-1,
+							0,
+							-1
+						],
+						"type": "minecraft:matching_blocks"
+					}
+				],
+				"type": "minecraft:all_of"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

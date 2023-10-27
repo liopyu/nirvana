@@ -1,0 +1,29 @@
+{
+	"feature": "wythers:vegetation/configured_trees_taiga",
+	"placement": [
+		{
+			"count": 25,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"absolute": 250
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"max_water_depth": 0,
+			"type": "minecraft:surface_water_depth_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING",
+			"type": "minecraft:heightmap"
+		}
+	]
+}

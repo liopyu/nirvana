@@ -1,0 +1,126 @@
+{
+	"config": {
+		"decorators": [
+			{
+				"type": "minecraft:trunk_vine"
+			},
+			{
+				"probability": 0.25,
+				"type": "minecraft:leave_vine"
+			},
+			{
+				"block_provider": {
+					"state": {
+						"Name": "minecraft:spore_blossom"
+					},
+					"type": "minecraft:simple_state_provider"
+				},
+				"directions": [
+					"down"
+				],
+				"exclusion_radius_xz": 1,
+				"exclusion_radius_y": 0,
+				"probability": 0.0024999999441206455,
+				"required_empty_blocks": 2,
+				"type": "minecraft:attached_to_leaves"
+			}
+		],
+		"dirt_provider": {
+			"state": {
+				"Name": "minecraft:jungle_wood",
+				"Properties": {
+					"axis": "y"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"foliage_placer": {
+			"height": 2,
+			"offset": 0,
+			"radius": 2,
+			"type": "minecraft:jungle_foliage_placer"
+		},
+		"foliage_provider": {
+			"state": {
+				"Name": "minecraft:jungle_leaves",
+				"Properties": {
+					"distance": "7",
+					"persistent": "false",
+					"waterlogged": "false"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"force_dirt": true,
+		"ignore_vines": false,
+		"minimum_size": {
+			"limit": 1,
+			"lower_size": 1,
+			"type": "minecraft:two_layers_feature_size",
+			"upper_size": 2
+		},
+		"root_placer": {
+			"above_root_placement": {
+				"above_root_placement_chance": 0.0,
+				"above_root_provider": {
+					"state": {
+						"Name": "minecraft:moss_carpet"
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			"mangrove_root_placement": {
+				"can_grow_through": "#minecraft:mangrove_roots_can_grow_through",
+				"max_root_length": 12,
+				"max_root_width": 3,
+				"muddy_roots_in": [
+					"minecraft:mud",
+					"minecraft:muddy_mangrove_roots"
+				],
+				"muddy_roots_provider": {
+					"state": {
+						"Name": "minecraft:muddy_mangrove_roots",
+						"Properties": {
+							"axis": "y"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				},
+				"random_skew_chance": 0.25
+			},
+			"root_provider": {
+				"state": {
+					"Name": "minecraft:jungle_wood",
+					"Properties": {
+						"axis": "y"
+					}
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"trunk_offset_y": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 8,
+					"min_inclusive": 2
+				}
+			},
+			"type": "minecraft:mangrove_root_placer"
+		},
+		"trunk_placer": {
+			"base_height": 20,
+			"height_rand_a": 2,
+			"height_rand_b": 15,
+			"type": "minecraft:mega_jungle_trunk_placer"
+		},
+		"trunk_provider": {
+			"state": {
+				"Name": "minecraft:jungle_log",
+				"Properties": {
+					"axis": "y"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		}
+	},
+	"type": "minecraft:tree"
+}

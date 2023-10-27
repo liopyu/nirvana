@@ -1,0 +1,30 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hexfortress:decor/low_bridge_center/gate_opened",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hexfortress:decor/low_bridge_center/gate_closed",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 9
+		}
+	],
+	"fallback": "hexfortress:decor/low_bridge_centers",
+	"name": "hexfortress:decor/low_bridge_centers"
+}

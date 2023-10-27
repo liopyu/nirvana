@@ -1,0 +1,20 @@
+{
+	"biomes": "#seafaring:has_structure/undergrounddungeon",
+	"max_distance_from_center": 110,
+	"size": 4,
+	"spawn_overrides": { },
+	"start_height": {
+		"max_inclusive": {
+			"absolute": 15
+		},
+		"min_inclusive": {
+			"absolute": 0
+		},
+		"type": "minecraft:uniform"
+	},
+	"start_jigsaw_name": "undergrounddungeon:anchor",
+	"start_pool": "seafaring:undergrounddungeon/base/a1",
+	"step": "surface_structures",
+	"terrain_adaptation": "bury",
+	"type": "yungsapi:yung_jigsaw"
+}

@@ -1,0 +1,21 @@
+{
+	"biomes": "#repurposed_structures:has_structure/mineshafts/crimson",
+	"cannot_spawn_in_liquid": false,
+	"min_y_allowed": 2,
+	"pools_that_ignore_boundaries": [],
+	"size": 10,
+	"spawn_overrides": { },
+	"start_height": {
+		"max_inclusive": {
+			"absolute": 13
+		},
+		"min_inclusive": {
+			"absolute": 6
+		},
+		"type": "minecraft:uniform"
+	},
+	"start_pool": "repurposed_structures:mineshafts/crimson/start_pool",
+	"step": "vegetal_decoration",
+	"type": "repurposed_structures:generic_jigsaw_structure",
+	"use_bounding_box_hack": false
+}

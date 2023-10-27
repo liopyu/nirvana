@@ -1,0 +1,14 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:supports/crimson_mineshaft",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:mineshafts/crimson/arch",
+	"name": "repurposed_structures:mineshafts/crimson/arch"
+}

@@ -1,0 +1,120 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/builder1",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/builder2",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/cook1",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/lumberjack1",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/lumberjack2",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/tavern1",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/guardtower1",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 12
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/guardtower2",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/residence1",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/residence2",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/miner1",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 8
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecolonies:incan/warehouse1",
+				"processors": "minecolonies:incan/placeholder_replacement",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 20
+		}
+	],
+	"fallback": "minecolonies:incan/roads",
+	"name": "minecolonies:incan/buildings"
+}

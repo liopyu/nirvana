@@ -1,0 +1,20 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 8,
+		"targets": [
+			{
+				"state": {
+					"Name": "born_in_chaos_v1:dark_metal_deposit"
+				},
+				"target": {
+					"block_state": {
+						"Name": "born_in_chaos_v1:black_argillite"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			}
+		]
+	},
+	"type": "born_in_chaos_v1:dark_metal_deposit"
+}

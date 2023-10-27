@@ -1,0 +1,20 @@
+{
+	"containers": [
+		{
+			"capacity": 4,
+			"empty": "minecraft:bucket",
+			"empty_sound": "minecraft:item.bucket.empty",
+			"fill_sound": "minecraft:item.bucket.fill",
+			"filled": [
+				"create:chocolate_bucket"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"create:chocolate"
+	],
+	"flowing_texture": "create:fluid/chocolate_flow",
+	"still_texture": "create:fluid/chocolate_still",
+	"translation_key": "fluid.create.chocolate",
+	"use_texture_from": "create:chocolate"
+}

@@ -1,0 +1,33 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:mobs/chickens/chicken_1",
+				"processors": "valhelsia_structures:mobs/chickens",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:mobs/chickens/chicken_2",
+				"processors": "valhelsia_structures:mobs/chickens",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:mobs/chickens/chicken_3",
+				"processors": "valhelsia_structures:mobs/chickens",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "valhelsia_structures:mobs/chickens"
+}

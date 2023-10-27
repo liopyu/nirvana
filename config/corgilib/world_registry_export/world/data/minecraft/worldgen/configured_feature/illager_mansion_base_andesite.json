@@ -1,0 +1,58 @@
+{
+	"config": {
+		"allowed_placement": {
+			"blocks": [
+				"minecraft:air",
+				"minecraft:water",
+				"minecraft:lava",
+				"minecraft:dandelion",
+				"minecraft:poppy",
+				"minecraft:brown_mushroom",
+				"minecraft:red_mushroom",
+				"minecraft:grass",
+				"minecraft:fern",
+				"minecraft:tall_grass",
+				"minecraft:large_fern",
+				"minecraft:dead_bush",
+				"minecraft:blue_orchid",
+				"minecraft:allium",
+				"minecraft:azure_bluet",
+				"minecraft:red_tulip",
+				"minecraft:orange_tulip",
+				"minecraft:pink_tulip",
+				"minecraft:white_tulip",
+				"minecraft:oxeye_daisy",
+				"minecraft:lily_of_the_valley",
+				"minecraft:sugar_cane",
+				"minecraft:lilac",
+				"minecraft:rose_bush",
+				"minecraft:peony",
+				"minecraft:oak_leaves",
+				"minecraft:birch_leaves",
+				"minecraft:dark_oak_leaves",
+				"minecraft:azalea_leaves",
+				"minecraft:flowering_azalea_leaves"
+			],
+			"offset": [
+				0,
+				1,
+				0
+			],
+			"type": "minecraft:matching_blocks"
+		},
+		"direction": "down",
+		"layers": [
+			{
+				"height": 100,
+				"provider": {
+					"state": {
+						"Name": "minecraft:polished_andesite"
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			}
+		],
+		"prioritize_tip": true
+	},
+	"type": "minecraft:block_column"
+}

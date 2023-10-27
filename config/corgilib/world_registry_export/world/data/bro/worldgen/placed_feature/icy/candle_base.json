@@ -1,0 +1,15 @@
+{
+	"feature": "bro:icy/candle_base",
+	"placement": [
+		{
+			"count": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 18,
+					"min_inclusive": 10
+				}
+			},
+			"type": "minecraft:count"
+		}
+	]
+}

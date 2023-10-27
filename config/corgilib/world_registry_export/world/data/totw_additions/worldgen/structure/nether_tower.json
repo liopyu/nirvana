@@ -1,0 +1,13 @@
+{
+	"biomes": "#totw_additions:has_structure/nether_tower_biomes",
+	"max_distance_from_center": 114,
+	"size": 5,
+	"spawn_overrides": { },
+	"start_height": {
+		"absolute": 29
+	},
+	"start_pool": "totw_additions:nether_tower/nether_tower_main_waystones",
+	"step": "surface_structures",
+	"type": "minecraft:jigsaw",
+	"use_expansion_hack": false
+}

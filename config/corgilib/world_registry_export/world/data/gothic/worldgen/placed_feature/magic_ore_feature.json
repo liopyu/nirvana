@@ -1,0 +1,27 @@
+{
+	"feature": "gothic:magic_ore_feature",
+	"placement": [
+		{
+			"count": 10,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 56
+				},
+				"min_inclusive": {
+					"above_bottom": 5
+				},
+				"type": "minecraft:trapezoid"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

@@ -1,0 +1,165 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 85
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/tunnel_rails_1",
+				"processors": "repurposed_structures:mineshafts/nether_no_rails",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/tunnel_rails_2",
+				"processors": "repurposed_structures:mineshafts/nether_no_rails",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/tunnel_rails_3",
+				"processors": "repurposed_structures:mineshafts/nether_no_rails",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/tunnel_rails_4",
+				"processors": "repurposed_structures:mineshafts/nether_no_rails",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/tunnel_rails_1",
+				"processors": "repurposed_structures:mineshafts/nether_main",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/tunnel_rails_2",
+				"processors": "repurposed_structures:mineshafts/nether_main",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/tunnel_rails_3",
+				"processors": "repurposed_structures:mineshafts/nether_main",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/tunnel_rails_4",
+				"processors": "repurposed_structures:mineshafts/nether_main",
+				"projection": "rigid"
+			},
+			"weight": 10
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/4_way",
+				"processors": "repurposed_structures:mineshafts/nether_misc",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/4_way_tall",
+				"processors": "repurposed_structures:mineshafts/nether_misc",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/stairs",
+				"processors": "repurposed_structures:mineshafts/nether_misc",
+				"projection": "rigid"
+			},
+			"weight": 15
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/spawner_1",
+				"processors": "repurposed_structures:mineshafts/nether_spawner",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/spawner_2",
+				"processors": "repurposed_structures:mineshafts/nether_spawner",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/spawner_3_end",
+				"processors": "repurposed_structures:mineshafts/nether_spawner",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/spawner_3_middle",
+				"processors": "repurposed_structures:mineshafts/nether_spawner",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/spawner_4_end",
+				"processors": "repurposed_structures:mineshafts/nether_spawner",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/nether/spawner_4_middle",
+				"processors": "repurposed_structures:mineshafts/nether_spawner",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:mineshafts/nether/fire",
+	"name": "repurposed_structures:mineshafts/nether/main"
+}

@@ -1,0 +1,20 @@
+{
+	"biomes": "#repurposed_structures:has_structure/cities/overworld",
+	"cannot_spawn_in_liquid": true,
+	"pools_that_ignore_boundaries": [
+		"repurposed_structures:cities/overworld/bridge_end",
+		"repurposed_structures:cities/overworld/tower_top",
+		"repurposed_structures:cities/overworld/fat_tower_top"
+	],
+	"project_start_to_heightmap": "WORLD_SURFACE_WG",
+	"size": 5,
+	"spawn_overrides": { },
+	"start_height": {
+		"absolute": 0
+	},
+	"start_pool": "repurposed_structures:cities/overworld/start_pool",
+	"step": "surface_structures",
+	"terrain_adaptation": "beard_thin",
+	"type": "repurposed_structures:generic_jigsaw_structure",
+	"use_bounding_box_hack": false
+}

@@ -1,0 +1,96 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/path_1",
+				"processors": "hopo:acacia/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/path_2",
+				"processors": "hopo:acacia/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/path_1_sculk",
+				"processors": "hopo:acacia/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/path_2_sculk",
+				"processors": "hopo:acacia/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/path_1_down",
+				"processors": "hopo:acacia/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/path_2_down",
+				"processors": "hopo:acacia/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/path_1_down_sculk",
+				"processors": "hopo:acacia/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/path_2_down_sculk",
+				"processors": "hopo:acacia/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/connector_1",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/acacia/minecart/connector_2",
+				"processors": "hopo:acacia/degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		}
+	],
+	"fallback": "hopo:minecart/acacia_mineshaft",
+	"name": "hopo:acacia_mineshaft"
+}

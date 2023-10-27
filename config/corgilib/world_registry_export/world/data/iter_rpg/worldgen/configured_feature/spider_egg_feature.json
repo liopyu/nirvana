@@ -1,0 +1,11 @@
+{
+	"config": {
+		"to_place": {
+			"state": {
+				"Name": "iter_rpg:spider_egg"
+			},
+			"type": "minecraft:simple_state_provider"
+		}
+	},
+	"type": "iter_rpg:spider_egg_feature"
+}

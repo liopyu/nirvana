@@ -1,0 +1,24 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/d2",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/d2o",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "seafaring:oceandungeon/start/d2"
+}

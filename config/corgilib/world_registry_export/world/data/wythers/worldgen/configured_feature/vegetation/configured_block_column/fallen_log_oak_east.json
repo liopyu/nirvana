@@ -1,0 +1,25 @@
+{
+	"config": {
+		"allowed_placement": {
+			"blocks": "minecraft:air",
+			"type": "minecraft:matching_blocks"
+		},
+		"direction": "east",
+		"layers": [
+			{
+				"height": 5,
+				"provider": {
+					"state": {
+						"Name": "minecraft:oak_log",
+						"Properties": {
+							"axis": "x"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			}
+		],
+		"prioritize_tip": false
+	},
+	"type": "minecraft:block_column"
+}

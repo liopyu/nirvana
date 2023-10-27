@@ -1,0 +1,24 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "valhelsia_structures:valhelsia_single",
+				"location": "valhelsia_structures:spawner_dungeon/cave/cave_1",
+				"processors": "valhelsia_structures:spawner_dungeon/caves",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "valhelsia_structures:valhelsia_single",
+				"location": "valhelsia_structures:spawner_dungeon/cave/cave_2",
+				"processors": "valhelsia_structures:spawner_dungeon/caves",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "valhelsia_structures:spawner_dungeon/caves"
+}

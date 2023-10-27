@@ -1,0 +1,122 @@
+{
+	"config": {
+		"decorators": [
+			{
+				"block_provider": {
+					"state": {
+						"Name": "minecraft:honeycomb_block"
+					},
+					"type": "minecraft:simple_state_provider"
+				},
+				"directions": [
+					"down"
+				],
+				"exclusion_radius_xz": 0,
+				"exclusion_radius_y": 0,
+				"probability": 0.05000000074505806,
+				"required_empty_blocks": 2,
+				"type": "minecraft:attached_to_leaves"
+			},
+			{
+				"probability": 0.10000000149011612,
+				"type": "minecraft:beehive"
+			}
+		],
+		"dirt_provider": {
+			"state": {
+				"Name": "minecraft:mangrove_roots",
+				"Properties": {
+					"waterlogged": "false"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"foliage_placer": {
+			"offset": 0,
+			"radius": 1,
+			"type": "minecraft:acacia_foliage_placer"
+		},
+		"foliage_provider": {
+			"state": {
+				"Name": "minecraft:azalea_leaves",
+				"Properties": {
+					"distance": "7",
+					"persistent": "false",
+					"waterlogged": "false"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"force_dirt": true,
+		"ignore_vines": true,
+		"minimum_size": {
+			"limit": 1,
+			"lower_size": 0,
+			"type": "minecraft:two_layers_feature_size",
+			"upper_size": 2
+		},
+		"root_placer": {
+			"above_root_placement": {
+				"above_root_placement_chance": 0.0,
+				"above_root_provider": {
+					"state": {
+						"Name": "minecraft:moss_carpet"
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			"mangrove_root_placement": {
+				"can_grow_through": "#minecraft:mangrove_roots_can_grow_through",
+				"max_root_length": 5,
+				"max_root_width": 3,
+				"muddy_roots_in": [
+					"minecraft:mud",
+					"minecraft:muddy_mangrove_roots"
+				],
+				"muddy_roots_provider": {
+					"state": {
+						"Name": "minecraft:muddy_mangrove_roots",
+						"Properties": {
+							"axis": "y"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				},
+				"random_skew_chance": 0.25
+			},
+			"root_provider": {
+				"state": {
+					"Name": "minecraft:mangrove_roots",
+					"Properties": {
+						"waterlogged": "false"
+					}
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"trunk_offset_y": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 2,
+					"min_inclusive": 0
+				}
+			},
+			"type": "minecraft:mangrove_root_placer"
+		},
+		"trunk_placer": {
+			"base_height": 4,
+			"height_rand_a": 2,
+			"height_rand_b": 2,
+			"type": "minecraft:forking_trunk_placer"
+		},
+		"trunk_provider": {
+			"state": {
+				"Name": "minecraft:mangrove_wood",
+				"Properties": {
+					"axis": "y"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		}
+	},
+	"type": "minecraft:tree"
+}

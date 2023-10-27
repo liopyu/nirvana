@@ -1,0 +1,27 @@
+{
+	"feature": "skylands:ocean_floor/deepslate_nether",
+	"placement": [
+		{
+			"count": 32,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 9
+				},
+				"min_inclusive": {
+					"absolute": 4
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

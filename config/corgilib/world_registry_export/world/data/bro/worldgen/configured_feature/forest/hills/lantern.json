@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "bro:na",
+		"features": [
+			{
+				"chance": 0.75,
+				"feature": "bro:forest/lantern_wip"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

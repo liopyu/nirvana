@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:pyramids/giant_tree_taiga_body",
+				"processors": "repurposed_structures:pyramids/giant_tree_taiga",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:pyramids/giant_tree_taiga"
+}

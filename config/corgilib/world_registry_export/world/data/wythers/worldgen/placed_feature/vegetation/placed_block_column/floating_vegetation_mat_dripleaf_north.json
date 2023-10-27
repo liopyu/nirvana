@@ -1,0 +1,101 @@
+{
+	"feature": "wythers:vegetation/configured_block_column/floating_vegetation_mat_dripleaf_north",
+	"placement": [
+		{
+			"height": {
+				"absolute": 62
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"predicate": {
+				"blocks": "minecraft:air",
+				"offset": [
+					0,
+					2,
+					0
+				],
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"predicate": {
+				"blocks": "minecraft:air",
+				"offset": [
+					0,
+					1,
+					0
+				],
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"predicate": {
+				"blocks": "minecraft:azalea_leaves",
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"predicate": {
+				"blocks": "minecraft:water",
+				"offset": [
+					0,
+					-1,
+					0
+				],
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"predicate": {
+				"predicate": {
+					"predicates": [
+						{
+							"blocks": "minecraft:water",
+							"offset": [
+								1,
+								0,
+								0
+							],
+							"type": "minecraft:matching_blocks"
+						},
+						{
+							"blocks": "minecraft:water",
+							"offset": [
+								-1,
+								0,
+								0
+							],
+							"type": "minecraft:matching_blocks"
+						},
+						{
+							"blocks": "minecraft:water",
+							"offset": [
+								0,
+								0,
+								1
+							],
+							"type": "minecraft:matching_blocks"
+						},
+						{
+							"blocks": "minecraft:water",
+							"offset": [
+								0,
+								0,
+								-1
+							],
+							"type": "minecraft:matching_blocks"
+						}
+					],
+					"type": "minecraft:any_of"
+				},
+				"type": "minecraft:not"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"config": {
+		"radius": 12,
+		"state": {
+			"Name": "minecraft:mangrove_roots",
+			"Properties": {
+				"waterlogged": "false"
+			}
+		},
+		"target": {
+			"Name": "minecraft:dripstone_block"
+		}
+	},
+	"type": "minecraft:netherrack_replace_blobs"
+}

@@ -1,0 +1,25 @@
+{
+	"feature": "wythers:terrain/configured_random_patch/cliff_grass",
+	"placement": [
+		{
+			"count": 50,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"absolute": 256
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING_NO_LEAVES",
+			"type": "minecraft:heightmap"
+		}
+	]
+}

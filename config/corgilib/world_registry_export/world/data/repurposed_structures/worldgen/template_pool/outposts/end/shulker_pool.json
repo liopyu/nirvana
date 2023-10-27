@@ -1,0 +1,20 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:mobs/shulker_mob",
+				"projection": "rigid"
+			},
+			"weight": 9
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:outposts/end/shulker_pool"
+}

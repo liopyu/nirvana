@@ -1,0 +1,12 @@
+{
+  "type": "integrated_api:generic_structure",
+  "start_pool": "minecraft:emptystructure/empty",
+  "size": 2,
+  "biomes": "#minecraft:has_structure/void",
+  "step": "underground_structures",
+  "terrain_adaptation": "beard_box",
+  "start_height": {
+    "absolute": -45
+  },
+  "spawn_overrides": {}
+}

@@ -1,0 +1,12 @@
+{
+	"config": {
+		"radius": 0,
+		"state": {
+			"Name": "minecraft:purple_stained_glass"
+		},
+		"target": {
+			"Name": "minecraft:air"
+		}
+	},
+	"type": "minecraft:netherrack_replace_blobs"
+}

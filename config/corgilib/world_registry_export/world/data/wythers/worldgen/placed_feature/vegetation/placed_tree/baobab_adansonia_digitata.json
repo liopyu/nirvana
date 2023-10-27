@@ -1,0 +1,41 @@
+{
+	"feature": {
+		"config": {
+			"default": "wythers:vegetation/placed_tree_component/baobab_bloated_tall_base_1",
+			"features": [
+				{
+					"chance": 0.5,
+					"feature": "wythers:vegetation/placed_tree_component/baobab_bloated_tall_base_2"
+				},
+				{
+					"chance": 0.014999999664723873,
+					"feature": "wythers:vegetation/placed_tree_component/baobab_bloated_tall_branches_1"
+				},
+				{
+					"chance": 0.009999999776482582,
+					"feature": "wythers:vegetation/placed_tree_component/baobab_bloated_tall_branches_2"
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 128,
+			"type": "minecraft:count"
+		},
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:dead_bush"
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"max_water_depth": 0,
+			"type": "minecraft:surface_water_depth_filter"
+		}
+	]
+}

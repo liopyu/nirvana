@@ -1,0 +1,15 @@
+{
+	"biomes": "#minecraft:has_structure/void",
+	"cannot_spawn_in_liquid": false,
+	"pools_that_ignore_boundaries": [],
+	"size": 2,
+	"spawn_overrides": { },
+	"start_height": {
+		"absolute": -45
+	},
+	"start_pool": "minecraft:emptystructure/empty",
+	"step": "underground_structures",
+	"terrain_adaptation": "beard_box",
+	"type": "integrated_api:generic_structure",
+	"use_bounding_box_hack": false
+}

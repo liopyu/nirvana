@@ -1,0 +1,27 @@
+{
+	"feature": "skylands:bulk_water_to_lava",
+	"placement": [
+		{
+			"count": 256,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 63
+				},
+				"min_inclusive": {
+					"above_bottom": 20
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

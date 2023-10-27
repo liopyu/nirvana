@@ -1,0 +1,50 @@
+{
+	"feature": {
+		"config": {
+			"half_height": 1,
+			"radius": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 3,
+					"min_inclusive": 2
+				}
+			},
+			"state_provider": {
+				"fallback": {
+					"state": {
+						"Name": "minecraft:clay"
+					},
+					"type": "minecraft:simple_state_provider"
+				},
+				"rules": []
+			},
+			"target": {
+				"blocks": [
+					"minecraft:dirt",
+					"minecraft:clay"
+				],
+				"type": "minecraft:matching_blocks"
+			}
+		},
+		"type": "ars_nouveau:disk"
+	},
+	"placement": [
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "OCEAN_FLOOR_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"predicate": {
+				"fluids": "minecraft:water",
+				"type": "minecraft:matching_fluids"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

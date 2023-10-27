@@ -1,0 +1,962 @@
+{
+  "type": "minecraft:chest",
+  "pools": [
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_iron",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:raw_zinc",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        
+        
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_gold",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_copper",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_zinc",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_osmium",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_silver",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_tin",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_lead",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_aluminum",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_uranium",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "create:crushed_raw_nickel",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 1,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "magistuarmory:diamond_pike"
+        },
+        {
+          "type": "minecraft:item",
+          "name": "magistuarmory:diamond_stylet"
+        },
+        
+        
+        {
+          "type": "minecraft:item",
+          "name": "magistuarmory:diamond_lochaberaxe"
+        },
+        
+        {
+          "type": "minecraft:item",
+          "name": "magistuarmory:diamond_zweihander"
+        }
+      ]
+    },
+    {
+      "bonus_rolls": 0.0,
+      "entries": [
+        {
+          "type": "minecraft:empty",
+          "weight": 400
+        },
+        
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:night_vision_goggles",
+          "weight": 8
+        },
+        
+        
+        
+        
+        
+        
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:fire_gauntlet",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:feral_claws",
+          "weight": 8
+        },
+        
+        
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:cross_necklace",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:antidote_vessel",
+          "weight": 8
+        },
+        
+        
+        
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:digging_claws",
+          "weight": 8
+        },
+        
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:universal_attractor",
+          "weight": 8
+        },
+        
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:running_shoes",
+          "weight": 8
+        },
+        
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:crystal_heart",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:villager_hat",
+          "weight": 8
+        },
+        {
+          "type": "minecraft:item",
+          "name": "artifacts:cloud_in_a_bottle",
+          "weight": 8
+        }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+      ],
+      "rolls": 1.0
+    },
+    
+    {
+      "rolls": {
+        "min": 2,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "potion_rings_rebooted:potion_ring",
+          "weight": 7,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
+        },
+        {
+        "type": "minecraft:empty",
+        "weight": 10
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2.0,
+        "max": 2.0
+      },
+      "bonus_rolls": 0.7,
+      "entries": [
+        
+        {
+          "weight": 8,
+          "type": "minecraft:empty"
+        },
+        
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 10.0,
+                "max": 16.0
+              },
+              "add": false
+            }
+          ],
+          "name": "minecraft:glowstone_dust"
+        },
+        
+        
+        {
+          "type": "minecraft:item",
+          "weight": 5,
+          "quality": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 3.0
+              },
+              "add": false
+            }
+          ],
+          "name": "minecraft:diamond"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 6,
+          "quality": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 1.0
+              },
+              "add": false
+            }
+          ],
+          "name": "minecraft:golden_apple"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 10,
+          "quality": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 12.0,
+                "max": 20.0
+              },
+              "add": false
+            }
+          ],
+          "name": "minecraft:experience_bottle"
+        }
+        
+      ]
+    },
+    {
+      "rolls": {
+        "min": 2,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lapis_block",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 7
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald_block",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_block",
+          "weight": 15,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_block",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+
+        {
+          "type": "minecraft:item",
+          "name": "recall_potion:recall_food",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 2,
+        "max": 2
+      },
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:lapis_block",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 3,
+                "max": 7
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:emerald_block",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:diamond_block",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_block",
+          "weight": 5,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 3
+              }
+            }
+          ]
+        },
+
+        {
+          "type": "minecraft:item",
+          "name": "recall_potion:recall_food",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 1,
+                "max": 1
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "min": 2,
+        "max": 2
+      },
+      "entries": [
+        
+        
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:ender_pearl",
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 4,
+                "max": 5
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:gold_ingot",
+          "weight": 3,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 2,
+                "max": 5
+              }
+            }
+          ]
+        },
+        
+        {
+          "type": "minecraft:item",
+          "name": "magistuarmory:steel_ingot",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 5,
+                "max": 7
+              }
+            }
+          ]
+        },
+        {
+          "type": "minecraft:item",
+          "name": "minecraft:glowstone_dust",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "min": 7,
+                "max": 12
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2.0,
+        "max": 3.0
+      },
+      "bonus_rolls": 0.7,
+      "entries": [
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 2.0,
+                "max": 5.0
+              },
+              "add": false
+            }
+          ],
+          "name": "theabyss:bottle_of_somnium"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 2.0
+              },
+              "add": false
+            }
+          ],
+          "name": "born_in_chaos_v1:pileof_dark_metal"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 1.0
+              },
+              "add": false
+            }
+          ],
+          "name": "healingflasks:t_2_healing_flask"
+        }
+      ]
+    },
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2.0,
+        "max": 2.0
+      },
+      "bonus_rolls": 0.7,
+      "entries": [
+        {
+          "weight": 15,
+          "type": "minecraft:empty"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 1.0
+              },
+              "add": false
+            }
+          ],
+          "name": "theabyss:ring_of_teleport"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 1.0
+              },
+              "add": false
+            }
+          ],
+          "name": "theabyss:ring_of_speed"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 1,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 1.0
+              },
+              "add": false
+            }
+          ],
+          "name": "theabyss:ring_of_home"
+        },
+        {
+          "type": "minecraft:item",
+          "weight": 13,
+          "functions": [
+            {
+              "function": "minecraft:set_count",
+              "count": {
+                "type": "minecraft:uniform",
+                "min": 1.0,
+                "max": 2.0
+              },
+              "add": false
+            }
+          ],
+          "name": "theabyss:anima_nugget"
+        }
+      ]
+    },
+    
+    {
+      "rolls": {
+        "type": "minecraft:uniform",
+        "min": 2.0,
+        "max": 2.0
+      },
+      "bonus_rolls": 0.2,
+      "entries": [
+        {
+          "type": "placebo:stack_entry",
+          "weight": 10,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly"
+            }
+          ],
+          "min": 1,
+          "max": 2,
+          "stack": {
+            "item": "minecraft:book",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly"
+            }
+          ],
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "magistuarmory:diamond_shortsword",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "functions": [
+            {
+              "function": "minecraft:enchant_randomly"
+            }
+          ],
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "magistuarmory:diamond_concavehalberd",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        
+        
+        
+        
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "magistuarmory:diamond_stylet",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+       
+        
+        
+        
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "magistuarmory:diamond_rondache",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "magistuarmory:silver_lucernhammer",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "magistuarmory:silver_stylet",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "magistuarmory:silver_shortsword",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "minecraft:diamond_helmet",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "minecraft:diamond_boots",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "minecraft:diamond_leggings",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        {
+          "type": "placebo:stack_entry",
+          "weight": 1,
+          "quality": 1,
+          "min": 1,
+          "max": 1,
+          "stack": {
+            "item": "minecraft:diamond_chestplate",
+            "count": 1,
+            "nbt": "{Damage:0}"
+          }
+        },
+        
+        {
+          "weight": 10,
+          "type": "minecraft:empty"
+        }
+      ]
+    }
+    
+    
+    
+    
+    
+  ]
+}

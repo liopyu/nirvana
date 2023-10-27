@@ -1,0 +1,36 @@
+{
+	"feature": {
+		"config": {
+			"default": "wythers:vegetation/placed_tree_component/maple_mid",
+			"features": [
+				{
+					"chance": 0.25,
+					"feature": "wythers:vegetation/placed_tree_component/maple_low"
+				},
+				{
+					"chance": 0.25,
+					"feature": "wythers:vegetation/placed_tree_component/maple_high"
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 3,
+			"type": "minecraft:count"
+		},
+		{
+			"predicate": {
+				"offset": [
+					0,
+					-1,
+					0
+				],
+				"tag": "minecraft:dirt",
+				"type": "minecraft:matching_block_tag"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

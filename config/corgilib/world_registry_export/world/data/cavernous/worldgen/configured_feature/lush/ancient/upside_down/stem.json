@@ -1,0 +1,41 @@
+{
+	"config": {
+		"allowed_placement": {
+			"predicates": [
+				{
+					"blocks": "minecraft:air",
+					"type": "minecraft:matching_blocks"
+				}
+			],
+			"type": "minecraft:all_of"
+		},
+		"direction": "down",
+		"layers": [
+			{
+				"height": {
+					"type": "minecraft:uniform",
+					"value": {
+						"max_inclusive": 5,
+						"min_inclusive": 2
+					}
+				},
+				"provider": {
+					"state": {
+						"Name": "minecraft:mushroom_stem",
+						"Properties": {
+							"down": "true",
+							"east": "true",
+							"north": "true",
+							"south": "true",
+							"up": "true",
+							"west": "true"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			}
+		],
+		"prioritize_tip": true
+	},
+	"type": "minecraft:block_column"
+}

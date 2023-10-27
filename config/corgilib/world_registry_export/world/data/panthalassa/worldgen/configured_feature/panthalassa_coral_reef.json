@@ -1,0 +1,28 @@
+{
+	"config": {
+		"features": [
+			{
+				"feature": {
+					"config": { },
+					"type": "panthalassa:panthalassa_coral_tree"
+				},
+				"placement": []
+			},
+			{
+				"feature": {
+					"config": { },
+					"type": "panthalassa:panthalassa_coral_claw"
+				},
+				"placement": []
+			},
+			{
+				"feature": {
+					"config": { },
+					"type": "panthalassa:panthalassa_coral_mushroom"
+				},
+				"placement": []
+			}
+		]
+	},
+	"type": "minecraft:simple_random_selector"
+}

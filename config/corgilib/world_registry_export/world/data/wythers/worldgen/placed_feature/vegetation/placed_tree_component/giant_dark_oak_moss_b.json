@@ -1,0 +1,40 @@
+{
+	"feature": {
+		"config": {
+			"default": "wythers:vegetation/placed_tree_component/giant_dark_oak_branches_moss",
+			"features": [
+				{
+					"chance": 0.25,
+					"feature": "wythers:vegetation/placed_tree_component/giant_dark_oak_branches_moss"
+				},
+				{
+					"chance": 0.25,
+					"feature": "wythers:vegetation/placed_tree_component/giant_dark_oak_branches_high_moss"
+				},
+				{
+					"chance": 0.5,
+					"feature": "wythers:vegetation/placed_tree_component/giant_dark_oak_trunk_moss"
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 3,
+			"type": "minecraft:count"
+		},
+		{
+			"predicate": {
+				"offset": [
+					0,
+					-1,
+					0
+				],
+				"tag": "minecraft:dirt",
+				"type": "minecraft:matching_block_tag"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

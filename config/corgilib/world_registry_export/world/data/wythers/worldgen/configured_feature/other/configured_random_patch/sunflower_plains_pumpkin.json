@@ -1,0 +1,51 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"features": [
+						"wythers:other/placed_block_column/pumpkin_and_stem_north",
+						"wythers:other/placed_block_column/pumpkin_and_stem_south",
+						"wythers:other/placed_block_column/pumpkin_and_stem_east",
+						"wythers:other/placed_block_column/pumpkin_and_stem_west",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems",
+						"wythers:other/placed_block_column/pumpkin_stems"
+					]
+				},
+				"type": "minecraft:simple_random_selector"
+			},
+			"placement": [
+				{
+					"predicate": {
+						"blocks": [
+							"minecraft:podzol",
+							"minecraft:rooted_dirt",
+							"minecraft:dirt"
+						],
+						"offset": [
+							0,
+							-1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 96,
+		"xz_spread": 7,
+		"y_spread": 3
+	},
+	"type": "minecraft:random_patch"
+}

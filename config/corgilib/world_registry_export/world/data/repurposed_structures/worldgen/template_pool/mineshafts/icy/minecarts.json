@@ -1,0 +1,29 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:minecarts/icy_mineshaft_minecart",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:mineshafts/icy/ice_decor",
+				"processors": "repurposed_structures:mineshafts/icy_misc",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 225
+		}
+	],
+	"fallback": "repurposed_structures:mineshafts/icy/minecarts",
+	"name": "repurposed_structures:mineshafts/icy/minecarts"
+}

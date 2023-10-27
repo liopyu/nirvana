@@ -1,0 +1,36 @@
+{
+	"feature": {
+		"config": {
+			"default": {
+				"feature": "theabyss:terrain_spring/plains/normal",
+				"placement": []
+			},
+			"features": [
+				{
+					"chance": 0.5,
+					"feature": {
+						"feature": "theabyss:terrain_spring/plains/normal",
+						"placement": []
+					}
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 1,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "WORLD_SURFACE_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

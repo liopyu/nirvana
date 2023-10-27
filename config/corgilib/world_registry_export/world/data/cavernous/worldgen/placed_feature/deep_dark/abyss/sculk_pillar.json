@@ -1,0 +1,51 @@
+{
+	"feature": "cavernous:deep_dark/abyss/sculk_pillar",
+	"placement": [
+		{
+			"count": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 6,
+					"min_inclusive": 2
+				}
+			},
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": -35
+				},
+				"min_inclusive": {
+					"above_bottom": 0
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		},
+		{
+			"direction_of_search": "down",
+			"max_steps": 12,
+			"target_condition": {
+				"predicates": [
+					{
+						"blocks": "minecraft:sculk",
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:deepslate",
+						"type": "minecraft:matching_blocks"
+					}
+				],
+				"type": "minecraft:any_of"
+			},
+			"type": "minecraft:environment_scan"
+		}
+	]
+}

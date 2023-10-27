@@ -1,0 +1,7 @@
+{
+	"flowing_texture": "create:fluid/honey_flow",
+	"from_mod": "autumnity",
+	"still_texture": "create:fluid/honey_still",
+	"translation_key": "item.autumnity.syrup",
+	"use_texture_from": "create:honey"
+}

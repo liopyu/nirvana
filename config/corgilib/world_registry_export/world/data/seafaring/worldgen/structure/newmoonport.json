@@ -1,0 +1,19 @@
+{
+	"biomes": "#seafaring:has_structure/newmoonport",
+	"max_distance_from_center": 128,
+	"size": 20,
+	"spawn_overrides": { },
+	"start_height": {
+		"max_inclusive": {
+			"absolute": 63
+		},
+		"min_inclusive": {
+			"absolute": 63
+		},
+		"type": "minecraft:uniform"
+	},
+	"start_jigsaw_name": "seafaring:anchor",
+	"start_pool": "seafaring:pool8",
+	"step": "surface_structures",
+	"type": "yungsapi:yung_jigsaw"
+}

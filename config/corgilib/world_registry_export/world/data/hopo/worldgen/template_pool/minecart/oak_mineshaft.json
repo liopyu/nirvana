@@ -1,0 +1,96 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/path_1",
+				"processors": "hopo:oak/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/path_2",
+				"processors": "hopo:oak/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/path_1_sculk",
+				"processors": "hopo:oak/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/path_2_sculk",
+				"processors": "hopo:oak/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/path_1_down",
+				"processors": "hopo:oak/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/path_2_down",
+				"processors": "hopo:oak/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/path_1_down_sculk",
+				"processors": "hopo:oak/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/path_2_down_sculk",
+				"processors": "hopo:oak/minecart_degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/connector_1",
+				"processors": "hopo:oak/degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hopo:mineshaft/oak/minecart/connector_2",
+				"processors": "hopo:oak/degraded",
+				"projection": "rigid"
+			},
+			"weight": 100
+		}
+	],
+	"fallback": "hopo:minecart/oak_mineshaft",
+	"name": "hopo:minecart/oak_mineshaft"
+}

@@ -1,0 +1,6 @@
+{
+	"config": {
+		"features": "#tectonic:trees/special/swamp_standard"
+	},
+	"type": "minecraft:simple_random_selector"
+}

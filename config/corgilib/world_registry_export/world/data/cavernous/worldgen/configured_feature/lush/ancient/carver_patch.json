@@ -1,0 +1,63 @@
+{
+	"config": {
+		"depth": 1,
+		"extra_bottom_block_chance": 0.0,
+		"extra_edge_column_chance": 0.0,
+		"ground_state": {
+			"default_state": {
+				"Name": "minecraft:moss_block"
+			},
+			"high_chance": 0.33329999446868896,
+			"high_states": [
+				{
+					"Name": "minecraft:grass_block",
+					"Properties": {
+						"snowy": "false"
+					}
+				},
+				{
+					"Name": "minecraft:mycelium",
+					"Properties": {
+						"snowy": "false"
+					}
+				}
+			],
+			"low_states": [
+				{
+					"Name": "minecraft:mycelium",
+					"Properties": {
+						"snowy": "false"
+					}
+				}
+			],
+			"noise": {
+				"amplitudes": [
+					1.0,
+					1.0,
+					1.0
+				],
+				"firstOctave": -6
+			},
+			"scale": 0.004999999888241291,
+			"seed": 1231254,
+			"threshold": -0.800000011920929,
+			"type": "minecraft:noise_threshold_provider"
+		},
+		"replaceable": "#cavernous:ancient_replacable",
+		"surface": "floor",
+		"vegetation_chance": 0.03500000014901161,
+		"vegetation_feature": {
+			"feature": "cavernous:lush/ancient/ancient_vegetation",
+			"placement": []
+		},
+		"vertical_range": 1,
+		"xz_radius": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_inclusive": 6,
+				"min_inclusive": 3
+			}
+		}
+	},
+	"type": "minecraft:vegetation_patch"
+}

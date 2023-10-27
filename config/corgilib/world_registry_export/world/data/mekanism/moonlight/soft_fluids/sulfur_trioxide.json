@@ -1,0 +1,21 @@
+{
+	"color": "ffce6c6c",
+	"containers": [
+		{
+			"capacity": 4,
+			"empty": "minecraft:bucket",
+			"empty_sound": "minecraft:item.bucket.empty",
+			"fill_sound": "minecraft:item.bucket.fill",
+			"filled": [
+				"mekanism:sulfur_trioxide_bucket"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"mekanism:sulfur_trioxide"
+	],
+	"flowing_texture": "mekanism:liquid/liquid_flow",
+	"still_texture": "mekanism:liquid/liquid",
+	"translation_key": "block.mekanism.sulfur_trioxide",
+	"use_texture_from": "mekanism:sulfur_trioxide"
+}

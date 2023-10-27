@@ -1,0 +1,33 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:desert_house/feature_oasis",
+				"processors": "valhelsia_structures:desert_house/wells_and_oasis",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:desert_house/feature_well_1",
+				"processors": "valhelsia_structures:desert_house/wells_and_oasis",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:desert_house/feature_well_2",
+				"processors": "valhelsia_structures:desert_house/wells_and_oasis",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "valhelsia_structures:desert_house/wells_and_oasis"
+}

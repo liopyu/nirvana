@@ -1,0 +1,21 @@
+{
+	"color": "ffeb6ca3",
+	"containers": [
+		{
+			"capacity": 4,
+			"empty": "minecraft:bucket",
+			"empty_sound": "minecraft:item.bucket.empty",
+			"fill_sound": "minecraft:item.bucket.fill",
+			"filled": [
+				"mekanism:nutritional_paste_bucket"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"mekanism:nutritional_paste"
+	],
+	"flowing_texture": "mekanism:liquid/liquid_flow",
+	"still_texture": "mekanism:liquid/liquid",
+	"translation_key": "block.mekanism.nutritional_paste",
+	"use_texture_from": "mekanism:nutritional_paste"
+}

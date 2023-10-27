@@ -1,0 +1,15 @@
+{
+	"config": {
+		"radius": 0,
+		"state": {
+			"Name": "minecraft:spruce_wood",
+			"Properties": {
+				"axis": "y"
+			}
+		},
+		"target": {
+			"Name": "minecraft:cave_air"
+		}
+	},
+	"type": "minecraft:netherrack_replace_blobs"
+}

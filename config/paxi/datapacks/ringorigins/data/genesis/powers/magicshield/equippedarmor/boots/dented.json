@@ -1,0 +1,14 @@
+{
+   "type": "origins:multiple",
+   "name": "Arcane",
+   
+   "arcane": 
+   {
+      "type": "origins:attribute",
+      "modifier": {
+          "attribute": "minecraft:generic.armor",
+          "value": -0.75,
+          "operation": "addition"
+      }
+  }
+}

@@ -1,0 +1,19 @@
+{
+	"feature": "gothic:blue_elder_gen",
+	"placement": [
+		{
+			"chance": 50,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

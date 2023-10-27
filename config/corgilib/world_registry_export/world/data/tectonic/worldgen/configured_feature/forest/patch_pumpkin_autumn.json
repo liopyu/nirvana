@@ -1,0 +1,238 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"features": [
+						{
+							"feature": {
+								"config": {
+									"discard_chance_on_air_exposure": 0.0,
+									"size": 48,
+									"targets": [
+										{
+											"state": {
+												"Name": "minecraft:coarse_dirt"
+											},
+											"target": {
+												"block": "minecraft:grass_block",
+												"predicate_type": "minecraft:random_block_match",
+												"probability": 0.5
+											}
+										}
+									]
+								},
+								"type": "minecraft:ore"
+							},
+							"placement": [
+								{
+									"predicate": {
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													0,
+													-1,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:all_of"
+									},
+									"type": "minecraft:block_predicate_filter"
+								}
+							]
+						},
+						{
+							"feature": "tectonic:forest/pumpkin_placer/north",
+							"placement": [
+								{
+									"predicate": {
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													0,
+													0,
+													-1
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													0,
+													-1,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													0,
+													-1,
+													-1
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:all_of"
+									},
+									"type": "minecraft:block_predicate_filter"
+								}
+							]
+						},
+						{
+							"feature": "tectonic:forest/pumpkin_placer/south",
+							"placement": [
+								{
+									"predicate": {
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													0,
+													0,
+													1
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													0,
+													-1,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													0,
+													-1,
+													1
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:all_of"
+									},
+									"type": "minecraft:block_predicate_filter"
+								}
+							]
+						},
+						{
+							"feature": "tectonic:forest/pumpkin_placer/west",
+							"placement": [
+								{
+									"predicate": {
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													-1,
+													0,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													0,
+													-1,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													-1,
+													-1,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:all_of"
+									},
+									"type": "minecraft:block_predicate_filter"
+								}
+							]
+						},
+						{
+							"feature": "tectonic:forest/pumpkin_placer/east",
+							"placement": [
+								{
+									"predicate": {
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													1,
+													0,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													0,
+													-1,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "#minecraft:dirt",
+												"offset": [
+													1,
+													-1,
+													0
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:all_of"
+									},
+									"type": "minecraft:block_predicate_filter"
+								}
+							]
+						}
+					]
+				},
+				"type": "minecraft:simple_random_selector"
+			},
+			"placement": []
+		},
+		"tries": 72,
+		"xz_spread": 6,
+		"y_spread": 3
+	},
+	"type": "minecraft:random_patch"
+}

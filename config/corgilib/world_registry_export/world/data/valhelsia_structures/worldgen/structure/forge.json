@@ -1,0 +1,25 @@
+{
+	"biomes": "#valhelsia_structures:has_structure/has_forge",
+	"max_distance_from_center": 80,
+	"name": "forge",
+	"project_start_to_heightmap": "WORLD_SURFACE_WG",
+	"requires_distance_to": [
+		"valhelsia_structures:castle_ruins",
+		"valhelsia_structures:castles",
+		"valhelsia_structures:player_houses",
+		"valhelsia_structures:tower_ruins",
+		"valhelsia_structures:big_trees"
+	],
+	"size": 7,
+	"spawn_overrides": { },
+	"start_height": {
+		"height_provider": {
+			"absolute": 0
+		},
+		"type": "valhelsia_structures:default_height"
+	},
+	"start_pool": "valhelsia_structures:forges",
+	"step": "surface_structures",
+	"terrain_adaptation": "beard_thin",
+	"type": "valhelsia_structures:legacy_valhelsia_jigsaw_structure"
+}

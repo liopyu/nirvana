@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "wythers:vegetation/placed_tree/coastal_mangrove",
+		"features": [
+			{
+				"chance": 0.8500000238418579,
+				"feature": "wythers:vegetation/placed_tree/coastal_mangrove"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

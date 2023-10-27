@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "bro:desert/spike_small_test",
+		"features": [
+			{
+				"chance": 0.25,
+				"feature": "bro:desert/humanoid_bone"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

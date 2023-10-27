@@ -1,0 +1,17 @@
+{
+	"feature": "tectonic:forest/trees/fancy_oak/variant_2_builder",
+	"placement": [
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:oak_sapling",
+					"Properties": {
+						"stage": "0"
+					}
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "wythers:features/trees/baobabs/savanna/adansonia_digitata_1",
+				"processors": "wythers:baobab",
+				"projection": "rigid"
+			},
+			"weight": 50
+		}
+	],
+	"fallback": "wythers:features/trees/baobabs/savanna",
+	"name": "wythers:features/trees/baobabs/savanna"
+}

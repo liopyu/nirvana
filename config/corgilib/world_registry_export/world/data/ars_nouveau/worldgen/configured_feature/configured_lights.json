@@ -1,0 +1,12 @@
+{
+	"config": {
+		"state": {
+			"Name": "ars_nouveau:light_block",
+			"Properties": {
+				"level": "0",
+				"waterlogged": "false"
+			}
+		}
+	},
+	"type": "ars_nouveau:lights"
+}

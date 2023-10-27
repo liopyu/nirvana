@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:strongholds/nether/start_crossing",
+				"processors": "repurposed_structures:strongholds/nether_randomize",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:strongholds/nether/terminators",
+	"name": "repurposed_structures:strongholds/nether/crossing"
+}

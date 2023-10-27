@@ -1,0 +1,178 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"default": {
+						"feature": {
+							"config": {
+								"features": [
+									{
+										"feature": "tectonic:forest/trees/standard_oak/piece/trunk_no_roots",
+										"placement": []
+									},
+									{
+										"feature": "tectonic:forest/trees/standard_oak/piece/trunk_with_roots",
+										"placement": []
+									}
+								]
+							},
+							"type": "minecraft:simple_random_selector"
+						},
+						"placement": [
+							{
+								"predicate": {
+									"blocks": "minecraft:air",
+									"type": "minecraft:matching_blocks"
+								},
+								"type": "minecraft:block_predicate_filter"
+							}
+						]
+					},
+					"features": [
+						{
+							"chance": 0.4000000059604645,
+							"feature": {
+								"feature": "tectonic:forest/trees/standard_oak/piece/treetop",
+								"placement": [
+									{
+										"allowed_search_condition": {
+											"blocks": "#minecraft:oak_logs",
+											"type": "minecraft:matching_blocks"
+										},
+										"direction_of_search": "up",
+										"max_steps": 8,
+										"target_condition": {
+											"blocks": "minecraft:air",
+											"type": "minecraft:matching_blocks"
+										},
+										"type": "minecraft:environment_scan"
+									},
+									{
+										"type": "minecraft:random_offset",
+										"xz_spread": {
+											"type": "minecraft:uniform",
+											"value": {
+												"max_inclusive": 1,
+												"min_inclusive": -1
+											}
+										},
+										"y_spread": -1
+									},
+									{
+										"predicate": {
+											"predicates": [
+												{
+													"predicates": [
+														{
+															"blocks": "#minecraft:oak_logs",
+															"offset": [
+																0,
+																-2,
+																-1
+															],
+															"type": "minecraft:matching_blocks"
+														},
+														{
+															"blocks": "#minecraft:oak_logs",
+															"offset": [
+																0,
+																-2,
+																1
+															],
+															"type": "minecraft:matching_blocks"
+														},
+														{
+															"blocks": "#minecraft:oak_logs",
+															"offset": [
+																1,
+																-2,
+																0
+															],
+															"type": "minecraft:matching_blocks"
+														},
+														{
+															"blocks": "#minecraft:oak_logs",
+															"offset": [
+																-1,
+																-2,
+																0
+															],
+															"type": "minecraft:matching_blocks"
+														}
+													],
+													"type": "minecraft:any_of"
+												},
+												{
+													"predicate": {
+														"predicates": [
+															{
+																"blocks": "#minecraft:oak_logs",
+																"offset": [
+																	1,
+																	0,
+																	1
+																],
+																"type": "minecraft:matching_blocks"
+															},
+															{
+																"blocks": "#minecraft:oak_logs",
+																"offset": [
+																	-1,
+																	0,
+																	1
+																],
+																"type": "minecraft:matching_blocks"
+															},
+															{
+																"blocks": "#minecraft:oak_logs",
+																"offset": [
+																	1,
+																	0,
+																	-1
+																],
+																"type": "minecraft:matching_blocks"
+															},
+															{
+																"blocks": "#minecraft:oak_logs",
+																"offset": [
+																	-1,
+																	0,
+																	-1
+																],
+																"type": "minecraft:matching_blocks"
+															},
+															{
+																"blocks": "#minecraft:oak_logs",
+																"type": "minecraft:matching_blocks"
+															}
+														],
+														"type": "minecraft:any_of"
+													},
+													"type": "minecraft:not"
+												}
+											],
+											"type": "minecraft:all_of"
+										},
+										"type": "minecraft:block_predicate_filter"
+									},
+									{
+										"type": "minecraft:random_offset",
+										"xz_spread": 0,
+										"y_spread": 1
+									}
+								]
+							}
+						}
+					]
+				},
+				"type": "minecraft:random_selector"
+			},
+			"placement": []
+		},
+		"tries": 32,
+		"xz_spread": 0,
+		"y_spread": 0
+	},
+	"type": "minecraft:random_patch"
+}

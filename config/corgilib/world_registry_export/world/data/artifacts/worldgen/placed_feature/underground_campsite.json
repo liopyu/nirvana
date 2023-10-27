@@ -1,0 +1,52 @@
+{
+	"feature": "artifacts:campsite",
+	"placement": [
+		{
+			"count": 3,
+			"type": "minecraft:count"
+		},
+		{
+			"chance": 1,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 40
+				},
+				"min_inclusive": {
+					"absolute": -60
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"allowed_search_condition": {
+				"blocks": "minecraft:air",
+				"type": "minecraft:matching_blocks"
+			},
+			"direction_of_search": "down",
+			"max_steps": 8,
+			"target_condition": {
+				"type": "minecraft:solid"
+			},
+			"type": "minecraft:environment_scan"
+		},
+		{
+			"type": "minecraft:random_offset",
+			"xz_spread": 0,
+			"y_spread": 1
+		},
+		{
+			"max_height": 6,
+			"type": "artifacts:ceiling_height_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

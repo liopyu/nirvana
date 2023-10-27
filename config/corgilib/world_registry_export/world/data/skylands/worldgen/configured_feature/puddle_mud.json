@@ -1,0 +1,148 @@
+{
+	"config": {
+		"half_height": 1,
+		"radius": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_inclusive": 6,
+				"min_inclusive": 6
+			}
+		},
+		"state_provider": {
+			"fallback": {
+				"state": {
+					"Name": "minecraft:mud"
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"rules": [
+				{
+					"if_true": {
+						"predicates": [
+							{
+								"blocks": "minecraft:air",
+								"offset": [
+									0,
+									1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							{
+								"offset": [
+									0,
+									-1,
+									0
+								],
+								"type": "minecraft:solid"
+							},
+							{
+								"predicates": [
+									{
+										"offset": [
+											1,
+											0,
+											0
+										],
+										"type": "minecraft:solid"
+									},
+									{
+										"blocks": "minecraft:water",
+										"offset": [
+											1,
+											0,
+											0
+										],
+										"type": "minecraft:matching_blocks"
+									}
+								],
+								"type": "minecraft:any_of"
+							},
+							{
+								"predicates": [
+									{
+										"offset": [
+											0,
+											0,
+											1
+										],
+										"type": "minecraft:solid"
+									},
+									{
+										"blocks": "minecraft:water",
+										"offset": [
+											0,
+											0,
+											1
+										],
+										"type": "minecraft:matching_blocks"
+									}
+								],
+								"type": "minecraft:any_of"
+							},
+							{
+								"predicates": [
+									{
+										"offset": [
+											-1,
+											0,
+											0
+										],
+										"type": "minecraft:solid"
+									},
+									{
+										"blocks": "minecraft:water",
+										"offset": [
+											-1,
+											0,
+											0
+										],
+										"type": "minecraft:matching_blocks"
+									}
+								],
+								"type": "minecraft:any_of"
+							},
+							{
+								"predicates": [
+									{
+										"offset": [
+											0,
+											0,
+											-1
+										],
+										"type": "minecraft:solid"
+									},
+									{
+										"blocks": "minecraft:water",
+										"offset": [
+											0,
+											0,
+											-1
+										],
+										"type": "minecraft:matching_blocks"
+									}
+								],
+								"type": "minecraft:any_of"
+							}
+						],
+						"type": "minecraft:all_of"
+					},
+					"then": {
+						"state": {
+							"Name": "minecraft:water",
+							"Properties": {
+								"level": "0"
+							}
+						},
+						"type": "minecraft:simple_state_provider"
+					}
+				}
+			]
+		},
+		"target": {
+			"blocks": "minecraft:mud",
+			"type": "minecraft:matching_blocks"
+		}
+	},
+	"type": "minecraft:disk"
+}

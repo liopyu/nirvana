@@ -1,0 +1,23 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"default": "wythers:vegetation/placed_block_column/twisting_vines",
+					"features": [
+						{
+							"chance": 0.10000000149011612,
+							"feature": "wythers:vegetation/placed_block_column/twisting_vines_mature"
+						}
+					]
+				},
+				"type": "minecraft:random_selector"
+			},
+			"placement": []
+		},
+		"tries": 48,
+		"xz_spread": 3,
+		"y_spread": 3
+	},
+	"type": "minecraft:random_patch"
+}

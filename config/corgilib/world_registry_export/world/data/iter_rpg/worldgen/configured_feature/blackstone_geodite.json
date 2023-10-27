@@ -1,0 +1,34 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 4,
+		"targets": [
+			{
+				"state": {
+					"Name": "iter_rpg:blackstone_geodite"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:blackstone"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			},
+			{
+				"state": {
+					"Name": "iter_rpg:blackstone_geodite"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:basalt",
+						"Properties": {
+							"axis": "y"
+						}
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			}
+		]
+	},
+	"type": "iter_rpg:blackstone_geodite"
+}

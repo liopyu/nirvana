@@ -1,0 +1,62 @@
+{
+	"feature": "cavernous:lush/honey/honey_pool",
+	"placement": [
+		{
+			"heightmap": "WORLD_SURFACE",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 192
+				},
+				"min_inclusive": {
+					"above_bottom": 0
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"direction_of_search": "down",
+			"max_steps": 32,
+			"target_condition": {
+				"predicates": [
+					{
+						"predicate": {
+							"blocks": "minecraft:air",
+							"type": "minecraft:matching_blocks"
+						},
+						"type": "minecraft:not"
+					},
+					{
+						"offset": [
+							0,
+							-5,
+							0
+						],
+						"type": "minecraft:inside_world_bounds"
+					}
+				],
+				"type": "minecraft:all_of"
+			},
+			"type": "minecraft:environment_scan"
+		},
+		{
+			"type": "minecraft:biome"
+		},
+		{
+			"count": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 3,
+					"min_inclusive": 0
+				}
+			},
+			"type": "minecraft:count"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "bygonenether:mob_feature_wither_skeleton",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "bygonenether:catacomb/wither_skeleton",
+	"name": "bygonenether:catacomb/wither_skeleton"
+}

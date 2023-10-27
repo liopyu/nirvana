@@ -1,0 +1,10 @@
+{
+	"equivalent_fluids": [
+		"sophisticatedcore:xp_still"
+	],
+	"flowing_texture": "sophisticatedcore:fluids/xp_flowing",
+	"luminosity": 10,
+	"still_texture": "sophisticatedcore:fluids/xp_still",
+	"translation_key": "fluid_type.sophisticatedcore.experience",
+	"use_texture_from": "sophisticatedcore:xp_still"
+}

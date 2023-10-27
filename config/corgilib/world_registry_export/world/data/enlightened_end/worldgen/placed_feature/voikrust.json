@@ -1,0 +1,27 @@
+{
+	"feature": "enlightened_end:voikrust",
+	"placement": [
+		{
+			"count": 8,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 15
+				},
+				"min_inclusive": {
+					"absolute": 1
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

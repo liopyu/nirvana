@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "bro:forest/dark_oak",
+		"features": [
+			{
+				"chance": 1.0,
+				"feature": "bro:forest/dark_oak"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

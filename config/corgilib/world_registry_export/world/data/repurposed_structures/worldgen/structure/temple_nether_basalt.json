@@ -1,0 +1,15 @@
+{
+	"biomes": "#minecraft:has_structure/void",
+	"cannot_spawn_in_liquid": false,
+	"land_search_direction": "HIGHEST_LAND",
+	"pools_that_ignore_boundaries": [],
+	"size": 1,
+	"spawn_overrides": { },
+	"start_height": {
+		"absolute": -4
+	},
+	"start_pool": "repurposed_structures:temples/nether_basalt",
+	"step": "surface_structures",
+	"type": "repurposed_structures:generic_nether_jigsaw_structure",
+	"use_bounding_box_hack": false
+}

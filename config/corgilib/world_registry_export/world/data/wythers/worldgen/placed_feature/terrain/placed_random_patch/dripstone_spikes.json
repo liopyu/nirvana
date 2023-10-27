@@ -1,0 +1,19 @@
+{
+	"feature": "wythers:terrain/configured_random_patch/dripstone_spikes",
+	"placement": [
+		{
+			"count": 30,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

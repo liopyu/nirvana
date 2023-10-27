@@ -1,0 +1,21 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "hexfortress:decor/low_bridge_center/pillar_base",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "hexfortress:decor/low_bridge_cross_centers",
+	"name": "hexfortress:decor/low_bridge_cross_centers"
+}

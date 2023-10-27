@@ -1,0 +1,36 @@
+{
+	"allowed_terrain_height_range": 15,
+	"biomes": "#idas:has_structure/ancient_mines_biomes",
+	"cannot_spawn_in_liquid": false,
+	"pools_that_ignore_boundaries": [],
+	"project_start_to_heightmap": "WORLD_SURFACE_WG",
+	"size": 20,
+	"spawn_overrides": {
+		"monster": {
+			"bounding_box": "piece",
+			"spawns": [
+				{
+					"maxCount": 1,
+					"minCount": 0,
+					"type": "minecraft:silverfish",
+					"weight": 1
+				},
+				{
+					"maxCount": 1,
+					"minCount": 0,
+					"type": "quark:wraith",
+					"weight": 1
+				}
+			]
+		}
+	},
+	"start_height": {
+		"absolute": 0
+	},
+	"start_pool": "idas:ancient_mines/ancient_mines_entrance",
+	"step": "surface_structures",
+	"terrain_adaptation": "beard_box",
+	"terrain_height_radius_check": 1,
+	"type": "integrated_api:generic_structure",
+	"use_bounding_box_hack": true
+}

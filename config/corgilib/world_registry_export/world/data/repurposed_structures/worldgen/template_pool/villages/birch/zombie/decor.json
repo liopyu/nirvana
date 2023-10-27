@@ -1,0 +1,45 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/birch/decor/lamp_1",
+				"processors": "repurposed_structures:villages/birch/pillar_1_zombified",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "minecraft:birch_bees_002",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:lily_of_the_valley",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "minecraft:pile_hay",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 2
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:villages/birch/zombie/decor"
+}

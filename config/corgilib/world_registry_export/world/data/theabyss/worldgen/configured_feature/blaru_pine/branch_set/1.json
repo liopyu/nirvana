@@ -1,0 +1,71 @@
+{
+	"config": {
+		"features": [
+			{
+				"feature": "theabyss:blaru_pine/branch/1_east",
+				"placement": [
+					{
+						"type": "minecraft:random_offset",
+						"xz_spread": 0,
+						"y_spread": {
+							"type": "minecraft:uniform",
+							"value": {
+								"max_inclusive": 1,
+								"min_inclusive": 0
+							}
+						}
+					}
+				]
+			},
+			{
+				"feature": "theabyss:blaru_pine/branch/1_south",
+				"placement": [
+					{
+						"type": "minecraft:random_offset",
+						"xz_spread": 0,
+						"y_spread": {
+							"type": "minecraft:uniform",
+							"value": {
+								"max_inclusive": 1,
+								"min_inclusive": 0
+							}
+						}
+					}
+				]
+			},
+			{
+				"feature": "theabyss:blaru_pine/branch/1_west",
+				"placement": [
+					{
+						"type": "minecraft:random_offset",
+						"xz_spread": 0,
+						"y_spread": {
+							"type": "minecraft:uniform",
+							"value": {
+								"max_inclusive": 1,
+								"min_inclusive": 0
+							}
+						}
+					}
+				]
+			},
+			{
+				"feature": "theabyss:blaru_pine/branch/1_north",
+				"placement": [
+					{
+						"type": "minecraft:random_offset",
+						"xz_spread": 0,
+						"y_spread": {
+							"type": "minecraft:uniform",
+							"value": {
+								"max_inclusive": 1,
+								"min_inclusive": 0
+							}
+						}
+					}
+				]
+			}
+		]
+	},
+	"type": "minecraft:simple_random_selector"
+}

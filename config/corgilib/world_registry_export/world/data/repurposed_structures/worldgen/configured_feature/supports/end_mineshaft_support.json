@@ -1,0 +1,23 @@
+{
+	"config": {
+		"arch_blocks": [
+			"minecraft:purpur_pillar"
+		],
+		"arch_only": false,
+		"fence_state": {
+			"Name": "minecraft:purpur_pillar",
+			"Properties": {
+				"axis": "y"
+			}
+		},
+		"is_water_based": false,
+		"pillar_state": {
+			"Name": "minecraft:purpur_pillar",
+			"Properties": {
+				"axis": "z"
+			}
+		},
+		"target_floor_block": "minecraft:purpur_block"
+	},
+	"type": "repurposed_structures:mineshaft_supports"
+}

@@ -1,0 +1,6 @@
+{
+	"color": "eccd96",
+	"flowing_texture": "moonlight:soft_fluids/potion_flow",
+	"from_mod": "farmersdelight",
+	"still_texture": "moonlight:soft_fluids/soup_liquid"
+}

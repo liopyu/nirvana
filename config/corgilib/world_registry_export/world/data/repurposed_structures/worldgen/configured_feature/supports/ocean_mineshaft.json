@@ -1,0 +1,26 @@
+{
+	"config": {
+		"arch_blocks": [
+			"minecraft:sea_lantern",
+			"minecraft:dark_prismarine"
+		],
+		"arch_only": true,
+		"fence_state": {
+			"Name": "minecraft:prismarine_wall",
+			"Properties": {
+				"east": "none",
+				"north": "none",
+				"south": "none",
+				"up": "true",
+				"waterlogged": "true",
+				"west": "none"
+			}
+		},
+		"is_water_based": true,
+		"pillar_state": {
+			"Name": "minecraft:dark_prismarine"
+		},
+		"target_floor_block": "minecraft:prismarine_bricks"
+	},
+	"type": "repurposed_structures:mineshaft_supports"
+}

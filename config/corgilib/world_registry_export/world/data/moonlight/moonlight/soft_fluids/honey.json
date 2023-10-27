@@ -1,0 +1,43 @@
+{
+	"containers": [
+		{
+			"capacity": 4,
+			"empty": "minecraft:air",
+			"empty_sound": "minecraft:block.honey_block.break",
+			"fill_sound": "minecraft:block.honey_block.place",
+			"filled": [
+				"minecraft:honey_block"
+			]
+		},
+		{
+			"capacity": 4,
+			"empty": "minecraft:bucket",
+			"empty_sound": "minecraft:item.bucket.empty",
+			"fill_sound": "minecraft:item.bucket.fill",
+			"filled": [
+				"create:honey_bucket"
+			]
+		},
+		{
+			"capacity": 1,
+			"empty": "minecraft:glass_bottle",
+			"empty_sound": "minecraft:block.honey_block.break",
+			"fill_sound": "minecraft:block.honey_block.place",
+			"filled": [
+				"minecraft:honey_bottle"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"create:honey"
+	],
+	"flowing_texture": "create:fluid/honey_flow",
+	"food": {
+		"divider": 1,
+		"item": "minecraft:honey_bottle"
+	},
+	"still_texture": "create:fluid/honey_still",
+	"tint_method": "no_tint",
+	"translation_key": "fluid.supplementaries.honey",
+	"use_texture_from": "create:honey"
+}

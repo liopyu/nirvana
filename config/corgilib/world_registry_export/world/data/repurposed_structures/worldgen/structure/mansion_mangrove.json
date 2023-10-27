@@ -1,0 +1,11 @@
+{
+	"biomes": "#minecraft:has_structure/void",
+	"foundation_block": {
+		"Name": "minecraft:mud"
+	},
+	"mansion_type": "mangrove",
+	"pillar_only_to_land": true,
+	"spawn_overrides": { },
+	"step": "surface_structures",
+	"type": "repurposed_structures:mansion_structure"
+}

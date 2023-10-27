@@ -1,0 +1,98 @@
+{
+	"config": {
+		"decorators": [
+			{
+				"probability": 0.25,
+				"type": "minecraft:leave_vine"
+			}
+		],
+		"dirt_provider": {
+			"state": {
+				"Name": "minecraft:jungle_wood",
+				"Properties": {
+					"axis": "y"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"foliage_placer": {
+			"offset": 1,
+			"radius": 2,
+			"type": "minecraft:acacia_foliage_placer"
+		},
+		"foliage_provider": {
+			"state": {
+				"Name": "minecraft:jungle_leaves",
+				"Properties": {
+					"distance": "7",
+					"persistent": "false",
+					"waterlogged": "false"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		},
+		"force_dirt": true,
+		"ignore_vines": true,
+		"minimum_size": {
+			"limit": 0,
+			"lower_size": 0,
+			"min_clipped_height": 4,
+			"type": "minecraft:two_layers_feature_size",
+			"upper_size": 0
+		},
+		"root_placer": {
+			"mangrove_root_placement": {
+				"can_grow_through": "#minecraft:mangrove_roots_can_grow_through",
+				"max_root_length": 40,
+				"max_root_width": 1,
+				"muddy_roots_in": [
+					"minecraft:mud",
+					"minecraft:muddy_mangrove_roots"
+				],
+				"muddy_roots_provider": {
+					"state": {
+						"Name": "minecraft:muddy_mangrove_roots",
+						"Properties": {
+							"axis": "y"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				},
+				"random_skew_chance": 0.0
+			},
+			"root_provider": {
+				"state": {
+					"Name": "minecraft:jungle_wood",
+					"Properties": {
+						"axis": "y"
+					}
+				},
+				"type": "minecraft:simple_state_provider"
+			},
+			"trunk_offset_y": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 20,
+					"min_inclusive": 10
+				}
+			},
+			"type": "minecraft:mangrove_root_placer"
+		},
+		"trunk_placer": {
+			"base_height": 10,
+			"height_rand_a": 5,
+			"height_rand_b": 0,
+			"type": "minecraft:fancy_trunk_placer"
+		},
+		"trunk_provider": {
+			"state": {
+				"Name": "minecraft:jungle_wood",
+				"Properties": {
+					"axis": "y"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		}
+	},
+	"type": "minecraft:tree"
+}

@@ -1,0 +1,51 @@
+{
+	"feature": {
+		"config": {
+			"radius": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 12,
+					"min_inclusive": 7
+				}
+			},
+			"state": {
+				"Name": "minecraft:stripped_warped_hyphae",
+				"Properties": {
+					"axis": "y"
+				}
+			},
+			"target": {
+				"Name": "minecraft:oak_log",
+				"Properties": {
+					"axis": "y"
+				}
+			}
+		},
+		"type": "minecraft:netherrack_replace_blobs"
+	},
+	"placement": [
+		{
+			"count": 2,
+			"type": "minecraft:count"
+		},
+		{
+			"count": 200,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "OCEAN_FLOOR",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:random_offset",
+			"xz_spread": 0,
+			"y_spread": 15
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

@@ -1,0 +1,20 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 24,
+		"targets": [
+			{
+				"state": {
+					"Name": "theabyss:stone_rackle"
+				},
+				"target": {
+					"block_state": {
+						"Name": "theabyss:stone"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			}
+		]
+	},
+	"type": "theabyss:stone_rackle"
+}

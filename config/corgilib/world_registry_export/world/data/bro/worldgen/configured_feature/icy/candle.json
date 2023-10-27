@@ -1,0 +1,7 @@
+{
+	"config": {
+		"default": "bro:icy/candle_base",
+		"features": []
+	},
+	"type": "minecraft:random_selector"
+}

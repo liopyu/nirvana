@@ -1,0 +1,46 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"allowed_placement": {
+						"type": "minecraft:true"
+					},
+					"direction": "up",
+					"layers": [
+						{
+							"height": {
+								"type": "minecraft:biased_to_bottom",
+								"value": {
+									"max_inclusive": 40,
+									"min_inclusive": 20
+								}
+							},
+							"provider": {
+								"state": {
+									"Name": "minecraft:kelp_plant"
+								},
+								"type": "minecraft:simple_state_provider"
+							}
+						}
+					],
+					"prioritize_tip": false
+				},
+				"type": "minecraft:block_column"
+			},
+			"placement": [
+				{
+					"predicate": {
+						"predicates": [],
+						"type": "minecraft:all_of"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 25,
+		"xz_spread": 0,
+		"y_spread": 0
+	},
+	"type": "minecraft:random_patch"
+}

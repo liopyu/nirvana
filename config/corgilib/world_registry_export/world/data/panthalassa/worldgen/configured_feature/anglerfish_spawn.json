@@ -1,0 +1,9 @@
+{
+	"config": {
+		"maxCount": 3,
+		"minCount": 1,
+		"spawnWeight": 100,
+		"type": "panthalassa:anglerfish"
+	},
+	"type": "panthalassa:panthalassa_spawner"
+}

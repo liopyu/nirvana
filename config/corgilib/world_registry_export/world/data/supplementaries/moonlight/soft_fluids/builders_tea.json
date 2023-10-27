@@ -1,0 +1,21 @@
+{
+	"containers": [
+		{
+			"capacity": 1,
+			"empty": "minecraft:glass_bottle",
+			"filled": [
+				"create:builders_tea"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"create:tea"
+	],
+	"flowing_texture": "create:fluid/tea_flow",
+	"food": {
+		"divider": 1,
+		"item": "create:builders_tea"
+	},
+	"still_texture": "create:fluid/tea_still",
+	"use_texture_from": "create:tea"
+}

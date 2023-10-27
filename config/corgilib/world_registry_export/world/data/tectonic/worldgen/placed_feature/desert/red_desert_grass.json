@@ -1,0 +1,41 @@
+{
+	"feature": "tectonic:desert/red_desert_grass",
+	"placement": [
+		{
+			"chance": 4,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"count": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 4,
+					"min_inclusive": 2
+				}
+			},
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:random_offset",
+			"xz_spread": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 3,
+					"min_inclusive": -3
+				}
+			},
+			"y_spread": 0
+		},
+		{
+			"heightmap": "OCEAN_FLOOR_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"max_water_depth": 0,
+			"type": "minecraft:surface_water_depth_filter"
+		}
+	]
+}

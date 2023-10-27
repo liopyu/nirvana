@@ -1,0 +1,11 @@
+{
+	"config": {
+		"state": {
+			"Name": "minecraft:deepslate",
+			"Properties": {
+				"axis": "y"
+			}
+		}
+	},
+	"type": "minecraft:forest_rock"
+}

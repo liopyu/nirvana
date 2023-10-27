@@ -1,0 +1,64 @@
+{
+	"carvers": {
+		"air": [
+			"minecraft:cave",
+			"minecraft:cave_extra_underground",
+			"minecraft:canyon"
+		]
+	},
+	"downfall": 0.5,
+	"effects": {
+		"ambient_sound": "theabyss:frost_world_ambience",
+		"fog_color": -4131073,
+		"foliage_color": -2688257,
+		"grass_color": -3933953,
+		"music": {
+			"max_delay": 24000,
+			"min_delay": 12000,
+			"replace_current_music": true,
+			"sound": "theabyss:the_abyss_music"
+		},
+		"particle": {
+			"options": {
+				"type": "minecraft:ash"
+			},
+			"probability": 0.019999999552965164
+		},
+		"sky_color": -4131073,
+		"water_color": -13421721,
+		"water_fog_color": -4737097
+	},
+	"features": [
+		[],
+		[ "minecraft:lake_lava_underground", "minecraft:lake_lava_surface" ],
+		[ "minecraft:iceberg_packed", "minecraft:iceberg_blue" ],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[ "minecraft:freeze_top_layer" ]
+	],
+	"precipitation": "snow",
+	"spawn_costs": { },
+	"spawners": {
+		"ambient": [
+			{
+				"maxCount": 1,
+				"minCount": 1,
+				"type": "minecraft:pig",
+				"weight": 10
+			}
+		],
+		"axolotls": [],
+		"creature": [],
+		"misc": [],
+		"monster": [],
+		"underground_water_creature": [],
+		"water_ambient": [],
+		"water_creature": []
+	},
+	"temperature": -1.0
+}

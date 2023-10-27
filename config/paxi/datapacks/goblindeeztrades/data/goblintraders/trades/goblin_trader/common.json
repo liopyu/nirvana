@@ -1,0 +1,228 @@
+{
+  "replace": false,
+  "trades": [
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 4,
+        "item": "minecraft:apple"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 14,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:earth_fragment"
+      },
+      "payment_item": {
+        "count": 3,
+        "item": "iter_rpg:coin"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 14,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:water_fragment"
+      },
+      "payment_item": {
+        "count": 3,
+        "item": "iter_rpg:coin"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 14,
+      "max_trades": 8,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:ender_pearl"
+      },
+      "payment_item": {
+        "count": 3,
+        "item": "iter_rpg:coin"
+      },
+      "price_multiplier": 0.0
+    },
+    
+    {
+      "type": "goblintraders:basic",
+      "experience": 14,
+      "max_trades": 12,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:air_fragment"
+      },
+      "payment_item": {
+        "count": 3,
+        "item": "iter_rpg:coin"
+      },
+      "price_multiplier": 0.0
+    },
+    
+    {
+      "type": "goblintraders:basic",
+      "experience": 10,
+      "max_trades": 2,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:potion",
+        "nbt": "{Potion:\"apotheosis:vitality\"}"
+      },
+      "payment_item": {
+        "count": 4,
+        "item": "panthalassa:cooked_plesiosaur_meat"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 2,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:potion",
+        "nbt": "{Potion:\"goblintraders:extended_water_breathing\"}"
+      },
+      "payment_item": {
+        "count": 4,
+        "item": "panthalassa:cooked_primal_fish_meat"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 12,
+      "max_trades": 7,
+      "offer_item": {
+        "count": 2,
+        "item": "kubejs:primal_takoyaki"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "panthalassa:cooked_primal_calamari"
+      },
+      "secondary_payment_item": {
+        "count": 2,
+        "item": "minecraft:wheat"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 2,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:potion",
+        "nbt": "{Potion:\"minecraft:strength\"}"
+      },
+      "payment_item": {
+        "count": 4,
+        "item": "panthalassa:cooked_primal_shark_meat"
+      },
+      "secondary_payment_item": {
+        "count": 4,
+        "item": "panthalassa:cooked_primal_turtle_meat"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 6,
+      "max_trades": 30,
+      "offer_item": {
+        "count": 2,
+        "item": "minecraft:iron_ingot"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:raw_iron"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 6,
+      "max_trades": 30,
+      "offer_item": {
+        "count": 3,
+        "item": "minecraft:gold_ingot"
+      },
+      "payment_item": {
+        "count": 2,
+        "item": "minecraft:raw_gold"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 6,
+      "max_trades": 30,
+      "offer_item": {
+        "count": 2,
+        "item": "minecraft:copper_ingot"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:raw_copper"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 24,
+      "offer_item": {
+        "count": 1,
+        "item": "minecraft:coal"
+      },
+      "payment_item": {
+        "count": 4,
+        "item": "minecraft:rotten_flesh"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 32,
+      "offer_item": {
+        "count": 2,
+        "item": "minecraft:flint"
+      },
+      "payment_item": {
+        "count": 1,
+        "item": "minecraft:gravel"
+      },
+      "price_multiplier": 0.0
+    },
+    {
+      "type": "goblintraders:basic",
+      "experience": 4,
+      "max_trades": 128,
+      "offer_item": {
+        "count": 1,
+        "item": "iter_rpg:coin"
+      },
+      "payment_item": {
+        "count": 32,
+        "item": "minecraft:cobblestone"
+      },
+      "price_multiplier": 0.0
+    }
+  ]
+}

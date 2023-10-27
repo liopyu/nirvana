@@ -1,0 +1,9 @@
+{
+	"feature": "bro:oceans/tube",
+	"placement": [
+		{
+			"count": 128,
+			"type": "minecraft:count_on_every_layer"
+		}
+	]
+}

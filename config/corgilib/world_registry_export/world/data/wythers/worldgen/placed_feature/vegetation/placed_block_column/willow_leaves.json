@@ -1,0 +1,93 @@
+{
+	"feature": "wythers:vegetation/configured_block_column/willow_leaves",
+	"placement": [
+		{
+			"count": 5,
+			"type": "minecraft:count"
+		},
+		{
+			"count": 256,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 90
+				},
+				"min_inclusive": {
+					"above_bottom": 65
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"allowed_search_condition": {
+				"blocks": "minecraft:air",
+				"type": "minecraft:matching_blocks"
+			},
+			"direction_of_search": "up",
+			"max_steps": 12,
+			"target_condition": {
+				"blocks": "minecraft:oak_leaves",
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:environment_scan"
+		},
+		{
+			"type": "minecraft:random_offset",
+			"xz_spread": 0,
+			"y_spread": -1
+		},
+		{
+			"predicate": {
+				"predicates": [
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							1,
+							1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							-1,
+							1,
+							0
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							0,
+							1,
+							1
+						],
+						"type": "minecraft:matching_blocks"
+					},
+					{
+						"blocks": "minecraft:air",
+						"offset": [
+							0,
+							1,
+							-1
+						],
+						"type": "minecraft:matching_blocks"
+					}
+				],
+				"type": "minecraft:any_of"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

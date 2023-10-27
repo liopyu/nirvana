@@ -1,0 +1,25 @@
+{
+	"config": {
+		"default": {
+			"feature": "wythers:vegetation/configured_tree/tundra_bush",
+			"placement": []
+		},
+		"features": [
+			{
+				"chance": 0.10000000149011612,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/azalea_scrub",
+					"placement": []
+				}
+			},
+			{
+				"chance": 0.20000000298023224,
+				"feature": {
+					"feature": "wythers:vegetation/configured_tree/spruce_scrub",
+					"placement": []
+				}
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "valhelsia_structures:mobs/pillager_with_sword_1",
+				"processors": "valhelsia_structures:mobs/pillager_with_sword_1",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "valhelsia_structures:mobs/pillager_with_sword_1"
+}

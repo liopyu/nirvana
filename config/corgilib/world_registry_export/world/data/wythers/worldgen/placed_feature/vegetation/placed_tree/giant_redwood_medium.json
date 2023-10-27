@@ -1,0 +1,56 @@
+{
+	"feature": {
+		"config": {
+			"default": "wythers:vegetation/placed_tree_component/giant_redwood_medium_base",
+			"features": [
+				{
+					"chance": 0.30000001192092896,
+					"feature": "wythers:vegetation/placed_tree_component/giant_redwood_medium_base_1"
+				},
+				{
+					"chance": 0.30000001192092896,
+					"feature": "wythers:vegetation/placed_tree_component/giant_redwood_medium_base_2"
+				},
+				{
+					"chance": 0.05000000074505806,
+					"feature": "wythers:vegetation/placed_tree_component/giant_redwood_medium_crown_1"
+				},
+				{
+					"chance": 0.05000000074505806,
+					"feature": "wythers:vegetation/placed_tree_component/giant_redwood_medium_crown_2"
+				},
+				{
+					"chance": 0.05000000074505806,
+					"feature": "wythers:vegetation/placed_tree_component/giant_redwood_medium_crown_3"
+				},
+				{
+					"chance": 0.30000001192092896,
+					"feature": "wythers:vegetation/placed_tree_component/giant_redwood_medium_base_4"
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 10,
+			"type": "minecraft:count"
+		},
+		{
+			"count": 30,
+			"type": "minecraft:count"
+		},
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:spruce_sapling",
+					"Properties": {
+						"stage": "0"
+					}
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

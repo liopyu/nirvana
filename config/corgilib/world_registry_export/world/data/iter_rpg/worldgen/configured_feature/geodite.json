@@ -1,0 +1,53 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.0,
+		"size": 4,
+		"targets": [
+			{
+				"state": {
+					"Name": "iter_rpg:geodite"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:stone"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			},
+			{
+				"state": {
+					"Name": "iter_rpg:geodite"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:granite"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			},
+			{
+				"state": {
+					"Name": "iter_rpg:geodite"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:diorite"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			},
+			{
+				"state": {
+					"Name": "iter_rpg:geodite"
+				},
+				"target": {
+					"block_state": {
+						"Name": "minecraft:andesite"
+					},
+					"predicate_type": "minecraft:blockstate_match"
+				}
+			}
+		]
+	},
+	"type": "iter_rpg:geodite"
+}

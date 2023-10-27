@@ -1,0 +1,60 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/giant_taiga/town_centers/meeting_point_1",
+				"processors": "repurposed_structures:villages/giant_taiga/path_randomizer_and_mossify",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/giant_taiga/town_centers/meeting_point_2",
+				"processors": "repurposed_structures:villages/giant_taiga/path_randomizer_and_mossify",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/giant_taiga/town_centers/meeting_point_3",
+				"processors": "repurposed_structures:villages/giant_taiga/path_randomizer_and_mossify",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/giant_taiga/zombie/town_centers/meeting_point_1",
+				"processors": "repurposed_structures:villages/giant_taiga/path_randomizer_and_mossify",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/giant_taiga/zombie/town_centers/meeting_point_2",
+				"processors": "repurposed_structures:villages/giant_taiga/path_randomizer_and_mossify",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/giant_taiga/zombie/town_centers/meeting_point_3",
+				"processors": "repurposed_structures:villages/giant_taiga/path_randomizer_and_mossify",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:villages/giant_taiga/town_centers"
+}

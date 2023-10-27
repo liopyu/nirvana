@@ -1,0 +1,96 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b2",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b2_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b4",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b5",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b5_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b2o",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b2_1o",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b4o",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b5o",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:oceandungeon/start/b5_1o",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 50
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "seafaring:oceandungeon/start/b2"
+}

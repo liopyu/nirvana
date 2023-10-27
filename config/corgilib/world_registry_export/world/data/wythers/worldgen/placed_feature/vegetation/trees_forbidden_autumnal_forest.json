@@ -1,0 +1,35 @@
+{
+	"feature": "wythers:vegetation/configured_trees_forbidden_autumnal_forest",
+	"placement": [
+		{
+			"count": 10,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "MOTION_BLOCKING_NO_LEAVES",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"max_water_depth": 0,
+			"type": "minecraft:surface_water_depth_filter"
+		},
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:oak_sapling",
+					"Properties": {
+						"stage": "0"
+					}
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

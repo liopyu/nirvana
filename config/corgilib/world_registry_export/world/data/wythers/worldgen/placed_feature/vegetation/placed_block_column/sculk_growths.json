@@ -1,0 +1,27 @@
+{
+	"feature": "wythers:vegetation/configured_block_column/sculk_growths",
+	"placement": [
+		{
+			"predicate": {
+				"blocks": [
+					"minecraft:sculk",
+					"minecraft:grass_block"
+				],
+				"offset": [
+					0,
+					-1,
+					0
+				],
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		},
+		{
+			"predicate": {
+				"blocks": "minecraft:air",
+				"type": "minecraft:matching_blocks"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

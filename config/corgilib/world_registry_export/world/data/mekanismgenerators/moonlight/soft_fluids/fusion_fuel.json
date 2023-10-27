@@ -1,0 +1,21 @@
+{
+	"color": "ff7e007d",
+	"containers": [
+		{
+			"capacity": 4,
+			"empty": "minecraft:bucket",
+			"empty_sound": "minecraft:item.bucket.empty",
+			"fill_sound": "minecraft:item.bucket.fill",
+			"filled": [
+				"mekanismgenerators:fusion_fuel_bucket"
+			]
+		}
+	],
+	"equivalent_fluids": [
+		"mekanismgenerators:fusion_fuel"
+	],
+	"flowing_texture": "mekanism:liquid/liquid_flow",
+	"still_texture": "mekanism:liquid/liquid",
+	"translation_key": "block.mekanismgenerators.fusion_fuel",
+	"use_texture_from": "mekanismgenerators:fusion_fuel"
+}

@@ -1,0 +1,99 @@
+{
+	"feature": {
+		"config": {
+			"default": {
+				"feature": "theabyss:blaru_pine/1",
+				"placement": []
+			},
+			"features": [
+				{
+					"chance": 0.014999999664723873,
+					"feature": {
+						"feature": "theabyss:blaru_pine/1",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.0024999999441206455,
+					"feature": {
+						"feature": "theabyss:blaru_pine/2",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.03999999910593033,
+					"feature": {
+						"feature": "theabyss:blaru_pine/3",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.10000000149011612,
+					"feature": {
+						"feature": "theabyss:blaru_pine/4",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.10000000149011612,
+					"feature": {
+						"feature": "theabyss:blaru_big_tree/1",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.10000000149011612,
+					"feature": {
+						"feature": "theabyss:blaru_big_tree/2",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.10000000149011612,
+					"feature": {
+						"feature": "theabyss:blaru_big_tree/3",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.10000000149011612,
+					"feature": {
+						"feature": "theabyss:blaru_big_tree/4",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.3499999940395355,
+					"feature": {
+						"feature": "theabyss:blaru_pine/5",
+						"placement": []
+					}
+				},
+				{
+					"chance": 0.05000000074505806,
+					"feature": {
+						"feature": "theabyss:blaru_pine/6",
+						"placement": []
+					}
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 10,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"heightmap": "WORLD_SURFACE_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

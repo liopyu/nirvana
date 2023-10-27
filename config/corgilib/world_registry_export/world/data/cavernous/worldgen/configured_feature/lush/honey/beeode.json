@@ -1,0 +1,14 @@
+{
+	"config": {
+		"fossil_processors": "cavernous:beeode",
+		"fossil_structures": [
+			"cavernous:beeode"
+		],
+		"max_empty_corners_allowed": 4,
+		"overlay_processors": "minecraft:empty",
+		"overlay_structures": [
+			"cavernous:beeode_blank"
+		]
+	},
+	"type": "minecraft:fossil"
+}

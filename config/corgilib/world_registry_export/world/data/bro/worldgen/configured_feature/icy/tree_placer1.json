@@ -1,0 +1,32 @@
+{
+	"config": {
+		"default": "bro:na",
+		"features": [
+			{
+				"chance": 0.44999998807907104,
+				"feature": "bro:icy/spruce1"
+			},
+			{
+				"chance": 0.44999998807907104,
+				"feature": "bro:icy/spruce2"
+			},
+			{
+				"chance": 0.15000000596046448,
+				"feature": "bro:icy/spruce_fancy1"
+			},
+			{
+				"chance": 0.15000000596046448,
+				"feature": "bro:icy/spruce_fancy2"
+			},
+			{
+				"chance": 0.15000000596046448,
+				"feature": "bro:icy/spruce_decor1"
+			},
+			{
+				"chance": 0.15000000596046448,
+				"feature": "bro:icy/spruce_decor2"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

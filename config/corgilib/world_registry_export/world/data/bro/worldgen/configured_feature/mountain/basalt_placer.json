@@ -1,0 +1,16 @@
+{
+	"config": {
+		"default": "bro:na",
+		"features": [
+			{
+				"chance": 0.6499999761581421,
+				"feature": "bro:mountain/basalt_tree"
+			},
+			{
+				"chance": 0.3499999940395355,
+				"feature": "bro:mountain/blackstone_tree"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

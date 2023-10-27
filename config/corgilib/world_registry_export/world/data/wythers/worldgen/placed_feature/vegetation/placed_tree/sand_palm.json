@@ -1,0 +1,14 @@
+{
+	"feature": "wythers:vegetation/configured_tree/sand_palm",
+	"placement": [
+		{
+			"predicate": {
+				"state": {
+					"Name": "minecraft:dead_bush"
+				},
+				"type": "minecraft:would_survive"
+			},
+			"type": "minecraft:block_predicate_filter"
+		}
+	]
+}

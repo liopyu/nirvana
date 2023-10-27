@@ -1,0 +1,26 @@
+{
+	"biomes": [
+		"minecraft:plains",
+		"minecraft:sunflower_plains",
+		"minecraft:snowy_plains",
+		"minecraft:snowy_taiga",
+		"minecraft:forest",
+		"minecraft:birch_forest",
+		"minecraft:dark_forest",
+		"minecraft:old_growth_birch_forest",
+		"minecraft:old_growth_pine_taiga",
+		"minecraft:old_growth_spruce_taiga",
+		"minecraft:taiga"
+	],
+	"max_distance_from_center": 100,
+	"project_start_to_heightmap": "WORLD_SURFACE_WG",
+	"size": 7,
+	"spawn_overrides": { },
+	"start_height": {
+		"absolute": 0
+	},
+	"start_pool": "nova_structures:bunker_enterance",
+	"step": "surface_structures",
+	"type": "minecraft:jigsaw",
+	"use_expansion_hack": false
+}

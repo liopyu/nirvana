@@ -1,0 +1,27 @@
+{
+	"feature": "tectonic:snowy/replace_dripstone",
+	"placement": [
+		{
+			"count": 256,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 112
+				},
+				"min_inclusive": {
+					"absolute": 76
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

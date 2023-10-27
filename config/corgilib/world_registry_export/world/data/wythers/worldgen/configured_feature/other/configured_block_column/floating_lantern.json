@@ -1,0 +1,38 @@
+{
+	"config": {
+		"allowed_placement": {
+			"blocks": "minecraft:air",
+			"type": "minecraft:matching_blocks"
+		},
+		"direction": "up",
+		"layers": [
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:lantern",
+						"Properties": {
+							"hanging": "true",
+							"waterlogged": "false"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			},
+			{
+				"height": 1,
+				"provider": {
+					"state": {
+						"Name": "minecraft:ochre_froglight",
+						"Properties": {
+							"axis": "y"
+						}
+					},
+					"type": "minecraft:simple_state_provider"
+				}
+			}
+		],
+		"prioritize_tip": true
+	},
+	"type": "minecraft:block_column"
+}

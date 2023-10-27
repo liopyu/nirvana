@@ -1,0 +1,18 @@
+{
+	"argument": {
+		"argument1": {
+			"from_value": 1.0,
+			"from_y": -64,
+			"to_value": -2.0,
+			"to_y": 320,
+			"type": "minecraft:y_clamped_gradient"
+		},
+		"argument2": {
+			"argument1": "tectonic:overworld/special/hoodoos/offset_sum",
+			"argument2": "tectonic:overworld/spline/offset",
+			"type": "minecraft:add"
+		},
+		"type": "minecraft:add"
+	},
+	"type": "minecraft:cache_once"
+}

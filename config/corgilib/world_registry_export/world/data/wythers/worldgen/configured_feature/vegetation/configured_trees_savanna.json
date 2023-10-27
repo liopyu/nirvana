@@ -1,0 +1,12 @@
+{
+	"config": {
+		"default": "minecraft:acacia_checked",
+		"features": [
+			{
+				"chance": 0.05000000074505806,
+				"feature": "wythers:vegetation/placed_tree/termite_mound"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

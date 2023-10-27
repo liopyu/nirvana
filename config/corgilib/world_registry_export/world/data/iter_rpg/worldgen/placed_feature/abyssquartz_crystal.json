@@ -1,0 +1,55 @@
+{
+	"feature": "iter_rpg:abyssquartz_crystal",
+	"placement": [
+		{
+			"count": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 6,
+					"min_inclusive": 4
+				}
+			},
+			"type": "minecraft:count"
+		},
+		{
+			"heightmap": "OCEAN_FLOOR_WG",
+			"type": "minecraft:heightmap"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": 0
+				},
+				"min_inclusive": {
+					"above_bottom": 5
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"chance": 8,
+			"type": "minecraft:rarity_filter"
+		},
+		{
+			"type": "minecraft:random_offset",
+			"xz_spread": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 3,
+					"min_inclusive": -3
+				}
+			},
+			"y_spread": {
+				"type": "minecraft:uniform",
+				"value": {
+					"max_inclusive": 1,
+					"min_inclusive": -1
+				}
+			}
+		},
+		{
+			"type": "minecraft:in_square"
+		}
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"config": {
+		"to_place": {
+			"state": {
+				"Name": "iter_rpg:small_vase",
+				"Properties": {
+					"waterlogged": "false"
+				}
+			},
+			"type": "minecraft:simple_state_provider"
+		}
+	},
+	"type": "iter_rpg:small_vase_feature"
+}

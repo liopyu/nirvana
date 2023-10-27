@@ -1,0 +1,22 @@
+{
+	"config": {
+		"state_provider": {
+			"entries": [
+				{
+					"data": {
+						"Name": "minecraft:deepslate_coal_ore"
+					},
+					"weight": 1
+				},
+				{
+					"data": {
+						"Name": "minecraft:coal_block"
+					},
+					"weight": 2
+				}
+			],
+			"type": "minecraft:weighted_state_provider"
+		}
+	},
+	"type": "minecraft:block_pile"
+}

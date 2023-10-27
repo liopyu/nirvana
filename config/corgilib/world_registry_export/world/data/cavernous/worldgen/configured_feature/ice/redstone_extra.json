@@ -1,0 +1,21 @@
+{
+	"config": {
+		"discard_chance_on_air_exposure": 0.800000011920929,
+		"size": 8,
+		"targets": [
+			{
+				"state": {
+					"Name": "minecraft:redstone_ore",
+					"Properties": {
+						"lit": "false"
+					}
+				},
+				"target": {
+					"predicate_type": "minecraft:tag_match",
+					"tag": "cavernous:biome_solids/ice/all"
+				}
+			}
+		]
+	},
+	"type": "minecraft:ore"
+}

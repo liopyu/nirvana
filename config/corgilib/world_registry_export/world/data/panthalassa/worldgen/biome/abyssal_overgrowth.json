@@ -1,0 +1,43 @@
+{
+	"carvers": {
+		"air": []
+	},
+	"downfall": 0.0,
+	"effects": {
+		"fog_color": 12638463,
+		"mood_sound": {
+			"block_search_extent": 8,
+			"offset": 2.0,
+			"sound": "minecraft:ambient.cave",
+			"tick_delay": 6000
+		},
+		"sky_color": 8103167,
+		"water_color": 10928013,
+		"water_fog_color": 199177
+	},
+	"features": [
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[],
+		[ "panthalassa:panthalassa_coral_reef", "panthalassa:primordial_stalks", "panthalassa:panthalassa_sea_grass", "panthalassa:panthalassa_kelp", "panthalassa:kronosaurus_spawn", "panthalassa:archelon_spawn", "panthalassa:mosasaurus_spawn", "panthalassa:acrolepis_spawn", "panthalassa:coelacanth_spawn", "panthalassa:ceratodus_spawn", "panthalassa:anomalocaris_spawn" ],
+		[]
+	],
+	"precipitation": "none",
+	"spawn_costs": { },
+	"spawners": {
+		"ambient": [],
+		"axolotls": [],
+		"creature": [],
+		"misc": [],
+		"monster": [],
+		"underground_water_creature": [],
+		"water_ambient": [],
+		"water_creature": []
+	},
+	"temperature": 2.0
+}

@@ -1,0 +1,249 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"allowed_placement": {
+						"predicates": [
+							{
+								"blocks": "#minecraft:dirt",
+								"type": "minecraft:matching_blocks"
+							},
+							{
+								"blocks": "#minecraft:dirt",
+								"offset": [
+									0,
+									1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							}
+						],
+						"type": "minecraft:any_of"
+					},
+					"direction": "down",
+					"layers": [
+						{
+							"height": 5,
+							"provider": {
+								"state": {
+									"Name": "minecraft:stone"
+								},
+								"type": "minecraft:simple_state_provider"
+							}
+						}
+					],
+					"prioritize_tip": false
+				},
+				"type": "minecraft:block_column"
+			},
+			"placement": [
+				{
+					"direction_of_search": "down",
+					"max_steps": 4,
+					"target_condition": {
+						"blocks": "#minecraft:dirt",
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:environment_scan"
+				},
+				{
+					"predicate": {
+						"predicates": [
+							{
+								"blocks": "minecraft:air",
+								"offset": [
+									-1,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							{
+								"blocks": "minecraft:air",
+								"offset": [
+									0,
+									-1,
+									-1
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							{
+								"blocks": "minecraft:air",
+								"offset": [
+									1,
+									-1,
+									0
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							{
+								"blocks": "minecraft:air",
+								"offset": [
+									0,
+									-1,
+									1
+								],
+								"type": "minecraft:matching_blocks"
+							},
+							{
+								"predicates": [
+									{
+										"blocks": "#minecraft:dirt",
+										"offset": [
+											0,
+											0,
+											1
+										],
+										"type": "minecraft:matching_blocks"
+									},
+									{
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													1,
+													-1,
+													1
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													-1,
+													-1,
+													1
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:any_of"
+									}
+								],
+								"type": "minecraft:all_of"
+							},
+							{
+								"predicates": [
+									{
+										"blocks": "#minecraft:dirt",
+										"offset": [
+											0,
+											0,
+											-1
+										],
+										"type": "minecraft:matching_blocks"
+									},
+									{
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													1,
+													-1,
+													-1
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													-1,
+													-1,
+													-1
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:any_of"
+									}
+								],
+								"type": "minecraft:all_of"
+							},
+							{
+								"predicates": [
+									{
+										"blocks": "#minecraft:dirt",
+										"offset": [
+											-1,
+											0,
+											0
+										],
+										"type": "minecraft:matching_blocks"
+									},
+									{
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													-1,
+													-1,
+													1
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													-1,
+													-1,
+													-1
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:any_of"
+									}
+								],
+								"type": "minecraft:all_of"
+							},
+							{
+								"predicates": [
+									{
+										"blocks": "#minecraft:dirt",
+										"offset": [
+											1,
+											0,
+											0
+										],
+										"type": "minecraft:matching_blocks"
+									},
+									{
+										"predicates": [
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													1,
+													-1,
+													1
+												],
+												"type": "minecraft:matching_blocks"
+											},
+											{
+												"blocks": "minecraft:air",
+												"offset": [
+													1,
+													-1,
+													-1
+												],
+												"type": "minecraft:matching_blocks"
+											}
+										],
+										"type": "minecraft:any_of"
+									}
+								],
+								"type": "minecraft:all_of"
+							}
+						],
+						"type": "minecraft:any_of"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 64,
+		"xz_spread": 3,
+		"y_spread": 3
+	},
+	"type": "minecraft:random_patch"
+}

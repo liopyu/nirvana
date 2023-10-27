@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "idas:tinkers_workshop/tinkers_workshop6",
+				"processors": "idas:tinkers_workshop/tinkers_workshop_processor",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "idas:tinkers_workshop/tinkers_workshop6"
+}

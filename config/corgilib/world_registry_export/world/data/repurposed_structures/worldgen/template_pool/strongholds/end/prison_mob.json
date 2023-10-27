@@ -1,0 +1,21 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:strongholds/end/mobs/enderman",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 3
+		}
+	],
+	"fallback": "repurposed_structures:strongholds/end/prison_mob",
+	"name": "repurposed_structures:strongholds/end/prison_mob"
+}

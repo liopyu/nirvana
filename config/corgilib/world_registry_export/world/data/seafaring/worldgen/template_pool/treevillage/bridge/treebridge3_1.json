@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "seafaring:treevillage/bridges/treebridge3_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 100
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "seafaring:treevillage/bridge/treebridge3_1"
+}

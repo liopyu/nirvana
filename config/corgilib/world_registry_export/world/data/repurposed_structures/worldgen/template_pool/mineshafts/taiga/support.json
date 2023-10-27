@@ -1,0 +1,14 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:feature_pool_element",
+				"feature": "repurposed_structures:supports/taiga_mineshaft_support",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "repurposed_structures:mineshafts/taiga/support",
+	"name": "repurposed_structures:mineshafts/taiga/support"
+}

@@ -1,0 +1,20 @@
+{
+	"biomes": "#betterstrongholds:has_structure/better_stronghold",
+	"max_distance_from_center": 128,
+	"max_y": 60,
+	"size": 16,
+	"spawn_overrides": { },
+	"start_height": {
+		"max_inclusive": {
+			"absolute": 11
+		},
+		"min_inclusive": {
+			"absolute": -30
+		},
+		"type": "minecraft:uniform"
+	},
+	"start_jigsaw_name": "betterstrongholds:stronghold_anchor",
+	"start_pool": "betterstrongholds:starts",
+	"step": "strongholds",
+	"type": "yungsapi:yung_jigsaw"
+}

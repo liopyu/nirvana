@@ -1,0 +1,28 @@
+{
+	"feature": {
+		"config": {
+			"default": "wythers:vegetation/placed_tree_component/giant_birch_branches",
+			"features": [
+				{
+					"chance": 0.25,
+					"feature": "wythers:vegetation/placed_tree_component/giant_birch_branches"
+				},
+				{
+					"chance": 0.25,
+					"feature": "wythers:vegetation/placed_tree_component/giant_birch_branches_high"
+				},
+				{
+					"chance": 0.5,
+					"feature": "wythers:vegetation/placed_tree_component/giant_birch_trunk"
+				}
+			]
+		},
+		"type": "minecraft:random_selector"
+	},
+	"placement": [
+		{
+			"count": 4,
+			"type": "minecraft:count"
+		}
+	]
+}

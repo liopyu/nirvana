@@ -1,0 +1,177 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/corner_01",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/corner_03",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/straight_02",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/straight_04",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 7
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/straight_05",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 3
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/straight_06",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/straight_08",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/straight_09",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/straight_10",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/straight_11",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/split_01",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/split_02",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/crossroad_02",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/crossroad_03",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/crossroad_04",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/crossroad_05",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/crossroad_06",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/crossroad_07",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 2
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "repurposed_structures:villages/jungle/streets/turn_01",
+				"processors": "repurposed_structures:villages/jungle/path_randomizer",
+				"projection": "terrain_matching"
+			},
+			"weight": 3
+		}
+	],
+	"fallback": "repurposed_structures:villages/jungle/terminators",
+	"name": "repurposed_structures:villages/jungle/streets"
+}

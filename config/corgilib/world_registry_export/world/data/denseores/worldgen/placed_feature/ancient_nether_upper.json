@@ -1,0 +1,27 @@
+{
+	"feature": "denseores:ore_ancient_nether_upper",
+	"placement": [
+		{
+			"count": 5,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"below_top": 8
+				},
+				"min_inclusive": {
+					"above_bottom": 8
+				},
+				"type": "minecraft:trapezoid"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

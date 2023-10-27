@@ -1,0 +1,15 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "minecraft:empty",
+				"processors": "minecraft:illager_manor_generic_degradation",
+				"projection": "rigid"
+			},
+			"weight": 8
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "minecraft:illager_mansion/illager_mob"
+}

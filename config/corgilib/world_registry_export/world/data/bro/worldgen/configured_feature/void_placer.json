@@ -1,0 +1,24 @@
+{
+	"config": {
+		"default": "bro:na",
+		"features": [
+			{
+				"chance": 0.25,
+				"feature": "bro:void_pillar"
+			},
+			{
+				"chance": 0.25,
+				"feature": "bro:void_pillar0"
+			},
+			{
+				"chance": 0.25,
+				"feature": "bro:void_pillar1"
+			},
+			{
+				"chance": 0.25,
+				"feature": "bro:void_pillar2"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

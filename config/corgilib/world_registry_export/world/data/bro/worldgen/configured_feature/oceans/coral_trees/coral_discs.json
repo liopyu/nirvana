@@ -1,0 +1,28 @@
+{
+	"config": {
+		"default": "bro:na",
+		"features": [
+			{
+				"chance": 0.03999999910593033,
+				"feature": "bro:oceans/coral_trees/tree_brain"
+			},
+			{
+				"chance": 0.03999999910593033,
+				"feature": "bro:oceans/coral_trees/tree_bubble"
+			},
+			{
+				"chance": 0.03999999910593033,
+				"feature": "bro:oceans/coral_trees/tree_fire"
+			},
+			{
+				"chance": 0.03999999910593033,
+				"feature": "bro:oceans/coral_trees/tree_horn"
+			},
+			{
+				"chance": 0.03999999910593033,
+				"feature": "bro:oceans/coral_trees/tree_tube"
+			}
+		]
+	},
+	"type": "minecraft:random_selector"
+}

@@ -1,0 +1,24 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:bastions/underground/bridge/starting_pieces/entrance",
+				"processors": "repurposed_structures:bastions/underground/entrance_replacement",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:bastions/underground/bridge/starting_pieces/entrance_face",
+				"processors": "repurposed_structures:bastions/underground/generic_degradation",
+				"projection": "rigid"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:bastions/underground/bridge/starting_pieces"
+}

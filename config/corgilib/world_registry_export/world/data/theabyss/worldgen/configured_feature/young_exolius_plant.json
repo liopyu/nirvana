@@ -1,0 +1,30 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"to_place": {
+						"state": {
+							"Name": "theabyss:young_exolius_plant"
+						},
+						"type": "minecraft:simple_state_provider"
+					}
+				},
+				"type": "minecraft:simple_block"
+			},
+			"placement": [
+				{
+					"predicate": {
+						"blocks": "minecraft:air",
+						"type": "minecraft:matching_blocks"
+					},
+					"type": "minecraft:block_predicate_filter"
+				}
+			]
+		},
+		"tries": 30,
+		"xz_spread": 7,
+		"y_spread": 3
+	},
+	"type": "theabyss:young_exolius_plant"
+}

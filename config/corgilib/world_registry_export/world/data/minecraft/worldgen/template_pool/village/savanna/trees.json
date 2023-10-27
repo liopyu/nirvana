@@ -1,0 +1,19 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:tree_pool_element",
+				"offset": [
+					0,
+					0,
+					0
+				],
+				"projection": "terrain_matching",
+				"species": "dynamictrees:acacia"
+			},
+			"weight": 1
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "minecraft:village/savanna/trees"
+}

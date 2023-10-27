@@ -1,0 +1,18 @@
+{
+	"config": {
+		"radius": {
+			"type": "minecraft:uniform",
+			"value": {
+				"max_inclusive": 5,
+				"min_inclusive": 5
+			}
+		},
+		"state": {
+			"Name": "minecraft:smooth_sandstone"
+		},
+		"target": {
+			"Name": "minecraft:snow_block"
+		}
+	},
+	"type": "minecraft:netherrack_replace_blobs"
+}

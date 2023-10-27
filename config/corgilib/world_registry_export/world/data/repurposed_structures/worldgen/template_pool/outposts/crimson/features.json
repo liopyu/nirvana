@@ -1,0 +1,84 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/crimson/cage1",
+				"processors": "repurposed_structures:outposts/crimson_feature_pillar",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/crimson/cage2",
+				"processors": "repurposed_structures:outposts/crimson_feature_pillar",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/crimson/cage3",
+				"processors": "repurposed_structures:outposts/crimson_feature_pillar",
+				"projection": "rigid"
+			},
+			"weight": 4
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/crimson/logs",
+				"processors": "repurposed_structures:outposts/crimson_feature_pillar",
+				"projection": "rigid"
+			},
+			"weight": 6
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/crimson/tent1",
+				"processors": "repurposed_structures:outposts/crimson_feature_pillar",
+				"projection": "rigid"
+			},
+			"weight": 6
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/crimson/tent2",
+				"processors": "repurposed_structures:outposts/crimson_feature_pillar",
+				"projection": "rigid"
+			},
+			"weight": 6
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/crimson/targets_1",
+				"processors": "repurposed_structures:outposts/crimson_feature_pillar",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "repurposed_structures:outposts/crimson/targets_2",
+				"processors": "repurposed_structures:outposts/crimson_feature_pillar",
+				"projection": "rigid"
+			},
+			"weight": 1
+		},
+		{
+			"element": {
+				"element_type": "minecraft:empty_pool_element"
+			},
+			"weight": 120
+		}
+	],
+	"fallback": "minecraft:empty",
+	"name": "repurposed_structures:outposts/crimson/features"
+}

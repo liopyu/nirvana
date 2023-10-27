@@ -1,0 +1,33 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "wythers:features/trees/baobabs/dry_tropical_forest/adansonia_grandidieri_1",
+				"processors": "wythers:baobab",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "wythers:features/trees/baobabs/dry_tropical_forest/adansonia_grandidieri_2",
+				"processors": "wythers:baobab",
+				"projection": "rigid"
+			},
+			"weight": 50
+		},
+		{
+			"element": {
+				"element_type": "minecraft:legacy_single_pool_element",
+				"location": "wythers:features/trees/baobabs/dry_tropical_forest/adansonia_grandidieri_3",
+				"processors": "wythers:baobab",
+				"projection": "rigid"
+			},
+			"weight": 50
+		}
+	],
+	"fallback": "wythers:features/trees/baobabs/dry_tropical_forest",
+	"name": "wythers:features/trees/baobabs/dry_tropical_forest"
+}

@@ -1,0 +1,68 @@
+{
+	"config": {
+		"feature": {
+			"feature": {
+				"config": {
+					"default": {
+						"feature": "tectonic:forest/trees/fancy_oak/trunk",
+						"placement": []
+					},
+					"features": [
+						{
+							"chance": 0.30000001192092896,
+							"feature": {
+								"feature": "tectonic:forest/trees/fancy_oak/trunk_side_tall",
+								"placement": []
+							}
+						},
+						{
+							"chance": 0.30000001192092896,
+							"feature": {
+								"feature": "tectonic:forest/trees/fancy_oak/trunk_side_short",
+								"placement": []
+							}
+						},
+						{
+							"chance": 0.30000001192092896,
+							"feature": {
+								"feature": "tectonic:forest/trees/fancy_oak/treetop_bottom_variant_1",
+								"placement": [
+									{
+										"type": "minecraft:random_offset",
+										"xz_spread": 0,
+										"y_spread": 9
+									}
+								]
+							}
+						},
+						{
+							"chance": 0.30000001192092896,
+							"feature": {
+								"feature": "tectonic:forest/trees/fancy_oak/treetop_top_variant_1",
+								"placement": [
+									{
+										"type": "minecraft:random_offset",
+										"xz_spread": 0,
+										"y_spread": {
+											"type": "minecraft:uniform",
+											"value": {
+												"max_inclusive": 12,
+												"min_inclusive": 11
+											}
+										}
+									}
+								]
+							}
+						}
+					]
+				},
+				"type": "minecraft:random_selector"
+			},
+			"placement": []
+		},
+		"tries": 64,
+		"xz_spread": 0,
+		"y_spread": 0
+	},
+	"type": "minecraft:random_patch"
+}

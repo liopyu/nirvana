@@ -1,0 +1,6 @@
+{
+	"color": "e1ccd8",
+	"flowing_texture": "moonlight:soft_fluids/potion_flow",
+	"from_mod": "ecologics",
+	"still_texture": "moonlight:soft_fluids/soup_liquid"
+}

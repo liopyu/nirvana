@@ -1,0 +1,27 @@
+{
+	"feature": "skylands:ocean_floor/bedrock",
+	"placement": [
+		{
+			"count": 256,
+			"type": "minecraft:count"
+		},
+		{
+			"type": "minecraft:in_square"
+		},
+		{
+			"height": {
+				"max_inclusive": {
+					"absolute": -16
+				},
+				"min_inclusive": {
+					"absolute": -16
+				},
+				"type": "minecraft:uniform"
+			},
+			"type": "minecraft:height_range"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

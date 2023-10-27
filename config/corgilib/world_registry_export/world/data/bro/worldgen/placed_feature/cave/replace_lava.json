@@ -1,0 +1,12 @@
+{
+	"feature": "bro:cave/replace_lava",
+	"placement": [
+		{
+			"count": 60,
+			"type": "minecraft:count_on_every_layer"
+		},
+		{
+			"type": "minecraft:biome"
+		}
+	]
+}

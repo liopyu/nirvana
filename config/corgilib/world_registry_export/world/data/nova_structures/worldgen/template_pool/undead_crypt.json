@@ -1,0 +1,141 @@
+{
+	"elements": [
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_stairs",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_stairs_t",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_stairs_high",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 8
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_2",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_3",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_4",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_5",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_6",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_cross",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_l_1",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_l_2",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_r",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_statue_room",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		},
+		{
+			"element": {
+				"element_type": "minecraft:single_pool_element",
+				"location": "nova_structures:undead_crypt/undead_crypt_room_t",
+				"processors": "minecraft:empty",
+				"projection": "rigid"
+			},
+			"weight": 5
+		}
+	],
+	"fallback": "nova_structures:undead_crypt_lock",
+	"name": "nova_structures:undead_crypt"
+}

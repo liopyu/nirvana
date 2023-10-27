@@ -1,0 +1,12 @@
+{
+	"config": {
+		"radius": 0,
+		"state": {
+			"Name": "minecraft:sea_lantern"
+		},
+		"target": {
+			"Name": "minecraft:air"
+		}
+	},
+	"type": "minecraft:netherrack_replace_blobs"
+}
