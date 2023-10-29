@@ -49,3 +49,38 @@ BlockEvents.broken(event => {
     }
 })
 
+ItemEvents.rightClicked(event => {
+    const {item,player,hand,player:{mainHandItem,offHandItem}} = event
+    let offhand = player.getHeldItem('off_hand');
+    let mainhand = player.getHeldItem('main_hand');
+    let apply = (item1, item2, result) => {
+      if((mainHandItem.hasTag(item1) && offHandItem.id == item2)||(mainHandItem.id == item2 && offHandItem.hasTag(item1))) {
+        if (offhand.count <= 0 || mainhand.count <= 0) {return}
+        if(hand != 'MAIN_HAND') {return}
+        mainHandItem.count--
+        offHandItem.count--
+        player.give(result)
+      } 
+    }
+    apply('forge:stripped_logs', 'create:andesite_alloy', 'create:andesite_casing')
+})
+BlockEvents.placed(event => {
+    const {server,block,player,player:{mainHandItem,offHandItem,persistentData}} = event
+    let offhand = player.getHeldItem('off_hand');
+    let mainhand = player.getHeldItem('main_hand');
+    let apply = (item1, item2, result) => {
+      if((mainHandItem.hasTag(item1) && offHandItem.id == item2)) {
+        if (offhand.count <= 0 || mainhand.count <= 0) {return}
+        server.schedule(10, event => {
+            mainHandItem.count--
+            offHandItem.count--
+        })
+        player.give(result)
+        event.cancel()
+      } else if((mainHandItem.id == item2 && offHandItem.hasTag(item1))) {
+        if (offhand.count <= 0 || mainhand.count <= 0) {return}
+        event.cancel()
+      } 
+    }
+    apply('forge:stripped_logs', 'create:andesite_alloy', 'create:andesite_casing')
+})

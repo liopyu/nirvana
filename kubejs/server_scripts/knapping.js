@@ -29,7 +29,8 @@ BlockEvents.rightClicked(event => {
 })
 
 PlayerEvents.loggedIn(event => {
-    let pData = event.player.persistentData
+    const {player} = event
+    let pData = player.persistentData
     pData.knapping = 1
     pData.sawing = 1
 })
@@ -80,9 +81,9 @@ BlockEvents.broken(event => {
     let item = player.getHeldItem('main_hand')
     if (!item.hasTag('kubejs:knives')) return;
     if (block.id == 'minecraft:grass') {
-    event.player.damageHeldItem('main_hand', 1) 
+    player.damageHeldItem('main_hand', 1) 
     }else if (block.id == 'minecraft:tall_grass') {
-        event.player.damageHeldItem('main_hand', 1) 
+        player.damageHeldItem('main_hand', 1) 
         }
     
 })
@@ -102,7 +103,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:stick')
         }
     }
@@ -112,7 +113,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:oak_planks')
         }
     }else if (block.id == 'minecraft:stripped_spruce_log') {
@@ -120,7 +121,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:spruce_planks')
         }
     }else if (block.id == 'minecraft:stripped_birch_log') {
@@ -128,7 +129,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:birch_planks')
         }
     }else if (block.id == 'minecraft:stripped_jungle_log') {
@@ -136,7 +137,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:jungle_planks')
         }
     }else if (block.id == 'minecraft:stripped_acacia_log') {
@@ -144,7 +145,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:acacia_planks')
         }
     }else if (block.id == 'minecraft:stripped_dark_oak_log') {
@@ -152,7 +153,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:dark_oak_planks')
         }
     }else if (block.id == 'minecraft:stripped_mangrove_log') {
@@ -160,7 +161,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:mangrove_planks')
         }
     }else if (block.id == 'minecraft:stripped_crimson_stem') {
@@ -168,7 +169,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:crimson_planks')
         }
     }else if (block.id == 'minecraft:stripped_warped_stem') {
@@ -176,7 +177,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x minecraft:warped_planks')
         }
     }else if (block.id == 'iter_rpg:stripped_sacred_log') {
@@ -184,7 +185,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x iter_rpg:sacred_log')
         }
     }else if (block.id == 'theabyss:stripped_blaru_log') {
@@ -192,7 +193,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x theabyss:blaru_planks')
         }
     }else if (block.id == 'theabyss:stripped_jungle_log') {
@@ -200,7 +201,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x theabyss:jungle_planks')
         }
     }else if (block.id == 'theabyss:stripped_bog_shroom_log') {
@@ -208,7 +209,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x theabyss:bog_planks')
         }
     }else if (block.id == 'theabyss:stripped_sal_shroom_log') {
@@ -216,7 +217,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x theabyss:sal_planks')
         }
     }else if (block.id == 'theabyss:stripped_slimed_log') {
@@ -224,7 +225,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x theabyss:slimed_planks')
         }
     }else if (block.id == 'theabyss:stripped_frozen_log') {
@@ -232,7 +233,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x theabyss:frozen_planks')
         }
     }else if (block.id == 'born_in_chaos_v1:stripped_scorched_log') {
@@ -240,7 +241,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x born_in_chaos_v1:scorched_planks')
         }
     }else if (block.id == 'enlightened_end:stripped_congealed_stem') {
@@ -248,7 +249,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x enlightened_end:congealed_planks')
         }
     }else if (block.id == 'upgrade_aquatic:stripped_driftwood_log') {
@@ -256,7 +257,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x upgrade_aquatic:driftwood_planks')
         }
     }else if (block.id == 'upgrade_aquatic:stripped_river_log') {
@@ -264,7 +265,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x upgrade_aquatic:river_planks')
         }
     }else if (block.hasTag('ars_nouveau:stripped_logs')) {
@@ -272,7 +273,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x ars_nouveau:archwood_planks')
         }
     }else if (block.id == 'quark:stripped_blossom_log') {
@@ -280,7 +281,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x quark:blossom_planks')
         }
     }else if (block.id == 'quark:stripped_azalea_log') {
@@ -288,7 +289,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x quark:azalea_planks')
         }
     }else if (block.id == 'quark:stripped_ancient_log') {
@@ -296,7 +297,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x quark:ancient_planks')
         }
     }else if (block.id == 'forbidden_arcanus:stripped_cherry_log') {
@@ -304,7 +305,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x forbidden_arcanus:cherry_planks')
         }
     }else if (block.id == 'forbidden_arcanus:stripped_aurum_log') {
@@ -312,7 +313,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x forbidden_arcanus:aurum_planks')
         }
     }else if (block.id == 'vinery:stripped_cherry_log') {
@@ -320,7 +321,7 @@ BlockEvents.rightClicked(event => {
         player.swing()
         if (Math.random() >= 0.5) {
             block.set('air')
-            event.player.damageHeldItem('main_hand', 1) 
+            player.damageHeldItem('main_hand', 1) 
             player.spawnAtLocation('2x vinery:cherry_planks')
         }
     }
@@ -335,4 +336,18 @@ BlockEvents.rightClicked(event => {
 
 
 
-
+/*ItemEvents.rightClicked(event => {
+    const {item,player,hand,player:{mainHandItem,offHandItem}} = event
+    let offhand = player.getHeldItem('off_hand');
+    let mainhand = player.getHeldItem('main_hand');
+    let apply = (item1, item2, result) => {
+      if((mainHandItem.id == item1 && offHandItem.id == item2)||(mainHandItem.id == item2 && offHandItem.id == item1)) {
+        if (offhand.count <= 0 || mainhand.count <= 0) {return}
+        if(!hand == 'MAIN_HAND') {return}
+        mainHandItem.count--
+        offHandItem.count--
+        player.give(result)
+      } 
+    }
+    apply('minecraft:stripped_oak_log', 'create:andesite_alloy', 'create:andesite_casing')
+})*/

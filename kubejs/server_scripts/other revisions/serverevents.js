@@ -55,14 +55,12 @@ ServerEvents.loaded(event => {
         server.runCommandSilent(`bossbar set thrasher_tower_guardian players @a`)
         server.runCommandSilent(`bossbar set thrasher_tower_guardian style notched_6`)
         //Generic First Load Functions
-        server.runCommandSilent('function improved_pickaxes:setup');
         server.runCommandSilent(`scoreboard objectives add lesslagg dummy`)
         server.runCommandSilent(`gamerule spawnRadius 1000`)
         server.runCommandSilent(`scoreboard objectives add testcount dummy`)
         server.runCommandSilent(`gamerule reducedDebugInfo true`)
         server.runCommandSilent(`scoreboard players set #lio lesslagg 20`)
         server.runCommandSilent(`scoreboard objectives add TiempoEnCama minecraft.custom:minecraft.sleep_in_bed`)
-        server.runCommandSilent(`function firstload:tht`)
         server.schedule(10, () => { server.runCommandSilent('scoreboard objectives add dragonring dummy') });
         server.runCommandSilent('scoreboard players set dragonringdummy dragonring 1');
         server.schedule(10, () => { server.runCommandSilent('scoreboard objectives add lightningattack dummy') });
@@ -71,6 +69,11 @@ ServerEvents.loaded(event => {
         server.schedule(10, () => { server.runCommandSilent('scoreboard players set lesslaggyy lightningattack 7') });
         server.schedule(10, () => { server.runCommandSilent('scoreboard players set randolightning lightningattack2 350') });
         persistentData.firstLoad = true
+      }
+      if (persistentData.firstLoad && !persistentData.secondLoad) {
+      server.runCommandSilent(`function firstload:tht`)
+      server.runCommandSilent('function improved_pickaxes:setup');
+      persistentData.secondLoad = true
       }
   })
 ServerEvents.tick(event => {

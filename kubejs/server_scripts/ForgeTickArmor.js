@@ -108,7 +108,7 @@ const ATTRIBUTE_LIST_BOOTS = [
   "Speedyb",
   "Tallb",
   "Thickb",
-  "Toughc",
+  "Toughb",
   "Normal",
   "Normal",
   "Normal",
