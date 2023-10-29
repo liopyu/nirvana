@@ -37,13 +37,13 @@ ItemEvents.modification(event => {
 StartupEvents.registry('block', event => {
 	// Register new items here
 	event.create('pebbles:andesite_pebble').displayName('Andesite Pebble')
-	.material('stone')
+	.soundType('stone')
 	.hardness(4)
 	.requiresTool(false)
 	.defaultCutout()
 
 	event.create('reforging_station').displayName('Reforging Station')
-	.material('anvil')
+	.soundType('anvil')
 	.hardness(16)
 	.tagBlock('minecraft:mineable/pickaxe')
 	.requiresTool(true)
@@ -53,14 +53,14 @@ StartupEvents.registry('block', event => {
 	
 
 	event.create('charred_grass').displayName('Charred Grass')
-	.material('dirt')
+	.soundType('rooted_dirt')
        .hardness(0.8)
        .tagBlock('minecraft:mineable/shovel') // Make it mine faster using a shovel in 1.18.2+
   	   .requiresTool(false) // Make it require a tool to drop ay loot
 
 
 	event.create('charred_dirt').displayName('Charred Dirt')
-	.material('dirt')
+	.soundType('rooted_dirt')
        .hardness(0.8)
        .tagBlock('minecraft:mineable/shovel') // Make it mine faster using a shovel in 1.18.2+
   	   .requiresTool(false) // Make it require a tool to drop ay loot
@@ -69,7 +69,7 @@ StartupEvents.registry('block', event => {
 
 
 	event.create('charred_stone').displayName('Charred Stone')
-	.material('stone')
+	.soundType('stone')
        .hardness(1)
        .tagBlock('minecraft:mineable/pickaxe') // Make it mine faster using a shovel in 1.18.2+
   	   .requiresTool(true) // Make it require a tool to drop ay loot
@@ -77,7 +77,7 @@ StartupEvents.registry('block', event => {
 
 
 	event.create('charred_earth').displayName('Charred Earth')
-	.material('dirt')
+	.soundType('rooted_dirt')
        .hardness(0.7)
        .tagBlock('minecraft:mineable/shovel') // Make it mine faster using a shovel in 1.18.2+
   	   .requiresTool(false) // Make it require a tool to drop ay loot
