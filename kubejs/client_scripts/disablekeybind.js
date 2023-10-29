@@ -1,4 +1,4 @@
-// priority: 8
+// priority: 20
 
 const $InputConstants = Java.loadClass("com.mojang.blaze3d.platform.InputConstants")
 const $SophisticatedKeybinds = Java.loadClass('net.p3pp3rf1y.sophisticatedbackpacks.client.KeybindHandler')
