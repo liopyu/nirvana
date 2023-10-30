@@ -637,7 +637,7 @@ demo:
     ## Tagged bool
     ##   Entries may be tagged with many different tags.
     ##   Mods may even create their own.
-    ## [Green tag] [Advanced!] [Red tag] [Yellow bookmark] [Blue tag] [EXPERIMENTAL!] [Requires Restart!] [true/false]
+    ## [Blue tag] [Yellow bookmark] [Green tag] [Red tag] [Advanced!] [EXPERIMENTAL!] [Requires Restart!] [true/false]
     mixed_bool: false
     ## Enable Switch
     ##   This entry can disable the one below it

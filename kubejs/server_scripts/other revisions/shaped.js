@@ -1776,11 +1776,11 @@ ServerEvents.recipes(event => {
   }).keepIngredient('kubejs:disintegration_tablet');
 
 
-  event.shapeless('kubejs:spectral_silt', [
+  /*event.shapeless('kubejs:spectral_silt', [
     "artifacts:steadfast_spikes",
     "kubejs:disintegration_tablet",
 
-  ]).keepIngredient('kubejs:disintegration_tablet');
+  ]).keepIngredient('kubejs:disintegration_tablet');*/
 
   event.shapeless('kubejs:spectral_silt', [
     "artifacts:panic_necklace",
@@ -1841,19 +1841,19 @@ ServerEvents.recipes(event => {
 
   ]).keepIngredient('kubejs:disintegration_tablet');
 
-  event.shapeless('kubejs:spectral_silt', [
+  /*event.shapeless('kubejs:spectral_silt', [
     "artifacts:running_shoes",
     "kubejs:disintegration_tablet",
 
-  ]).keepIngredient('kubejs:disintegration_tablet');
+  ]).keepIngredient('kubejs:disintegration_tablet');*/
 
   
 
-  event.shapeless('kubejs:spectral_silt', [
+  /*event.shapeless('kubejs:spectral_silt', [
     "artifacts:flippers",
     "kubejs:disintegration_tablet",
 
-  ]).keepIngredient('kubejs:disintegration_tablet');
+  ]).keepIngredient('kubejs:disintegration_tablet');*/
 
   event.shapeless('kubejs:spectral_silt', [
     "#quark:runes",
@@ -1951,7 +1951,7 @@ ServerEvents.recipes(event => {
     D: '#forge:string'
   });
 
-  event.shaped('artifacts:running_shoes', [
+  /*event.shaped('artifacts:running_shoes', [
     'D D',
     'DFD',
     'E E'
@@ -1959,9 +1959,9 @@ ServerEvents.recipes(event => {
     F: '#forge:string',
     E: 'kubejs:spectral_silt',
     D: 'minecraft:red_wool'
-  });
+  });*/
 
-  event.shaped('artifacts:steadfast_spikes', [
+  /*event.shaped('artifacts:steadfast_spikes', [
     'CEC',
     'CEC',
     'F F'
@@ -1969,9 +1969,9 @@ ServerEvents.recipes(event => {
     C: 'magistuarmory:leather_strip',
     F: 'ars_nouveau:wilden_spike',
     E: 'kubejs:spectral_silt'
-  });
+  });*/
 
-  event.shaped('artifacts:flippers', [
+  /*event.shaped('artifacts:flippers', [
     'FFE',
     ' CF',
     'FFE'
@@ -1979,7 +1979,7 @@ ServerEvents.recipes(event => {
     C: 'alexsmobs:flying_fish_boots',
     F: 'pneumaticcraft:plastic',
     E: 'kubejs:spectral_silt'
-  });
+  });*/
 
   //Magic Mirror
   event.shaped('magicmirror:magicmirror', [

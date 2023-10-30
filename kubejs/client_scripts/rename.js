@@ -1,19 +1,6 @@
 // priority: 1
 ClientEvents.lang('en_us', event => {
   const rename = (item, newName) => event.add(Item.of(item).item.getDescriptionId(), newName)
-  //Ingredient.of(/:.*vertical/).stacks.forEach(item => rename(item, '§7'+ item.item.getName(item).string))
-  //Ingredient.of(/:.*framed/).stacks.forEach(item => rename(item, '§7'+ item.item.getName(item).string))
-  
-  Ingredient.of(/:.*trapdoor/).stacks.forEach(item => rename(item, '§7'+ item.item.getName(item).string))
-  //Ingredient.of(/:.*compat/).stacks.forEach(item => rename(item, '§7'+ item.item.getName(item).string))
-  Ingredient.of(/:.*diamond/).stacks.forEach(item => rename(item, '§b'+ item.item.getName(item).string))
-  Ingredient.of(/:.*gold/).stacks.forEach(item => rename(item, '§6'+ item.item.getName(item).string))
-  Ingredient.of(/:.*emerald/).stacks.forEach(item => rename(item, '§a'+ item.item.getName(item).string))
-  Ingredient.of(/:.*netherite/).stacks.forEach(item => rename(item, '§d'+ item.item.getName(item).string))
-  
-  //Ingredient.of(/:.*plank/).stacks.forEach(item => rename(item, '§9'+ item.item.getName(item).string))
-  
-    
     rename("minecraft:large_fern", '§aTall Fern')
     rename("minecraft:tall_grass", '§aOvergrown Grass')
     rename("minecraft:tropical_fish", 'Exotic Fish')
@@ -63,11 +50,7 @@ ClientEvents.lang('en_us', event => {
     rename("ars_nouveau:blue_archwood_leaves", '§2Blue Archwood Foliage')
     rename("ars_nouveau:purple_archwood_leaves", '§2Purple Archwood Foliage')
     rename("ars_nouveau:green_archwood_leaves", '§2Green Archwood Foliage')
-    rename("ars_nouveau:red_archwood_leaves", '§2Red Archwood Foliage')/*
-    rename("biomemakeover:blighted_balsa_leaves", '§2 Foliage')
-    rename("biomemakeover:willow_leaves", '§2Willow Foliage')
-    rename("biomemakeover:swamp_cypress_leaves", '§2Swamp Cypress Foliage')
-    rename("biomemakeover:ancient_oak_leaves", '§2Ancient Foliage')*/
+    rename("ars_nouveau:red_archwood_leaves", '§2Red Archwood Foliage')
     rename("iter_rpg:sacred_leaves", '§6Scared Foliage')
     rename("hexfortress:wither_leaves", '§0Withered Foliage')
     rename("minecraft:campfire", '§eCampfire')
@@ -107,7 +90,6 @@ ClientEvents.lang('en_us', event => {
     rename("stalwart_dungeons:raw_tungsten", '§aUnrefined Tungsten')
     rename("enlightened_end:raw_bismuth", '§5Unrefined Bismuth')
     rename("ylf_mod:brokenice", '§bBroken Ice')
-
     rename("minecraft:raw_iron_block", '§8Unrefined Iron Block')
     rename("minecraft:raw_gold_block", '§6Unrefined Gold Block')
     rename("minecraft:raw_copper_block", '§8Unrefined Copper Block')
@@ -121,13 +103,16 @@ ClientEvents.lang('en_us', event => {
     rename("enlightened_end:raw_bismuth_block", '§5Unrefined Bismuth Block')
     rename("alcocraftplus:mug_of_nether_star_lager", '§9Mead of Flight')
     rename("alcocraftplus:mug_of_chorus_ale", '§9§l§oBitter Mead of Flight')
-
-
+    //Ingredient.of(/:.*vertical/).stacks.forEach(item => rename(item, '§7'+ item.item.getName(item).string))
+    //Ingredient.of(/:.*framed/).stacks.forEach(item => rename(item, '§7'+ item.item.getName(item).string))
     
-    
-    
-    
-
-
+    //Ingredient.of(/:.*trapdoor/).stacks.forEach(item => rename(item, '§7'+ item.item.getName(item).string))
+    //Ingredient.of(/:.*compat/).stacks.forEach(item => rename(item, '§7'+ item.item.getName(item).string))
+    /*Ingredient.of(/:.*diamond/).stacks.forEach(item => rename(item, '§b'+ item.item.getName(item).string))
+    Ingredient.of(/:.*gold/).stacks.forEach(item => rename(item, '§6'+ item.item.getName(item).string))
+    Ingredient.of(/:.*emerald/).stacks.forEach(item => rename(item, '§a'+ item.item.getName(item).string))
+    Ingredient.of(/:.*netherite/).stacks.forEach(item => rename(item, '§d'+ item.item.getName(item).string))
+    */
+    //Ingredient.of(/:.*plank/).stacks.forEach(item => rename(item, '§9'+ item.item.getName(item).string))
   })
  
