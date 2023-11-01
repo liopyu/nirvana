@@ -1,7 +1,7 @@
-// priority: 10
+// priority: 5
 ItemEvents.tooltip(event => {
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (item?.id == 'ae2:facade') return
+        
         if (item?.nbt?.Arcanel){
             text.add([
                 Text.of('Quality: ').gray(),
@@ -119,7 +119,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (item?.id == 'ae2:facade') return
+        
         if(item.isEmpty()) return
          
          if (item?.nbt?.Arcanec){
@@ -253,7 +253,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (item?.id == 'ae2:facade') return
+        
         if(item.isEmpty()) return
          
          if (item?.nbt?.Arcaneh){
@@ -373,7 +373,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (item?.id == 'ae2:facade') return
+        
         if(item.isEmpty()) return
         if (item?.nbt?.Crumblingb){
             text.add([

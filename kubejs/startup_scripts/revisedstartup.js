@@ -31,7 +31,20 @@ ItemEvents.modification(event => {
 	  })
 })
 
-
+BlockEvents.modification(e => {
+    e.modify('/.plank/' , block => {
+        block.requiresTool = true
+    })
+	e.modify('/.log/' , block => {
+        block.requiresTool = true
+    })
+	e.modify('/.wood/' , block => {
+        block.requiresTool = true
+    })
+	e.modify('/.*/' , block => {
+        block.destroySpeed = Block.getBlock(block.id).defaultDestroyTime() / 0.5
+    })
+})
 
 
 StartupEvents.registry('block', event => {

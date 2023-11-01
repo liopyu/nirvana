@@ -216,11 +216,5 @@ EntityEvents.death(event => {
         
     }
 })
-PlayerEvents.inventoryChanged(event => {
-    let pData = event.player.persistentData
-    if (pData.firstsleep == 1) {
-        event.cancel()
-    }
-})
 
 

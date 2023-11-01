@@ -58,3 +58,6 @@ minecraftinstance*
 *username-cache*
 ops.json
 whitelist.json
+manifest-template.json
+create_manifest.py
+generate.py

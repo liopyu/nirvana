@@ -191,10 +191,18 @@
 	
   {
     "_comment" : "Rivers and oceans have no trees but we set a default density and chance for addons to use.",
-    "select": { "tag": "#minecraft:(is_river)|(is_ocean)|(is_beach)|(#tectonicworld:is_beach)" },
+    "select": { "tag": "#minecraft:is_ocean" },
     "apply": {
-      "density": [ 1.0 ],
-      "chance": 0.02
+      "species" : {
+        "random" : {
+          "oak" : 4,
+          "birch" : 1,
+          "apple_oak": 1
+        }
+      },
+      "density": [ 0.3 ],
+      "chance": 0.3,
+      "forestness" : 0.2
     }
   },
   {

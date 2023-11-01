@@ -52,3 +52,5 @@ global.wakeup = event => {
     let player = event.entity;
     Utils.server.runCommandSilent(`scoreboard players reset ${player.username} TiempoEnCama`)
 }
+
+

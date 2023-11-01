@@ -1,1 +1,1 @@
-kill @e[type=item,predicate=bro:item_deleter]
+#kill @e[type=item,predicate=bro:item_deleter]

@@ -1,7 +1,7 @@
 // priority: 11
 ItemEvents.tooltip(event => {
         event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-            if (item?.id == 'ae2:facade') return
+            
             if (item?.nbt?.Rusted){
                 text.add([
                     Text.of('Quality: ').gray(),
