@@ -20,4 +20,3 @@ StartupEvents.registry("enchantment", event => {
         
         
 })
-

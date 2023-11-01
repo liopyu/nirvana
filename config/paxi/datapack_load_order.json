@@ -1,3 +1,4 @@
 {
-  "loadOrder": [wwoo, wwooislands, dungeonsandtaverns, GenericMinecraftTweaking, DisabledNetherPortals, scalinghealth]
+  "loadOrder": ["wwoo", "wwooislands", "dungeonsandtaverns", "GenericMinecraftTweaking", "DisabledNetherPortals", "scalinghealth"
+  ]
 }

@@ -8,26 +8,24 @@
 	},
 	"sources": [
 		{
-			"type": "puffish_skills:kill_entity",
+			"type": "puffish_skills:mine_block",
 			"data": {
-				"parameters": {
-					"dropped_xp": {
-						"type": "entity_dropped_experience"
-					},
-					"max_health": {
-						"type": "entity_max_health"
+				"conditions": {
+					"bedrock": {
+						"type": "block",
+						"data": {
+							"block": "bedrock"
+						}
 					}
+					
 				},
 				"experience": [
 					{
-						"expression": "dropped_xp + max_health / 20"
+						"condition": "bedrock",
+						"expression": "5000"
 					}
-				],
-				"anti_farming": {
-					"enabled": true,
-					"limit_per_chunk": 35,
-					"reset_after_seconds": 35
-				}
+				
+				]
 			}
 		}
 	]
