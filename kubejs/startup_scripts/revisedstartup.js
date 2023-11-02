@@ -1118,6 +1118,10 @@ global.gravescroll = entity => {
 		offHandItem.count--
 	}
 }
+/**
+ * 
+ * @param {Internal.Player} entity 
+ */
 global.recall = entity => {
 	let player = entity
 	let offHandItem = entity.getHeldItem('off_hand');

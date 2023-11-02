@@ -17,7 +17,7 @@ const keyContains = (string, component) => {
 
 ItemEvents.tooltip(event => {
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item?.id)) return
+        if (!Item.exists(item.id)) return
         if (item?.nbt?.Prospecting) {
             text.add([
                 Text.of('Quality: ').gray(),
@@ -269,7 +269,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, a, text) => {
-        if (!Item.exists(item?.id)) return
+        if (!Item.exists(item.id)) return
         let isStatSection = false
         if (item?.nbt?.Leggings){
         for (let i = 0;i < text.size();i++) {
@@ -358,7 +358,7 @@ ItemEvents.tooltip(event => {
     }
 })
     event.addAdvanced(Ingredient.all, (stack, item, text) => {
-        if (!Item.exists(item?.id)) return
+        //if (!Item.exists(stack.id)) return
         
         //if (!(stack.isEnchanted() || enchantedBook.test(stack))) return
         let wasEnch = false
@@ -388,7 +388,7 @@ ItemEvents.tooltip(event => {
 
 
        event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item?.id)) return
+        if (!Item.exists(item.id)) return
         if (item?.nbt?.Rusted){
             text.add([
                 Text.of('Quality: ').gray(),
@@ -639,7 +639,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item?.id)) return
+        if (!Item.exists(item.id)) return
         
         if (item?.nbt?.Arcanel){
             text.add([
@@ -758,7 +758,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item?.id)) return
+        if (!Item.exists(item.id)) return
         
         if(item.isEmpty()) return
          
@@ -893,7 +893,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item?.id)) return
+        if (!Item.exists(item.id)) return
         
         if(item.isEmpty()) return
          
@@ -1014,7 +1014,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item?.id)) return
+        if (!Item.exists(item.id)) return
         
         if(item.isEmpty()) return
         if (item?.nbt?.Crumblingb){
