@@ -1,4 +1,6 @@
 // priority: 9
+const $OriginsClient = Java.loadClass('io.github.apace100.origins.OriginsClient')
+
 const enchantedBook = Ingredient.of('minecraft:enchanted_book')
 const formatCurse = c => c.darkRed()
 const formatEnch = c => c.darkAqua()
@@ -12,12 +14,10 @@ const keyContains = (string, component) => {
   let key = component?.contents?.key
   return key != null && key.contains(string)
 }
-const $OriginsClient = Java.loadClass('io.github.apace100.origins.OriginsClient')
-
 
 ItemEvents.tooltip(event => {
-
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
+        if (!Item.exists(item?.id)) return
         if (item?.nbt?.Prospecting) {
             text.add([
                 Text.of('Quality: ').gray(),
@@ -269,6 +269,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, a, text) => {
+        if (!Item.exists(item?.id)) return
         let isStatSection = false
         if (item?.nbt?.Leggings){
         for (let i = 0;i < text.size();i++) {
@@ -357,6 +358,7 @@ ItemEvents.tooltip(event => {
     }
 })
     event.addAdvanced(Ingredient.all, (stack, item, text) => {
+        if (!Item.exists(item?.id)) return
         
         //if (!(stack.isEnchanted() || enchantedBook.test(stack))) return
         let wasEnch = false
@@ -383,12 +385,769 @@ ItemEvents.tooltip(event => {
          }
         }}
        })
-})
 
-ItemEvents.tooltip(event => {
+
+       event.addAdvanced(Ingredient.all, (item, advanced, text) => {
+        if (!Item.exists(item?.id)) return
+        if (item?.nbt?.Rusted){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Rusted').red()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-10% Dig Speed').red()  
+            ])
+            text.add([
+                Text.of('-10% Attack Damage').red()  
+            ])
+            
+        }else if (item?.nbt?.Clumsy){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Clumsy').red()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-5% Dig Speed').red()  
+            ])
+            text.add([
+                Text.of('-5% Attack Speed').red()  
+            ])
+        }else if (item?.nbt?.Elegant){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Elegant').aqua()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('+15% Dig Speed').blue()  
+            ])
+            text.add([
+                Text.of('+15% Attack Speed').blue()  
+            ])
+        }else if (item?.nbt?.Broken){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Broken').darkGray()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-15% Attack Damage').red()  
+            ])
+           
+        }else if (item?.nbt?.Short){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Short').red()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-1 Reach Distance').red()  
+            ])
+        }else if (item?.nbt?.Thin){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Thin').yellow()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('+10% Attack Speed').blue()  
+            ])
+            text.add([
+                Text.of('-5% Attack Damage').red()  
+            ])
+            
+        }else if (item?.nbt?.Pokey){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Pokey').yellow()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-10% Dig Speed').red()  
+            ])
+            text.add([
+                Text.of('+5% Attack Damage').blue()  
+            ])
+        }else if (item?.nbt?.Vicious){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Vicious').yellow()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('+15% Attack Damage').blue()  
+            ])
+            text.add([
+                Text.of('-0.5 Reach Distance').red()  
+            ])
+        }else if (item?.nbt?.Long){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Long').blue()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            
+            text.add([
+                Text.of('+0.5 Reach Distance').blue()  
+            ])
+        }else if (item?.nbt?.Keen){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Keen').blue()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('+10% Attack Speed').blue()  
+            ])
+            text.add([
+                Text.of('+10% Attack Damage').blue()  
+            ])
+            
+        }else if (item?.nbt?.Sweeping){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Sweeping').aqua()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('+20% Attack Speed').blue()  
+            ])
+            text.add([
+                Text.of('+0.5 Reach Distance').blue()  
+            ])
+        }else if (item?.nbt?.Legendary){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Legendary').lightPurple()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('+10% Dig Speed').blue()  
+            ])
+            text.add([
+                Text.of('+10% Attack Speed').blue()  
+            ])
+            text.add([
+                Text.of('+15% Attack Damage').blue()  
+            ])
+            text.add([
+                Text.of('+0.5 Reach Distance').blue()  
+            ])
+        }else if (item?.nbt?.Worthless){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Worthless').darkRed()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-10% Dig Speed').red()  
+            ])
+            text.add([
+                Text.of('-10% Attack Speed').red()  
+            ])
+            text.add([
+                Text.of('-10% Attack Damage').red()  
+            ])
+            text.add([
+                Text.of('-1 Reach Distance').red()  
+            ])
+        }else if (item?.nbt?.Broad){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Broad').yellow()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-5% Dig Speed').red()  
+            ])
+            text.add([
+                Text.of('-5% Attack Speed').red()  
+            ])
+            text.add([
+                Text.of('+10% Attack Damage').blue()  
+            ])
+
+        }else if (item?.nbt?.Bulky){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Bulky').darkGray()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-15% Dig Speed').red()  
+            ])
+            text.add([
+                Text.of('-15% Attack Speed').red()  
+            ])
+        }else if (item?.nbt?.Sharp){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Sharp').blue()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('+10% Attack Damage').blue()  
+            ])
+        }else if (item?.nbt?.Chipped){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Chipped').red()   
+            ])
+            text.add([
+                Text.of('When in main hand:').gray() 
+            ])
+            text.add([
+                Text.of('-5% Attack Speed').red()  
+            ])
+            text.add([
+                Text.of('-5% Attack Damage').red()  
+            ])
+        }
+    })
+    event.addAdvanced(Ingredient.all, (item, advanced, text) => {
+        if (!Item.exists(item?.id)) return
+        
+        if (item?.nbt?.Arcanel){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Arcane').blue()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Magic Shielding').blue()  
+            ])
+        } else if (item?.nbt?.Dentedl){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Dented').darkGray()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('-2 Locational Armor').red()  
+            ])
+        } else if (item?.nbt?.Heavyl){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Heavy').red()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('-10% Speed').red()  
+            ])
+        }else if (item?.nbt?.Springyl){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Springy').blue()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('+0.5 Jump Height').blue()  
+            ])
+        }else if (item?.nbt?.Masterfull){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Masterful').lightPurple()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('+0.5 Jump Height').blue()  
+            ])
+            text.add([
+                Text.of('+1 Locational Armor Toughness').blue()  
+            ])
+            text.add([
+                Text.of('+1 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Toughl){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Tough').blue()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Locational Armor Toughness').blue()  
+            ])
+        }else if (item?.nbt?.Thickl){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Thick').yellow()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('-5% Speed').red()  
+            ])
+            text.add([
+                Text.of('+1 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Protectivel){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Protective').blue()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Crumblingl){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Crumbling').darkRed()   
+            ])
+            text.add([
+                Text.of('When on legs:').gray() 
+            ])
+            text.add([
+                Text.of('-1 Locational Armor Toughness').red()  
+            ])
+            text.add([
+                Text.of('-1 Locational Armor').red()  
+            ])
+            text.add([
+                Text.of('-1 Magic Shielding').red()  
+            ])
+        }
+    })
+    event.addAdvanced(Ingredient.all, (item, advanced, text) => {
+        if (!Item.exists(item?.id)) return
+        
+        if(item.isEmpty()) return
+         
+         if (item?.nbt?.Arcanec){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Arcane').blue()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Magic Shielding').blue()  
+            ])
+        } else if (item?.nbt?.Heavyc){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Heavy').red()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('-10% Speed').red()  
+            ])
+        }else if (item?.nbt?.Cumbersomec){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Cumbersome').darkGray()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('-10% Dig Speed').red()  
+            ])
+            text.add([
+                Text.of('-10% Attack Speed').red()  
+            ])
+        }else if (item?.nbt?.Solidc){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Solid').blue()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('+0.5 Knockback Resistance').blue()  
+            ])
+        }else if (item?.nbt?.Masterfulc){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Masterful').lightPurple()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Locational Armor Toughness').blue()  
+            ])
+            text.add([
+                Text.of('+1 Locational Armor').blue()  
+            ])
+            text.add([
+                Text.of('+0.5 Knockback Resistance').blue()  
+            ])
+        }else if (item?.nbt?.Toughc){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Tough').blue()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Locational Armor Toughness').blue()  
+            ])
+        }else if (item?.nbt?.Thickc){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Thick').yellow()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('-5% Speed').red()  
+            ])
+            text.add([
+                Text.of('+1 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Protectivec){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Protective').blue()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Crumblingc){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Crumbling').darkRed()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('-1 Locational Armor Toughness').red()  
+            ])
+            text.add([
+                Text.of('-1 Locational Armor').red()  
+            ])
+            text.add([
+                Text.of('-1 Magic Shielding').red()  
+            ])
+        }else if (item?.nbt?.Dentedc){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Dented').darkGray()   
+            ])
+            text.add([
+                Text.of('When on body:').gray() 
+            ])
+            text.add([
+                Text.of('-2 Locational Armor').red()  
+            ])
+        }
+    })
+    event.addAdvanced(Ingredient.all, (item, advanced, text) => {
+        if (!Item.exists(item?.id)) return
+        
+        if(item.isEmpty()) return
+         
+         if (item?.nbt?.Arcaneh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Arcane').blue()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Magic Shielding').blue()  
+            ])
+        }else if (item?.nbt?.Crumblingh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Crumbling').darkRed()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('-1 Locational Armor Toughness').red()  
+            ])
+            text.add([
+                Text.of('-6 Locational Armor').red()  
+            ])
+            text.add([
+                Text.of('-1 Magic Shielding').red()  
+            ])
+        }else if (item?.nbt?.Thickh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Thick').yellow()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('-5% Speed').red()  
+            ])
+            text.add([
+                Text.of('+2 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Luckyh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Lucky').blue()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('+0.5 Luck').blue()  
+            ])
+        }else if (item?.nbt?.Masterfulh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Masterful').lightPurple()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('+0.5 Luck').blue()  
+            ])
+            text.add([
+                Text.of('+1 Locational Armor Toughness').blue()  
+            ])
+            text.add([
+                Text.of('+2 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Toughh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Tough').blue()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Locational Armor Toughness').blue()  
+            ])
+        }else if (item?.nbt?.Protectiveh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Protective').blue()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('+2 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Dentedh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Dented').darkGray()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('-4 Locational Armor').red()  
+            ])
+        } else if (item?.nbt?.Heavyh){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Heavy').red()   
+            ])
+            text.add([
+                Text.of('When on head:').gray() 
+            ])
+            text.add([
+                Text.of('-10% Speed').red()  
+            ])
+        }
+    })
+    event.addAdvanced(Ingredient.all, (item, advanced, text) => {
+        if (!Item.exists(item?.id)) return
+        
+        if(item.isEmpty()) return
+        if (item?.nbt?.Crumblingb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Crumbling').darkRed()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('-1 Locational Armor Toughness').red()  
+            ])
+            text.add([
+                Text.of('-4.5 Locational Armor').red()  
+            ])
+            text.add([
+                Text.of('-1 Magic Shielding').red()  
+            ])
+        }else if (item?.nbt?.Dentedb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Dented').darkGray()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('-3 Locational Armor').red()  
+            ])
+        }else if (item?.nbt?.Arcaneb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Arcane').blue()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Magic Shielding').blue()  
+            ])
+        }else if (item?.nbt?.Speedyb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Speedy').blue()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('+10% Speed').blue()  
+            ])
+        }else if (item?.nbt?.Tallb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Tall').blue()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('+0.5 Step Height').blue()  
+            ])
+        }else if (item?.nbt?.Masterfulb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Masterful').lightPurple()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('+0.5 Step Height').blue()  
+            ])
+            text.add([
+                Text.of('+10% Speed').blue()  
+            ])
+            text.add([
+                Text.of('+1 Locational Armor Toughness').blue()  
+            ])
+            text.add([
+                Text.of('+1.5 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Toughb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Tough').blue()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('+1 Locational Armor Toughness').blue()  
+            ])
+        }else if (item?.nbt?.Thickb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Thick').yellow()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('-5% Speed').red()  
+            ])
+            text.add([
+                Text.of('+1.5 Locational Armor').blue()  
+            ])
+        }else if (item?.nbt?.Heavyb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Heavy').red()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('-10% Speed').red()  
+            ])
+        }else if (item?.nbt?.Protectiveb){
+            text.add([
+                Text.of('Quality: ').gray(),
+                Text.of('Protective').blue()   
+            ])
+            text.add([
+                Text.of('When on feet:').gray() 
+            ])
+            text.add([
+                Text.of('+1.5 Locational Armor').blue()  
+            ])
+        }
+    })
     event.addAdvanced('kubejs:reforging_station', (item, advanced, text) => {
-
-
         text.add([
             Text.of('Used to Reforge Items').gray(),
         ])
