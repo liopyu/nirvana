@@ -31,8 +31,8 @@ global.jump = event => {
     let pData = entity.persistentData
     if (pData.jump != 1) { return }
     pData.jump = 0;
-    Utils.server.schedule(200, () => {
+    entity.level.server.schedule(200, () => {
       pData.jump = 1;
     });
-    Utils.server.runCommandSilent(`execute as ${entity.username} run playsound environs:jump player @s ${entity.x} ${entity.y} ${entity.z} 0.5 1`)
+    entity.level.server.runCommandSilent(`execute as ${entity.username} run playsound environs:jump player @s ${entity.x} ${entity.y} ${entity.z} 0.5 1`)
 }

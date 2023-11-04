@@ -5,7 +5,7 @@
   "terrain_adaptation": "none",
   "spawn_overrides": {},
   "start_pool": "seafaring:gravel",
-  "start_jigsaw_name": "seafaring:gravel",
+  "start_jigsaw_name": "seafaring:gravel/anchor",
   "size": 1,
   
   "start_height": {

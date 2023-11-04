@@ -3,16 +3,13 @@ ForgeEvents.onEvent('net.minecraftforge.event.entity.player.PlayerSleepInBedEven
 })
 global.firstsleep = event => {
 	let player = event.entity;
-    //player.tell('test')
+    if (!event.entity.isPlayer()) return
     let pData = player.persistentData
     let night = player.level.isNight()
     if (pData.firstsleep != 1 && pData.firstsleep != 2 && night) {
-        Utils.server.schedule(30, () => {
-            Utils.server.runCommandSilent(`execute in theabyss:the_abyss run tp ${player.username} 0 200 0`)
+        player.level.server.schedule(30, () => {
+            player.level.server.runCommandSilent(`execute in theabyss:the_abyss run tp ${player.username} 0 200 0`)
         });
-        
-    
-    
     pData.firstsleep = 1
     pData.fsx = player.x
     pData.fsy = player.y
@@ -42,15 +39,16 @@ global.firstsleep = event => {
     }
     }
   }
-
-
   ForgeEvents.onEvent('net.minecraftforge.event.entity.player.PlayerWakeUpEvent', event => {
     global.wakeup(event)
 })
-  
+  /**
+   * 
+   * @param {Internal.Entity} event 
+   * @returns 
+   */
 global.wakeup = event => {
     let player = event.entity;
-    Utils.server.runCommandSilent(`scoreboard players reset ${player.username} TiempoEnCama`)
+    if (!event.entity.isPlayer()) return
+    player.level.server.runCommandSilent(`scoreboard players reset ${player.username} TiempoEnCama`)
 }
-
-

@@ -131,31 +131,10 @@ PlayerEvents.tick(event => {
             });
             event.server.runCommandSilent(`execute in wabworldgen:tutorial run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
         }
-        //event.player.tell(pData.sleeptimer)
-        
-
     }
-    
 })
 //Debugging Stuff
-/*ItemEvents.rightClicked('minecraft:wooden_shovel', event => {
-    let pData = event.player.persistentData
-    event.player.tell(event.player.persistentData.fsx)
-    event.player.tell(event.player.persistentData.fsy)
-    event.player.tell(event.player.persistentData.fsz)
-    event.player.tell(pData.fsn)
-    event.player.tell(pData.fsp)
-    event.player.tell(pData.sleeptimer)
-    event.player.tell(pData.firstsleep)
-    event.entity.tell(event.level.dayTime())
-    
-    let night = event.player.level.isNight()
-    if (night) {
-        event.player.tell('its night')
-    }
-
-})
-ItemEvents.rightClicked('minecraft:diamond_sword', event => {
+/*ItemEvents.rightClicked('minecraft:diamond_sword', event => {
     let pData = event.player.persistentData
     event.player.tell(event.player.persistentData.fsx)
     event.player.tell(event.player.persistentData.fsy)
@@ -166,7 +145,6 @@ ItemEvents.rightClicked('minecraft:diamond_sword', event => {
     event.player.tell(pData.firstsleep)
     pData.firstsleep = 0
     pData.sleeptimer = 0
-    pData.firstsleep = 1
 })*/
 PlayerEvents.loggedIn(event => {
     let pData = event.player.persistentData

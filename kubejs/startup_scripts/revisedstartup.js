@@ -153,41 +153,41 @@ ForgeEvents.onEvent(
   global.attributeupdate = event => {
 	const {entity,entity: {persistentData,username}} = event
 	let arcane = persistentData.getInt("arcaneLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} arcane ${arcane}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} arcane ${arcane}`)
 	let athletic = persistentData.getInt("athleticLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} athletic ${athletic}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} athletic ${athletic}`)
 	let aiming = persistentData.getInt("aimingLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} aiming ${aiming}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} aiming ${aiming}`)
 	let armored = persistentData.getInt("armoredLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} armored ${armored}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} armored ${armored}`)
 	let clunky = persistentData.getInt("clunkyLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} clunky ${clunky}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} clunky ${clunky}`)
 	let flailing = persistentData.getInt("flailingLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} flailing ${flailing}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} flailing ${flailing}`)
 	let focusing = persistentData.getInt("focusingLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} focusing ${focusing}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} focusing ${focusing}`)
 	let graceful = persistentData.getInt("gracefulLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} graceful ${graceful}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} graceful ${graceful}`)
 	let healthy = persistentData.getInt("healthyLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} healthy ${healthy}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} healthy ${healthy}`)
 	let horrible = persistentData.getInt("horribleLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} horrible ${horrible}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} horrible ${horrible}`)
 	let lucky = persistentData.getInt("luckyLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} lucky ${lucky}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} lucky ${lucky}`)
 	let prospecting = persistentData.getInt("prospectingLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} prospecting ${prospecting}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} prospecting ${prospecting}`)
 	let punishing = persistentData.getInt("punishingLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} punishing ${punishing}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} punishing ${punishing}`)
 	let shielding = persistentData.getInt("shieldingLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} shielding ${shielding}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} shielding ${shielding}`)
 	let speedy = persistentData.getInt("speedyLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} speedy ${speedy}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} speedy ${speedy}`)
 	let springy = persistentData.getInt("springyLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} springy ${springy}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} springy ${springy}`)
 	let strengthening = persistentData.getInt("strengtheningLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} strengthening ${strengthening}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} strengthening ${strengthening}`)
 	let undying = persistentData.getInt("undyingLevel")
-	Utils.server.runCommandSilent(`scoreboard players set ${username} undying ${undying}`)
+	entity.level.server.runCommandSilent(`scoreboard players set ${username} undying ${undying}`)
   }
 
    ////////////////////////////////////////////////////////////////////////////
@@ -1068,52 +1068,52 @@ global.gravescroll = entity => {
 	pData.deathreset = 0
 	if (item.id == 'kubejs:grave_scroll') {
 		if (pData.deathdimension == 1){
-			Utils.server.runCommand(`execute in ae2:spatial_storage run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in ae2:spatial_storage run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 2){
-			Utils.server.runCommand(`execute in deepwhisperer:deep_space run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in deepwhisperer:deep_space run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 3){
-			Utils.server.runCommand(`execute in minecraft:overworld run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in minecraft:overworld run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 4){
-			Utils.server.runCommand(`execute in minecraft:the_end run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in minecraft:the_end run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 5){
-			Utils.server.runCommand(`execute in minecraft:the_nether run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in minecraft:the_nether run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 6){
-			Utils.server.runCommand(`execute in panthalassa:panthalassa run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in panthalassa:panthalassa run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 7){
-			Utils.server.runCommand(`execute in tectonicworld:tectonic run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in tectonicworld:tectonic run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 8){
-			Utils.server.runCommand(`execute in theabyss:frost_world run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in theabyss:frost_world run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 9){
-			Utils.server.runCommand(`execute in theabyss:pocket_dimension run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in theabyss:pocket_dimension run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 10){
-			Utils.server.runCommand(`execute in theabyss:the_abyss run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in theabyss:the_abyss run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 11){
-			Utils.server.runCommand(`execute in wabworldgen:tutorial run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in wabworldgen:tutorial run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}
 		item.count--
 	}else if (offHandItem.id == 'kubejs:grave_scroll') {
 		if (pData.deathdimension == 1){
-			Utils.server.runCommand(`execute in ae2:spatial_storage run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in ae2:spatial_storage run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 2){
-			Utils.server.runCommand(`execute in deepwhisperer:deep_space run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in deepwhisperer:deep_space run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 3){
-			Utils.server.runCommand(`execute in minecraft:overworld run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in minecraft:overworld run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 4){
-			Utils.server.runCommand(`execute in minecraft:the_end run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in minecraft:the_end run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 5){
-			Utils.server.runCommand(`execute in minecraft:the_nether run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in minecraft:the_nether run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 6){
-			Utils.server.runCommand(`execute in panthalassa:panthalassa run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in panthalassa:panthalassa run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 7){
-			Utils.server.runCommand(`execute in tectonicworld:tectonic run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in tectonicworld:tectonic run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 8){
-			Utils.server.runCommand(`execute in theabyss:frost_world run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in theabyss:frost_world run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 9){
-			Utils.server.runCommand(`execute in theabyss:pocket_dimension run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in theabyss:pocket_dimension run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 10){
-			Utils.server.runCommand(`execute in theabyss:the_abyss run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in theabyss:the_abyss run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}else if (pData.deathdimension == 11){
-			Utils.server.runCommand(`execute in wabworldgen:tutorial run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
+			entity.level.server.runCommand(`execute in wabworldgen:tutorial run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}
 		offHandItem.count--
 	}
@@ -1130,13 +1130,13 @@ global.recall = entity => {
 	const {x, y, z} = player.getSpawnLocation()
 	if (item.id == 'recall_potion:recall_food') {
 		item.count--
-		Utils.server.runCommandSilent(`execute as ${player.username} run playsound minecraft:teleport ambient @s ${player.x} ${player.y} ${player.z} 1 1`)
-		Utils.server.runCommandSilent(`execute in ${dim} run execute as ${player.username} run tp ${x} ${y} ${z}`)
+		entity.level.server.runCommandSilent(`execute as ${player.username} run playsound minecraft:teleport ambient @s ${player.x} ${player.y} ${player.z} 1 1`)
+		entity.level.server.runCommandSilent(`execute in ${dim} run execute as ${player.username} run tp ${x} ${y} ${z}`)
 		
 	}else if (offHandItem.id == 'recall_potion:recall_food') {
 		offHandItem.count--
-		Utils.server.runCommandSilent(`execute as ${player.username} run playsound minecraft:teleport ambient @s ${player.x} ${player.y} ${player.z} 1 1`)
-		Utils.server.runCommandSilent(`execute in ${dim} run execute as ${player.username} run tp ${x} ${y} ${z}`)
+		entity.level.server.runCommandSilent(`execute as ${player.username} run playsound minecraft:teleport ambient @s ${player.x} ${player.y} ${player.z} 1 1`)
+		entity.level.server.runCommandSilent(`execute in ${dim} run execute as ${player.username} run tp ${x} ${y} ${z}`)
 		
 	}
 }

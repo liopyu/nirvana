@@ -17,7 +17,8 @@ const keyContains = (string, component) => {
 
 ItemEvents.tooltip(event => {
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item.id)) return
+        //console.log(item.id)
+        if (!Item.exists(item?.id)) return
         if (item?.nbt?.Prospecting) {
             text.add([
                 Text.of('Quality: ').gray(),
@@ -269,7 +270,8 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, a, text) => {
-        if (!Item.exists(item.id)) return
+        //console.log(item.id)
+        if (!Item.exists(item?.id)) return
         let isStatSection = false
         if (item?.nbt?.Leggings){
         for (let i = 0;i < text.size();i++) {
@@ -358,9 +360,10 @@ ItemEvents.tooltip(event => {
     }
 })
     event.addAdvanced(Ingredient.all, (stack, item, text) => {
-        //if (!Item.exists(stack.id)) return
+        //console.log(stack.id)
+        //if (!Item.exists(item?.id)) return
         
-        //if (!(stack.isEnchanted() || enchantedBook.test(stack))) return
+        if (!(stack.isEnchanted() || enchantedBook.test(stack))) return
         let wasEnch = false
         if (item?.nbt?.Enchantments || item?.nbt?.StoredEnchantments){
         for (let i = 0;i < text.size();i++) {
@@ -388,7 +391,8 @@ ItemEvents.tooltip(event => {
 
 
        event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item.id)) return
+        //console.log(item.id)
+        if (!Item.exists(item?.id)) return
         if (item?.nbt?.Rusted){
             text.add([
                 Text.of('Quality: ').gray(),
@@ -639,7 +643,8 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item.id)) return
+        //console.log(item.id)
+        if (!Item.exists(item?.id)) return
         
         if (item?.nbt?.Arcanel){
             text.add([
@@ -758,7 +763,8 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item.id)) return
+        //console.log(item.id)
+        if (!Item.exists(item?.id)) return
         
         if(item.isEmpty()) return
          
@@ -893,7 +899,8 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item.id)) return
+        //console.log(item.id)
+        if (!Item.exists(item?.id)) return
         
         if(item.isEmpty()) return
          
@@ -1014,7 +1021,8 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(Ingredient.all, (item, advanced, text) => {
-        if (!Item.exists(item.id)) return
+        //console.log(item.id)
+        if (!Item.exists(item?.id)) return
         
         if(item.isEmpty()) return
         if (item?.nbt?.Crumblingb){
@@ -1148,6 +1156,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced('kubejs:reforging_station', (item, advanced, text) => {
+        //console.log(item.id)
         text.add([
             Text.of('Used to Reforge Items').gray(),
         ])
@@ -1171,27 +1180,35 @@ ItemEvents.tooltip(event => {
 
     })
     event.addAdvanced('scalinghealth:heart_crystal', (item, advanced, text) => {
+        //console.log(item.id)
         text.add(1, Component.yellow('I think my pet would like this more than me. '))
     })
     event.addAdvanced('scalinghealth:power_crystal', (item, advanced, text) => {
+        //console.log(item.id)
         text.add(1, Component.yellow('I think my pet would like this more than me. '))
     })
     event.addAdvanced('ylf_mod:brokenice', (item, advanced, text) => {
+        //console.log(item.id)
         text.add(1, Component.darkPurple('Like catnip is to a cat, Broken Ice is to a Ylf.'))
     })
     event.addAdvanced('mekanism:mekasuit_helmet', (item, advanced, text) => {
+        //console.log(item.id)
         text.add(1, Component.green('Negates 20% locational damage when powered.'))
     })
     event.addAdvanced('mekanism:mekasuit_bodyarmor', (item, advanced, text) => {
+        //console.log(item.id)
         text.add(1, Component.green('Negates 20% locational damage when powered.'))
     })
     event.addAdvanced('mekanism:mekasuit_pants', (item, advanced, text) => {
+        //console.log(item.id)
         text.add(1, Component.green('Negates 20% locational damage when powered.'))
     })
     event.addAdvanced('mekanism:mekasuit_boots', (item, advanced, text) => {
+        //console.log(item.id)
         text.add(1, Component.green('Negates 20% locational damage when powered.'))
     })
     event.addAdvanced(['kubejs:dragon_ring'], (item, advanced, text) => {
+        //console.log(item.id)
         let key = $OriginsClient.usePrimaryActivePowerKeybind.key.displayName.get()
         if (!event.isShift()) {
             text.add(1, [
@@ -1257,6 +1274,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(['kubejs:fairy_ring'], (item, advanced, text) => {
+        //console.log(item.id)
         if (!event.isShift()) {
             text.add(1, [
                 Text.of('25% Entity size').gold(),
@@ -1306,6 +1324,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(['kubejs:ocean_dragon_ring'], (item, advanced, text) => {
+        //console.log(item.id)
         let key = $OriginsClient.usePrimaryActivePowerKeybind.key.displayName.get()
         if (!event.isShift()) {
             text.add(1, [
@@ -1382,6 +1401,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(['kubejs:lightning_dragon_ring'], (item, advanced, text) => {
+        //console.log(item.id)
         let key = $OriginsClient.usePrimaryActivePowerKeybind.key.displayName.get()
         if (!event.isShift()) {
             text.add(1, [
@@ -1444,6 +1464,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(['kubejs:titan_ring'], (item, advanced, text) => {
+        //console.log(item.id)
         let key = $OriginsClient.usePrimaryActivePowerKeybind.key.displayName.get()
         let key2 = $OriginsClient.useSecondaryActivePowerKeybind.key.displayName.get()
         if (!event.isShift()) {
@@ -1554,6 +1575,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(['kubejs:ring_of_faeles'], (item, advanced, text) => {
+        //console.log(item.id)
         if (!event.isShift()) {
 
             text.add(1, [
@@ -1614,6 +1636,7 @@ ItemEvents.tooltip(event => {
         }
     })
     event.addAdvanced(['kubejs:elf_ring'], (item, advanced, text) => {
+        //console.log(item.id)
         if (!event.isShift()) {
 
             text.add(1, [
