@@ -51,4 +51,6 @@ global.wakeup = event => {
     let player = event.entity;
     if (!event.entity.isPlayer()) return
     player.level.server.runCommandSilent(`scoreboard players reset ${player.username} TiempoEnCama`)
+    player.level.server.runCommandSilent(`weather clear 1800`)
+
 }

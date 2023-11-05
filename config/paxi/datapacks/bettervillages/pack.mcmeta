@@ -1,9 +1,0 @@
- {
-    "pack": {
-        "description": "Better village : This mod improves the vanilla minecraft villages !",
-        "pack_format": 10,
-        "forge:resource_pack_format": 9,
-        "forge:data_pack_format": 10,
-        "_comment": "(c) Ad vitam æternam, JTorLeon Studios, All Rights Reserved"
-    }
-}

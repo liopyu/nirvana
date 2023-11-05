@@ -1836,7 +1836,6 @@
       ],
       "result": "allow",
       "mob": [
-        "upgrade_aquatic:nautilus",
         "iter_rpg:scallop"
       ],      
       "dimension": [
@@ -2157,8 +2156,6 @@
     {
       
       "mob": [
-        "upgrade_aquatic:great_thrasher", 
-        "upgrade_aquatic:thrasher", 
         "born_in_chaos_v1:skeleton_thrasher",
         "minecraft:cod", 
         "panthalassa:thalassomedon", 
@@ -2186,7 +2183,6 @@
         "mutantmonsters:mutant_creeper",
         "mutantmonsters:mutant_zombie",
         "mutantmonsters:mutant_skeleton",
-        "upgrade_aquatic:nautilus",
         "iter_rpg:scallop",
         "alexsmobs:blue_jay",
         "minecraft:creeper",

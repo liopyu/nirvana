@@ -15,7 +15,7 @@ menu:
   ##   If enabled, mods in this list will not receive menus nor commands.
   ##   Otherwise, mods in this list will be the only ones to receive menus & commands.
   ##   Mods that use the Simple Config API always have menus & commands
-  ## [Requires Restart!] [List: [Suggestions: "saturn", "dynamiclightsreforged", "scorpions", "adaptive_performance_tweaks_core", "supermartijn642configlib", "rpgskillable", "additionalentityattributes", "playeranimator", "keebszs_battle_towers", "hammerlib", "entitycollisionfpsfix", "valhelsia_furniture", "stalwart_dungeons", "apoli", "rubidium", "reauth", ... (omitted 266 more)]]
+  ## [Requires Restart!] [List: [Suggestions: "dynamiclightsreforged", "scorpions", "adaptive_performance_tweaks_core", "supermartijn642configlib", "rpgskillable", "additionalentityattributes", "playeranimator", "keebszs_battle_towers", "hammerlib", "entitycollisionfpsfix", "valhelsia_furniture", "stalwart_dungeons", "apoli", "rubidium", "reauth", "modernfix", ... (omitted 254 more)]]
   wrap_config_exceptions: []
   ## Replace Config Menus
   ##   Replace configuration menus of mods that already had one.
@@ -26,7 +26,7 @@ menu:
   ##   Exceptions to the above setting
   ##   If enabled, mods in this list won't have their menus replaced
   ##   Otherwise, the mods in this list will be the only replaced ones.
-  ## [Requires Restart!] [List: [Suggestions: "saturn", "dynamiclightsreforged", "scorpions", "adaptive_performance_tweaks_core", "supermartijn642configlib", "rpgskillable", "additionalentityattributes", "playeranimator", "keebszs_battle_towers", "hammerlib", "entitycollisionfpsfix", "valhelsia_furniture", "stalwart_dungeons", "apoli", "rubidium", "reauth", ... (omitted 266 more)]]
+  ## [Requires Restart!] [List: [Suggestions: "dynamiclightsreforged", "scorpions", "adaptive_performance_tweaks_core", "supermartijn642configlib", "rpgskillable", "additionalentityattributes", "playeranimator", "keebszs_battle_towers", "hammerlib", "entitycollisionfpsfix", "valhelsia_furniture", "stalwart_dungeons", "apoli", "rubidium", "reauth", "modernfix", ... (omitted 254 more)]]
   replace_menu_exceptions: []
   ## Wrap Top Groups as Tabs
   ##   Wraps top level groups in other mods' configs as tabs rather than normal groups.

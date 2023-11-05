@@ -4,7 +4,13 @@
    
    "arcane": 
    {
-      "type": "origins:attribute",
+      "type": "origins:conditioned_attribute",
+    "condition": {
+     "type": "origins:scoreboard",
+     "objective": "thickbLevel",
+     "comparison": "==",
+     "compare_to": 1
+ },
       "modifier": {
           "name": "Max health increase",
           "attribute": "minecraft:generic.armor",
@@ -14,7 +20,13 @@
   },
    "magicdefence": 
    {
-      "type": "origins:attribute",
+      "type": "origins:conditioned_attribute",
+    "condition": {
+     "type": "origins:scoreboard",
+     "objective": "thickbLevel",
+     "comparison": "==",
+     "compare_to": 1
+ },
       "modifier": {
           "name": "Max health increase",
           "attribute": "minecraft:generic.movement_speed",

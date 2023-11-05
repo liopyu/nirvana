@@ -3,7 +3,13 @@
    "name": "Arcane",
    "stuff": 
    {
-      "type": "origins:attribute",
+      "type": "origins:conditioned_attribute",
+   "condition": {
+    "type": "origins:scoreboard",
+    "objective": "crumblingbLevel",
+    "comparison": "==",
+    "compare_to": 1
+},
       "modifier": {
           "name": "Max health increase",
           "attribute": "minecraft:generic.armor_toughness",
@@ -13,7 +19,13 @@
   },
    "arcane": 
    {
-      "type": "origins:attribute",
+      "type": "origins:conditioned_attribute",
+   "condition": {
+    "type": "origins:scoreboard",
+    "objective": "crumblingbLevel",
+    "comparison": "==",
+    "compare_to": 1
+},
       "modifier": {
           "name": "Max health increase",
           "attribute": "minecraft:generic.armor",
@@ -69,6 +81,12 @@
        "name": "Armor but for magic",
        "operation": "multiply_total",
        "value": 0.04
-   }
+   },
+   "condition": {
+    "type": "origins:scoreboard",
+    "objective": "crumblingbLevel",
+    "comparison": "==",
+    "compare_to": 1
+}
 }
 }

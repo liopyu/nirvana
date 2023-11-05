@@ -3,7 +3,13 @@
    "name": "Arcane",
    "stuff": 
    {
-      "type": "origins:attribute",
+      "type": "origins:conditioned_attribute",
+    "condition": {
+     "type": "origins:scoreboard",
+     "objective": "masterfulbLevel",
+     "comparison": "==",
+     "compare_to": 1
+ },
       "modifier": {
           "name": "Max health increase",
           "attribute": "minecraft:generic.armor_toughness",
@@ -13,7 +19,13 @@
   },
    "arcane": 
    {
-      "type": "origins:attribute",
+      "type": "origins:conditioned_attribute",
+    "condition": {
+     "type": "origins:scoreboard",
+     "objective": "masterfulbLevel",
+     "comparison": "==",
+     "compare_to": 1
+ },
       "modifier": {
           "name": "Max health increase",
           "attribute": "minecraft:generic.armor",
@@ -23,7 +35,13 @@
   },
   "stufff": 
   {
-     "type": "origins:attribute",
+     "type": "origins:conditioned_attribute",
+    "condition": {
+     "type": "origins:scoreboard",
+     "objective": "masterfulbLevel",
+     "comparison": "==",
+     "compare_to": 1
+ },
      "modifier": {
          "attribute": "forge:step_height_addition",
          "value": 0.5,
@@ -32,7 +50,13 @@
  },
  "speed":
  {
-    "type": "origins:attribute",
+    "type": "origins:conditioned_attribute",
+    "condition": {
+     "type": "origins:scoreboard",
+     "objective": "masterfulbLevel",
+     "comparison": "==",
+     "compare_to": 1
+ },
     "modifier": {
         "name": "Max health increase",
         "attribute": "minecraft:generic.movement_speed",

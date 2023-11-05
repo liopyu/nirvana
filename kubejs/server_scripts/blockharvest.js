@@ -84,3 +84,12 @@ BlockEvents.placed(event => {
     }
     apply('forge:stripped_logs', 'create:andesite_alloy', 'create:andesite_casing')
 })
+
+BlockEvents.broken(event => {
+    const {player,block,player:{persistentData}} = event
+    if (player.isCreative() || player.isSpectator()) return
+    if (player.hasEffect('kubejs:tool_debility')) {
+        player.displayClientMessage(Component.of(`A powerful force prevents you from breaking blocks.`).bold().darkRed(), true)
+      event.cancel()
+    }
+  })

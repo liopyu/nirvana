@@ -131,5 +131,4 @@ EntityEvents.death(event =>{
     }else if (player.level.dimension.path == 'tutorial') {
         pData.deathdimension = 11
     }
-    
 })

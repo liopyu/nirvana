@@ -47,5 +47,11 @@
        "name": "Armor but for magic",
        "operation": "multiply_total",
        "value": 0.04
-   }
+   },
+   "condition": {
+    "type": "origins:scoreboard",
+    "objective": "arcanecLevel",
+    "comparison": "==",
+    "compare_to": 1
+}
 }

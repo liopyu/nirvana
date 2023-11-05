@@ -1,5 +1,11 @@
 {
-   "type": "origins:attribute",
+    "type": "origins:conditioned_attribute",
+    "condition": {
+     "type": "origins:scoreboard",
+     "objective": "protectivecLevel",
+     "comparison": "==",
+     "compare_to": 1
+ },
    "modifier": {
        "name": "Max health increase",
        "attribute": "minecraft:generic.armor",

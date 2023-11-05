@@ -3,6 +3,12 @@
    "modifier": {
        "operation": "addition",
        "value": 0.07
-   }
+   },
+   "condition": {
+    "type": "origins:scoreboard",
+    "objective": "springylLevel",
+    "comparison": "==",
+    "compare_to": 1
+}
    
 }

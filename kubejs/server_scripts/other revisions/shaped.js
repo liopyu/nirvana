@@ -19,7 +19,7 @@ ServerEvents.recipes(event => {
     B: 'aquaculture:iron_hook',
     E: 'minecraft:stick'
   });
-  
+
 
   event.shapeless('4x minecraft:paper', [
     'minecraft:birch_log',
@@ -40,8 +40,8 @@ ServerEvents.recipes(event => {
     'minecraft:stripped_birch_log',
     'minecraft:stripped_birch_log'
   ]);
-  
-    
+
+
 
   event.shaped('minecraft:chest', [
     'AAA',
@@ -100,7 +100,7 @@ ServerEvents.recipes(event => {
     'kubejs:cosmic_cloud',
   ]);
   event.shaped('kubejs:reforging_station', [
-    
+
     'ABA',
     'CDC'
   ], {
@@ -158,10 +158,10 @@ ServerEvents.recipes(event => {
     D: 'aquaculture:neptunium_ingot',
     E: 'minecraft:stick'
   });
-  
+
 
   //Tombstone
-  event.shaped('tombstone:book_of_disenchantment', [
+  /*event.shaped('tombstone:book_of_disenchantment', [
     'ACA',
     'CBC',
     'ACA'
@@ -169,7 +169,7 @@ ServerEvents.recipes(event => {
     A: 'tombstone:grave_dust',
     B: 'minecraft:book',
     C: 'kubejs:spectral_silt'
-  });
+  });*/
 
   //First Aid
   event.shaped('2x firstaid:bandage', [
@@ -178,13 +178,13 @@ ServerEvents.recipes(event => {
     A: '#forge:string',
     C: '#forge:wool'
   });
-  
+
 
   //Atlas
   event.shapeless('map_atlases:atlas', [
     'minecraft:compass',
     'minecraft:writable_book'
-    
+
   ]);
 
 
@@ -205,7 +205,7 @@ ServerEvents.recipes(event => {
     '#forge:storage_blocks/aluminum',
   ]);
 
-  
+
 
   /* More Babies //rendering error with iris
   event.shaped('more_babies:cursed_clock_on_a_stick', [
@@ -231,7 +231,7 @@ ServerEvents.recipes(event => {
 
 
   // Bedrock Ores
-  
+
 
   /* Bedrock Miner
   event.shaped('bedrockminer:bedrock_breaker', [
@@ -309,7 +309,7 @@ ServerEvents.recipes(event => {
     A: 'theabyss:fusion_ingot',
     B: 'tetra:forged_beam'
   });
-  
+
   event.shaped('theabyss:knight_axe', [
     'CAA ',
     ' BA ',
@@ -376,7 +376,7 @@ ServerEvents.recipes(event => {
   ], {
     A: 'theabyss:phantom_ingot',
     B: 'tetra:forged_beam'
-    });
+  });
 
   event.shaped('theabyss:phantom_shovel', [
     'A',
@@ -415,7 +415,7 @@ ServerEvents.recipes(event => {
     B: 'tetra:forged_beam',
     C: 'theabyss:anima_nugget'
   });
-  
+
   event.shaped('theabyss:incorythe_axe', [
     'AA',
     'BA',
@@ -526,7 +526,7 @@ ServerEvents.recipes(event => {
     A: 'theabyss:loran',
     B: 'tetra:forged_beam'
   });
-  
+
   event.shaped('theabyss:shuriken', [
     'A A',
     ' B ',
@@ -758,7 +758,7 @@ ServerEvents.recipes(event => {
     E: 'magistuarmory:wood_roundshield',
     G: 'mutantmore:mutant_shulker_shell'
   });
-  
+
   event.shaped('mutantmore:mutant_blaze_shields', [
     'CDC',
     'DED',
@@ -1121,7 +1121,7 @@ ServerEvents.recipes(event => {
     'apotheosis:gem_dust',
     'forbidden_arcanus:mundabitur_dust'
   ]);
-  
+
 
   // Supplementaries
   event.shaped('3x supplementaries:rope', [
@@ -1762,7 +1762,7 @@ ServerEvents.recipes(event => {
     C: 'healingflasks:t_2_healing_flask',
     E: 'theabyss:anima_nugget'
   });
-  
+
 
   //Custom Bountiful Bauble Items
   event.shaped('kubejs:disintegration_tablet', [
@@ -1847,7 +1847,7 @@ ServerEvents.recipes(event => {
 
   ]).keepIngredient('kubejs:disintegration_tablet');*/
 
-  
+
 
   /*event.shapeless('kubejs:spectral_silt', [
     "artifacts:flippers",
@@ -2009,7 +2009,7 @@ ServerEvents.recipes(event => {
     F: 'minecraft:iron_nugget',
     C: 'magistuarmory:steel_ingot'
   });
-  
+
   //DOOM
   event.shaped('doom:gun_table', [
     'FGF',
@@ -2070,9 +2070,9 @@ ServerEvents.recipes(event => {
     E: 'doom:argent_axe'
   });
   event.shapeless('doom:gas_barrel', [
-  'minecraft:gunpowder',
-  'mekanism:basic_chemical_tank',
-  'minecraft:blaze_powder',
+    'minecraft:gunpowder',
+    'mekanism:basic_chemical_tank',
+    'minecraft:blaze_powder',
   ]);
   event.shaped('doom:energy_cells', [
     'FFF',
@@ -2131,392 +2131,392 @@ ServerEvents.recipes(event => {
     'minecraft:gunpowder',
     'minecraft:blaze_powder',
     'minecraft:iron_ingot'
-    ]);
-    event.shaped('doom:bfg_cell', [
-      'CFC',
-      'DDD',
-      'CFC'
-    ], {
-      F: 'magistuarmory:steel_plate',
-      C: 'mekanism:ingot_uranium',
-      D: 'doom:argent_energy',
-    });
-    event.shapeless('kubejs:spectral_silt', [
-      "doom:daisy",
-      "kubejs:disintegration_tablet",
-  
-    ]).keepIngredient('kubejs:disintegration_tablet');
+  ]);
+  event.shaped('doom:bfg_cell', [
+    'CFC',
+    'DDD',
+    'CFC'
+  ], {
+    F: 'magistuarmory:steel_plate',
+    C: 'mekanism:ingot_uranium',
+    D: 'doom:argent_energy',
+  });
+  event.shapeless('kubejs:spectral_silt', [
+    "doom:daisy",
+    "kubejs:disintegration_tablet",
 
-    //Vinery
-    event.shaped('vinery:fermentation_barrel', [
-      'FDF',
-      'CEC',
-      'FDF'
-    ], {
-      F: 'minecraft:iron_ingot',
-      C: 'minecraft:tripwire_hook',
-      D: '#minecraft:logs',
-      E: 'minecraft:barrel',
-    });
+  ]).keepIngredient('kubejs:disintegration_tablet');
 
-    //Drink Beer
-    event.shaped('drinkbeer:beer_barrel', [
-      'DFD',
-      'DEC',
-      'DFD'
-    ], {
-      F: 'minecraft:iron_ingot',
-      C: 'minecraft:tripwire_hook',
-      D: '#minecraft:logs',
-      E: 'minecraft:barrel',
-    });
+  //Vinery
+  event.shaped('vinery:fermentation_barrel', [
+    'FDF',
+    'CEC',
+    'FDF'
+  ], {
+    F: 'minecraft:iron_ingot',
+    C: 'minecraft:tripwire_hook',
+    D: '#minecraft:logs',
+    E: 'minecraft:barrel',
+  });
 
-    //Kubejs
+  //Drink Beer
+  event.shaped('drinkbeer:beer_barrel', [
+    'DFD',
+    'DEC',
+    'DFD'
+  ], {
+    F: 'minecraft:iron_ingot',
+    C: 'minecraft:tripwire_hook',
+    D: '#minecraft:logs',
+    E: 'minecraft:barrel',
+  });
 
-    event.shapeless('3x minecraft:oak_planks', [
-      '#minecraft:oak_logs',
-      '#kubejs:saws',
+  //Kubejs
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x minecraft:spruce_planks', [
-      '#minecraft:spruce_logs',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:oak_planks', [
+    '#minecraft:oak_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x minecraft:birch_planks', [
-      '#minecraft:birch_logs',
-      '#kubejs:saws',
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x minecraft:jungle_planks', [
-      '#minecraft:jungle_logs',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:spruce_planks', [
+    '#minecraft:spruce_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x minecraft:acacia_planks', [
-      '#minecraft:acacia_logs',
-      '#kubejs:saws',
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x minecraft:dark_oak_planks', [
-      '#minecraft:dark_oak_logs',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:birch_planks', [
+    '#minecraft:birch_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x minecraft:mangrove_planks', [
-      '#minecraft:mangrove_logs',
-      '#kubejs:saws',
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x minecraft:crimson_planks', [
-      '#minecraft:crimson_stems',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:jungle_planks', [
+    '#minecraft:jungle_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x minecraft:warped_planks', [
-      '#minecraft:warped_stems',
-      '#kubejs:saws',
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x iter_rpg:sacred_planks', [
-      'iter_rpg:sacred_log',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:acacia_planks', [
+    '#minecraft:acacia_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x theabyss:blaru_planks', [
-      'theabyss:blaru_log',
-      '#kubejs:saws',
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x theabyss:jungle_planks', [
-      'theabyss:jungle_log',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:dark_oak_planks', [
+    '#minecraft:dark_oak_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x theabyss:bog_planks', [
-      'theabyss:bog_shroom_log',
-      '#kubejs:saws',
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x theabyss:sal_planks', [
-      'theabyss:sal_shroom_log',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:mangrove_planks', [
+    '#minecraft:mangrove_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x theabyss:slimed_planks', [
-      'theabyss:slimed_log',
-      '#kubejs:saws',
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x theabyss:frozen_planks', [
-      'theabyss:frozen_log',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:crimson_planks', [
+    '#minecraft:crimson_stems',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x theabyss:vigilant_planks', [
-      'theabyss:vigilant_log',
-      '#kubejs:saws',
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    ]).damageIngredient('#kubejs:saws', 1)
-    
-    event.shapeless('3x born_in_chaos_v1:scorched_planks', [
-      '#minecraft:woodkr',
-      '#kubejs:saws',
+  event.shapeless('3x minecraft:warped_planks', [
+    '#minecraft:warped_stems',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    /*event.shapeless('3x desolation:charred_planks', [
-      'desolation:charredlog',
-      '#kubejs:saws',
+  event.shapeless('3x iter_rpg:sacred_planks', [
+    'iter_rpg:sacred_log',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)*/
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x enlightened_end:congealed_planks', [
-      '#enlightened_end:seldge_logs',
-      '#kubejs:saws',
+  event.shapeless('3x theabyss:blaru_planks', [
+    'theabyss:blaru_log',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x enlightened_end:ebony_planks', [
-      'enlightened_end:ebony_stalk_bundle',
-      '#kubejs:saws',
+  event.shapeless('3x theabyss:jungle_planks', [
+    'theabyss:jungle_log',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x upgrade_aquatic:driftwood_planks', [
-      '#upgrade_aquatic:driftwood_logs',
-      '#kubejs:saws',
+  event.shapeless('3x theabyss:bog_planks', [
+    'theabyss:bog_shroom_log',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x upgrade_aquatic:river_planks', [
-      '#upgrade_aquatic:river_logs',
-      '#kubejs:saws',
+  event.shapeless('3x theabyss:sal_planks', [
+    'theabyss:sal_shroom_log',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x ars_nouveau:archwood_planks', [
-      '#forge:logs/archwood',
-      '#kubejs:saws',
+  event.shapeless('3x theabyss:slimed_planks', [
+    'theabyss:slimed_log',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x quark:bamboo_planks', [
-      '#quark:bamboo_logs',
-      '#kubejs:saws',
+  event.shapeless('3x theabyss:frozen_planks', [
+    'theabyss:frozen_log',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x quark:blossom_planks', [
-      '#quark:blossom_logs',
-      '#kubejs:saws',
+  event.shapeless('3x theabyss:vigilant_planks', [
+    'theabyss:vigilant_log',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x quark:azalea_planks', [
-      '#quark:azalea_logs',
-      '#kubejs:saws',
+  event.shapeless('3x born_in_chaos_v1:scorched_planks', [
+    '#minecraft:woodkr',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x quark:ancient_planks', [
-      '#quark:ancient_logs',
-      '#kubejs:saws',
+  /*event.shapeless('3x desolation:charred_planks', [
+    'desolation:charredlog',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)*/
 
-    event.shapeless('3x forbidden_arcanus:fungyss_planks', [
-      '#forbidden_arcanus:fungyss_stems',
-      '#kubejs:saws',
+  event.shapeless('3x enlightened_end:congealed_planks', [
+    '#enlightened_end:seldge_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x forbidden_arcanus:cherry_planks', [
-      '#forbidden_arcanus:cherrywood_logs',
-      '#kubejs:saws',
+  event.shapeless('3x enlightened_end:ebony_planks', [
+    'enlightened_end:ebony_stalk_bundle',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x forbidden_arcanus:aurum_planks', [
-      '#forbidden_arcanus:mysterywood_logs',
-      '#kubejs:saws',
+  /*event.shapeless('3x upgrade_aquatic:driftwood_planks', [
+    '#upgrade_aquatic:driftwood_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('3x forbidden_arcanus:edelwood_planks', [
-      '#forbidden_arcanus:edelwood_logs',
-      '#kubejs:saws',
+  event.shapeless('3x upgrade_aquatic:river_planks', [
+    '#upgrade_aquatic:river_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)*/
 
-    event.shapeless('3x vinery:cherry_planks', [
-      'vinery:cherry_log',
-      '#kubejs:saws',
+  event.shapeless('3x ars_nouveau:archwood_planks', [
+    '#forge:logs/archwood',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('2x minecraft:stick', [
-      '#minecraft:planks',
-      '#kubejs:saws',
+  event.shapeless('3x quark:bamboo_planks', [
+    '#quark:bamboo_logs',
+    '#kubejs:saws',
 
-    ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shaped('kubejs:bronze_saw', [
-      '  D',
-      ' DC',
-      'DC '
-    ], {
-      C: '#forge:ingots/bronze',
-      D: 'minecraft:stick',
-    });
+  event.shapeless('3x quark:blossom_planks', [
+    '#quark:blossom_logs',
+    '#kubejs:saws',
 
-    event.shaped('kubejs:copper_saw', [
-      '  D',
-      ' DC',
-      'DC '
-    ], {
-      C: '#forge:ingots/copper',
-      D: 'minecraft:stick',
-    });
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shaped('kubejs:diamond_saw', [
-      '  D',
-      ' DC',
-      'DC '
-    ], {
-      C: '#forge:gems/diamond',
-      D: 'minecraft:stick',
-    });
+  event.shapeless('3x quark:azalea_planks', [
+    '#quark:azalea_logs',
+    '#kubejs:saws',
 
-    event.shaped('kubejs:gold_saw', [
-      '  D',
-      ' DC',
-      'DC '
-    ], {
-      C: '#forge:ingots/gold',
-      D: 'minecraft:stick',
-    });
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shaped('kubejs:iron_saw', [
-      '  D',
-      ' DC',
-      'DC '
-    ], {
-      C: '#forge:ingots/iron',
-      D: 'minecraft:stick',
-    });
+  event.shapeless('3x quark:ancient_planks', [
+    '#quark:ancient_logs',
+    '#kubejs:saws',
 
-    event.shaped('kubejs:steel_saw', [
-      '  D',
-      ' DC',
-      'DC '
-    ], {
-      C: '#forge:ingots/steel',
-      D: 'minecraft:stick',
-    });
+  ]).damageIngredient('#kubejs:saws', 1)
 
-    event.shapeless('kubejs:grass_string', [
-      '3x kubejs:grass_fiber',
-    ])
+  event.shapeless('3x forbidden_arcanus:fungyss_planks', [
+    '#forbidden_arcanus:fungyss_stems',
+    '#kubejs:saws',
 
-    event.shaped('kubejs:flint_hatchet', [
-      ' EC',
-      ' D ',
-    ], {
-      C: 'kubejs:flint_shard',
-      D: 'minecraft:stick',
-      E: '#forge:string',
-    });
-    event.shaped('kubejs:flint_pickaxe', [
-      'CEC',
-      ' D ',
-    ], {
-      C: 'kubejs:flint_shard',
-      D: 'minecraft:stick',
-      E: '#forge:string',
-    });
-    event.shaped('kubejs:flint_shovel', [
-      ' C ',
-      ' E ',
-      ' D '
-    ], {
-      C: 'kubejs:flint_shard',
-      D: 'minecraft:stick',
-      E: '#forge:string',
-    });
-    event.shaped('kubejs:flint_hoe', [
-      'CCE',
-      '  D',
-    ], {
-      C: 'kubejs:flint_shard',
-      D: 'minecraft:stick',
-      E: '#forge:string',
-    });
-    event.shaped('kubejs:flint_knife', [
-      ' C ',
-      ' D ',
-    ], {
-      C: 'kubejs:flint_shard',
-      D: 'minecraft:stick',
-    });
-    event.shaped('kubejs:bronze_knife', [
-      ' C ',
-      ' D ',
-    ], {
-      C: '#forge:ingots/bronze',
-      D: 'minecraft:stick',
-    });
-    event.shaped('kubejs:copper_knife', [
-      ' C ',
-      ' D ',
-    ], {
-      C: '#forge:ingots/copper',
-      D: 'minecraft:stick',
-    });
-    event.shaped('kubejs:diamond_knife', [
-      ' C ',
-      ' D ',
-    ], {
-      C: '#forge:gems/diamond',
-      D: 'minecraft:stick',
-    });
-    event.shaped('kubejs:gold_knife', [
-      ' C ',
-      ' D ',
-    ], {
-      C: '#forge:ingots/gold',
-      D: 'minecraft:stick',
-    });
-    event.shaped('kubejs:iron_knife', [
-      ' C ',
-      ' D ',
-    ], {
-      C: '#forge:ingots/iron',
-      D: 'minecraft:stick',
-    });
-    event.shaped('kubejs:steel_knife', [
-      ' C ',
-      ' D ',
-    ], {
-      C: '#forge:ingots/steel',
-      D: 'minecraft:stick',
-    });
+  ]).damageIngredient('#kubejs:saws', 1)
+
+  event.shapeless('3x forbidden_arcanus:cherry_planks', [
+    '#forbidden_arcanus:cherrywood_logs',
+    '#kubejs:saws',
+
+  ]).damageIngredient('#kubejs:saws', 1)
+
+  event.shapeless('3x forbidden_arcanus:aurum_planks', [
+    '#forbidden_arcanus:mysterywood_logs',
+    '#kubejs:saws',
+
+  ]).damageIngredient('#kubejs:saws', 1)
+
+  event.shapeless('3x forbidden_arcanus:edelwood_planks', [
+    '#forbidden_arcanus:edelwood_logs',
+    '#kubejs:saws',
+
+  ]).damageIngredient('#kubejs:saws', 1)
+
+  event.shapeless('3x vinery:cherry_planks', [
+    'vinery:cherry_log',
+    '#kubejs:saws',
+
+  ]).damageIngredient('#kubejs:saws', 1)
+
+  event.shapeless('2x minecraft:stick', [
+    '#minecraft:planks',
+    '#kubejs:saws',
+
+  ]).damageIngredient('#kubejs:saws', 1)
+
+  event.shaped('kubejs:bronze_saw', [
+    '  D',
+    ' DC',
+    'DC '
+  ], {
+    C: '#forge:ingots/bronze',
+    D: 'minecraft:stick',
+  });
+
+  event.shaped('kubejs:copper_saw', [
+    '  D',
+    ' DC',
+    'DC '
+  ], {
+    C: '#forge:ingots/copper',
+    D: 'minecraft:stick',
+  });
+
+  event.shaped('kubejs:diamond_saw', [
+    '  D',
+    ' DC',
+    'DC '
+  ], {
+    C: '#forge:gems/diamond',
+    D: 'minecraft:stick',
+  });
+
+  event.shaped('kubejs:gold_saw', [
+    '  D',
+    ' DC',
+    'DC '
+  ], {
+    C: '#forge:ingots/gold',
+    D: 'minecraft:stick',
+  });
+
+  event.shaped('kubejs:iron_saw', [
+    '  D',
+    ' DC',
+    'DC '
+  ], {
+    C: '#forge:ingots/iron',
+    D: 'minecraft:stick',
+  });
+
+  event.shaped('kubejs:steel_saw', [
+    '  D',
+    ' DC',
+    'DC '
+  ], {
+    C: '#forge:ingots/steel',
+    D: 'minecraft:stick',
+  });
+
+  event.shapeless('kubejs:grass_string', [
+    '3x kubejs:grass_fiber',
+  ])
+
+  event.shaped('kubejs:flint_hatchet', [
+    ' EC',
+    ' D ',
+  ], {
+    C: 'kubejs:flint_shard',
+    D: 'minecraft:stick',
+    E: '#forge:string',
+  });
+  event.shaped('kubejs:flint_pickaxe', [
+    'CEC',
+    ' D ',
+  ], {
+    C: 'kubejs:flint_shard',
+    D: 'minecraft:stick',
+    E: '#forge:string',
+  });
+  event.shaped('kubejs:flint_shovel', [
+    ' C ',
+    ' E ',
+    ' D '
+  ], {
+    C: 'kubejs:flint_shard',
+    D: 'minecraft:stick',
+    E: '#forge:string',
+  });
+  event.shaped('kubejs:flint_hoe', [
+    'CCE',
+    '  D',
+  ], {
+    C: 'kubejs:flint_shard',
+    D: 'minecraft:stick',
+    E: '#forge:string',
+  });
+  event.shaped('kubejs:flint_knife', [
+    ' C ',
+    ' D ',
+  ], {
+    C: 'kubejs:flint_shard',
+    D: 'minecraft:stick',
+  });
+  event.shaped('kubejs:bronze_knife', [
+    ' C ',
+    ' D ',
+  ], {
+    C: '#forge:ingots/bronze',
+    D: 'minecraft:stick',
+  });
+  event.shaped('kubejs:copper_knife', [
+    ' C ',
+    ' D ',
+  ], {
+    C: '#forge:ingots/copper',
+    D: 'minecraft:stick',
+  });
+  event.shaped('kubejs:diamond_knife', [
+    ' C ',
+    ' D ',
+  ], {
+    C: '#forge:gems/diamond',
+    D: 'minecraft:stick',
+  });
+  event.shaped('kubejs:gold_knife', [
+    ' C ',
+    ' D ',
+  ], {
+    C: '#forge:ingots/gold',
+    D: 'minecraft:stick',
+  });
+  event.shaped('kubejs:iron_knife', [
+    ' C ',
+    ' D ',
+  ], {
+    C: '#forge:ingots/iron',
+    D: 'minecraft:stick',
+  });
+  event.shaped('kubejs:steel_knife', [
+    ' C ',
+    ' D ',
+  ], {
+    C: '#forge:ingots/steel',
+    D: 'minecraft:stick',
+  });
 
   event.shapeless('kubejs:grave_scroll', [
     'minecraft:rotten_flesh',
@@ -2525,42 +2525,21 @@ ServerEvents.recipes(event => {
   ]
   );
 
-
-  /*event.shaped(Item.of('tetra:modular_double', '{Damage:0,HideFlags:1,"double/basic_hammer_left_material":"basic_hammer/netherite","double/basic_handle_material":"basic_handle/oak","double/claw_right_material":"claw/netherite","double/handle":"double/basic_handle","double/head_left":"double/basic_hammer_left","double/head_right":"double/claw_right",honing_progress:515,id:"c38e8c0a-b0ec-48ae-a942-11f83c430666"}'), [
-    'CD ',
-    'DED',
-    ' D '
-  ], {
-    D: 'tetra:metal_scrap',
-    C: 'quark:diamond_heart',
-    E: 'minecraft:redstone'
-  });*/ //example of creating nbt item
-
-  
-
-
-
-
 });
 
 ItemEvents.crafted(event => {
-  const {item, player, server} = event
+  const { item, player, server } = event
   let pData = player.persistentData
   if (pData.craftsaw != 1) { return }
-    pData.craftsaw = 0;
-    server.schedule(2000, () => {
-        
-      pData.craftsaw = 1;
+  pData.craftsaw = 0;
+  server.schedule(2000, () => {
+
+    pData.craftsaw = 1;
   });
   server.runCommandSilent(`execute as ${player.username} run playsound minecraft:craftsaw ambient @s ${player.x} ${player.y} ${player.z} 0.5 1`)
-  
-  
+
+
 })
-PlayerEvents.loggedIn(event => {
-  let pData = event.player.persistentData
-  pData.craftsaw = 1
-  pData.jump = 1
-  
-})
+
 
 

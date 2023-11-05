@@ -162,10 +162,10 @@ import stdlib.List;
 <tag:items:kubejs:kelp>.add(<item:minecraft:dried_kelp>);
 <tag:items:kubejs:kelp>.add(<item:forbidden_arcanus:cherry_flower_vines>);
 <tag:items:kubejs:wetkelp>.add(<item:minecraft:kelp>);
-<tag:items:kubejs:wetkelp>.add(<item:upgrade_aquatic:tongue_kelp>);
+/*<tag:items:kubejs:wetkelp>.add(<item:upgrade_aquatic:tongue_kelp>);
 <tag:items:kubejs:wetkelp>.add(<item:upgrade_aquatic:thorny_kelp>);
 <tag:items:kubejs:wetkelp>.add(<item:upgrade_aquatic:ochre_kelp>);
-<tag:items:kubejs:wetkelp>.add(<item:upgrade_aquatic:polar_kelp>);
+<tag:items:kubejs:wetkelp>.add(<item:upgrade_aquatic:polar_kelp>);*/
 <tag:items:forge:milk>.add(<item:forbidden_arcanus:edelwood_milk_bucket>);
 <tag:blocks:minecraft:doors>.add(<block:domum_ornamentum:vanilla_doors_compat>);
 <tag:blocks:minecraft:wooden_doors>.add(<block:domum_ornamentum:vanilla_doors_compat>);
@@ -179,7 +179,7 @@ import stdlib.List;
 <tag:blocks:minecraft:wooden_doors>.add(<block:born_in_chaos_v1:scorched_planks_door>);
 <tag:blocks:minecraft:wooden_doors>.add(<block:iter_rpg:sacred_door>);
 <tag:blocks:minecraft:wooden_doors>.add(<block:enlightened_end:congealed_door>);
-<tag:blocks:minecraft:wooden_doors>.add(<block:upgrade_aquatic:glass_door>);
+//<tag:blocks:minecraft:wooden_doors>.add(<block:upgrade_aquatic:glass_door>);
 <tag:blocks:minecraft:wooden_doors>.add(<block:unusualend:chorus_nest_planks_door>);
 
 <tag:items:kubejs:seagrass>.add(<item:minecraft:seagrass>);

@@ -3,7 +3,13 @@
    "name": "Arcane",
    "stuff": 
    {
-      "type": "origins:attribute",
+      "type": "origins:conditioned_attribute",
+   "condition": {
+    "type": "origins:scoreboard",
+    "objective": "masterfulhLevel",
+    "comparison": "==",
+    "compare_to": 1
+},
       "modifier": {
           "name": "Max health increase",
           "attribute": "minecraft:generic.armor_toughness",
@@ -13,7 +19,13 @@
   },
    "arcane": 
    {
-      "type": "origins:attribute",
+      "type": "origins:conditioned_attribute",
+   "condition": {
+    "type": "origins:scoreboard",
+    "objective": "masterfulhLevel",
+    "comparison": "==",
+    "compare_to": 1
+},
       "modifier": {
           "name": "Max health increase",
           "attribute": "minecraft:generic.armor",
@@ -23,7 +35,13 @@
   },
    "magicdefence": 
    {
-    "type": "origins:attribute",
+    "type": "origins:conditioned_attribute",
+   "condition": {
+    "type": "origins:scoreboard",
+    "objective": "masterfulhLevel",
+    "comparison": "==",
+    "compare_to": 1
+},
     "modifier": {
         "attribute": "minecraft:generic.luck",
         "value": 0.5,

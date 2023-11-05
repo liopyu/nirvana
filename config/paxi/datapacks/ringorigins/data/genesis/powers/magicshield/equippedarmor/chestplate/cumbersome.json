@@ -3,7 +3,13 @@
    "name": "Arcane",
    "damage":
  {
-   "type": "origins:attribute",
+  "type": "origins:conditioned_attribute",
+  "condition": {
+   "type": "origins:scoreboard",
+   "objective": "cumbersomecLevel",
+   "comparison": "==",
+   "compare_to": 1
+},
    "modifier": {
        "attribute": "minecraft:generic.attack_speed",
        "value": -0.1,

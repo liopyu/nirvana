@@ -827,7 +827,7 @@ REIEvents.hide('item', event => {
         'create:netherite_backtank_placeable',
 
         //Upgrade Aquatic
-        "upgrade_aquatic:bedroll",
+        /*"upgrade_aquatic:bedroll",
         "upgrade_aquatic:white_bedroll",
         "upgrade_aquatic:orange_bedroll",
         "upgrade_aquatic:magenta_bedroll",
@@ -843,7 +843,7 @@ REIEvents.hide('item', event => {
         "upgrade_aquatic:brown_bedroll",
         "upgrade_aquatic:green_bedroll",
         "upgrade_aquatic:red_bedroll",
-        "upgrade_aquatic:black_bedroll",
+        "upgrade_aquatic:black_bedroll",*/
         //Enlightened End
         'enlightened_end:biome_replace_block',
         'enlightened_end:ebony_stalk_bulb',

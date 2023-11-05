@@ -37,7 +37,7 @@ ao:2
 prioritizeChunkUpdates:0
 biomeBlendRadius:2
 renderClouds:"true"
-resourcePacks:["vanilla","mod_resources","Medieval_Background_Music-1.19.3-2.0.zip","Solar Flux Generated Resources","Supplementaries Generated Pack","V Slab Compat Generated Pack","quark:emote_resources","JICKLUS.zip","3dblocksnores.zip","JicklusFontFix.zip","STONEBORN-1.19-V3.2.1.zip","STONEBORN-+SBMC+-V3.1-Modded-Compatibility.zip","EmbellishedStone-1.19-1.0.0.zip","Round-Trees-7.0-1.19+.zip"]
+resourcePacks:["vanilla","mod_resources","Medieval_Background_Music-1.19.3-2.0.zip","Solar Flux Generated Resources","Supplementaries Generated Pack","quark:emote_resources","JICKLUS.zip","3dblocksnores.zip","JicklusFontFix.zip","STONEBORN-1.19-V3.2.1.zip","STONEBORN-+SBMC+-V3.1-Modded-Compatibility.zip","EmbellishedStone-1.19-1.0.0.zip","Round-Trees-7.0-1.19+.zip"]
 incompatibleResourcePacks:["Medieval_Background_Music-1.19.3-2.0.zip","quark:emote_resources","remove_libraries_gui.zip","JICKLUS.zip","JicklusFontFix.zip"]
 lastServer:localhost
 lang:en_us
@@ -125,9 +125,6 @@ key_key.origins.view_origin:key.keyboard.o
 key_iris.keybind.reload:key.keyboard.r
 key_iris.keybind.toggleShaders:key.keyboard.unknown
 key_iris.keybind.shaderPackSelection:key.keyboard.unknown
-key_tombstone.message.knowledge_of_death:key.keyboard.unknown
-key_tombstone.message.config:key.keyboard.unknown
-key_tombstone.message.compendium:key.keyboard.unknown
 key_key.theabyss.ghost_attack:key.keyboard.x
 key_key.theabyss.ghost_fire_attack:key.keyboard.c
 key_key.theabyss.ghost_deactivate:key.keyboard.v
@@ -205,11 +202,11 @@ key_keybind.sophisticatedbackpacks.open_backpack:key.keyboard.b
 key_keybind.sophisticatedbackpacks.inventory_interaction:key.keyboard.c
 key_keybind.sophisticatedbackpacks.tool_swap:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.sort:key.keyboard.unknown
-key_keybind.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.toggle_upgrade_4:key.keyboard.unknown
-key_keybind.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.unknown
-key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.x:ALT
+key_keybind.sophisticatedbackpacks.toggle_upgrade_5:key.keyboard.unknown
 key_keybind.sophisticatedbackpacks.toggle_upgrade_1:key.keyboard.z:ALT
+key_keybind.sophisticatedbackpacks.toggle_upgrade_2:key.keyboard.x:ALT
+key_keybind.sophisticatedbackpacks.toggle_upgrade_3:key.keyboard.unknown
 key_fpsreducer.key.openGui:key.keyboard.end
 key_fpsreducer.key.forceIdle:key.keyboard.pause
 key_keys.reblured.toggle:key.keyboard.f10
