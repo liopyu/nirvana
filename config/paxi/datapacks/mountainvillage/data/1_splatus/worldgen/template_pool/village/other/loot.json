@@ -1,0 +1,22 @@
+{
+  "name": "1_splatus:village/other/workstation",
+  "fallback": "1_splatus:village/other/loot",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "1_splatus:village/other/generic_loot",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 25,
+      "element": {
+        "projection": "rigid",
+        "element_type": "minecraft:empty_pool_element"
+      }
+    }
+  ]
+}

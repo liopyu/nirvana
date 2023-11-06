@@ -1,0 +1,15 @@
+{
+  "name": "1_splatus:village/other/pillar_spruce",
+  "fallback": "1_splatus:village/other/pillar_spruce",
+  "elements": [
+    {
+      "weight": 5,
+      "element": {
+        "location": "1_splatus:village/other/pillar3",
+        "processors": "minecraft:empty",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

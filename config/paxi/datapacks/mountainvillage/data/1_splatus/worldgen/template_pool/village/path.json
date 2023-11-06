@@ -1,0 +1,24 @@
+{
+  "name": "1_splatus:village/path",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 29,
+      "element": {
+        "location": "1_splatus:village/other/path1",
+        "processors": "1_splatus:path",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "1_splatus:village/other/path2",
+        "processors": "1_splatus:path",
+        "projection": "terrain_matching",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

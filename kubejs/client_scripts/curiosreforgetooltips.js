@@ -1188,6 +1188,10 @@ ItemEvents.tooltip(event => {
         //console.log(item.id)
         text.add(1, Component.yellow('I think my pet would like this more than me. '))
     })
+    event.addAdvanced('kubejs:white_wine', (item, advanced, text) => {
+        //console.log(item.id)
+        text.add(1, Component.white('Drinking this is said to amplify potion effects..'))
+    })
     event.addAdvanced('scalinghealth:power_crystal', (item, advanced, text) => {
         //console.log(item.id)
         text.add(1, Component.yellow('I think my pet would like this more than me. '))

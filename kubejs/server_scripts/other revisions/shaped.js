@@ -2525,7 +2525,20 @@ ServerEvents.recipes(event => {
   ]
   );
 
+
+  
+
 });
+ServerEvents.recipes(e => {
+    e.custom({
+        type: 'vinery:wine_fermentation',
+        ingredients: [
+            { item: 'minecraft:glow_berries' },
+            { item: '#minecraft:grapejuice_white' }
+        ],
+        result: { item: 'kubejs:white_wine' }
+    })
+})
 
 ItemEvents.crafted(event => {
   const { item, player, server } = event
