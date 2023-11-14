@@ -38,7 +38,7 @@
 						"projection": "rigid"
 					},
 					{
-						"element_type": "minecraft:tree_pool_element",
+						"element_type": "dynamictrees:tree_pool_element",
 						"offset": [
 							5,
 							1,
@@ -90,7 +90,7 @@
 						"projection": "rigid"
 					},
 					{
-						"element_type": "minecraft:tree_pool_element",
+						"element_type": "dynamictrees:tree_pool_element",
 						"offset": [
 							5,
 							1,

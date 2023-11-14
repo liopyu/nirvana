@@ -1,0 +1,33 @@
+{
+  "name": "gatkong:village/ocean/town_centers",
+  "fallback": "minecraft:empty",
+  "elements": [
+    {
+      "weight": 50,
+      "element": {
+        "location": "gatkong:village/ocean/zombie/town_centers/ocean_meeting_point_1",
+        "processors": "minecraft:zombie_plains",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 50,
+      "element": {
+        "location": "gatkong:village/ocean/zombie/town_centers/ocean_meeting_point_2",
+        "processors": "minecraft:zombie_plains",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    },
+    {
+      "weight": 50,
+      "element": {
+        "location": "gatkong:village/ocean/zombie/town_centers/ocean_meeting_point_3",
+        "processors": "minecraft:zombie_plains",
+        "projection": "rigid",
+        "element_type": "minecraft:legacy_single_pool_element"
+      }
+    }
+  ]
+}

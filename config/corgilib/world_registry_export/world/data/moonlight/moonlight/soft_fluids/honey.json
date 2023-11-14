@@ -1,6 +1,15 @@
 {
 	"containers": [
 		{
+			"capacity": 1,
+			"empty": "minecraft:glass_bottle",
+			"empty_sound": "minecraft:block.honey_block.break",
+			"fill_sound": "minecraft:block.honey_block.place",
+			"filled": [
+				"minecraft:honey_bottle"
+			]
+		},
+		{
 			"capacity": 4,
 			"empty": "minecraft:air",
 			"empty_sound": "minecraft:block.honey_block.break",
@@ -16,15 +25,6 @@
 			"fill_sound": "minecraft:item.bucket.fill",
 			"filled": [
 				"create:honey_bucket"
-			]
-		},
-		{
-			"capacity": 1,
-			"empty": "minecraft:glass_bottle",
-			"empty_sound": "minecraft:block.honey_block.break",
-			"fill_sound": "minecraft:block.honey_block.place",
-			"filled": [
-				"minecraft:honey_bottle"
 			]
 		}
 	],

@@ -13,7 +13,8 @@
       "exclusion_zone":{
         "chunk_count":16,
         "other_set":[
-        "minecraft:ancient_city"
+        "minecraft:ancient_city",
+        "joshie:village_ocean"
         ]
         }
     }

@@ -18,10 +18,18 @@
 },
    "magicdefence": 
    {
-      "type": "origins:modify_break_speed",
-      "modifier": {
-          "operation": "multiply_base",
-          "value": -0.1
-      }
+      "type": "origins:conditioned_attribute",
+      "condition": {
+         "type": "origins:scoreboard",
+         "objective": "cumbersomecLevel",
+         "comparison": "==",
+         "compare_to": 1
+      },
+  "modifier": {
+      "attribute": "puffish_skills:player.mining_speed",
+      "operation": "multiply_base",
+      "value": -0.1
   }
+  }
+  
 }

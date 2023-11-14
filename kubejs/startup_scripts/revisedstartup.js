@@ -1,9 +1,7 @@
 // priority: 0
 
 // Visit the wiki for more info - https://kubejs.com/
-
 console.info('Hello, World! (Loaded startup scripts)')
-
 StartupEvents.registry('item', event => {
 	// Register new items here
 	event.create('dragon_ring').displayName('§6Ring of Fire Dragons')
@@ -25,12 +23,10 @@ ItemEvents.modification(event => {
 	event.modify("kubejs:elf_ring", item => { item.setMaxStackSize(1) })
 	event.modify("kubejs:lightning_dragon_ring", item => { item.setMaxStackSize(1) })
 	event.modify("kubejs:ocean_dragon_ring", item => { item.setMaxStackSize(1) })
-	event.modify("kubejs:titan_ring", item => { item.setMaxStackSize(1) })
-	event.modify('doom:argent_energy', item => {
-		item.burnTime = 1600
-	})
+	event.modify("kubejs:titan_ring", item => {item.setMaxStackSize(1) })
+	event.modify('doom:argent_energy', item => {item.burnTime = 16000})
+	
 })
-
 BlockEvents.modification(e => {
 	e.modify('/.plank/', block => {
 		block.requiresTool = true
@@ -45,6 +41,7 @@ BlockEvents.modification(e => {
 		block.destroySpeed = Block.getBlock(block.id).defaultDestroyTime() / 0.5
 	})
 })
+
 
 
 StartupEvents.registry('block', event => {
@@ -947,12 +944,13 @@ StartupEvents.registry('item', e => {
 			if (entity.player) global.recall(entity)
 			return itemstack;
 		})
-		e.create('white_wine').displayName('White Wine')
+	e.create('white_wine').displayName('White Wine')
 		.use((level, player, hand) => true)
 		.useAnimation("drink")
 		.useDuration((itemstack) => 24)
 		.finishUsing((itemstack, level, entity) => {
 			if (entity.player) global.wine(entity)
+			//if (entity.player) global.wine2(entity)
 			return itemstack;
 		})
 
@@ -988,8 +986,9 @@ global.gravescroll = entity => {
 		} else if (pData.deathdimension == 11) {
 			entity.level.server.runCommand(`execute in wabworldgen:tutorial run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}
-		if (!entity.isCreative()){
-		item.count--}
+		if (!entity.isCreative()) {
+			item.count--
+		}
 	} else if (offHandItem.id == 'kubejs:grave_scroll') {
 		if (pData.deathdimension == 1) {
 			entity.level.server.runCommand(`execute in ae2:spatial_storage run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
@@ -1014,8 +1013,9 @@ global.gravescroll = entity => {
 		} else if (pData.deathdimension == 11) {
 			entity.level.server.runCommand(`execute in wabworldgen:tutorial run tp ${entity.username} ${pData.deathx} ${pData.deathy} ${pData.deathz}`)
 		}
-		if (!entity.isCreative()){
-		offHandItem.count--}
+		if (!entity.isCreative()) {
+			offHandItem.count--
+		}
 	}
 }
 /**
@@ -1029,14 +1029,16 @@ global.recall = entity => {
 	let dim = player.getRespawnDimension().location()
 	const { x, y, z } = player.getSpawnLocation()
 	if (item.id == 'recall_potion:recall_food') {
-		if (!entity.isCreative()){
-		item.count--}
+		if (!entity.isCreative()) {
+			item.count--
+		}
 		entity.level.server.runCommandSilent(`execute as ${player.username} run playsound minecraft:teleport ambient @s ${player.x} ${player.y} ${player.z} 1 1`)
 		entity.level.server.runCommandSilent(`execute in ${dim} run execute as ${player.username} run tp ${x} ${y} ${z}`)
 
 	} else if (offHandItem.id == 'recall_potion:recall_food') {
-		if (!entity.isCreative()){
-		offHandItem.count--}
+		if (!entity.isCreative()) {
+			offHandItem.count--
+		}
 		entity.level.server.runCommandSilent(`execute as ${player.username} run playsound minecraft:teleport ambient @s ${player.x} ${player.y} ${player.z} 1 1`)
 		entity.level.server.runCommandSilent(`execute in ${dim} run execute as ${player.username} run tp ${x} ${y} ${z}`)
 
@@ -1076,40 +1078,30 @@ global.radiationEffect = (entity, lvl) => {
 	// Damage based on level
 	entity.attack(damageSource, lvl + 1);
 }
-
-  /**
-   * 
-   * @param {Internal.Player} entity 
-   * @param {Internal.LivingEntity.activeEffects} activeEffects
-   * @returns 
-   */
-  global.wine = entity => {
+global.wine2 = entity => {
+	/*if (!entity.hasEffect('drinkbeer:drunk')){
+		entity.potionEffects.add('drinkbeer:drunk', 2000, 0,  false, true)
+	}*/
+}
+/**
+ * 
+ * @param {Internal.Player} entity 
+ * @returns 
+ */
+global.wine = entity => {
 	let offHandItem = entity.getHeldItem('off_hand');
 	let item = entity.getHeldItem('main_hand');
 	entity.activeEffects.forEach(effect => {
-		if (effect.descriptionId.includes('drinkbeer.drunk')){
-			let nbt = effect.save({})
-			let drunklvl = entity.persistentData.drinkbeerlvl = (effect.amplifier + 1) * 12
-			let newInstance = effect.load(nbt)
-			nbt.Duration = NBT.b(nbt.Duration + 5)
-			entity.forceAddEffect(newInstance, entity)
-			
-			entity.tell(entity.persistentData.drinkbeerlvl)
-		  }
+		//Return if the potion effect is level 2 or higher
+		if (effect.amplifier >= 2) return
+		let nbt = effect.save({})
+		console.log("Old: " + nbt)
+		//How much to increase the level each sip
+		nbt.Amplifier = NBT.b(nbt.Amplifier + 1)
+		let newInstance = effect.load(nbt)
+		console.log("New: " + newInstance.save({}))
+		entity.forceAddEffect(newInstance, entity)
 	})
-	entity.activeEffects.forEach(effect => {
-	  //Return if the potion effect is level 2 or higher
-	  if (effect.amplifier >= 2) return
-	  
-	  let nbt = effect.save({})
-	  console.log("Old: " + nbt)
-	  //How much to increase the level each sip
-	  nbt.Amplifier = NBT.b(nbt.Amplifier + 1)
-	  let newInstance = effect.load(nbt)
-	  console.log("New: " + newInstance.save({}))
-	  entity.forceAddEffect(newInstance, entity)
-  })
-  //event.player.potionEffects.add('drinkbeer:drunk', 21, 2, false, true)
 	if (item.id == 'kubejs:white_wine') {
 		if (!entity.isCreative()) {
 			item.count--
@@ -1121,4 +1113,5 @@ global.radiationEffect = (entity, lvl) => {
 			entity.give('glass_bottle')
 		}
 	}
-  }
+}
+

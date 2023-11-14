@@ -502,12 +502,6 @@
           
           {
             "type": "minecraft:item",
-            "weight": 1,
-            "name": "upgrade_aquatic:prismarine_rod"
-          },
-          
-          {
-            "type": "minecraft:item",
             "weight": 10,
             "functions": [
               {

@@ -278,23 +278,6 @@
             ],
             "name": "minecraft:dried_kelp"
           },
-          {
-            "type": "minecraft:item",
-            "weight": 3,
-            "quality": 3,
-            "functions": [
-              {
-                "function": "minecraft:set_count",
-                "count": {
-                  "type": "minecraft:uniform",
-                  "min": 1.0,
-                  "max": 2.0
-                },
-                "add": false
-              }
-            ],
-            "name": "upgrade_aquatic:boiled_purple_pickerelweed"
-          },
           
           {
             "type": "minecraft:item",

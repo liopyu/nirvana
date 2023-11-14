@@ -1,6 +1,0 @@
-{
-	"biomes": "minecraft:warped_forest",
-	"features": "theabyss:warped_crystal_ore",
-	"step": "vegetal_decoration",
-	"type": "forge:add_features"
-}

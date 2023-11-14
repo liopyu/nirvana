@@ -1,0 +1,24 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/town_centers/cave_center_01",
+        "processors": "minecraft:mossify_20_percent",
+        "projection": "rigid"
+      },
+      "weight": 5
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/town_centers/cave_center_02",
+        "processors": "minecraft:mossify_20_percent",
+        "projection": "rigid"
+      },
+      "weight": 15
+    }
+  ],
+  "fallback": "minecraft:empty",
+  "name": "gatkong:village/cave/town_centers"
+}

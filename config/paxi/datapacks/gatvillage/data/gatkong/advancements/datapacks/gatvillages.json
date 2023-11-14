@@ -1,0 +1,23 @@
+{
+  "__comment": "Made by GatKong",
+  "parent": "gatkong:datapacks/root",
+  "display": {
+    "icon": {
+      "item": "minecraft:player_head",
+        "nbt": "{SkullOwner:{Id:[I;-595882961,-952679480,-1645063580,1656976748],Properties:{textures:[{Value:\"eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjBmMWFmZDNlNjVlNjIyMzQ2NjkxNzQ4YjFkN2E1YmIzOWM0ZmQ2YjFlZjI4YWY1ZjMzODU0NWIyNTcxYyJ9fX0=\"}]}}}" 
+    },
+    "title": {
+      "text": "Gat Villages 5.0"
+    },
+    "description": {
+      "text": "Improves default village structures, and adds new biome-specific village types"
+    },
+    "frame": "task",
+    "show_toast": false,
+    "announce_to_chat": false,
+    "hidden": false
+  },
+  "criteria": {
+    "gatpack": { "trigger": "minecraft:tick" }
+  }
+}

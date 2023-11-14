@@ -212,7 +212,7 @@
         "mutantmonsters:mutant_skeleton"
 
     ],
-      "persecond": 0.01,
+      "persecond": 0,
       "attempts": 1,
       
       "amount": {

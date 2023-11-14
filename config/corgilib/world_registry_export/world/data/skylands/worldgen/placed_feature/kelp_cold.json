@@ -2,9 +2,9 @@
 	"feature": "minecraft:kelp",
 	"placement": [
 		{
-			"noise_factor": 80.0,
+			"noise_factor": 20.0,
 			"noise_offset": 0.0,
-			"noise_to_count_ratio": 120,
+			"noise_to_count_ratio": 25,
 			"type": "minecraft:noise_based_count"
 		},
 		{

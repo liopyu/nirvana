@@ -130,6 +130,20 @@ PlayerEvents.loggedIn(event => {
     });
 
 })
-
-
-
+/*class Human {
+    constructor(name) {
+        this.dna = 'AACTG';
+        this.name = name;
+    }
+    get gender(){
+        return this.gender
+    }
+    set gender(val) {
+        this.gender = val;
+    }
+    static isHuman(human){
+        if (human.dna == 'AACTG') {
+            return true;
+        }
+    }
+}*/

@@ -1,0 +1,23 @@
+{
+  "type": "yungsapi:yung_jigsaw",
+  "biomes": "#seafaring:has_structure/floating_hub_tectonic",
+  "step": "surface_structures",
+  "terrain_adaptation": "none",
+  "spawn_overrides": {},
+  "start_pool": "seafaring:floating_hub/floating_hub13",
+  "start_jigsaw_name": "seafaring:floating_hub/anchor",
+  "size": 50,
+  "project_start_to_heightmap": "WORLD_SURFACE_WG",
+  "start_height": {
+    "type": "minecraft:uniform",
+    "min_inclusive": {
+      "absolute": 80
+    },
+    "max_inclusive": {
+      "absolute": 90
+    }
+  },
+  
+  "max_distance_from_center": 128,
+  "use_expansion_hack": false
+}

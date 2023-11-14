@@ -89,11 +89,6 @@
       
           {
             "type": "minecraft:item",
-            "weight": 1,
-            "name": "upgrade_aquatic:cooked_lionfish"
-          },
-          {
-            "type": "minecraft:item",
             "weight": 10,
             "name": "minecraft:milk_bucket"
           },

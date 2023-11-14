@@ -3,7 +3,7 @@
 [Settings]
 
 	[Settings.Misc]
-		"Cloud Height [Raw, Default 256]" = 64
+		"Cloud Height [Raw, Default 256]" = 316
 		"Chunk Fade In Quality (OFF, FAST, FANCY)" = "FANCY"
 		"Render Fog" = false
 		"Enable Extended Server View Distance" = true

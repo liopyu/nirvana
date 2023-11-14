@@ -1,0 +1,29 @@
+{
+    "structures": [
+      {
+        "structure": "seafaring:floating_hub_overworld",
+        "weight": 1
+      }
+    ],
+    "placement": {
+      "type": "minecraft:random_spread",
+      "spacing": 110,
+      "separation": 80,
+      "salt": 85635562,
+      "exclusion_zone":{
+        "chunk_count":16,
+        "other_set":[
+        "minecraft:ancient_city",
+        "joshie:village_ocean",
+        "joshie:floating_hub_tectonic",
+        "seafaring:treevillage",
+        "keebsz:cobblestone_battletower",
+        "seafaring:oceandungeon",
+        "seafaring:oceandungeon2",
+        "seafaring:pub_island",
+        "joshie:village_ocean",
+        "seafaring:brewery"
+        ]
+        }
+    }
+  }

@@ -502,12 +502,6 @@
           
           {
             "type": "minecraft:item",
-            "weight": 1,
-            "name": "upgrade_aquatic:prismarine_rod"
-          },
-          
-          {
-            "type": "minecraft:item",
             "weight": 10,
             "functions": [
               {
@@ -727,11 +721,6 @@
         },
         "bonus_rolls": 0.0,
         "entries": [
-          {
-            "type": "minecraft:item",
-            "weight": 1,
-            "name": "upgrade_aquatic:prismarine_rod"
-          },
           {
             "weight": 500,
             "type": "minecraft:empty"
@@ -1313,11 +1302,6 @@
         },
         "bonus_rolls": 0.0,
         "entries": [
-          {
-            "type": "minecraft:item",
-            "weight": 1,
-            "name": "upgrade_aquatic:prismarine_rod"
-          },
           
           {
             "type": "minecraft:item",

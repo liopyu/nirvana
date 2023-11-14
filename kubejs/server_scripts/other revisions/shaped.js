@@ -2534,7 +2534,7 @@ ServerEvents.recipes(e => {
         type: 'vinery:wine_fermentation',
         ingredients: [
             { item: 'minecraft:glow_berries' },
-            { item: '#minecraft:grapejuice_white' }
+            { tag: 'minecraft:grapejuice_white' }
         ],
         result: { item: 'kubejs:white_wine' }
     })

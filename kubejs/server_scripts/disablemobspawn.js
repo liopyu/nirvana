@@ -2,55 +2,59 @@ EntityEvents.spawned(event => {
     if (event.entity.getType() == 'mutationcraft:helicopter') {
         event.cancel()
     }
+    if (event.entity.getType() == 'vinery:wandering_winemaker') {
+        console.log(`Vinery's Wandering Winemaker is disabled in this pack because of conflicts with fresh animations. To re-enable this edit the kubejs>server_scripts>disablemobspawn.js`)
+        event.cancel()
+    }
 })
 
 EntityEvents.spawned(event => {
-    if (event.entity.getType() == 'mutationcraft:assimilated_human') {
-        if (event.entity.level.dimension.path == 'spatial_storage') {
-            console.log(event.entity.x)
-            console.log(event.entity.y)
-            console.log(event.entity.z)
-            console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-            event.cancel()
-        } else if (event.entity.level.dimension.path == 'overworld') {
-            console.log(event.entity.x)
-            console.log(event.entity.y)
-            console.log(event.entity.z)
-            console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-            event.cancel()
-        } else if (event.entity.level.dimension.path == 'the_end') {
-            console.log(event.entity.x)
-            console.log(event.entity.y)
-            console.log(event.entity.z)
-            console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-            event.cancel()
-        } else if (event.entity.level.dimension.path == 'the_nether') {
-            console.log(event.entity.x)
-            console.log(event.entity.y)
-            console.log(event.entity.z)
-            console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-            event.cancel()
-        } else if (event.entity.level.dimension.path == 'panthalassa') {
-            console.log(event.entity.x)
-            console.log(event.entity.y)
-            console.log(event.entity.z)
-            console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-            event.cancel()
-        } else if (event.entity.level.dimension.path == 'tectonic') {
-            console.log(event.entity.x)
-            console.log(event.entity.y)
-            console.log(event.entity.z)
-            console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-            event.cancel()
-        } else if (event.entity.level.dimension.path == 'tutorial') {
-            console.log(event.entity.x)
-            console.log(event.entity.y)
-            console.log(event.entity.z)
-            console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-            event.cancel()
-        }
-
+    if (!event.entity.type.includes('mutationcraft')) return
+    if (event.entity.level.dimension.path == 'spatial_storage') {
+        console.log(event.entity.x)
+        console.log(event.entity.y)
+        console.log(event.entity.z)
+        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
+        event.cancel()
+    } else if (event.entity.level.dimension.path == 'overworld') {
+        console.log(event.entity.x)
+        console.log(event.entity.y)
+        console.log(event.entity.z)
+        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
+        event.cancel()
+    } else if (event.entity.level.dimension.path == 'the_end') {
+        console.log(event.entity.x)
+        console.log(event.entity.y)
+        console.log(event.entity.z)
+        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
+        event.cancel()
+    } else if (event.entity.level.dimension.path == 'the_nether') {
+        console.log(event.entity.x)
+        console.log(event.entity.y)
+        console.log(event.entity.z)
+        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
+        event.cancel()
+    } else if (event.entity.level.dimension.path == 'panthalassa') {
+        console.log(event.entity.x)
+        console.log(event.entity.y)
+        console.log(event.entity.z)
+        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
+        event.cancel()
+    } else if (event.entity.level.dimension.path == 'tectonic') {
+        console.log(event.entity.x)
+        console.log(event.entity.y)
+        console.log(event.entity.z)
+        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
+        event.cancel()
+    } else if (event.entity.level.dimension.path == 'tutorial') {
+        console.log(event.entity.x)
+        console.log(event.entity.y)
+        console.log(event.entity.z)
+        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
+        event.cancel()
     }
+
+
 })
 
 BlockEvents.broken(event => {
@@ -103,7 +107,9 @@ BlockEvents.rightClicked(event => {
 })
 
 ItemEvents.rightClicked(event => {
-    const { player, server, item, item: {id}, player:{username}} = event
+    if (!event.entity.isPlayer()) return
+    const { player, server, item, item: { id }, player: { username } } = event
+    if (!player.getSpawnLocation()) return
     const { x, y, z } = player.getSpawnLocation()
     let dim = player.getRespawnDimension().location()
     if (id == 'magicmirror:magicmirror') {

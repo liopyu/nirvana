@@ -2,8 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f99e458-b6c4-4c64-afff-12854b4e50d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/kubejs/client_scripts/curiosreforgetooltips.js" beforeDir="false" afterPath="$PROJECT_DIR$/kubejs/client_scripts/curiosreforgetooltips.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/libraryferret_1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/libraryferret_1.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/oculus.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/oculus.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/roughlyenoughitems/config.json5" beforeDir="false" afterPath="$PROJECT_DIR$/config/roughlyenoughitems/config.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/roughlyenoughitems/pinyin.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/roughlyenoughitems/pinyin.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/roughlyenoughitems/pinyin_double.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/roughlyenoughitems/pinyin_double.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/simpleconfig-client.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/simpleconfig-client.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sound_physics_remastered/occlusion.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/sound_physics_remastered/occlusion.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sound_physics_remastered/reflectivity.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/sound_physics_remastered/reflectivity.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/sound_physics_remastered/soundphysics.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/sound_physics_remastered/soundphysics.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/worldedit/worldedit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/worldedit/worldedit.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubejs/server_scripts/temp.js" beforeDir="false" afterPath="$PROJECT_DIR$/kubejs/server_scripts/temp.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/kubejs/startup_scripts/revisedstartup.js" beforeDir="false" afterPath="$PROJECT_DIR$/kubejs/startup_scripts/revisedstartup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/options.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,12 +29,12 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">

@@ -1,0 +1,69 @@
+{
+  "elements": [
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/rails/straight_01",
+        "processors": "minecraft:street_plains",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/rails/straight_02",
+        "processors": "minecraft:street_plains",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/rails/straight_03",
+        "processors": "minecraft:street_plains",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/rails/turn_01",
+        "processors": "minecraft:street_plains",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/terminators/terminator_01",
+        "processors": "minecraft:street_plains",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/terminators/terminator_02",
+        "processors": "minecraft:street_plains",
+        "projection": "rigid"
+      },
+      "weight": 2
+    },
+    {
+      "element": {
+        "element_type": "minecraft:legacy_single_pool_element",
+        "location": "gatkong:village/cave/terminators/terminator_03",
+        "processors": "minecraft:street_plains",
+        "projection": "rigid"
+      },
+      "weight": 2
+    }
+  ],
+  "fallback": "gatkong:village/cave/terminators",
+  "name": "gatkong:village/cave/rails"
+}

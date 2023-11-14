@@ -2,19 +2,19 @@
 	"color": "ff3f76e4",
 	"containers": [
 		{
+			"capacity": 1,
+			"empty": "minecraft:glass_bottle",
+			"filled": [
+				"minecraft:potion"
+			]
+		},
+		{
 			"capacity": 4,
 			"empty": "minecraft:bucket",
 			"empty_sound": "minecraft:item.bucket.empty",
 			"fill_sound": "minecraft:item.bucket.fill",
 			"filled": [
 				"minecraft:water_bucket"
-			]
-		},
-		{
-			"capacity": 1,
-			"empty": "minecraft:glass_bottle",
-			"filled": [
-				"minecraft:potion"
 			]
 		}
 	],

@@ -163,7 +163,7 @@ ServerEvents.tick(event => {
     server.runCommandSilent(`execute as @e[type=minecraft:bat,tag=blazeguardian] run kill @s`)
     server.runCommandSilent(`kill @e[type=minecraft:bat,tag=slime_tower_guardian_spawn]`)
     //Mob AOE Effects
-    server.runCommandSilent(`execute at @e[tag=bossprotected] run effect give @a[distance=..30] kubejs:tool_debility 0 0 true`)
+    server.runCommandSilent(`execute at @e[tag=bossprotected] run effect give @a[distance=..15] kubejs:tool_debility 1 0 true`)
     server.runCommandSilent(`execute at @e[type=ylf_mod:ylf] run effect give @a[distance=..10] minecraft:instant_health 1 0 true`)
     server.runCommandSilent(`execute at @e[type=gothic:warg] run effect give @a[distance=..3] kubejs:paralysis 2 0 true`)
 

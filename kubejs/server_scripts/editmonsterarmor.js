@@ -38,6 +38,7 @@ EntityEvents.spawned(event => {
     let rando2 = Math.random().toFixed(1)
     let rando3 = Math.random().toFixed(1)
     let rando4 = Math.random().toFixed(1)
+    let rando5 = Math.random().toFixed(1)
     
     if (event.entity.level.getDimension() != 'tectonicworld:tectonic') return
     if (rando >= 0.4) return

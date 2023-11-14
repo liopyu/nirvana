@@ -2,7 +2,7 @@
 	"elements": [
 		{
 			"element": {
-				"element_type": "minecraft:tree_pool_element",
+				"element_type": "dynamictrees:tree_pool_element",
 				"offset": [
 					0,
 					0,
