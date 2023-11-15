@@ -15,4 +15,3 @@ NetworkEvents.dataReceived('packet', e =>{
     })
     console.log('recieved client packet')
 })
-

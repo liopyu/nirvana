@@ -4,8 +4,8 @@
  * @type {{dim: string, effects: string[], y: number, preferCenter?: boolean, teleportY?: number, onTeleport?: (event: Internal.LivingEntityHurtEventJS | Internal.SimplePlayerEventJS, by: number) => void}[]}
  */
 const allDimensions = [
-	{ dim: "minecraft:overworld", effects: ["minecraft:slow_falling"], y: 360 },
-	{
+	{ dim: "minecraft:overworld", effects: ["minecraft:slow_falling"], y: 360, teleportY: 63, },
+	/*{
 		dim: "wabworldgen:tutorial", effects: ["minecraft:slow_falling"],
 		y: 280,
 		teleportY: 63,
@@ -14,15 +14,21 @@ const allDimensions = [
 			event.player.block.set('air')
 			event.player.block.up.set('air')}
 		}
-	},
+	},*/
 	{
 		dim: "tectonicworld:tectonic",
 		effects: ["minecraft:slow_falling"],
-		y: 250,
+		y: 280,
 		teleportY: 50,
-		onTeleport: (event, _) => {
+		
+		onTeleport: (event, by) => {
+			if (by > 0) {
+				event.player.teleportTo('tectonicworld:tectonic', event.player.x, 250, event.player.z, 1, 1)
+			}
+			
 			event.player.block.set('air')
 			event.player.block.up.set('air')
+			
 		}
 	},
 	{
@@ -38,20 +44,25 @@ const allDimensions = [
 	{
 		dim: "minecraft:the_end",
 		effects: ["minecraft:slow_falling"],
-		y: 270,
+		y: 258,
 		preferCenter: true,
 	},
 	{
 		dim: "deepwhisperer:deep_space",
 		effects: ["minecraft:slow_falling"],
-		y: 310,
+		y: 270,
 		teleportY: 80,
-		onTeleport: (event, _) => {
+		onTeleport: (event, by) => {
+			if (by > 0) {
+				event.player.teleportTo('deepwhisperer:deep_space', event.player.x, 250, event.player.z, 1, 1)
+			}
+			
 			event.player.block.set('air')
 			event.player.block.up.set('air')
+			
 		}
 	},
-	{ dim: "theabyss:the_abyss", effects: ["minecraft:slow_falling"], y: 200 },
+	{ dim: "theabyss:the_abyss", effects: ["minecraft:slow_falling"], y: 310 },
 ];
 /**
  * Options for teleporting
@@ -74,6 +85,7 @@ const teleportOptions = {
 function teleport(by, event) {
 	const { player } = event;
 	let { x, z } = player;
+	
 
 	/** Current dimension */
 	let current = player.level.dimension;

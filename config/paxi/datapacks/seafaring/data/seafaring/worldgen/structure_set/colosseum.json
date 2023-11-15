@@ -9,7 +9,7 @@
       "type": "minecraft:random_spread",
       "spacing": 110,
       "separation": 100,
-      "salt": 151673251,
+      "salt": 2082944824,
       "exclusion_zone":{
         "chunk_count":16,
         "other_set":[

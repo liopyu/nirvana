@@ -652,6 +652,7 @@ ServerEvents.tags('item', event => {
         'ars_nouveau:apprentice_hood',
         'ars_nouveau:archmage_hood',
         'mutantmore:mutant_wither_skeleton_skull',
+        'mutantmonsters:mutant_skeleton_skull',
 
     ])
     event.add('forge:chestplates', [
@@ -740,6 +741,7 @@ ServerEvents.tags('item', event => {
         'mutationcraft:rusted_metal_armor_leggings',
         'mutationcraft:metal_armor_leggings',
         'magistuarmory:maximilian_leggings',
+        'magistuarmory:platemail_leggings',
         'minecraft:leather_leggings',
         'magistuarmory:cuirassier_leggings',
         'minecolonies:pirate_leggins',
@@ -751,6 +753,8 @@ ServerEvents.tags('item', event => {
         'ars_nouveau:apprentice_leggings',
         'ars_nouveau:archmage_leggings',
         'mutantmore:mutant_wither_skeleton_leggings',
+        'mutantmonsters:mutant_skeleton_leggings',
+        'unusualend:enderling_scrap_leggings',
 
     ])
     event.add('forge:boots', [
@@ -798,6 +802,7 @@ ServerEvents.tags('item', event => {
         'ars_nouveau:apprentice_boots',
         'ars_nouveau:archmage_boots',
         'mutantmore:mutant_wither_skeleton_boots',
+        'mutantmonsters:mutant_skeleton_boots',
 
     ])
     event.add('forge:armor/chain', [
@@ -1002,6 +1007,7 @@ ServerEvents.tags('item', event => {
         'magistuarmory:ceremonialarmet',
         'magistuarmory:ceremonial_chestplate',
         'magistuarmory:ceremonial_boots',
+        'magistuarmory:platemail_leggings',
     ])
     event.add('forge:armor/leather', [
         'minecraft:leather_helmet',
@@ -1047,6 +1053,7 @@ ServerEvents.tags('item', event => {
     ])
     event.add('forge:armor/phantom_membrane', [
         'minecraft:elytra',
+        'unusualend:enderling_scrap_leggings',
     ])
     event.add('forge:armor/rocky_shell', [
         'alexsmobs:rocky_chestplate',
@@ -1080,6 +1087,9 @@ ServerEvents.tags('item', event => {
     ])
     event.add('forge:armor/bone', [
         'mutantmonsters:mutant_skeleton_chestplate',
+        'mutantmonsters:mutant_skeleton_boots',
+        'mutantmonsters:mutant_skeleton_leggings',
+        'mutantmonsters:mutant_skeleton_skull',
     ])
     event.add('forge:armor/wither_bone', [
         'mutantmore:mutant_wither_skeleton_chestplate',

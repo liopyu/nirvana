@@ -6,9 +6,9 @@ EntityEvents.hurt(event => {
     if (source.getType() == 'indirectMagic') {
         if (source.player.username == entity.username) return
         server.runCommandSilent(`puffish_skills experience add ${source.player.username} arcane ${magicxp}`)
-        server.tell(magicxp)
+        //server.tell(magicxp)
     }else if (source.getType() != 'indirectMagic') {
         server.runCommandSilent(`puffish_skills experience add ${source.player.username} combat ${meleexp}`)
-        server.tell(meleexp)
+        //server.tell(meleexp)
     }
 })

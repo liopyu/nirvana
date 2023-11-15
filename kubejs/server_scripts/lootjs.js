@@ -1,4 +1,5 @@
 LootJS.modifiers((event) => {
+    
     event
         .addBlockLootModifier("#minecraft:leaves")
         .randomChance(0.2)
@@ -83,4 +84,5 @@ LootJS.modifiers((event) => {
         event
         .addLootTypeModifier(LootType.ENTITY)
         .removeLoot('tameablebeasts:purple_allay')
+        
 });

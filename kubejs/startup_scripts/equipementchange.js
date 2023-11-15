@@ -32,39 +32,39 @@ global.equipementchangedh = event => {
     let arcanehResult = getarcaneh(curioEquiped) - getarcaneh(curioRemoved)
     let oldarcanehLevel = getarcanehLevel(player) || 0
     player.persistentData.putInt("arcanehLevel", oldarcanehLevel + arcanehResult)
-    player.tell(getarcanehLevel(player))
+    //player.tell(getarcanehLevel(player))
     let crumblinghResult = getcrumblingh(curioEquiped) - getcrumblingh(curioRemoved)
     let oldcrumblinghLevel = getcrumblinghLevel(player) || 0
     player.persistentData.putInt("crumblinghLevel", oldcrumblinghLevel + crumblinghResult)
-    player.tell(getcrumblinghLevel(player))
+    //player.tell(getcrumblinghLevel(player))
     let dentedhResult = getdentedh(curioEquiped) - getdentedh(curioRemoved)
     let olddentedhLevel = getdentedhLevel(player) || 0
     player.persistentData.putInt("dentedhLevel", olddentedhLevel + dentedhResult)
-    player.tell(getdentedhLevel(player))
+    //player.tell(getdentedhLevel(player))
     let heavyhResult = getheavyh(curioEquiped) - getheavyh(curioRemoved)
     let oldheavyhLevel = getheavyhLevel(player) || 0
     player.persistentData.putInt("heavyhLevel", oldheavyhLevel + heavyhResult)
-    player.tell(getheavyhLevel(player))
+    //player.tell(getheavyhLevel(player))
     let masterfulhResult = getmasterfulh(curioEquiped) - getmasterfulh(curioRemoved)
     let oldmasterfulhLevel = getmasterfulhLevel(player) || 0
     player.persistentData.putInt("masterfulhLevel", oldmasterfulhLevel + masterfulhResult)
-    player.tell(getmasterfulhLevel(player))
+    //player.tell(getmasterfulhLevel(player))
     let protectivehResult = getprotectiveh(curioEquiped) - getprotectiveh(curioRemoved)
     let oldprotectivehLevel = getprotectivehLevel(player) || 0
     player.persistentData.putInt("protectivehLevel", oldprotectivehLevel + protectivehResult)
-    player.tell(getprotectivehLevel(player))
+    //player.tell(getprotectivehLevel(player))
     let luckyhResult = getluckyh(curioEquiped) - getluckyh(curioRemoved)
     let oldluckyhLevel = getluckyhLevel(player) || 0
     player.persistentData.putInt("luckyhLevel", oldluckyhLevel + luckyhResult)
-    player.tell(getluckyhLevel(player))
+    //player.tell(getluckyhLevel(player))
     let thickhResult = getthickh(curioEquiped) - getthickh(curioRemoved)
     let oldthickhLevel = getthickhLevel(player) || 0
     player.persistentData.putInt("thickhLevel", oldthickhLevel + thickhResult)
-    player.tell(getthickhLevel(player))
+    //player.tell(getthickhLevel(player))
     let toughhResult = gettoughh(curioEquiped) - gettoughh(curioRemoved)
     let oldtoughhLevel = gettoughhLevel(player) || 0
     player.persistentData.putInt("toughhLevel", oldtoughhLevel + toughhResult)
-    player.tell(gettoughhLevel(player))
+    //player.tell(gettoughhLevel(player))
 }
 
 const getarcaneh = itemstack => {
@@ -164,43 +164,43 @@ global.equipementchangedc = event => {
     let solidcResult = getsolidc(curioEquiped) - getsolidc(curioRemoved)
     let oldsolidcLevel = getsolidcLevel(player) || 0
     player.persistentData.putInt("solidcLevel", oldsolidcLevel + solidcResult)
-    player.tell(getsolidcLevel(player))
+    //player.tell(getsolidcLevel(player))
     let cumbersomecResult = getcumbersomec(curioEquiped) - getcumbersomec(curioRemoved)
     let oldcumbersomecLevel = getcumbersomecLevel(player) || 0
     player.persistentData.putInt("cumbersomecLevel", oldcumbersomecLevel + cumbersomecResult)
-    player.tell(getcumbersomecLevel(player))
+    //player.tell(getcumbersomecLevel(player))
     let arcanecResult = getarcanec(curioEquiped) - getarcanec(curioRemoved)
     let oldarcanecLevel = getarcanecLevel(player) || 0
     player.persistentData.putInt("arcanecLevel", oldarcanecLevel + arcanecResult)
-    player.tell(getarcanecLevel(player))
+    //player.tell(getarcanecLevel(player))
     let crumblingcResult = getcrumblingc(curioEquiped) - getcrumblingc(curioRemoved)
     let oldcrumblingcLevel = getcrumblingcLevel(player) || 0
     player.persistentData.putInt("crumblingcLevel", oldcrumblingcLevel + crumblingcResult)
-    player.tell(getcrumblingcLevel(player))
+    //player.tell(getcrumblingcLevel(player))
     let dentedcResult = getdentedc(curioEquiped) - getdentedc(curioRemoved)
     let olddentedcLevel = getdentedcLevel(player) || 0
     player.persistentData.putInt("dentedcLevel", olddentedcLevel + dentedcResult)
-    player.tell(getdentedcLevel(player))
+    //player.tell(getdentedcLevel(player))
     let heavycResult = getheavyc(curioEquiped) - getheavyc(curioRemoved)
     let oldheavycLevel = getheavycLevel(player) || 0
     player.persistentData.putInt("heavycLevel", oldheavycLevel + heavycResult)
-    player.tell(getheavycLevel(player))
+    //player.tell(getheavycLevel(player))
     let masterfulcResult = getmasterfulc(curioEquiped) - getmasterfulc(curioRemoved)
     let oldmasterfulcLevel = getmasterfulcLevel(player) || 0
     player.persistentData.putInt("masterfulcLevel", oldmasterfulcLevel + masterfulcResult)
-    player.tell(getmasterfulcLevel(player))
+    //player.tell(getmasterfulcLevel(player))
     let protectivecResult = getprotectivec(curioEquiped) - getprotectivec(curioRemoved)
     let oldprotectivecLevel = getprotectivecLevel(player) || 0
     player.persistentData.putInt("protectivecLevel", oldprotectivecLevel + protectivecResult)
-    player.tell(getprotectivecLevel(player))
+    //player.tell(getprotectivecLevel(player))
     let thickcResult = getthickc(curioEquiped) - getthickc(curioRemoved)
     let oldthickcLevel = getthickcLevel(player) || 0
     player.persistentData.putInt("thickcLevel", oldthickcLevel + thickcResult)
-    player.tell(getthickcLevel(player))
+    //player.tell(getthickcLevel(player))
     let toughcResult = gettoughc(curioEquiped) - gettoughc(curioRemoved)
     let oldtoughcLevel = gettoughcLevel(player) || 0
     player.persistentData.putInt("toughcLevel", oldtoughcLevel + toughcResult)
-    player.tell(gettoughcLevel(player))
+    //player.tell(gettoughcLevel(player))
 }
 
 const getsolidc = itemstack => {
@@ -309,39 +309,39 @@ global.equipementchangedl = event => {
     let arcanelResult = getarcanel(curioEquiped) - getarcanel(curioRemoved)
     let oldarcanelLevel = getarcanelLevel(player) || 0
     player.persistentData.putInt("arcanelLevel", oldarcanelLevel + arcanelResult)
-    player.tell(getarcanelLevel(player))
+    //player.tell(getarcanelLevel(player))
     let crumblinglResult = getcrumblingl(curioEquiped) - getcrumblingl(curioRemoved)
     let oldcrumblinglLevel = getcrumblinglLevel(player) || 0
     player.persistentData.putInt("crumblinglLevel", oldcrumblinglLevel + crumblinglResult)
-    player.tell(getcrumblinglLevel(player))
+    //player.tell(getcrumblinglLevel(player))
     let dentedlResult = getdentedl(curioEquiped) - getdentedl(curioRemoved)
     let olddentedlLevel = getdentedlLevel(player) || 0
     player.persistentData.putInt("dentedlLevel", olddentedlLevel + dentedlResult)
-    player.tell(getdentedlLevel(player))
+    //player.tell(getdentedlLevel(player))
     let heavylResult = getheavyl(curioEquiped) - getheavyl(curioRemoved)
     let oldheavylLevel = getheavylLevel(player) || 0
     player.persistentData.putInt("heavylLevel", oldheavylLevel + heavylResult)
-    player.tell(getheavylLevel(player))
+    //player.tell(getheavylLevel(player))
     let masterfullResult = getmasterfull(curioEquiped) - getmasterfull(curioRemoved)
     let oldmasterfullLevel = getmasterfullLevel(player) || 0
     player.persistentData.putInt("masterfullLevel", oldmasterfullLevel + masterfullResult)
-    player.tell(getmasterfullLevel(player))
+    //player.tell(getmasterfullLevel(player))
     let protectivelResult = getprotectivel(curioEquiped) - getprotectivel(curioRemoved)
     let oldprotectivelLevel = getprotectivelLevel(player) || 0
     player.persistentData.putInt("protectivelLevel", oldprotectivelLevel + protectivelResult)
-    player.tell(getprotectivelLevel(player))
+    //player.tell(getprotectivelLevel(player))
     let thicklResult = getthickl(curioEquiped) - getthickl(curioRemoved)
     let oldthicklLevel = getthicklLevel(player) || 0
     player.persistentData.putInt("thicklLevel", oldthicklLevel + thicklResult)
-    player.tell(getthicklLevel(player))
+    //player.tell(getthicklLevel(player))
     let toughlResult = gettoughl(curioEquiped) - gettoughl(curioRemoved)
     let oldtoughlLevel = gettoughlLevel(player) || 0
     player.persistentData.putInt("toughlLevel", oldtoughlLevel + toughlResult)
-    player.tell(gettoughlLevel(player))
+    //player.tell(gettoughlLevel(player))
     let springylResult = getspringyl(curioEquiped) - getspringyl(curioRemoved)
     let oldspringylLevel = getspringylLevel(player) || 0
     player.persistentData.putInt("springylLevel", oldspringylLevel + springylResult)
-    player.tell(getspringylLevel(player))
+    //player.tell(getspringylLevel(player))
 }
 
 const getarcanel = itemstack => {
@@ -423,43 +423,43 @@ global.equipementchangedb = event => {
     let arcanebResult = getarcaneb(curioEquiped) - getarcaneb(curioRemoved)
     let oldarcanebLevel = getarcanebLevel(player) || 0
     player.persistentData.putInt("arcanebLevel", oldarcanebLevel + arcanebResult)
-    player.tell(getarcanebLevel(player))
+    //player.tell(getarcanebLevel(player))
     let crumblingbResult = getcrumblingb(curioEquiped) - getcrumblingb(curioRemoved)
     let oldcrumblingbLevel = getcrumblingbLevel(player) || 0
     player.persistentData.putInt("crumblingbLevel", oldcrumblingbLevel + crumblingbResult)
-    player.tell(getcrumblingbLevel(player))
+    //player.tell(getcrumblingbLevel(player))
     let dentedbResult = getdentedb(curioEquiped) - getdentedb(curioRemoved)
     let olddentedbLevel = getdentedbLevel(player) || 0
     player.persistentData.putInt("dentedbLevel", olddentedbLevel + dentedbResult)
-    player.tell(getdentedbLevel(player))
+    //player.tell(getdentedbLevel(player))
     let heavybResult = getheavyb(curioEquiped) - getheavyb(curioRemoved)
     let oldheavybLevel = getheavybLevel(player) || 0
     player.persistentData.putInt("heavybLevel", oldheavybLevel + heavybResult)
-    player.tell(getheavybLevel(player))
+    //player.tell(getheavybLevel(player))
     let masterfulbResult = getmasterfulb(curioEquiped) - getmasterfulb(curioRemoved)
     let oldmasterfulbLevel = getmasterfulbLevel(player) || 0
     player.persistentData.putInt("masterfulbLevel", oldmasterfulbLevel + masterfulbResult)
-    player.tell(getmasterfulbLevel(player))
+    //player.tell(getmasterfulbLevel(player))
     let protectivebResult = getprotectiveb(curioEquiped) - getprotectiveb(curioRemoved)
     let oldprotectivebLevel = getprotectivebLevel(player) || 0
     player.persistentData.putInt("protectivebLevel", oldprotectivebLevel + protectivebResult)
-    player.tell(getprotectivebLevel(player))
+    //player.tell(getprotectivebLevel(player))
     let thickbResult = getthickb(curioEquiped) - getthickb(curioRemoved)
     let oldthickbLevel = getthickbLevel(player) || 0
     player.persistentData.putInt("thickbLevel", oldthickbLevel + thickbResult)
-    player.tell(getthickbLevel(player))
+    //player.tell(getthickbLevel(player))
     let toughbResult = gettoughb(curioEquiped) - gettoughb(curioRemoved)
     let oldtoughbLevel = gettoughbLevel(player) || 0
     player.persistentData.putInt("toughbLevel", oldtoughbLevel + toughbResult)
-    player.tell(gettoughbLevel(player))
+    //player.tell(gettoughbLevel(player))
     let tallbResult = gettallb(curioEquiped) - gettallb(curioRemoved)
     let oldtallbLevel = gettallbLevel(player) || 0
     player.persistentData.putInt("tallbLevel", oldtallbLevel + tallbResult)
-    player.tell(gettallbLevel(player))
+    //player.tell(gettallbLevel(player))
     let speedybResult = getspeedyb(curioEquiped) - getspeedyb(curioRemoved)
     let oldspeedybLevel = getspeedybLevel(player) || 0
     player.persistentData.putInt("speedybLevel", oldspeedybLevel + speedybResult)
-    player.tell(getspeedybLevel(player))
+    //player.tell(getspeedybLevel(player))
 }
 
 

@@ -16,11 +16,11 @@
 
 	["Locational Armor".Armor]
 		multiplierHead = 5.0
-		multiplierChest = 2.4
-		multiplierLegs = 2.6
+		multiplierChest = 2.0
+		multiplierLegs = 3
 		multiplierFeet = 4.0
 		offsetHead = 0.0
-		offsetChest = 0.0
+		offsetChest = 0.3
 		offsetLegs = 0.0
 		offsetFeet = 0.0
 

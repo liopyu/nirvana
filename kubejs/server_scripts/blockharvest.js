@@ -93,3 +93,15 @@ BlockEvents.broken(event => {
       event.cancel()
     }
   })
+
+  ItemEvents.rightClicked('stick', event => {
+    /* function name() {
+        for (let i = 0; i < boots.length; i++) {
+            const element = boots[i];
+            event.player.tell(element)
+        }
+    } */
+    boots.forEach(boots => {
+        console.log(boots)
+    });
+  })

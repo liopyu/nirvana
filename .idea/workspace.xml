@@ -2,10 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5f99e458-b6c4-4c64-afff-12854b4e50d1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/infernalmobs.cfg" beforeDir="false" afterPath="$PROJECT_DIR$/config/infernalmobs.cfg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/libraryferret_1.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/libraryferret_1.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/oculus.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/oculus.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/roughlyenoughitems/config.json5" beforeDir="false" afterPath="$PROJECT_DIR$/config/roughlyenoughitems/config.json5" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/structures/brewery/brewery1.nbt" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/structures/brewery/brewery1.nbt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/brewery.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/brewery.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/colosseum.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/colosseum.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/floating_hub_overworld.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/floating_hub_overworld.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/floating_hub_tectonic.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/floating_hub_tectonic.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/gravel.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/gravel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/newmoonport.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/newmoonport.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/oceandungeon.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/oceandungeon.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/pub_island.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/pub_island.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/treevillage.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/treevillage.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/undergrounddungeon.json" beforeDir="false" afterPath="$PROJECT_DIR$/config/paxi/datapacks/seafaring/data/seafaring/worldgen/structure_set/undergrounddungeon.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/roughlyenoughitems/pinyin.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/roughlyenoughitems/pinyin.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/roughlyenoughitems/pinyin_double.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/roughlyenoughitems/pinyin_double.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/simpleconfig-client.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/simpleconfig-client.yaml" afterDir="false" />
@@ -13,8 +23,9 @@
       <change beforePath="$PROJECT_DIR$/config/sound_physics_remastered/reflectivity.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/sound_physics_remastered/reflectivity.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/sound_physics_remastered/soundphysics.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/sound_physics_remastered/soundphysics.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/worldedit/worldedit.properties" beforeDir="false" afterPath="$PROJECT_DIR$/config/worldedit/worldedit.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubejs/server_scripts/temp.js" beforeDir="false" afterPath="$PROJECT_DIR$/kubejs/server_scripts/temp.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kubejs/startup_scripts/revisedstartup.js" beforeDir="false" afterPath="$PROJECT_DIR$/kubejs/startup_scripts/revisedstartup.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubejs/server_scripts/lootjs.js" beforeDir="false" afterPath="$PROJECT_DIR$/kubejs/server_scripts/lootjs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubejs/server_scripts/newdimteleport.js" beforeDir="false" afterPath="$PROJECT_DIR$/kubejs/server_scripts/newdimteleport.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/kubejs/server_scripts/other revisions/network.js" beforeDir="false" afterPath="$PROJECT_DIR$/kubejs/server_scripts/other revisions/network.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/options.txt" beforeDir="false" afterPath="$PROJECT_DIR$/options.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
