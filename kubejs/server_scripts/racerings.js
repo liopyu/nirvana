@@ -1,18 +1,18 @@
 
 PlayerEvents.tick(event => {
-    const {player,server,entity, entity:{username,maxHealth,persistentData}} = event
-    let dragonmax = (maxHealth *0.25).toFixed(0)
-    let fairymax = -(maxHealth *0.75).toFixed(0)
-    let faelesmax = -(maxHealth *0.2).toFixed(0)
-    let titanmax = (maxHealth *1).toFixed(0)
+    const { player, server, entity, entity: { username, maxHealth, persistentData } } = event
+    let dragonmax = (maxHealth * 0.25).toFixed(0)
+    let fairymax = -(maxHealth * 0.75).toFixed(0)
+    let faelesmax = -(maxHealth * 0.2).toFixed(0)
+    let titanmax = (maxHealth * 1).toFixed(0)
     let healthylevel = player.persistentData.getInt("healthyLevel")
     let undyinglevel = player.persistentData.getInt("undyingLevel")
-    let healthymax = (healthylevel *2)
-    let undyingmax = (undyinglevel *2)
-    if(!(player.age % 20 == 0)) return
-        player.modifyAttribute('minecraft:generic.max_health', '-123924,1111,155221,-3120', `${healthymax}`, "addition")
-        player.modifyAttribute('minecraft:generic.max_health', '-123924,1112,155221,-3120', `${undyingmax}`, "addition")
-    
+    let healthymax = (healthylevel * 2)
+    let undyingmax = (undyinglevel * 2)
+    if (!(player.age % 20 == 0)) return
+    player.modifyAttribute('minecraft:generic.max_health', '-123924,1111,155221,-3120', `${healthymax}`, "addition")
+    player.modifyAttribute('minecraft:generic.max_health', '-123924,1112,155221,-3120', `${undyingmax}`, "addition")
+
     let curios = player.nbt.ForgeCaps['curios:inventory']
     if (curios.toString().contains('kubejs:dragon_ring')) {
         if (persistentData.hasdragonring == 1) return
@@ -43,7 +43,7 @@ PlayerEvents.tick(event => {
             server.runCommandSilent(`execute as ${username} run tag @s remove oceandragon`)
 
     } else if (curios.toString().contains('kubejs:elf_ring')) {
-        
+
 
         //event.player.tell('elf!')
         server.runCommandSilent(`execute as ${username} run origin set @s origins:origin elfring:elf`)
@@ -80,13 +80,11 @@ PlayerEvents.tick(event => {
 })
 
 PlayerEvents.loggedOut(event => {
-    const {player,server,entity, entity:{username,maxHealth,persistentData}} = event
+    const { player, server, entity, entity: { username, maxHealth, persistentData } } = event
     persistentData.loggedout = 1
-    console.log(persistentData.loggedout)
 })
 PlayerEvents.loggedIn(event => {
     const { player, server, entity, entity: { username, maxHealth, persistentData } } = event
-    console.log(persistentData.loggedout)
     let dragonmax = (maxHealth * 0.25).toFixed(0)
     let fairymax = -(maxHealth * 0.75).toFixed(0)
     let faelesmax = -(maxHealth * 0.2).toFixed(0)
@@ -121,29 +119,14 @@ PlayerEvents.loggedIn(event => {
         }
     } else if (curios.toString().contains('kubejs:titan_ring')) {
         if (persistentData.hastitanring == 1) {
-            player.modifyAttribute('minecraft:generic.max_health', '-123924,5555,155221,-3120', `${titanmax}`, "addition")
+            event.player.modifyAttribute('minecraft:generic.max_health', '-123924,5555,155221,-3120', `${titanmax}`, "addition")
         }
     }
     server.schedule(120, () => {
         persistentData.loggedout = 0
-        console.log(persistentData.loggedout)
     });
 
 })
-/*class Human {
-    constructor(name) {
-        this.dna = 'AACTG';
-        this.name = name;
-    }
-    get gender(){
-        return this.gender
-    }
-    set gender(val) {
-        this.gender = val;
-    }
-    static isHuman(human){
-        if (human.dna == 'AACTG') {
-            return true;
-        }
-    }
-}*/
+
+
+

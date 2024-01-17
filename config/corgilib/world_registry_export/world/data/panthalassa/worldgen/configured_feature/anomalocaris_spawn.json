@@ -1,9 +1,0 @@
-{
-	"config": {
-		"maxCount": 3,
-		"minCount": 1,
-		"spawnWeight": 100,
-		"type": "panthalassa:anomalocaris"
-	},
-	"type": "panthalassa:panthalassa_spawner"
-}

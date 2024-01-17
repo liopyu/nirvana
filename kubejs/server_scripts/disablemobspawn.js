@@ -160,3 +160,4 @@ EntityEvents.death(event => {
     }
 
 })
+

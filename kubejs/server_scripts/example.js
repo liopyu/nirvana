@@ -4,6 +4,6 @@
 
 console.info('Hello, World! (Loaded server scripts)')
 
-/*ItemEvents.rightClicked(event => {
-    event.player.tell(event.player.level.dimension)
-})*/
+/* ItemEvents.rightClicked(event => {
+    console.log()
+}) */

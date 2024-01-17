@@ -21,12 +21,12 @@ toggleSprint:false
 darkMojangStudiosBackground:false
 hideLightningFlashes:false
 mouseSensitivity:1.0
-fov:0.5
+fov:0.675
 screenEffectScale:1.0
 fovEffectScale:1.0
 darknessEffectScale:1.0
 gamma:1.0
-renderDistance:17
+renderDistance:32
 simulationDistance:10
 entityDistanceScaling:1.0
 guiScale:3
@@ -112,6 +112,10 @@ key_key.hotbar.7:key.keyboard.7
 key_key.hotbar.8:key.keyboard.8
 key_key.hotbar.9:key.keyboard.9
 key_key.puffish_skills.open:key.keyboard.k
+key_key.dragon_fireAttack:key.keyboard.r
+key_key.dragon_strike:key.keyboard.g
+key_key.dragon_down:key.keyboard.x
+key_key.dragon_change_view:key.keyboard.f7
 key_key.rpgskillable.open_skill_screen:key.keyboard.equal
 key_key.hammerlib.render_item:key.keyboard.unknown
 key_key.modernfix.config:key.keyboard.unknown
@@ -188,7 +192,7 @@ key_key.immersive_aircraft.fallback_control_pull:key.keyboard.unknown
 key_key.immersive_aircraft.fallback_control_push:key.keyboard.unknown
 key_key.immersive_aircraft.fallback_dismount:key.keyboard.grave.accent
 key_key.immersive_aircraft.fallback_boost:key.keyboard.unknown
-key_gui.xaero_open_map:key.keyboard.comma
+key_gui.xaero_open_map:key.keyboard.m
 key_gui.xaero_open_settings:key.keyboard.right.bracket
 key_gui.xaero_map_zoom_in:key.keyboard.unknown
 key_gui.xaero_map_zoom_out:key.keyboard.unknown
@@ -228,7 +232,7 @@ key_simpleconfig.key.save:key.keyboard.s:CONTROL
 key_simpleconfig.key.reset_restore:key.keyboard.r:CONTROL
 key_simpleconfig.key.hotkey:key.keyboard.h:CONTROL
 key_simpleconfig.key.help:key.keyboard.q:CONTROL
-key_key.map_atlases.open_minimap:key.keyboard.m
+key_key.map_atlases.open_minimap:key.keyboard.comma
 key_create.keyinfo.toolmenu:key.keyboard.left.alt
 key_create.keyinfo.toolbelt:key.keyboard.left.alt
 key_keybinds.show_wounds:key.keyboard.h

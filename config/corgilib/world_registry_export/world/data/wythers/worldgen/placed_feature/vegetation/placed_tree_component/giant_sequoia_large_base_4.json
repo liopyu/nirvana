@@ -1,9 +1,0 @@
-{
-	"feature": "wythers:vegetation/configured_tree_component/giant_sequoia_large_base_4",
-	"placement": [
-		{
-			"heightmap": "WORLD_SURFACE_WG",
-			"type": "minecraft:heightmap"
-		}
-	]
-}

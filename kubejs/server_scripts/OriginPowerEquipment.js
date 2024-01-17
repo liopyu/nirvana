@@ -159,4 +159,23 @@ PlayerEvents.loggedIn( event => {
     
   })
 
-  
+
+/* PlayerEvents.loggedIn(event => {
+  const { player, server, player: { persistentData, username } } = event
+  persistentData.putInt("heatresistantLevel", 0)
+  if (player.stages.has('new_join')) return
+  server.runCommandSilent(`scoreboard objective add heatresistant dummy`)
+  server.runCommandSilent(`power grant ${username} yourorigin:power`)
+})
+PlayerEvents.respawned(event => {
+  const { player, server, player: { persistentData, username } } = event
+  persistentData.putInt("heatresistantLevel", 0)
+})
+ServerEvents.tags('item', event => {
+  event.add('kubejs:heat_resistant', [
+    'kubejs:item',
+  ])
+  event.add('curios:necklace', [
+    'kubejs:item'
+  ])
+}) */

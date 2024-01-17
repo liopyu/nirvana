@@ -1,9 +1,0 @@
-{
-	"feature": "bro:cave/replace_drip",
-	"placement": [
-		{
-			"count": 50,
-			"type": "minecraft:count_on_every_layer"
-		}
-	]
-}

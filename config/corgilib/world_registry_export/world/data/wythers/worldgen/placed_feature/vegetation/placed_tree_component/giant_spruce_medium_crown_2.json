@@ -1,9 +1,0 @@
-{
-	"feature": "wythers:vegetation/configured_tree_component/giant_spruce_medium_crown_2",
-	"placement": [
-		{
-			"heightmap": "WORLD_SURFACE_WG",
-			"type": "minecraft:heightmap"
-		}
-	]
-}

@@ -1,9 +1,0 @@
-{
-	"config": {
-		"feature": "wythers:vegetation/placed_block_column/sculk_growths",
-		"tries": 16,
-		"xz_spread": 5,
-		"y_spread": 5
-	},
-	"type": "minecraft:random_patch"
-}

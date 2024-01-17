@@ -1,6 +1,0 @@
-{
-	"config": {
-		"features": "#tectonic:trees/spruce_standard"
-	},
-	"type": "minecraft:simple_random_selector"
-}

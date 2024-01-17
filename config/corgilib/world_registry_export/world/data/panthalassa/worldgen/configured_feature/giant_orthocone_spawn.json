@@ -1,9 +1,0 @@
-{
-	"config": {
-		"maxCount": 1,
-		"minCount": 1,
-		"spawnWeight": 100,
-		"type": "panthalassa:giant_orthocone"
-	},
-	"type": "panthalassa:panthalassa_spawner"
-}

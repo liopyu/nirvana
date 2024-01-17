@@ -1,9 +1,0 @@
-{
-	"feature": "bro:mountain/valley/delta",
-	"placement": [
-		{
-			"count": 256,
-			"type": "minecraft:count_on_every_layer"
-		}
-	]
-}

@@ -1,6 +1,0 @@
-{
-	"biomes": "#ae2:has_meteorites",
-	"spawn_overrides": { },
-	"step": "top_layer_modification",
-	"type": "ae2:mtrt"
-}

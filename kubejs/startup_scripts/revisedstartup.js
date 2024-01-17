@@ -23,9 +23,9 @@ ItemEvents.modification(event => {
 	event.modify("kubejs:elf_ring", item => { item.setMaxStackSize(1) })
 	event.modify("kubejs:lightning_dragon_ring", item => { item.setMaxStackSize(1) })
 	event.modify("kubejs:ocean_dragon_ring", item => { item.setMaxStackSize(1) })
-	event.modify("kubejs:titan_ring", item => {item.setMaxStackSize(1) })
-	event.modify('doom:argent_energy', item => {item.burnTime = 16000})
-	
+	event.modify("kubejs:titan_ring", item => { item.setMaxStackSize(1) })
+	event.modify('doom:argent_energy', item => { item.burnTime = 16000 })
+
 })
 BlockEvents.modification(e => {
 	e.modify('/.plank/', block => {
@@ -118,6 +118,7 @@ StartupEvents.registry('sound_event', event => {
 	event.create('minecraft:craftsaw')
 	event.create('minecraft:knapping')
 })
+
 
 
 //FULL CREDIT TO @UNCANDANGO IN THE KUBEJS DISCORD FOR WORKING THESE FUNCTIONS OUT!!
@@ -435,7 +436,9 @@ const getprospectingLevel = player => {
 }
 ////////////////////////////////////////////////////////////////////////////
 /** @arg {Internal.CurioChangeEvent} e */
-global.curioChangeEvent14 = e => {
+global.curioChangeEvent14 = e => e.entity.persistentData.putInt("punishingLevel", (e.entity.persistentData.getInt("punishingLevel") || 0) + +e.to.nbt.getBoolean("Punishing") - +e.from.nbt.getBoolean("Punishing"));
+
+/* global.curioChangeEvent14 = e => {
 	let player = e.entity;
 	let curioEquiped = e.to
 	let curioRemoved = e.from
@@ -452,7 +455,7 @@ const getpunishing = itemstack => {
 
 const getpunishingLevel = player => {
 	return player.persistentData.getInt("punishingLevel")
-}
+} */
 
 ////////////////////////////////////////////////////////////////////////////
 /** @arg {Internal.CurioChangeEvent} e */
@@ -1044,7 +1047,7 @@ global.recall = entity => {
 
 	}
 }
-const $EntityDamageSource = Java.loadClass(`net.minecraft.world.damagesource.EntityDamageSource`);
+const $DamageSource = Java.loadClass(`net.minecraft.world.damagesource.DamageSource`)
 
 /** Register effects */
 StartupEvents.registry('mob_effect', event => {
@@ -1058,9 +1061,6 @@ StartupEvents.registry('mob_effect', event => {
 		.color(Color.GREEN)
 		// Set whether the effect is harmful
 		.harmful();
-	event.create('tool_debility')
-		.color(Color.GRAY)
-	//.effectTick((entity) => global.tooldebility(entity))
 })
 
 /**
@@ -1071,12 +1071,12 @@ StartupEvents.registry('mob_effect', event => {
  * @param {number} lvl The level of the effect
  */
 global.radiationEffect = (entity, lvl) => {
+	// Create damage source
+	let damagesource = new $DamageSource('radiation')
 	// Check if the global is run on the client. If so, return
 	if (entity.level.clientSide) return;
-	// Create damage source
-	let damageSource = new $EntityDamageSource("radiation", entity);
-	// Damage based on level
-	entity.attack(damageSource, lvl + 1);
+	// Damage based on level 
+	entity.attack(damagesource, lvl + 1);
 }
 global.wine2 = entity => {
 	/*if (!entity.hasEffect('drinkbeer:drunk')){

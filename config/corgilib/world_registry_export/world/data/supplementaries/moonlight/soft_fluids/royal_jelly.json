@@ -1,7 +1,0 @@
-{
-	"flowing_texture": "the_bumblezone:block/flowing_royal_jelly",
-	"from_mod": "the_bumblezone",
-	"still_texture": "the_bumblezone:block/royal_jelly",
-	"tint_method": "no_tint",
-	"use_texture_from": "the_bumblezone:royal_jelly_fluid_still"
-}

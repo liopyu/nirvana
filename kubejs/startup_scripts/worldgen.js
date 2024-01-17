@@ -44,5 +44,3 @@ WorldgenEvents.remove(event => {
       lake.barrier = 'minecraft:sand'
     })
   })*/
-  
-  
