@@ -62,17 +62,20 @@ ItemEvents.rightClicked(event => {
 
 })
 
-BlockEvents.broken(event => {
-    const { player, block, server } = event
-    let item = player.getHeldItem('main_hand')
-    if (!item.hasTag('kubejs:knives')) return;
-    if (block.id == 'minecraft:grass') {
-        player.damageHeldItem('main_hand', 1)
-    } else if (block.id == 'minecraft:tall_grass') {
+/* BlockEvents.broken(event => {
+    const { player, block } = event
+    if (!player.getHeldItem('main_hand').item.hasTag('kubejs:knives')) return
+    if (block.id == 'minecraft:grass' || block.id == 'minecraft:tall_grass') {
         player.damageHeldItem('main_hand', 1)
     }
-
-})
+}) */
+BlockEvents.broken(({ block, player }) => {
+    if (
+        !player.getHeldItem("main_hand").hasTag("kubejs:knives") &&
+        ["minecraft:grass", "minecraft:tall_grass"].includes(block.id)
+    )
+        player.damageHeldItem("main_hand", 1);
+});
 
 
 

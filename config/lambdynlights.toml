@@ -1,0 +1,123 @@
+
+[light_sources]
+	entities = true
+	self = true
+	block_entities = true
+	water_sensitive_check = true
+
+	[light_sources.settings]
+
+		[light_sources.settings.entities]
+
+			[light_sources.settings.entities.minecraft]
+				player = true
+				zombie_villager = true
+				skeleton = true
+				spider = true
+				creeper = true
+				zombie = true
+				chicken = true
+				item = true
+				drowned = true
+				squid = true
+				tropical_fish = true
+				dolphin = true
+				chest_minecart = true
+				villager = true
+				minecart = true
+				armor_stand = true
+				bee = true
+				cat = true
+				experience_orb = true
+				pig = true
+				arrow = true
+				bat = true
+				husk = true
+				painting = true
+
+			[light_sources.settings.entities.alexsmobs]
+				fly = true
+				leafcutter_ant = true
+				underminer = true
+				skelewag = true
+				crow = true
+
+			[light_sources.settings.entities.ars_nouveau]
+				starbuncle = true
+				whirlisprig = true
+				wilden_stalker = true
+				drygmy = true
+
+			[light_sources.settings.entities.iter_rpg]
+				goblin_warrior = true
+				hobgoblin = true
+				goblin = true
+				water_elemental = true
+				blob = true
+				projectile_droplet_projectile = true
+				projectile_driftbow = true
+
+			[light_sources.settings.entities.gothic]
+				scavenger = true
+				scavenger_young = true
+				npc_oldcamp_hunter = true
+				npc_swamp_camp_hunter = true
+
+			[light_sources.settings.entities.iceandfire]
+				myrmex_worker = true
+				myrmex_queen = true
+				myrmex_soldier = true
+				myrmex_sentinel = true
+				ice_dragon = true
+				myrmex_egg = true
+				stymphalian_bird = true
+				hippocampus = true
+				sea_serpent = true
+
+			[light_sources.settings.entities.medieval_craft_weapons]
+				archer = true
+				knight = true
+				soldier = true
+				romanlegionary = true
+				heavyknight = true
+
+			[light_sources.settings.entities.born_in_chaos_v1]
+				door_knight = true
+				zombie_clown = true
+				dark_vortex = true
+				dread_hound = true
+				scarlet_persecutor = true
+				sir_pumpkinhead = true
+				baby_skeleton = true
+				zombie_clown_not_despawn = true
+				skeleton_thrasher = true
+				decaying_zombie = true
+				decrepit_skeleton = true
+				skeleton_demoman = true
+				bonescaller = true
+				restless_spirit = true
+				baby_skeleton_2 = true
+
+			[light_sources.settings.entities.scorpions]
+				emperor_scorpion = true
+				brown_scorpion = true
+
+			[light_sources.settings.entities.mekanismadditions]
+				baby_skeleton = true
+
+			[light_sources.settings.entities.villagerbrute]
+				villager_brute = true
+
+			[light_sources.settings.entities.panthalassa]
+				kronosaurus = true
+				anglerfish = true
+
+			[light_sources.settings.entities.quark]
+				shiba = true
+
+			[light_sources.settings.entities.dynamictrees]
+				falling_tree = true
+
+			[light_sources.settings.entities.forbidden_arcanus]
+				lost_soul = true
+
