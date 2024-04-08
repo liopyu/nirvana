@@ -13,11 +13,17 @@
 	#
 	#List for the mobs that should not be displayed, put a comma (,) between the registered names!
 	blacklist = "minecraft:ender_dragon,stalwart_dungeons:spore_projectile,minecraft:armor_stand,minecraft:villager,minecraft:sheep,minecraft:cow,minecraft:chicken,minecraft:pig,alexsmobs:blue_jay,quark:toretoise,alexsmobs:crow,minecraft:bat,minecraft:squid,minecraft:allay,minecraft:axolotl,minecraft:cat,minecraft:cod,minecraft:donkey,minecraft:fox,minecraft:frog,minecraft:glow_squid,minecraft:horse,minecraft:mooshroom,minecraft:mule,minecraft:ocelot,minecraft:parrot,minecraft:pufferfish,minecraft:rabbit,minecraft:salmon,minecraft:skeleton_horse,minecraft:snow_golem,minecraft:squid_tadpole,minecraft:tropical_fish,minecraft:turtle,minecraft:wandering_trader,alexsmobs:anteater,alexsmobs:bald_eagle,alexsmobs:bison,alexsmobs:capuchin_monkey,alexsmobs:elephant,alexsmobs:emu,alexsmobs:frilled_shark,alexsmobs:gelada_monkey,alexsmobs:giant_squid,alexsmobs:gorilla,alexsmobs:kangaroo,alexsmobs:leafcutter_ant,alexsmobs:lobster,alexsmobs:mantis_shrimp,alexsmobs:moose,alexsmobs:raccoon,alexsmobs:snow_leopard,alexsmobs:tarantula_hawk,alexsmobs:tasmanian_devil,alexsmobs:caiman,alexsmobs:cachalot_whale,theabyss:deer,theabyss:hylia_fox,theabyss:laro_fish,theabyss:luro_fish,theabyss:ralu_fish,theabyss:lizard,theabyss:infected_dragonfly,twilightforest:bighorn_sheep,twilightforest:tiny_bird,twilightforest:squirrel,twilightforest:raven,twilightforest:penguin,tameablebeasts:tameable_racoon,tameablebeasts:tameable_penguin,tameablebeasts:tameable_chikote,tameablebeasts:scarecrow,tameablebeasts:tameable_beetle,tameablebeasts:quetzalcoatlus,tameablebeasts:tameable_ground_beetle,tameablebeasts:giant_grasshopper,tameablebeasts:giant_roly_poly,tameablebeasts:tameable_teeth,minecraft:iron_golem,minecolonies:citizen,minecolonies:visitor,minecraft:dolphin,minecraft:bee,guardvillagers:guard,alexsmobs:platypus,alexsmobs:catfish,alexsmobs:fly,alexsmobs:seagull,alexsmobs:orca,minecraft:silverfish,alexsmobs:toucan"
+	#Show bar texture
+	bar = true
+	#Show the hp bar of the mobs who are damaged
+	damaged_only = false
+	#Show the hp bar of the mob you are looking at
+	hovered_only = false
 
 	#MobHealtBar
 	[general.hpbar]
 		#Health Bar Type
-		#Range: 1 ~ 13
+		#Range: 1 ~ 14
 		type = 2
 		#X Position
 		#Range: > -2147483648

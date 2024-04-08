@@ -105,7 +105,7 @@ StartupEvents.registry('mob_effect', event => {
 		1,
 		"multiply_base").color(Color.YELLOW)
 
-
+	event.create('tool_debility').harmful().color(Color.YELLOW)
 
 })
 
@@ -435,10 +435,7 @@ const getprospectingLevel = player => {
 	return player.persistentData.getInt("prospectingLevel")
 }
 ////////////////////////////////////////////////////////////////////////////
-/** @arg {Internal.CurioChangeEvent} e */
-global.curioChangeEvent14 = e => e.entity.persistentData.putInt("punishingLevel", (e.entity.persistentData.getInt("punishingLevel") || 0) + +e.to.nbt.getBoolean("Punishing") - +e.from.nbt.getBoolean("Punishing"));
-
-/* global.curioChangeEvent14 = e => {
+global.curioChangeEvent14 = e => {
 	let player = e.entity;
 	let curioEquiped = e.to
 	let curioRemoved = e.from
@@ -455,7 +452,7 @@ const getpunishing = itemstack => {
 
 const getpunishingLevel = player => {
 	return player.persistentData.getInt("punishingLevel")
-} */
+}
 
 ////////////////////////////////////////////////////////////////////////////
 /** @arg {Internal.CurioChangeEvent} e */

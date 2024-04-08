@@ -211,7 +211,7 @@ PlayerEvents.tick(e => {
     server.runCommandSilent(`execute as ${username} run tag @s remove oceandragon`)
   }
 })
-PlayerEvents.tick(event => {
+/* PlayerEvents.tick(event => {
   const { player, server, player: { username, persistentData, block, block: { id, south, west, north, east } } } = event
   if (!(player.age % 20 == 0)) return
   if (player.isCreative() || player.isSpectator()) return
@@ -232,7 +232,34 @@ PlayerEvents.tick(event => {
     south.set('air')
     player.displayClientMessage(Component.of(`It looks like a mysterious force prevents entry.. I'll have to find another way.`).bold().green(), true)
   }
-})
+}) */
+PlayerEvents.tick(event => {
+  const { player, player: { username, persistentData, block, block: { id, south, west, north, east } } } = event;
+
+  if (player.age % 20 !== 0 || player.isCreative() || player.isSpectator() || persistentData.canaccessnetherportal === 1) return;
+
+  const destroyPortalAndDisplayMessage = () => {
+    block.set('air');
+    player.displayClientMessage(Component.of(`It looks like a mysterious force prevents entry.. I'll have to find another way.`).bold().green(), true);
+  };
+
+  switch (id) {
+    case 'minecraft:nether_portal':
+      destroyPortalAndDisplayMessage();
+      break;
+    case west:
+    case east:
+    case north:
+    case south:
+      if (block === 'minecraft:nether_portal') {
+        destroyPortalAndDisplayMessage();
+      }
+      break;
+    default:
+      break;
+  }
+});
+
 /* PlayerEvents.tick(event => {
   const { player, server, player: { username, persistentData, block, block: { id, south, west, north, east } } } = event
   if (!(player.age % 20 == 0) || player.isCreative() || player.isSpectator() || persistentData.canaccessnetherportal == 1) return
@@ -258,15 +285,3 @@ PlayerEvents.advancement(event => {
 PlayerEvents.respawned(e => {
   e.server.runCommandSilent(`execute as ${e.entity.username} run attribute @s forge:entity_gravity base set 0.084`)
 })
-/* PlayerEvents.loggedIn(event => {
-  const {player,server,player:{persistentData,username}} = event
-  persistentData.timerlog = 1
-})
-  PlayerEvents.tick(event => {
-    const {player,server,server:{persistentData,username}} = event
-    if (!(player.age % 20 == 0)) return
-    player.tell(persistentData.timerlog)
-    if (persistentData.timerlog <= 20) {
-    ++persistentData.timerlog
-  }
-  }) */

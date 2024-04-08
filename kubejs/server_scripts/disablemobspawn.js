@@ -1,72 +1,29 @@
+const forbiddenDimensions = ['spatial_storage', 'overworld', 'the_end', 'the_nether', 'panthalassa', 'tectonic', 'tutorial'];
 EntityEvents.spawned(event => {
-    if (event.entity.getType() == 'mutationcraft:helicopter') {
+    const { entity, entity: { pos, type, level: { dimension: { path } } } } = event;
+    if (type.includes('mutationcraft') && forbiddenDimensions.includes(path)) {
+        console.log(pos);
+        console.log('Assimilated Being Tried Spawning Where It Shouldnt');
+        event.cancel();
+    }
+    if (entity.getType() == 'mutationcraft:helicopter') {
         event.cancel()
     }
-    if (event.entity.getType() == 'vinery:wandering_winemaker') {
+    if (entity.getType() == 'vinery:wandering_winemaker') {
         console.log(`Vinery's Wandering Winemaker is disabled in this pack because of conflicts with fresh animations. To re-enable this edit the kubejs>server_scripts>disablemobspawn.js`)
         event.cancel()
     }
-})
+});
 
-EntityEvents.spawned(event => {
-    if (!event.entity.type.includes('mutationcraft')) return
-    if (event.entity.level.dimension.path == 'spatial_storage') {
-        console.log(event.entity.x)
-        console.log(event.entity.y)
-        console.log(event.entity.z)
-        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-        event.cancel()
-    } else if (event.entity.level.dimension.path == 'overworld') {
-        console.log(event.entity.x)
-        console.log(event.entity.y)
-        console.log(event.entity.z)
-        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-        event.cancel()
-    } else if (event.entity.level.dimension.path == 'the_end') {
-        console.log(event.entity.x)
-        console.log(event.entity.y)
-        console.log(event.entity.z)
-        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-        event.cancel()
-    } else if (event.entity.level.dimension.path == 'the_nether') {
-        console.log(event.entity.x)
-        console.log(event.entity.y)
-        console.log(event.entity.z)
-        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-        event.cancel()
-    } else if (event.entity.level.dimension.path == 'panthalassa') {
-        console.log(event.entity.x)
-        console.log(event.entity.y)
-        console.log(event.entity.z)
-        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-        event.cancel()
-    } else if (event.entity.level.dimension.path == 'tectonic') {
-        console.log(event.entity.x)
-        console.log(event.entity.y)
-        console.log(event.entity.z)
-        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-        event.cancel()
-    } else if (event.entity.level.dimension.path == 'tutorial') {
-        console.log(event.entity.x)
-        console.log(event.entity.y)
-        console.log(event.entity.z)
-        console.log('Assimilated Being Tried Spawning Where It Shouldnt')
-        event.cancel()
-    }
-
-
-})
 
 BlockEvents.broken(event => {
     const { block, player, server } = event
     const { x, y, z } = block
-
     if (block.id == 'minecraft:spawner') {
-        server.runCommandSilent(`summon minecraft:experience_orb ${x} ${y} ${z} {Value:35,Age:0,Invulnerable:0}`)
+        let xp = block.createEntity("minecraft:experience_orb")
+        xp.mergeNbt(`{Value:35,Age:0,Invulnerable:0}`)
+        xp.spawn()
     }
-    /*if (block.hasTag('minecraft:crops')) {
-        server.runCommandSilent(`summon minecraft:experience_orb ${x} ${y} ${z} {Value:15,Age:0,Invulnerable:0}`)
-    }*/
 })
 BlockEvents.rightClicked(event => {
     const { block, player, server } = event
@@ -81,7 +38,6 @@ BlockEvents.rightClicked(event => {
         player.tell(`§dYou don't feel like falling asleep in an unknown dimension..`)
         event.cancel()
     }
-
     if (block.id == 'hexfortress:locked_chest' && (righthand.id != 'hexfortress:blaze_key')) {
         player.tell(`§aIt looks like I need a key to open this. Maybe the Guardian has it?`)
     }
@@ -93,7 +49,6 @@ BlockEvents.placed(event => {
     let path = player.level.dimension.path
     if (block.hasTag('waystones:waystone')) {
         event.server.runCommandSilent(`execute in ${namespace}:${path} run spawnpoint ${player.username} ${player.x.toFixed(0)} ${player.y.toFixed(0)} ${player.z.toFixed(0)}`)
-        //player.tell('test')
     }
 })
 
@@ -105,9 +60,7 @@ BlockEvents.rightClicked(event => {
         event.server.runCommandSilent(`execute in ${namespace}:${path} run spawnpoint ${player.username} ${player.x.toFixed(0)} ${player.y.toFixed(0)} ${player.z.toFixed(0)}`)
     }
 })
-
 ItemEvents.rightClicked(event => {
-    if (!event.entity.isPlayer()) return
     const { player, server, item, item: { id }, player: { username } } = event
     if (!player.getSpawnLocation()) return
     const { x, y, z } = player.getSpawnLocation()
@@ -115,49 +68,54 @@ ItemEvents.rightClicked(event => {
     if (id == 'magicmirror:magicmirror') {
         server.runCommandSilent(`execute in ${dim} run execute as ${player.username} run tp ${x} ${y} ${z}`)
         player.addItemCooldown('magicmirror:magicmirror', 25)
-        server.runCommandSilent(`execute as ${username} run playsound minecraft:teleport ambient @s ${player.x} ${player.y} ${player.z} 1 1`)
+        player.sendData('magicmirror')
     }
-    if (id == 'sophisticatedbackpacks:backpack') {
-        server.runCommandSilent(`title ${username} actionbar {"text":"I think I should place this down to open it.","bold":true,"color":"green"}`);
-        event.cancel()
-    }
-    if (id == 'sophisticatedbackpacks:iron_backpack') {
-        server.runCommandSilent(`title ${username} actionbar {"text":"I think I should place this down to open it.","bold":true,"color":"green"}`);
-        event.cancel()
-    }
-    if (id == 'sophisticatedbackpacks:gold_backpack') {
-        server.runCommandSilent(`title ${username} actionbar {"text":"I think I should place this down to open it.","bold":true,"color":"green"}`);
-        event.cancel()
-    }
-    if (id == 'sophisticatedbackpacks:diamond_backpack') {
-        server.runCommandSilent(`title ${username} actionbar {"text":"I think I should place this down to open it.","bold":true,"color":"green"}`);
-        event.cancel()
-    }
-    if (id == 'sophisticatedbackpacks:netherite_backpack') {
-        server.runCommandSilent(`title ${username} actionbar {"text":"I think I should place this down to open it.","bold":true,"color":"green"}`);
-        event.cancel()
+})
+ItemEvents.rightClicked(event => {
+    const { player, server, item, item: { id }, player: { username, x, y, z } } = event;
+    const backpackIds = [
+        'sophisticatedbackpacks:backpack',
+        'sophisticatedbackpacks:iron_backpack',
+        'sophisticatedbackpacks:gold_backpack',
+        'sophisticatedbackpacks:diamond_backpack',
+        'sophisticatedbackpacks:netherite_backpack'
+    ];
+    if (backpackIds.includes(id)) {
+        player.displayClientMessage(Component.of('I think I should place this down to open it.').green().bold(), true)
+        event.cancel();
     }
     if (id == 'kubejs:grave_scroll') {
-        server.runCommandSilent(`playsound minecraft:block.portal.trigger ambient ${username} ${player.x} ${player.y} ${player.z} 0.4 1.2`)
+        player.sendData('grave_scroll')
     }
+});
 
-
-})
 EntityEvents.death(event => {
     const { entity, entity: { x, y, z, tags, type }, server } = event
     let mob = type.toString()
-    //console.log(mob)
     if (tags.contains('slime_tower_guardian_spawn')) {
         if (mob != 'minecraft:bat') return
-        server.runCommandSilent(`summon minecraft:slime ${x} ${y} ${z} {Size:3,CustomName:'[{"text":"ֆʟɨʍʏ ǟɮօʍɨռǟȶɨօռ","color":"green","bold":true}]',DeathLootTable:"keebsz:entities/slime_tower_guardian",Tags:["slime_tower_guardian"],Health:200,ArmorItems:[{},{},{id:"hexfortress:blaze_key",tag:{display:{Lore:[' "Tower Guardian Key" '],Name:' "гเ๓ยгย" '}},Count:1},{id:"hexfortress:blaze_key",tag:{display:{Lore:[' "Tower Guardian Key" '],Name:' "гเ๓ยгย" '}},Count:1}],ArmorDropChances:[1f,1f,1f,1f],Attributes:[{Name:"generic.max_health",Base:200d}],Passengers:[{id:"slime",Size:2,Passengers:[{id:"slime",Size:1}]}]}`)
+        let slime1 = entity.level.getBlock(x.toFixed(0), y.toFixed(0), z.toFixed(0)).createEntity("minecraft:slime")
+        let slime2 = entity.level.getBlock(x.toFixed(0), y.toFixed(0), z.toFixed(0)).createEntity("minecraft:slime")
+        let slime3 = entity.level.getBlock(x.toFixed(0), y.toFixed(0), z.toFixed(0)).createEntity("minecraft:slime")
+        slime1.customName = Component.of(Text.of('ֆʟɨʍʏ ǟɮօʍɨռǟȶɨօռ').green().bold())
+        slime3.mergeNbt(`{Size:1}`)
+        slime2.mergeNbt(`{Size:2}`)
+        slime1.mergeNbt(`{Tags: ["slime_tower_guardian"],DeathLootTable:"keebsz:entities/slime_tower_guardian",Size:3,Attributes:[{Name:"generic.max_health",Base:200d}],ArmorDropChances:[1f,1f,1f,1f],Health:200,ArmorItems:[{},{},{id:"hexfortress:blaze_key",tag:{display:{Lore:['"Tower Guardian Key"'],Name:'"гเ๓ยгย"'}},Count:1},{id:"hexfortress:blaze_key",tag:{display:{Lore:['"Tower Guardian Key"'],Name:'"гเ๓ยгย"'}},Count:1}]}`)
+        slime2.startRiding(slime1)
+        slime3.startRiding(slime2)
+        slime1.spawn()
+        slime2.spawn()
+        slime3.spawn()
     } else if (tags.contains('blazeguardian')) {
         if (mob != 'minecraft:bat') return
-        server.runCommandSilent(`summon mutantmore:mutant_blaze ${x} ${y} ${z} {CustomName:'[{"text":"IПFΣЯПΛL ƬIƬΛП","bold":true,"color":"gray"}]',Health:150,NoGravity:1b,PersistenceRequired:1b,Tags:[blaze_tower_guardian],DeathLootTable:"keebsz:entities/blaze_guardian",Attributes:[{Name:"generic.max_health",Base:150d},{Name:"generic.follow_range",Base:40d}]}`)
+        let mutant_blaze = entity.level.getBlock(x, y, z).createEntity("mutantmore:mutant_blaze")
+        mutant_blaze.mergeNbt(`{CustomName:'[{"text":"IПFΣЯПΛL ƬIƬΛП","bold":true,"color":"gray"}]',Health:150,NoGravity:1b,PersistenceRequired:1b,Tags:[blaze_tower_guardian],DeathLootTable:"keebsz:entities/blaze_guardian",Attributes:[{Name:"generic.max_health",Base:150d},{Name:"generic.follow_range",Base:40d}]}`)
+        mutant_blaze.spawn()
     } else if (tags.contains('trader')) {
         if (mob != 'minecraft:silverfish') return
-        server.runCommandSilent(`summon wandering_trader ${x} ${y} ${z}`)
-        server.runCommandSilent(`summon wandering_trader ${x} ${y} ${z}`)
+        let trader = entity.level.getBlock(x, y, z).createEntity("wandering_trader")
+        let trader1 = entity.level.getBlock(x, y, z).createEntity("wandering_trader")
+        trader.spawn()
+        trader1.spawn()
     }
-
 })
-

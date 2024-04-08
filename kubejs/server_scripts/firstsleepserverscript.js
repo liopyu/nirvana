@@ -1,133 +1,131 @@
 PlayerEvents.tick(event => {
-    //event.player.tell(event.server.getLevel().dayTime())
+    const { player } = event
     let pData = event.player.persistentData
-    //event.entity.tell(event.level.dayTime())
     if (pData.timer >= 1) return;
     if (pData.firstsleep == 0) return;
     if (pData.firstsleep == 2) return;
-    //event.player.tell('test')
     if (pData.firstsleep == 1) {
         ++pData.sleeptimer
     }
-    if (pData.sleeptimer >= 2 && pData.sleeptimer <= 5 && pData.firstsleep == 1){
+    let effect = player.potionEffects
+    if (pData.sleeptimer >= 2 && pData.sleeptimer <= 5 && pData.firstsleep == 1) {
         Utils.server.schedule(10, () => {
-            Utils.server.runCommandSilent(`effect give ${event.player.username} theabyss:fear 15 0`)
+            effect.add('theabyss:fear', 300, 0, false, false)
+            player.removeEffect("minecraft:blindness")
         });
     }
-    if (pData.sleeptimer >= 40){
+    if (pData.sleeptimer >= 40) {
         if (pData.dimension == 1) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
-            
             event.server.runCommandSilent(`execute in ae2:spatial_storage run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            
-            }else if (pData.dimension == 2) {
+        } else if (pData.dimension == 2) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
             event.server.runCommandSilent(`execute in deepwhisperer:deep_space run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 3) {
+        } else if (pData.dimension == 3) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                
+                effect.clear()
+
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
-            
+
             event.server.runCommandSilent(`execute in minecraft:overworld run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 4) {
+        } else if (pData.dimension == 4) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
             event.server.runCommandSilent(`execute in minecraft:the_end run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 5) {
+        } else if (pData.dimension == 5) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
             event.server.runCommandSilent(`execute in minecraft:the_nether run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 6) {
+        } else if (pData.dimension == 6) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
             event.server.runCommandSilent(`execute in panthalassa:panthalassa run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 7) {
+        } else if (pData.dimension == 7) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
             event.server.runCommandSilent(`execute in tectonicworld:tectonic run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 8) {
+        } else if (pData.dimension == 8) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
-            
+
             event.server.runCommandSilent(`execute in theabyss:frost_world run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 9) {
+        } else if (pData.dimension == 9) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
             event.server.runCommandSilent(`execute in theabyss:pocket_dimension run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 10) {
+        } else if (pData.dimension == 10) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
             event.server.runCommandSilent(`execute in theabyss:the_abyss run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
-            }else if (pData.dimension == 11) {
+        } else if (pData.dimension == 11) {
             Utils.server.schedule(1, () => {
-                event.server.runCommandSilent(`effect clear ${event.player.username}`)
-                event.server.runCommandSilent(`tellraw ${event.player.username} {"text":"Whoa.. was that a nightmare??..... that place.. it looked so familiar..","bold":true,"color":"dark_red"}`)
+                effect.clear()
+                player.displayClientMessage(Component.of('Whoa.. was that a nightmare??..... that place.. it looked so familiar..').darkRed().bold(), true)
             });
             Utils.server.schedule(300, () => {
                 pData.firstsleep = 2
-                event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 100`)
+                effect.add('minecraft:instant_health', 300, 0, false, false)
             });
             event.server.runCommandSilent(`execute in wabworldgen:tutorial run tp ${event.player.username} ${pData.fsx} ${pData.fsy} ${pData.fsz}`)
         }
@@ -177,22 +175,15 @@ BlockEvents.leftClicked(event => {
         event.cancel()
     }
 })
-/*EntityEvents.hurt(event => {
-    let pData = event.entity.persistentData
-    if (pData.firstsleep == 1) {
-        event.entity.setHealth(20)
-        //event.cancel()
-
-    }
-})*/
 EntityEvents.death(event => {
+    if (!event.entity.player) return
     let pData = event.entity.persistentData
+    let effect = event.player.potionEffects
     if (pData.firstsleep == 1) {
         event.entity.setHealth(20)
-        event.server.runCommandSilent(`effect give ${event.player.username} minecraft:instant_health 1 100`)
+        effect.add('minecraft:instant_health', 300, 0, false, false)
         event.cancel()
-        
+
     }
 })
-
 

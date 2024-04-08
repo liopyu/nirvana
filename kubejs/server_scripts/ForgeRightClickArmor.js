@@ -313,9 +313,19 @@ function actionbar(username, text, color, bold, italic) {
     })}`
   )
 }
+function displayActionBarMessageForReforging(event, itemName, color) {
+  const message = "To Reforge You Must Have ";
+  const itemNameComponent = Component.of(itemName).color(color).italic();
 
+  event.player.displayClientMessage(
+    Component.of(message).color(Color.DARK_GREEN)
+      .append(itemNameComponent)
+      .append(Component.of(" In Your Inventory!").color(Color.DARK_GREEN)), true
+  );
+}
 
-BlockEvents.leftClicked(event => {
+function checkMaterials(event) {
+  let item = event.player.getHeldItem('main_hand')
   let goldindex = event.player.inventory.allItems.some(Ingredient.of("gold_ingot"))
   let ironindex = event.player.inventory.allItems.some(Ingredient.of("iron_ingot"))
   let diamondindex = event.player.inventory.allItems.some(Ingredient.of("diamond"))
@@ -341,6 +351,7 @@ BlockEvents.leftClicked(event => {
   let forestindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:forest_ingot"))
   let oceanindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:ocean_ingot"))
   let endindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:end_ingot"))
+  let elementalindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:elemental_ingot"))
   let skyindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:sky_ingot"))
   let hellindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:hell_ingot"))
   let adamantiteindex = event.player.inventory.allItems.some(Ingredient.of("enlightened_end:adamantite_ingot"))
@@ -365,11 +376,6 @@ BlockEvents.leftClicked(event => {
   let centipede_legindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:centipede_leg"))
   let bronzeindex = event.player.inventory.allItems.some(Ingredient.of("mekanism:ingot_bronze"))
   let magebloom_fiberindex = event.player.inventory.allItems.some(Ingredient.of("ars_nouveau:magebloom_fiber"))
-
-  let item = event.player.getHeldItem('main_hand')
-  let offHandItem = event.player.getHeldItem('off_hand');
-  let pData = event.player.persistentData;
-  let air = event.player.getMainHandItem().id == 'minecraft:air'
 
   let diamond = item.hasTag('forge:armor/diamond')
   let iron = item.hasTag('forge:armor/iron')
@@ -421,220 +427,80 @@ BlockEvents.leftClicked(event => {
   let centipede_leg = item.hasTag('forge:armor/centipede_leg')
   let bronze = item.hasTag('forge:armor/bronze')
   let magebloom_fiber = item.hasTag('forge:armor/magebloom_fiber')
+  const materialsToCheck = [
+    { item: gold, index: goldindex, name: "Gold Ingot", color: Color.GOLD },
+    { item: iron, index: ironindex, name: "Iron Ingot", color: Color.GOLD },
+    { item: diamond, index: diamondindex, name: "Diamond", color: Color.GOLD },
+    { item: chain, index: chainindex, name: "Forged Mesh", color: Color.GOLD },
+    { item: frost, index: frostindex, name: "Packed Ice", color: Color.GOLD },
+    { item: netherite, index: netheriteindex, name: "Netherite Scrap", color: Color.GOLD },
+    { item: copper, index: copperindex, name: "Copper Ingot", color: Color.GOLD },
+    { item: steel, index: steelindex, name: "Steel Ingot", color: Color.GOLD },
+    { item: draco, index: dracoindex, name: "Dragon Scale", color: Color.GOLD },
+    { item: hdpe, index: hdpeindex, name: "HDPE Sheet", color: Color.GOLD },
+    { item: compressed_iron, index: compressed_ironindex, name: "Compressed Iron Ingot", color: Color.GOLD },
+    { item: mortem, index: mortemindex, name: "Cloth", color: Color.GOLD },
+    { item: glacerythe, index: glacerytheindex, name: "Glacerythe Gem", color: Color.GOLD },
+    { item: fusion, index: fusionindex, name: "Fusion Ingot", color: Color.GOLD },
+    { item: incorythe, index: incorytheindex, name: "Incorythe Gem", color: Color.GOLD },
+    { item: phantom, index: phantomindex, name: "Phantom Ingot", color: Color.GOLD },
+    { item: garnite, index: garniteindex, name: "Garnite Ingot", color: Color.GOLD },
+    { item: unorithe, index: unoritheindex, name: "Unorithe Ingot", color: Color.GOLD },
+    { item: ignisithe, index: ignisitheindex, name: "Ignisithe Gem", color: Color.GOLD },
+    { item: titan_bone, index: titan_boneindex, name: "Titan Bone", color: Color.GOLD },
+    { item: tungsten, index: tungstenindex, name: "Tungsten Ingot", color: Color.GOLD },
+    { item: chorundum, index: chorundumindex, name: "Chorundum", color: Color.GOLD },
+    { item: forest, index: forestindex, name: "Forest Ingot", color: Color.GOLD },
+    { item: ocean, index: oceanindex, name: "Ocean Ingot", color: Color.GOLD },
+    { item: end, index: endindex, name: "End Ingot", color: Color.GOLD },
+    { item: elemental, index: elementalindex, name: "Elemental Ingot", color: Color.GOLD },
+    { item: sky, index: skyindex, name: "Sky Ingot", color: Color.GOLD },
+    { item: hell, index: hellindex, name: "Hell Ingot", color: Color.GOLD },
+    { item: adamantite, index: adamantiteindex, name: "Adamantite Ingot", color: Color.GOLD },
+    { item: neptunium, index: neptuniumindex, name: "Neptunium Ingot", color: Color.GOLD },
+    { item: red_wool, index: red_woolindex, name: "Red Wool", color: Color.GOLD },
+    { item: aberythe, index: aberytheindex, name: "Aberythe Gem", color: Color.GOLD },
+    { item: fish_bones, index: fish_bonesindex, name: "Fish Bones", color: Color.GOLD },
+    { item: flying_fish, index: flying_fishindex, name: "Flying Fish", color: Color.GOLD },
+    { item: dark_metal, index: dark_metalindex, name: "Dark Metal Ingot", color: Color.GOLD },
+    { item: rocky_shell, index: rocky_shellindex, name: "Rocky Shell", color: Color.GOLD },
+    { item: phantom_membrane, index: phantom_membraneindex, name: "Phantom Membrane", color: Color.GOLD },
+    { item: tarantula_hawk_wing, index: tarantula_hawk_wingindex, name: "Tarantula Hawk Wing", color: Color.GOLD },
+    { item: kangaroo_hide, index: kangaroo_hideindex, name: "Kangaroo Hide", color: Color.GOLD },
+    { item: spiked_scute, index: spiked_scuteindex, name: "Spiked Scute", color: Color.GOLD },
+    { item: raccoon_tail, index: raccoon_tailindex, name: "Raccoon Tail", color: Color.GOLD },
+    { item: wither_bone, index: wither_boneindex, name: "Wither Rib/Wither Limb", color: Color.GOLD },
+    { item: moose_antler, index: moose_antlerindex, name: "Moose Antler", color: Color.GOLD },
+    { item: leather, index: leatherindex, name: "Leather", color: Color.GOLD },
+    { item: bone, index: boneindex, name: "Bone", color: Color.GOLD },
+    { item: scute, index: scuteindex, name: "Scute", color: Color.GOLD },
+    { item: crocodile_scute, index: crocodile_scuteindex, name: "Crocodile Scute", color: Color.GOLD },
+    { item: centipede_leg, index: centipede_legindex, name: "Centipede Leg", color: Color.GOLD },
+    { item: bronze, index: bronzeindex, name: "Bronze Ingot", color: Color.GOLD },
+    { item: magebloom_fiber, index: magebloom_fiberindex, name: "Magebloom Fiber", color: Color.GOLD }
+  ];
+  for (let material of materialsToCheck) {
+    if (material.item && material.index === false) {
+      displayActionBarMessageForReforging(event, material.name, material.color);
+    }
+  }
+}
 
+BlockEvents.leftClicked(event => {
+  let item = event.player.getHeldItem('main_hand')
+  let offHandItem = event.player.getHeldItem('off_hand');
+  let pData = event.player.persistentData;
+  let air = event.player.getMainHandItem().id == 'minecraft:air'
+  if (!pData.timestalllll) { pData.timestalllll = 1 }
   if (pData.timestalllll != 1) { return }
   if (event.block.id != 'kubejs:reforging_station') { return }
   if (air) { return }
-  //console.log('test')
-
   pData.timestalllll = 0;
-
-  if (gold && goldindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Gold Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (iron && ironindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Iron Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (diamond && diamondindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Diamond ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (chain && chainindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Forged Mesh ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (frost && frostindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Packed Ice ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (netherite && netheriteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Netherite Scrap ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (copper && copperindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Copper Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (steel && steelindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Steel Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (draco && dracoindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Dragon Scale ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (hdpe && hdpeindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"HDPE Sheet ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (compressed_iron && compressed_ironindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Compressed Iron Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (mortem && mortemindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Cloth ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (glacerythe && glacerytheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Glacerythe Gem ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (fusion && fusionindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Fusion Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (incorythe && incorytheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Incorythe Gem ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (phantom && phantomindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Phantom Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (garnite && garniteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Garnite Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (unorithe && unoritheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Unorithe Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (ignisithe && ignisitheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Ignisithe Gem ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (titan_bone && titan_boneindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Titan Bone ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (tungsten && tungstenindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Tungsten Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (chorundum && chorundumindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Chorundum ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (forest && forestindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Forest Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (ocean && oceanindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Ocean Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (end && endindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"End Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (elemental && elementalindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Elemental Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (sky && skyindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Sky Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (hell && hellindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Hell Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (adamantite && adamantiteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Adamantite Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (neptunium && neptuniumindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Neptunium Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (red_wool && red_woolindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Red Wool ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (aberythe && aberytheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Aberythe Gem ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (fish_bones && fish_bonesindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Fish Bones ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (flying_fish && flying_fishindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Flying Fish ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (dark_metal && dark_metalindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Dark Metal Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (rocky_shell && rocky_shellindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Rocky Shell ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (phantom_membrane && phantom_membraneindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Phantom Membrane ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (tarantula_hawk_wing && tarantula_hawk_wingindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Tarantula Hawk Wing ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (kangaroo_hide && kangaroo_hideindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Kangaroo Hide ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (spiked_scute && spiked_scuteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Spiked Scute ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (raccoon_tail && raccoon_tailindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Raccoon Tail ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (wither_bone && wither_boneindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Wither Rib/Wither Limb ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (moose_antler && moose_antlerindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Moose Antler ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (leather && leatherindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Leather ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (bone && boneindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Bone ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (scute && scuteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Scute ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (crocodile_scute && crocodile_scuteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Crocodile Scute ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (centipede_leg && centipede_legindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Centipede Leg ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (bronze && bronzeindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Bronze Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (magebloom_fiber && magebloom_fiberindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Magebloom Fiber ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-
+  checkMaterials(event)
   event.server.schedule(1200, () => {
 
     pData.timestalllll = 1;
   });
-
 })
 PlayerEvents.loggedIn(event => {
   let pData = event.player.persistentData
@@ -645,325 +511,20 @@ PlayerEvents.loggedIn(event => {
 })
 
 BlockEvents.rightClicked(event => {
-  let goldindex = event.player.inventory.allItems.some(Ingredient.of("gold_ingot"))
-  let ironindex = event.player.inventory.allItems.some(Ingredient.of("iron_ingot"))
-  let diamondindex = event.player.inventory.allItems.some(Ingredient.of("diamond"))
-  let chainindex = event.player.inventory.allItems.some(Ingredient.of("tetra:forged_mesh"))
-  let frostindex = event.player.inventory.allItems.some(Ingredient.of("packed_ice"))
-  let netheriteindex = event.player.inventory.allItems.some(Ingredient.of("netherite_scrap"))
-  let copperindex = event.player.inventory.allItems.some(Ingredient.of("minecraft:copper_ingot"))
-  let steelindex = event.player.inventory.allItems.some(Ingredient.of("magistuarmory:steel_ingot"))
-  let dracoindex = event.player.inventory.allItems.some(Ingredient.of("forbidden_arcanus:dragon_scale"))
-  let hdpeindex = event.player.inventory.allItems.some(Ingredient.of("mekanism:hdpe_sheet"))
-  let compressed_ironindex = event.player.inventory.allItems.some(Ingredient.of("pneumaticcraft:ingot_iron_compressed"))
-  let glacerytheindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:glacerythe_gem"))
-  let mortemindex = event.player.inventory.allItems.some(Ingredient.of("forbidden_arcanus:cloth"))
-  let fusionindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:fusion_ingot"))
-  let incorytheindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:incorythe_gem"))
-  let phantomindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:phantom_ingot"))
-  let garniteindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:garnite_ingot"))
-  let unoritheindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:unorithe_ingot"))
-  let ignisitheindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:ignisithe_gem"))
-  let titan_boneindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:fixed_bone"))
-  let tungstenindex = event.player.inventory.allItems.some(Ingredient.of("stalwart_dungeons:tungsten_ingot"))
-  let chorundumindex = event.player.inventory.allItems.some(Ingredient.of("stalwart_dungeons:chorundum"))
-  let forestindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:forest_ingot"))
-  let oceanindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:ocean_ingot"))
-  let endindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:end_ingot"))
-  let skyindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:sky_ingot"))
-  let hellindex = event.player.inventory.allItems.some(Ingredient.of("iter_rpg:hell_ingot"))
-  let adamantiteindex = event.player.inventory.allItems.some(Ingredient.of("enlightened_end:adamantite_ingot"))
-  let neptuniumindex = event.player.inventory.allItems.some(Ingredient.of("aquaculture:neptunium_ingot"))
-  let red_woolindex = event.player.inventory.allItems.some(Ingredient.of("red_wool"))
-  let aberytheindex = event.player.inventory.allItems.some(Ingredient.of("theabyss:aberythe_gem"))
-  let fish_bonesindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:fish_bones"))
-  let flying_fishindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:flying_fish"))
-  let dark_metalindex = event.player.inventory.allItems.some(Ingredient.of("born_in_chaos_v1:dark_metal_ingot"))
-  let rocky_shellindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:rocky_shell"))
-  let phantom_membraneindex = event.player.inventory.allItems.some(Ingredient.of("minecraft:phantom_membrane"))
-  let tarantula_hawk_wingindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:tarantula_hawk_wing"))
-  let kangaroo_hideindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:kangaroo_hide"))
-  let spiked_scuteindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:spiked_scute"))
-  let raccoon_tailindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:raccoon_tail"))
-  let wither_boneindex = event.player.inventory.allItems.some(Ingredient.of("mutantmore:repairs_blazing_scimitar"))
-  let moose_antlerindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:moose_antler"))
-  let leatherindex = event.player.inventory.allItems.some(Ingredient.of("minecraft:leather"))
-  let boneindex = event.player.inventory.allItems.some(Ingredient.of("minecraft:bone"))
-  let scuteindex = event.player.inventory.allItems.some(Ingredient.of("minecraft:scute"))
-  let crocodile_scuteindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:crocodile_scute"))
-  let centipede_legindex = event.player.inventory.allItems.some(Ingredient.of("alexsmobs:centipede_leg"))
-  let bronzeindex = event.player.inventory.allItems.some(Ingredient.of("mekanism:ingot_bronze"))
-  let magebloom_fiberindex = event.player.inventory.allItems.some(Ingredient.of("ars_nouveau:magebloom_fiber"))
-
   let item = event.player.getHeldItem('main_hand')
   let offHandItem = event.player.getHeldItem('off_hand');
   let pData = event.player.persistentData;
   let air = event.player.getMainHandItem().id == 'minecraft:air'
-
-  let diamond = item.hasTag('forge:armor/diamond')
-  let iron = item.hasTag('forge:armor/iron')
-  let gold = item.hasTag('forge:armor/gold')
-  let chain = item.hasTag('forge:armor/chain')
-  let frost = item.hasTag('forge:armor/frost')
-  let netherite = item.hasTag('forge:armor/netherite')
-  let copper = item.hasTag('forge:armor/copper')
-  let steel = item.hasTag('forge:armor/steel')
-  let draco = item.hasTag('forge:armor/draco')
-  let mortem = item.hasTag('forge:armor/mortem')
-  let hdpe = item.hasTag('forge:armor/mortem')
-  let compressed_iron = item.hasTag('forge:armor/mortem')
-  let fusion = item.hasTag('forge:armor/fusion')
-  let incorythe = item.hasTag('forge:armor/incorythe')
-  let phantom = item.hasTag('forge:armor/phantom')
-  let garnite = item.hasTag('forge:armor/garnite')
-  let unorithe = item.hasTag('forge:armor/unorithe')
-  let glacerythe = item.hasTag('forge:armor/glacerythe')
-  let ignisithe = item.hasTag('forge:armor/ignisithe')
-  let titan_bone = item.hasTag('forge:armor/titan_bone')
-  let aberythe = item.hasTag('forge:armor/aberythe')
-  let tungsten = item.hasTag('forge:armor/tungsten')
-  let chorundum = item.hasTag('forge:armor/chorundum')
-  let forest = item.hasTag('forge:armor/forest')
-  let ocean = item.hasTag('forge:armor/ocean')
-  let end = item.hasTag('forge:armor/end')
-  let elemental = item.hasTag('forge:armor/elemental')
-  let sky = item.hasTag('forge:armor/sky')
-  let hell = item.hasTag('forge:armor/hell')
-  let adamantite = item.hasTag('forge:armor/adamantite')
-  let neptunium = item.hasTag('forge:armor/neptunium')
-  let red_wool = item.hasTag('forge:armor/red_wool')
-  let fish_bones = item.hasTag('forge:armor/fish_bones')
-  let flying_fish = item.hasTag('forge:armor/flying_fish')
-  let dark_metal = item.hasTag('forge:armor/dark_metal')
-  let rocky_shell = item.hasTag('forge:armor/rocky_shell')
-  let phantom_membrane = item.hasTag('forge:armor/phantom_membrane')
-  let tarantula_hawk_wing = item.hasTag('forge:armor/tarantula_hawk_wing')
-  let kangaroo_hide = item.hasTag('forge:armor/kangaroo_hide')
-  let spiked_scute = item.hasTag('forge:armor/spiked_scute')
-  let raccoon_tail = item.hasTag('forge:armor/raccoon_tail')
-  let wither_bone = item.hasTag('forge:armor/wither_bone')
-  let moose_antler = item.hasTag('forge:armor/moose_antler')
-  let leather = item.hasTag('forge:armor/leather')
-  let bone = item.hasTag('forge:armor/bone')
-  let scute = item.hasTag('forge:armor/scute')
-  let crocodile_scute = item.hasTag('forge:armor/crocodile_scute')
-  let centipede_leg = item.hasTag('forge:armor/centipede_leg')
-  let bronze = item.hasTag('forge:armor/bronze')
-  let magebloom_fiber = item.hasTag('forge:armor/magebloom_fiber')
-
+  if (!pData.timestallllllll) { pData.timestallllllll = 1 }
   if (pData.timestallllllll != 1) { return }
   if (event.block.id != 'kubejs:reforging_station') { return }
   if (air) { return }
-  //console.log('test')
-
   pData.timestallllllll = 0;
-
-  if (gold && goldindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Gold Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (iron && ironindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Iron Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (diamond && diamondindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Diamond ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (chain && chainindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Forged Mesh ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (frost && frostindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Packed Ice ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (netherite && netheriteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Netherite Scrap ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (copper && copperindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Copper Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (steel && steelindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Steel Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (draco && dracoindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Dragon Scale ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (hdpe && hdpeindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"HDPE Sheet ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (compressed_iron && compressed_ironindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Compressed Iron Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (mortem && mortemindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Cloth ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (glacerythe && glacerytheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Glacerythe Gem ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (fusion && fusionindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Fusion Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (incorythe && incorytheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Incorythe Gem ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (phantom && phantomindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Phantom Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (garnite && garniteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Garnite Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (unorithe && unoritheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Unorithe Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (ignisithe && ignisitheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Ignisithe Gem ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (titan_bone && titan_boneindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Titan Bone ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (tungsten && tungstenindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Tungsten Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (chorundum && chorundumindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Chorundum ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (forest && forestindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Forest Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (ocean && oceanindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Ocean Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (end && endindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"End Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (elemental && elementalindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Elemental Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (sky && skyindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Sky Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (hell && hellindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Hell Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (adamantite && adamantiteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Adamantite Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (neptunium && neptuniumindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Neptunium Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (red_wool && red_woolindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Red Wool ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (aberythe && aberytheindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Aberythe Gem ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (fish_bones && fish_bonesindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Fish Bones ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (flying_fish && flying_fishindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Flying Fish ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (dark_metal && dark_metalindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Dark Metal Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (rocky_shell && rocky_shellindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Rocky Shell ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (phantom_membrane && phantom_membraneindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Phantom Membrane ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (tarantula_hawk_wing && tarantula_hawk_wingindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Tarantula Hawk Wing ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (kangaroo_hide && kangaroo_hideindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Kangaroo Hide ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (spiked_scute && spiked_scuteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Spiked Scute ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (raccoon_tail && raccoon_tailindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Raccoon Tail ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (wither_bone && wither_boneindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Wither Rib/Wither Limb ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (moose_antler && moose_antlerindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Moose Antler ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (leather && leatherindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Leather ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (bone && boneindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Bone ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (scute && scuteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Scute ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (crocodile_scute && crocodile_scuteindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Crocodile Scute ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (centipede_leg && centipede_legindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Centipede Leg ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (bronze && bronzeindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Bronze Ingot ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-  else if (magebloom_fiber && magebloom_fiberindex == false) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge You Must Have ","bold":false,"color":"dark_green"},{"text":"Magebloom Fiber ","italic":true,"color":"gold"},{"text":"In Your Inventory!","color":"dark_green"}]`);
-  }
-
-
+  checkMaterials(event)
   event.server.schedule(1200, () => {
 
     pData.timestallllllll = 1;
   });
-
 })
 
 

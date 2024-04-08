@@ -26,7 +26,7 @@ screenEffectScale:1.0
 fovEffectScale:1.0
 darknessEffectScale:1.0
 gamma:1.0
-renderDistance:32
+renderDistance:2
 simulationDistance:10
 entityDistanceScaling:1.0
 guiScale:3
@@ -48,7 +48,7 @@ chatLineSpacing:0.0
 textBackgroundOpacity:0.5
 backgroundForChatOnly:true
 hideServerAddress:false
-advancedItemTooltips:false
+advancedItemTooltips:true
 pauseOnLostFocus:true
 overrideWidth:0
 overrideHeight:0
@@ -178,6 +178,7 @@ key_tetra.toolbelt.binding.access:key.keyboard.unknown
 key_tetra.toolbelt.binding.restock:key.keyboard.unknown
 key_tetra.toolbelt.binding.open:key.keyboard.unknown
 key_tetra.toolbelt.binding.secondary_use:key.keyboard.v
+key_key.weaponmaster_ydm.opengui:key.keyboard.v
 key_treechop.key.toggle_chopping:key.keyboard.unknown
 key_treechop.key.toggle_felling:key.keyboard.unknown
 key_treechop.key.cycle_sneak_behavior:key.keyboard.unknown
@@ -197,6 +198,7 @@ key_gui.xaero_open_settings:key.keyboard.right.bracket
 key_gui.xaero_map_zoom_in:key.keyboard.unknown
 key_gui.xaero_map_zoom_out:key.keyboard.unknown
 key_gui.xaero_quick_confirm:key.keyboard.right.shift
+key_gui.xaero_toggle_dimension:key.keyboard.unknown
 key_gui.xaero_toggle_tracked_players:key.keyboard.unknown
 key_gui.xaero_toggle_pac_chunk_claims:key.keyboard.unknown
 key_placebo.toggleTrails:key.keyboard.keypad.9
@@ -233,8 +235,14 @@ key_simpleconfig.key.reset_restore:key.keyboard.r:CONTROL
 key_simpleconfig.key.hotkey:key.keyboard.h:CONTROL
 key_simpleconfig.key.help:key.keyboard.q:CONTROL
 key_key.map_atlases.open_minimap:key.keyboard.comma
+key_key.map_atlases.zoom_out_minimap:key.keyboard.keypad.subtract
+key_key.map_atlases.zoom_in_minimap:key.keyboard.keypad.add
+key_key.map_atlases.increase_slice:key.keyboard.unknown
+key_key.map_atlases.decrease_slice:key.keyboard.unknown
+key_key.enlightened_end.dashing_leggings_ability:key.keyboard.g
 key_create.keyinfo.toolmenu:key.keyboard.left.alt
 key_create.keyinfo.toolbelt:key.keyboard.left.alt
+key_key.azurelib.reload:key.keyboard.r
 key_keybinds.show_wounds:key.keyboard.h
 key_key.craftingtweaks.rotate:key.keyboard.unknown
 key_key.craftingtweaks.rotate_counter_clockwise:key.keyboard.unknown
@@ -293,17 +301,16 @@ key_key.ae2.portable_item_cell:key.keyboard.unknown
 key_key.ae2.portable_fluid_cell:key.keyboard.unknown
 key_key.ae2.wireless_pattern_encoding_terminal:key.keyboard.unknown
 key_key.ae2.wireless_terminal:key.keyboard.unknown
-key_key.weaponmaster.opengui:key.keyboard.v
+key_quark.keybind.variant_selector:key.keyboard.r
 key_quark.keybind.camera_mode:key.keyboard.f12
-key_quark.keybind.back:key.mouse.4
 key_quark.keybind.autorun:key.keyboard.unknown
+key_quark.keybind.back:key.mouse.4
+key_quark.keybind.sort_player:key.keyboard.unknown
+key_quark.keybind.sort_container:key.keyboard.unknown
 key_quark.keybind.change_hotbar:key.keyboard.z
 key_quark.keybind.transfer_insert:key.keyboard.unknown
 key_quark.keybind.transfer_extract:key.keyboard.unknown
 key_quark.keybind.shift_lock:key.keyboard.unknown
-key_quark.keybind.sort_player:key.keyboard.unknown
-key_quark.keybind.sort_container:key.keyboard.unknown
-key_quark.keybind.lock_rotation:key.keyboard.unknown
 key_quark.emote.no:key.keyboard.unknown
 key_quark.emote.yes:key.keyboard.unknown
 key_quark.emote.wave:key.keyboard.unknown
@@ -322,6 +329,7 @@ key_quark.keybind.patreon_emote.dab:key.keyboard.unknown
 key_quark.keybind.patreon_emote.jet:key.keyboard.unknown
 key_quark.keybind.patreon_emote.exorcist:key.keyboard.unknown
 key_quark.keybind.patreon_emote.zombie:key.keyboard.unknown
+key_quark.keybind.lock_rotation:key.keyboard.unknown
 key_supplementaries.keybind.quiver:key.keyboard.v
 key_key.inventoryhud.toggle:key.keyboard.i
 key_key.inventoryhud.openconfig:key.keyboard.l
@@ -330,14 +338,11 @@ key_key.inventoryhud.togglearm:key.keyboard.unknown
 key_key.inventoryhud.toggleall:key.keyboard.unknown
 key_Reload Menu | CTRL + ALT + :key.keyboard.r
 key_Toggle Customization Overlay | CTRL + ALT + :key.keyboard.c
-key_key.raised.hud.down:key.keyboard.keypad.subtract
-key_key.raised.hud.up:key.keyboard.keypad.add
-key_key.raised.chat.down:key.keyboard.keypad.divide
-key_key.raised.chat.up:key.keyboard.keypad.multiply
+key_key.raised.options:key.keyboard.keypad.0
+key_key.minecolonies.toggle_goggles:key.keyboard.unknown
 key_key.presencefootsteps.settings:key.keyboard.f10
 key_key.entityculling.toggle:key.keyboard.unknown
 key_key.pickup.item:key.keyboard.unknown
-key_key.category.vinery:key.keyboard.h
 key_key.observable.profile:key.keyboard.r
 key_pneumaticcraft.armor.upgrade.fall_protection:key.keyboard.unknown
 key_pneumaticcraft.armor.upgrade.jet_boots.module.hover:key.keyboard.unknown

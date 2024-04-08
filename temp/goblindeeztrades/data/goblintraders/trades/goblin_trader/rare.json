@@ -35,7 +35,7 @@
       "max_trades": 8,
       "offer_item": {
         "count": 1,
-        "item": "iter_rpg:forest_ingot"
+        "item": "iter_rpg:earth_ingot"
       },
       "payment_item": {
         "count": 1,
@@ -75,7 +75,6 @@
         "item": "minecraft:paper"
       }
     },
-    
     {
       "type": "goblintraders:basic",
       "enchantments": [
@@ -158,9 +157,6 @@
       },
       "price_multiplier": 0.0
     },
-    
-    
-    
     {
       "type": "goblintraders:basic",
       "enchantments": [

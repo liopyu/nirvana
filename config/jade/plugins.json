@@ -51,9 +51,6 @@
     "show_tree_block_counts": true,
     "show_num_chops_remaining": true
   },
-  "tombstone": {
-    "graves": true
-  },
   "pneumaticcraft": {
     "pneumatic": true,
     "tube_module": true,
@@ -106,23 +103,23 @@
     "energy": true,
     "tooltip_renderer": true
   },
+  "create": {
+    "filter": true,
+    "backtank_capacity": true,
+    "goggles.requires_goggles": true,
+    "goggles": true,
+    "blaze_burner": true,
+    "exact_block": true,
+    "crafting_blueprint": true,
+    "goggles.detailed": false,
+    "placard": true
+  },
   "dynamictrees": {
     "rooty_water": true,
     "pod": true,
     "fruit": true,
     "rooty": true,
     "branch": true
-  },
-  "create": {
-    "filter": true,
-    "goggles.requires_goggles": true,
-    "goggles": true,
-    "copper_backtank": true,
-    "blaze_burner": true,
-    "exact_block": true,
-    "crafting_blueprint": true,
-    "goggles.detailed": false,
-    "placard": true
   },
   "waystones": {
     "waystone": true

@@ -18,550 +18,214 @@ const ATTRIBUTE_LIST = [
     "Athletic",
     "Armored",
     "Aiming",
-  ];
-  function generateRandomAttributeList(random) {
-      let output = '{';
-      let chance = Math.ceil(random * ATTRIBUTE_LIST.length);
-      for(let i=0; i<ATTRIBUTE_LIST.length; i++) {
-          let attr = ATTRIBUTE_LIST[i];
-          output += `${attr}:${(chance == (i)) ? 1 : 0}b`;
-          if (i+1 != ATTRIBUTE_LIST.length){
-              output += ',';
-          }
-      }
-      
-      output += ",Reforged:1b";
-      output += '}';
-      return output;
-  }
-  BlockEvents.leftClicked(event => {
-      let offHandItem = event.player.getHeldItem('off_hand');
-      let item = event.player.getHeldItem('main_hand');
-      let pData = event.player.persistentData;
-      let air = event.player.getMainHandItem().id == 'minecraft:air'
-      if (pData.timestall != 1) {
-          return;
-      }
-      if (event.block.id != 'kubejs:reforging_station'){
+];
+function generateRandomAttributeList(random) {
+    let output = '{';
+    let chance = Math.ceil(random * ATTRIBUTE_LIST.length);
+    for (let i = 0; i < ATTRIBUTE_LIST.length; i++) {
+        let attr = ATTRIBUTE_LIST[i];
+        output += `${attr}:${(chance == (i)) ? 1 : 0}b`;
+        if (i + 1 != ATTRIBUTE_LIST.length) {
+            output += ',';
+        }
+    }
+
+    output += ",Reforged:1b";
+    output += '}';
+    return output;
+}
+function toolTip(event, item) {
+    let offHandItem = event.player.getHeldItem('off_hand');
+    event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
+    item.nbt.merge(generateRandomAttributeList(Math.random()));
+    offHandItem.count--
+    const nbtKeys = Object.keys(item.nbt);
+    const defaultTooltip = 'Your fingers fumble and you smash your thumb';
+
+    let tooltipMessage = defaultTooltip;
+    let color = 'red';
+
+    for (const key of nbtKeys) {
+        if (item.nbt[key]) {
+            tooltipMessage = key;
+            color = getColor(key);
+            break;
+        }
+    }
+
+    event.player.displayClientMessage(Component.of(tooltipMessage)[color]().bold(), true);
+}
+
+function getColor(key) {
+    const colorMap = {
+        Arcane: 'lightPurple',
+        Undying: 'lightPurple',
+        Punishing: 'lightPurple',
+        Graceful: 'aqua',
+        Athletic: 'aqua',
+        Strengthening: 'blue',
+        Springy: 'blue',
+        Speedy: 'blue',
+        Shielding: 'blue',
+        Prospecting: 'blue',
+        Lucky: 'blue',
+        Healthy: 'blue',
+        Focusing: 'blue',
+        Flailing: 'blue',
+        Armored: 'blue',
+        Aiming: 'blue',
+        Clunky: 'blue',
+        Horrible: 'darkGray'
+    };
+
+    return colorMap[key] || 'red';
+}
+const matchingValues = [
+    { tag: 'kubejs:trinkets_gold', offHandItem: 'minecraft:gold_ingot', nbt: false },
+    { tag: 'kubejs:trinkets_spectral_silt', offHandItem: 'kubejs:spectral_silt', nbt: true },
+    { tag: 'kubejs:trinkets_ars', offHandItem: 'ars_nouveau:source_gem', nbt: true },
+    { tag: 'kubejs:trinkets_leather', offHandItem: 'minecraft:leather', nbt: true },
+    { tag: 'kubejs:trinkets_cosmic_cloud', offHandItem: 'kubejs:cosmic_cloud', nbt: true },
+    { tag: 'kubejs:trinkets_unspecified', offHandItem: 'kubejs:cosmic_cloud', nbt: true },
+    { tag: 'kubejs:trinkets_arcane_powder', offHandItem: 'iter_rpg:arcane_powder', nbt: true },
+    { tag: 'kubejs:trinkets_iron', offHandItem: 'minecraft:iron_ingot', nbt: true },
+    { tag: 'kubejs:trinkets_netherite', offHandItem: 'minecraft:netherite_scrap', nbt: true },
+    { tag: 'kubejs:trinkets_diamond', offHandItem: '#forge:gems/diamond', nbt: true },
+    { tag: 'kubejs:trinkets_dragon_breath', offHandItem: 'minecraft:dragon_breath', nbt: true }
+];
+
+function checkConditions(event, item, offHandItem, matchingValues) {
+    if (offHandItem.count > 0) {
+        for (const value of matchingValues) {
+            if (item.hasTag(value.tag) && event.player.offHandItem == value.offHandItem && (!value.nbt || item.nbt.Reforged)) {
+                return true;
+            }
+        }
+    }
+    return false;
+}
+function displayActionBarMessage(event, message, item) {
+    let itemName;
+    let color;
+
+    switch (true) {
+        case item.hasTag('kubejs:trinkets_gold'):
+            itemName = 'Gold Ingot';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_ars'):
+            itemName = 'Source Gem';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_leather'):
+            itemName = 'Leather';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_cosmic_cloud'):
+        case item.hasTag('kubejs:trinkets_unspecified'):
+            itemName = 'Cosmic Cloud';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_arcane_powder'):
+            itemName = 'Arcane Powder';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_dragon_breath'):
+            itemName = 'Dragon Breath';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_spectral_silt'):
+            itemName = 'Spectral Silt';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_certus_quartz'):
+            itemName = 'Quartz';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_redstone'):
+            itemName = 'Redstone Dust';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_iron'):
+            itemName = 'Iron Ingot';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_diamond'):
+            itemName = 'Diamond';
+            color = Color.GOLD;
+            break;
+        case item.hasTag('kubejs:trinkets_netherite'):
+            itemName = 'Netherite Scrap';
+            color = Color.GOLD;
+            break;
+        default:
+            itemName = 'Unknown Item';
+            color = Color.WHITE;
+            break;
+    }
+
+    return event.player.displayClientMessage(
+        Component.of(message)
+            .color(Color.DARK_GREEN)
+            .append(Component.of(itemName).color(color).italic())
+            .append(Component.of(' In Off-Hand!')).color(Color.DARK_GREEN), true
+    );
+}
+function displayNeededItem(event, item, offHandItem) {
+    if ((item.hasTag('kubejs:trinkets_gold') && event.player.offHandItem != 'minecraft:gold_ingot') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_gold')) ||
+        (item.hasTag('kubejs:trinkets_ars') && event.player.offHandItem != 'ars_nouveau:source_gem') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_ars')) ||
+        (item.hasTag('kubejs:trinkets_leather') && event.player.offHandItem != 'minecraft:leather') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_leather')) ||
+        (item.hasTag('kubejs:trinkets_cosmic_cloud') && event.player.offHandItem != 'kubejs:cosmic_cloud') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_cosmic_cloud')) ||
+        (item.hasTag('kubejs:trinkets_unspecified') && event.player.offHandItem != 'kubejs:cosmic_cloud') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_unspecified')) ||
+        (item.hasTag('kubejs:trinkets_arcane_powder') && event.player.offHandItem != 'iter_rpg:arcane_powder') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_arcane_powder')) ||
+        (item.hasTag('kubejs:trinkets_dragon_breath') && event.player.offHandItem != 'minecraft:dragon_breath') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_dragon_breath')) ||
+        (item.hasTag('kubejs:trinkets_spectral_silt') && event.player.offHandItem != 'kubejs:spectral_silt') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_spectral_silt')) ||
+        (item.hasTag('kubejs:trinkets_certus_quartz') && event.player.offHandItem != '#forge:gems/quartz') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_certus_quartz')) ||
+        (item.hasTag('kubejs:trinkets_redstone') && event.player.offHandItem != 'minecraft:redstone') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_redstone')) ||
+        (item.hasTag('kubejs:trinkets_iron') && event.player.offHandItem != 'minecraft:iron_ingot') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_iron')) ||
+        (item.hasTag('kubejs:trinkets_diamond') && event.player.offHandItem != '#forge:gems/diamond') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_diamond')) ||
+        (item.hasTag('kubejs:trinkets_netherite') && event.player.offHandItem != 'minecraft:netherite_scrap') ||
+        (!offHandItem.count > 0 && item.hasTag('kubejs:trinkets_netherite'))) {
+        displayActionBarMessage(event, 'To Reforge hold ', item);
+    } else return;
+}
+BlockEvents.leftClicked(event => {
+    let offHandItem = event.player.getHeldItem('off_hand');
+    let item = event.player.getHeldItem('main_hand');
+    let pData = event.player.persistentData;
+    let air = event.player.getMainHandItem().id == 'minecraft:air'
+    if (pData.timestall != 1) {
         return;
-      }
-      if (air){
+    }
+    if (event.block.id != 'kubejs:reforging_station') {
         return;
-      }
-      //event.player.tell(event.block.id)
-      event.player.sendInventoryUpdate()
-      pData.timestall = 0;
-      event.server.schedule(1200, () => {
-          pData.timestall = 1;
-      });
-      if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_gold') && event.player.offHandItem == 'minecraft:gold_ingot')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_spectral_silt') && event.player.offHandItem == 'kubejs:spectral_silt') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_ars') && event.player.offHandItem == 'ars_nouveau:source_gem') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_leather') && event.player.offHandItem == 'minecraft:leather') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_cosmic_cloud') && event.player.offHandItem == 'kubejs:cosmic_cloud') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_unspecified') && event.player.offHandItem == 'kubejs:cosmic_cloud') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }
-      
-      else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_arcane_powder') && event.player.offHandItem == 'iter_rpg:arcane_powder') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_iron') && event.player.offHandItem == 'minecraft:iron_ingot') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_netherite') && event.player.offHandItem == 'minecraft:netherite_scrap') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_diamond') && event.player.offHandItem == '#forge:gems/diamond') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if (offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_dragon_breath') && event.player.offHandItem == 'minecraft:dragon_breath') && item.nbt.Reforged) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run playsound minecraft:block.anvil.use block @s ${event.player.x} ${event.player.y} ${event.player.z} 0.5 0.5`);
-      item.nbt.merge(generateRandomAttributeList(Math.random()));
-      offHandItem.count--
-      if (item.nbt.Arcane){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Arcane","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Undying){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Undying","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Punishing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Punishing","bold":true,"color":"light_purple"}`);
-    }else if (item.nbt.Graceful){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Graceful","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Athletic){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Athletic","bold":true,"color":"aqua"}`);
-    }else if (item.nbt.Strengthening){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Strengthening","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Springy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Springy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Speedy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Speedy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Shielding){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Shielding","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Prospecting){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Prospecting","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Lucky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Lucky","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Healthy){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Healthy","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Focusing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Focusing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Flailing){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Flailing","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Armored){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Armored","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Aiming){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Aiming","bold":true,"color":"blue"}`);
-    }else if (item.nbt.Clunky){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Clunky","bold":true,"color":"dark_gray"}`);
-    }else if (item.nbt.Horrible){
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Horrible","bold":true,"color":"dark_gray"}`);
-    }else event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar {"text":"Your fingers fumble and you smash your thumb","bold":true,"color":"red"}`);
-      }else if ((item.hasTag('kubejs:trinkets_gold') && event.player.offHandItem != 'minecraft:gold_ingot')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Gold Ingot ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_gold'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Gold Ingot ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_ars') && event.player.offHandItem != 'ars_nouveau:source_gem')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Source Gem ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_ars'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Source Gem ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_leather') && event.player.offHandItem != 'minecraft:leather')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Leather ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_leather'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Leather ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_cosmic_cloud') && event.player.offHandItem != 'kubejs:cosmic_cloud')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Cosmic Cloud ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_cosmic_cloud'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Cosmic Cloud ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_unspecified') && event.player.offHandItem != 'kubejs:cosmic_cloud')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Cosmic Cloud ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_unspecified'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Cosmic Cloud ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_arcane_powder') && event.player.offHandItem != 'iter_rpg:arcane_powder')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Arcane Powder ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_arcane_powder'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Arcane Powder ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_dragon_breath') && event.player.offHandItem != 'minecraft:dragon_breath')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Dragon Breath ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_dragon_breath'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Dragon Breath ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_spectral_silt') && event.player.offHandItem != 'kubejs:spectral_silt')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Spectral Silt ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_spectral_silt'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Spectral Silt ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_certus_quartz') && event.player.offHandItem != '#forge:gems/quartz')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Quartz ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_certus_quartz'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Quartz ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_redstone') && event.player.offHandItem != 'minecraft:redstone')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Redstone Dust ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_redstone'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Redstone Dust ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_iron') && event.player.offHandItem != 'minecraft:iron_ingot')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Iron Ingot ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_iron'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Iron Ingot ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_diamond') && event.player.offHandItem != '#forge:gems/diamond')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Diamond ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_diamond'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Diamond ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if ((item.hasTag('kubejs:trinkets_netherite') && event.player.offHandItem != 'minecraft:netherite_scrap')) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Netherite Scrap ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_netherite'))) {
-        event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Netherite Scrap ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-    }else return;
-  });
-  PlayerEvents.loggedIn(event => {
+    }
+    if (air) {
+        return;
+    }
+    //event.player.tell(event.block.id)
+    event.player.sendInventoryUpdate()
+    pData.timestall = 0;
+    event.server.schedule(1200, () => {
+        pData.timestall = 1;
+    });
+    if (checkConditions(event, item, offHandItem, matchingValues)) {
+        toolTip(event, item, offHandItem);
+    } else displayNeededItem(event, item, offHandItem)
+});
+PlayerEvents.loggedIn(event => {
     let pData = event.player.persistentData
     //pData.forgecheck = 0
     pData.timestall = 1
@@ -575,11 +239,11 @@ BlockEvents.rightClicked(event => {
     if (pData.timestalllllllll != 1) {
         return;
     }
-    if (event.block.id != 'kubejs:reforging_station'){
-      return;
+    if (event.block.id != 'kubejs:reforging_station') {
+        return;
     }
-    if (air){
-      return;
+    if (air) {
+        return;
     }
     //event.player.tell(event.block.id)
     event.player.sendInventoryUpdate()
@@ -587,58 +251,8 @@ BlockEvents.rightClicked(event => {
     event.server.schedule(1200, () => {
         pData.timestalllllllll = 1;
     });
-    if ((item.hasTag('kubejs:trinkets_gold') && event.player.offHandItem != 'minecraft:gold_ingot')) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Gold Ingot ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_gold'))) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Gold Ingot ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if ((item.hasTag('kubejs:trinkets_ars') && event.player.offHandItem != 'ars_nouveau:source_gem')) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Source Gem ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_ars'))) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Source Gem ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if ((item.hasTag('kubejs:trinkets_leather') && event.player.offHandItem != 'minecraft:leather')) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Leather ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_leather'))) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Leather ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if ((item.hasTag('kubejs:trinkets_cosmic_cloud') && event.player.offHandItem != 'kubejs:cosmic_cloud')) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Cosmic Cloud ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_cosmic_cloud'))) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Cosmic Cloud ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if ((item.hasTag('kubejs:trinkets_unspecified') && event.player.offHandItem != 'kubejs:cosmic_cloud')) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Cosmic Cloud ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_unspecified'))) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Cosmic Cloud ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if ((item.hasTag('kubejs:trinkets_arcane_powder') && event.player.offHandItem != 'iter_rpg:arcane_powder')) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Arcane Powder ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_arcane_powder'))) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Arcane Powder ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if ((item.hasTag('kubejs:trinkets_dragon_breath') && event.player.offHandItem != 'minecraft:dragon_breath')) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Dragon Breath ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_dragon_breath'))) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Dragon Breath ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if ((item.hasTag('kubejs:trinkets_spectral_silt') && event.player.offHandItem != 'kubejs:spectral_silt')) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Spectral Silt ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_spectral_silt'))) {
-      event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Spectral Silt ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-  }else if ((item.hasTag('kubejs:trinkets_certus_quartz') && event.player.offHandItem != '#forge:gems/quartz')) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Quartz ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_certus_quartz'))) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Quartz ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if ((item.hasTag('kubejs:trinkets_redstone') && event.player.offHandItem != 'minecraft:redstone')) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Redstone Dust ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_redstone'))) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Redstone Dust ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if ((item.hasTag('kubejs:trinkets_iron') && event.player.offHandItem != 'minecraft:iron_ingot')) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Iron Ingot ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_iron'))) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Iron Ingot ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if ((item.hasTag('kubejs:trinkets_diamond') && event.player.offHandItem != '#forge:gems/diamond')) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Diamond ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_diamond'))) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Diamond ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if ((item.hasTag('kubejs:trinkets_netherite') && event.player.offHandItem != 'minecraft:netherite_scrap')) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Netherite Scrap ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else if (!offHandItem.count > 0 && (item.hasTag('kubejs:trinkets_netherite'))) {
-    event.server.runCommandSilent(`execute as ${event.player.username} run title @s actionbar ["",{"text":"To Reforge hold ","bold":false,"color":"dark_green"},{"text":"Netherite Scrap ","italic":true,"color":"gold"},{"text":"In Off-Hand!","color":"dark_green"}]`);
-}else return;
+    if (checkConditions(event, item, offHandItem, matchingValues)) {
+        toolTip(event, item, offHandItem);
+    } else displayNeededItem(event, item, offHandItem)
 });
 

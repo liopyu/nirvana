@@ -34,3 +34,5 @@ const $KubeJS = Java.loadClass('dev.latvian.mods.kubejs.KubeJS')
 if ($KubeJS.clientScriptManager.firstLoad) {
   $MinecraftForge.EVENT_BUS.addListener('LOW', false, Java.loadClass('net.minecraftforge.event.entity.player.ItemTooltipEvent'), event => global.tooltips(event))
 }
+
+

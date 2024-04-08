@@ -30,6 +30,10 @@ show_tag_types = true
 # Default value: true
 ignore_letter_case = true
 
+# Prints stack trace for exceptions.
+# Default value: false
+print_exception_stack_trace = false
+
 # Save suggestions to file - ".minecraft/nbt_ac_output.txt"
 # 0 - Disabled
 # 1 - Enabled

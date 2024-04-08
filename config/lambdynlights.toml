@@ -34,6 +34,31 @@
 				bat = true
 				husk = true
 				painting = true
+				parrot = true
+				rabbit = true
+				wolf = true
+				sheep = true
+				item_frame = true
+				horse = true
+				enderman = true
+				wandering_trader = true
+				trader_llama = true
+				silverfish = true
+				iron_golem = true
+				piglin = true
+				zombified_piglin = true
+				small_fireball = true
+				potion = true
+				fireball = true
+				strider = true
+				blaze = true
+				slime = true
+				piglin_brute = true
+				vindicator = true
+				cave_spider = true
+				vex = true
+				ocelot = true
+				lightning_bolt = true
 
 			[light_sources.settings.entities.alexsmobs]
 				fly = true
@@ -41,12 +66,27 @@
 				underminer = true
 				skelewag = true
 				crow = true
+				toucan = true
+				snow_leopard = true
+				blue_jay = true
+				maned_wolf = true
+				dropbear = true
+				laviathan = true
+				seagull = true
+				tasmanian_devil = true
+				capuchin_monkey = true
+				potoo = true
+				raccoon = true
+				kangaroo = true
+				elephant = true
 
 			[light_sources.settings.entities.ars_nouveau]
 				starbuncle = true
 				whirlisprig = true
 				wilden_stalker = true
 				drygmy = true
+				wilden_hunter = true
+				gift_starby = true
 
 			[light_sources.settings.entities.iter_rpg]
 				goblin_warrior = true
@@ -56,12 +96,28 @@
 				blob = true
 				projectile_droplet_projectile = true
 				projectile_driftbow = true
+				debug_mobmorph = true
+				giant_spider = true
+				air_elemental = true
+				spiderling = true
+				fire_elemental = true
+				revenant = true
+				carcass = true
+				demonsoul = true
+				demonspine = true
+				projectile_fireball_projectile = true
 
 			[light_sources.settings.entities.gothic]
 				scavenger = true
 				scavenger_young = true
 				npc_oldcamp_hunter = true
 				npc_swamp_camp_hunter = true
+				stone_guardian = true
+				npc_farmer = true
+				molerat = true
+				ice_wolf = true
+				warg = true
+				gothic_wolf = true
 
 			[light_sources.settings.entities.iceandfire]
 				myrmex_worker = true
@@ -73,6 +129,15 @@
 				stymphalian_bird = true
 				hippocampus = true
 				sea_serpent = true
+				lightning_dragon = true
+				hippogryph = true
+				dragon_multipart = true
+				deathworm = true
+				fire_dragon = true
+				troll = true
+				pixie = true
+				hydra_multipart = true
+				hydra = true
 
 			[light_sources.settings.entities.medieval_craft_weapons]
 				archer = true
@@ -80,6 +145,7 @@
 				soldier = true
 				romanlegionary = true
 				heavyknight = true
+				viking_1 = true
 
 			[light_sources.settings.entities.born_in_chaos_v1]
 				door_knight = true
@@ -97,6 +163,31 @@
 				bonescaller = true
 				restless_spirit = true
 				baby_skeleton_2 = true
+				corpse_fish = true
+				corpse_fly = true
+				swarmer = true
+				zombie_bruiser = true
+				barrel_zombie = true
+				phantom_creeper = true
+				wither_scuttler = true
+				nightmare_stalker = true
+				fallen_chaos_knight = true
+				supreme_bonescaller = true
+				shy_spirit = true
+				mr_pumpkin = true
+				projectile_staffof_magic_arrows_2 = true
+				baby_skeleton_minion = true
+				projectile_staffof_blindness = true
+				dire_hound_leader = true
+				phantom_creeper_copy = true
+				bloody_gadfly = true
+				spirit_guide = true
+				zombie_fisherman = true
+				bone_imp = true
+				bone_imp_2 = true
+				firelight = true
+				maggot = true
+				spirit_guide_assistant = true
 
 			[light_sources.settings.entities.scorpions]
 				emperor_scorpion = true
@@ -114,10 +205,113 @@
 
 			[light_sources.settings.entities.quark]
 				shiba = true
+				glass_frame = true
+				foxhound = true
 
 			[light_sources.settings.entities.dynamictrees]
 				falling_tree = true
 
 			[light_sources.settings.entities.forbidden_arcanus]
 				lost_soul = true
+
+			[light_sources.settings.entities.ylf_mod]
+				ylf = true
+
+			[light_sources.settings.entities.valhelsia_furniture]
+				seat = true
+
+			[light_sources.settings.entities.mutationcraft]
+				assimilated_enderman = true
+				human_stage_1 = true
+				hazmat_flamethrower = true
+				assimilated_human = true
+				hazmat_helicopter = true
+				reductor = true
+				necroptor = true
+				miter = true
+				assimilated_spider = true
+				hazmat_leader = true
+				scientist = true
+				hazmat_medic = true
+				assimilated_pig = true
+				assimilated_wandering_trader = true
+				hazmat_guard = true
+				assimilated_piglin = true
+				human_stage_3 = true
+				assimilated_witch = true
+				assimilated_pillager = true
+				assimilated_villager = true
+
+			[light_sources.settings.entities.theabyss]
+				brain_walker = true
+				slime_spider = true
+				end_spider = true
+				guard = true
+
+			[light_sources.settings.entities.mutantmonsters]
+				mutant_skeleton = true
+				body_part = true
+
+			[light_sources.settings.entities.doom]
+				zombieman = true
+				shotgunguy = true
+				possessed_worker = true
+				imp = true
+				spectre = true
+				chaingun_mob = true
+				pinky = true
+				cacodemon = true
+				unwilling = true
+				chaingunner = true
+				mechazombie = true
+				barenblast = true
+				revenant = true
+				rocket_mob = true
+				possessed_soldier = true
+				tentacle = true
+				prowler = true
+				baron = true
+				cueball = true
+				mancubus = true
+				fire_projectile = true
+				possessed_scientist = true
+				turret = true
+				gargoyle = true
+				archvile = true
+				archvile_firing = true
+				marauder = true
+				whiplash = true
+				summoner = true
+				revenant2016 = true
+				arachnotron = true
+				lost_soul = true
+				stone_imp = true
+				armoredbaron = true
+				gore_nest = true
+				doom_hunter = true
+
+			[light_sources.settings.entities.netherskeletons]
+				nether_skeleton = true
+				soul_skeleton = true
+				charred_skeleton = true
+				skelly_piglin = true
+				skelly_ghast = true
+				projectile_skelly_ghast = true
+
+			[light_sources.settings.entities.magma_monsters]
+				magma_monster = true
+				magma_monster_grunt = true
+
+			[light_sources.settings.entities.mutantmore]
+				mutant_wither_skeleton = true
+				mutant_blaze = true
+				mutant_blaze_fireball = true
+				fire_slash = true
+				mutant_wither_skeleton_body_part = true
+				mutant_blaze_rod_projectile = true
+				rodling = true
+				rodling_fireball = true
+
+			[light_sources.settings.entities.vinery]
+				mule = true
 

@@ -7,7 +7,8 @@ BlockEvents.rightClicked(event => {
     if (air) { return }
     if (item.count <= 0) return
     if (item.id == 'minecraft:flint') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:knapping block @s ${player.x} ${player.y} ${player.z} 1 1`)
+        player.sendData('knapping')
+        //server.runCommandSilent(`execute as ${player.username} run playsound minecraft:knapping block @s ${player.x} ${player.y} ${player.z} 1 1`)
         player.swing()
         if (Math.random() >= 0.5) {
             item.count--
@@ -22,242 +23,88 @@ PlayerEvents.loggedIn(event => {
 })
 
 ItemEvents.rightClicked(event => {
-    const { player, item, server } = event
-    let offHandItem = player.getHeldItem('off_hand');
-    let mainhanditem = player.getHeldItem('main_hand');
-    let pData = player.persistentData;
-    let air = player.getMainHandItem().id == 'minecraft:air'
-    if (air) return
-    if (offHandItem.id == 'minecraft:air') return
-    if (offHandItem.count <= 0 || mainhanditem.count <= 0) return
+    const { player, player: { mainHandItem, offHandItem } } = event;
+    if (mainHandItem.id !== 'minecraft:air' && offHandItem.id !== 'minecraft:air' &&
+        offHandItem.count > 0 && mainHandItem.count > 0 && mainHandItem.hasTag('kubejs:knives')) {
+        let leatherCount;
+        switch (offHandItem.id) {
+            case 'minecraft:leather_boots':
+                leatherCount = 1;
+                break;
+            case 'minecraft:leather_leggings':
+                leatherCount = 3;
+                break;
+            case 'minecraft:leather_chestplate':
+                leatherCount = 4;
+                break;
+            case 'minecraft:leather_helmet':
+                leatherCount = 2;
+                break;
+            case 'minecraft:leather_horse_armor':
+                leatherCount = 6;
+                break;
+            default:
+                leatherCount = 0;
+        }
 
-
-    if (mainhanditem.hasTag('kubejs:knives') && offHandItem.id == 'minecraft:leather_boots') {
-        offHandItem.count--
-        player.give('leather')
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:entity.sheep.shear player @s ${player.x} ${player.y} ${player.z} 1 1`)
-
-    } else if (mainhanditem.hasTag('kubejs:knives') && offHandItem.id == 'minecraft:leather_leggings') {
-        offHandItem.count--
-        player.give('3x leather')
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:entity.sheep.shear player @s ${player.x} ${player.y} ${player.z} 1 1`)
-
-    } else if (mainhanditem.hasTag('kubejs:knives') && offHandItem.id == 'minecraft:leather_chestplate') {
-        offHandItem.count--
-        player.give('4x leather')
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:entity.sheep.shear player @s ${player.x} ${player.y} ${player.z} 1 1`)
-
-    } else if (mainhanditem.hasTag('kubejs:knives') && offHandItem.id == 'minecraft:leather_helmet') {
-        offHandItem.count--
-        player.give('2x leather')
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:entity.sheep.shear player @s ${player.x} ${player.y} ${player.z} 1 1`)
-
-    } else if (mainhanditem.hasTag('kubejs:knives') && offHandItem.id == 'minecraft:leather_horse_armor') {
-        offHandItem.count--
-        player.give('6x leather')
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:entity.sheep.shear player @s ${player.x} ${player.y} ${player.z} 1 1`)
-
+        if (leatherCount > 0) {
+            offHandItem.count--;
+            player.give(`${leatherCount}x leather`);
+            player.sendData('shear');
+        }
     }
+});
 
-
-})
-
-/* BlockEvents.broken(event => {
+BlockEvents.broken(event => {
     const { player, block } = event
-    if (!player.getHeldItem('main_hand').item.hasTag('kubejs:knives')) return
+    if (!player.getHeldItem('main_hand').hasTag('kubejs:knives')) return
     if (block.id == 'minecraft:grass' || block.id == 'minecraft:tall_grass') {
         player.damageHeldItem('main_hand', 1)
     }
-}) */
-BlockEvents.broken(({ block, player }) => {
-    if (
-        !player.getHeldItem("main_hand").hasTag("kubejs:knives") &&
-        ["minecraft:grass", "minecraft:tall_grass"].includes(block.id)
-    )
-        player.damageHeldItem("main_hand", 1);
-});
-
-
-
+})
 BlockEvents.rightClicked(event => {
-    const { player, block, server } = event
-    let item = player.getHeldItem('main_hand')
-    let pData = player.persistentData;
-    if (pData.sawing != 1) { return }
-    if (!item.hasTag('forge:tools/axes')) { return }
-    if (item.count <= 0) return
-    pData.sawing = 0;
-    if (block.hasTag('minecraft:planks')) {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.hit block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:stick', "up")
-        }
+    const { player, block, server } = event;
+    const mainHandItem = player.getHeldItem('main_hand');
+    const pData = player.persistentData;
+
+    if (pData.sawing !== 1 || !mainHandItem.hasTag('forge:tools/axes') || mainHandItem.count <= 0) {
+        return;
     }
 
-    if (block.id == 'minecraft:stripped_oak_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:oak_planks', "up")
-        }
-    } else if (block.id == 'minecraft:stripped_spruce_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:spruce_planks', "up")
-        }
-    } else if (block.id == 'minecraft:stripped_birch_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:birch_planks', "up")
-        }
-    } else if (block.id == 'minecraft:stripped_jungle_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:jungle_planks', "up")
-        }
-    } else if (block.id == 'minecraft:stripped_acacia_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:acacia_planks', "up")
-        }
-    } else if (block.id == 'minecraft:stripped_dark_oak_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:dark_oak_planks', "up")
-        }
-    } else if (block.id == 'minecraft:stripped_mangrove_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:mangrove_planks', "up")
-        }
-    } else if (block.id == 'minecraft:stripped_crimson_stem') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:crimson_planks', "up")
-        }
-    } else if (block.id == 'minecraft:stripped_warped_stem') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x minecraft:warped_planks', "up")
-        }
-    } else if (block.id == 'iter_rpg:stripped_sacred_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x iter_rpg:sacred_log', "up")
-        }
-    } else if (block.id == 'theabyss:stripped_blaru_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x theabyss:blaru_planks', "up")
-        }
-    } else if (block.id == 'theabyss:stripped_jungle_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x theabyss:jungle_planks', "up")
-        }
-    } else if (block.id == 'theabyss:stripped_bog_shroom_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x theabyss:bog_planks', "up")
-        }
-    } else if (block.id == 'theabyss:stripped_sal_shroom_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x theabyss:sal_planks', "up")
-        }
-    } else if (block.id == 'theabyss:stripped_slimed_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x theabyss:slimed_planks', "up")
-        }
-    } else if (block.id == 'theabyss:stripped_frozen_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x theabyss:frozen_planks', "up")
-        }
-    } else if (block.id == 'born_in_chaos_v1:stripped_scorched_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x born_in_chaos_v1:scorched_planks', "up")
-        }
-    } else if (block.id == 'enlightened_end:stripped_congealed_stem') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x enlightened_end:congealed_planks', "up")
-        }
-    } else if (block.id == 'upgrade_aquatic:stripped_driftwood_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x upgrade_aquatic:driftwood_planks', "up")
-        }
-    } else if (block.id == 'upgrade_aquatic:stripped_river_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x upgrade_aquatic:river_planks', "up")
-        }
-    } else if (block.hasTag('ars_nouveau:stripped_logs')) {
+    const blockPlankMap = {
+        'minecraft:planks': 'minecraft:stick',
+        'minecraft:stripped_oak_log': 'minecraft:oak_planks',
+        'minecraft:stripped_spruce_log': 'minecraft:spruce_planks',
+        'minecraft:stripped_birch_log': 'minecraft:birch_planks',
+        'minecraft:stripped_jungle_log': 'minecraft:jungle_planks',
+        'minecraft:stripped_acacia_log': 'minecraft:acacia_planks',
+        'minecraft:stripped_dark_oak_log': 'minecraft:dark_oak_planks',
+        'minecraft:stripped_mangrove_log': 'minecraft:mangrove_planks',
+        'minecraft:stripped_crimson_stem': 'minecraft:crimson_planks',
+        'minecraft:stripped_warped_stem': 'minecraft:warped_planks',
+        'iter_rpg:stripped_sacred_log': 'iter_rpg:sacred_log',
+        'theabyss:stripped_blaru_log': 'theabyss:blaru_planks',
+        'theabyss:stripped_jungle_log': 'theabyss:jungle_planks',
+        'theabyss:stripped_bog_shroom_log': 'theabyss:bog_planks',
+        'theabyss:stripped_sal_shroom_log': 'theabyss:sal_planks',
+        'theabyss:stripped_slimed_log': 'theabyss:slimed_planks',
+        'theabyss:stripped_frozen_log': 'theabyss:frozen_planks',
+        'born_in_chaos_v1:stripped_scorched_log': 'born_in_chaos_v1:scorched_planks',
+        'enlightened_end:stripped_congealed_stem': 'enlightened_end:congealed_planks',
+        'upgrade_aquatic:stripped_driftwood_log': 'upgrade_aquatic:driftwood_planks',
+        'upgrade_aquatic:stripped_river_log': 'upgrade_aquatic:river_planks',
+        'quark:stripped_blossom_log': 'quark:blossom_planks',
+        'quark:stripped_azalea_log': 'quark:azalea_planks',
+        'quark:stripped_ancient_log': 'quark:ancient_planks',
+        'forbidden_arcanus:stripped_cherry_log': 'forbidden_arcanus:cherry_planks',
+        'forbidden_arcanus:stripped_aurum_log': 'forbidden_arcanus:aurum_planks',
+        'vinery:stripped_cherry_log': 'vinery:cherry_planks',
+    };
+
+
+    const blockId = block.id;
+    const plankId = blockPlankMap[blockId];
+    if (block.hasTag('ars_nouveau:stripped_logs')) {
         server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
         player.swing()
         if (Math.random() >= 0.5) {
@@ -265,87 +112,48 @@ BlockEvents.rightClicked(event => {
             player.damageHeldItem('main_hand', 1)
             block.popItemFromFace('2x ars_nouveau:archwood_planks', "up")
         }
-    } else if (block.id == 'quark:stripped_blossom_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
+    }
+    if (plankId) {
+        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`);
+        player.swing();
+
         if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x quark:blossom_planks', "up")
-        }
-    } else if (block.id == 'quark:stripped_azalea_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x quark:azalea_planks', "up")
-        }
-    } else if (block.id == 'quark:stripped_ancient_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x quark:ancient_planks', "up")
-        }
-    } else if (block.id == 'forbidden_arcanus:stripped_cherry_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x forbidden_arcanus:cherry_planks', "up")
-        }
-    } else if (block.id == 'forbidden_arcanus:stripped_aurum_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x forbidden_arcanus:aurum_planks', "up")
-        }
-    } else if (block.id == 'vinery:stripped_cherry_log') {
-        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
-        player.swing()
-        if (Math.random() >= 0.5) {
-            block.set('air')
-            player.damageHeldItem('main_hand', 1)
-            block.popItemFromFace('2x vinery:cherry_planks', "up")
+            block.set('air');
+            player.damageHeldItem('main_hand', 1);
+            block.popItemFromFace(`2x ${plankId}`, 'up');
         }
     }
 
     server.schedule(140, () => {
-
         pData.sawing = 1;
     });
+});
 
-})
 
 PlayerEvents.tick(event => {
     let { player, level } = event
-    if (player.age % 20 != 0) return
+    if (player.age % 80 != 0) return
     let campfireblocktick = BlockPos.findClosestMatch(player.block.pos, 3, 3, pos => {
         let islitlevel = level.getBlock(pos).blockState.lightEmission
         if (islitlevel == 0) return false
-        if (!level.getBlock(pos).hasTag("minecraft:campfires")) return
+        if (!level.getBlock(pos).hasTag("minecraft:campfires")) return false
         return true
     })
-    campfireblocktick.ifPresent(() => player.heal(1))
+    campfireblocktick.ifPresent(() => player.potionEffects.add('minecraft:regeneration', 80, 0, false, true))
 })
 
-/*ItemEvents.rightClicked(event => {
-    const {item,player,hand,player:{mainHandItem,offHandItem}} = event
+/* ItemEvents.rightClicked(event => {
+    const { item, player, hand, player: { mainHandItem, offHandItem } } = event
     let offhand = player.getHeldItem('off_hand');
     let mainhand = player.getHeldItem('main_hand');
     let apply = (item1, item2, result) => {
-      if((mainHandItem.id == item1 && offHandItem.id == item2)||(mainHandItem.id == item2 && offHandItem.id == item1)) {
-        if (offhand.count <= 0 || mainhand.count <= 0) {return}
-        if(!hand == 'MAIN_HAND') {return}
-        mainHandItem.count--
-        offHandItem.count--
-        player.give(result)
-      } 
+        if ((mainHandItem.id == item1 && offHandItem.id == item2) || (mainHandItem.id == item2 && offHandItem.id == item1)) {
+            if (offhand.count <= 0 || mainhand.count <= 0) { return }
+            if (!hand == 'MAIN_HAND') { return }
+            mainHandItem.count--
+            offHandItem.count--
+            player.give(result)
+        }
     }
     apply('minecraft:stripped_oak_log', 'create:andesite_alloy', 'create:andesite_casing')
-})*/
+}) */
