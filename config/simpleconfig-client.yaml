@@ -243,7 +243,7 @@ hotkeys:
   edit_config_hotkeys: right.alt>"h">
   ## Edit Mod Config
   ##   Add keybinds to open directly the config menu of specific mods.
-  ## [Map: [Hotkey: !key+"char"+mouse.left!>:press#game] >> [Suggestions: "scorpions", "supermartijn642configlib", "rpgskillable", "additionalentityattributes", "playeranimator", "keebszs_battle_towers", "hammerlib", "entitycollisionfpsfix", "valhelsia_furniture", "stalwart_dungeons", "apoli", "reauth", "modernfix", "yungsapi", "maxhealthfix", "mdecore", ... (omitted 251 more)]]
+  ## [Map: [Hotkey: !key+"char"+mouse.left!>:press#game] >> [Suggestions: "scorpions", "supermartijn642configlib", "rpgskillable", "additionalentityattributes", "playeranimator", "keebszs_battle_towers", "hammerlib", "entitycollisionfpsfix", "valhelsia_furniture", "stalwart_dungeons", "apoli", "reauth", "modernfix", "yungsapi", "maxhealthfix", "mdecore", ... (omitted 253 more)]]
   mod_config_hotkeys: {}
 
 ## Demo
@@ -642,7 +642,7 @@ demo:
     ## Tagged bool
     ##   Entries may be tagged with many different tags.
     ##   Mods may even create their own.
-    ## [Advanced!] [Green tag] [Blue tag] [Yellow bookmark] [Red tag] [Requires Restart!] [EXPERIMENTAL!] [true/false]
+    ## [Red tag] [Yellow bookmark] [Blue tag] [Green tag] [Advanced!] [Requires Restart!] [EXPERIMENTAL!] [true/false]
     mixed_bool: false
     ## Enable Switch
     ##   This entry can disable the one below it

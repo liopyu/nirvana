@@ -1748,7 +1748,7 @@ ServerEvents.recipes(event => {
   //Healing Flasks
   event.shapeless('healingflasks:flask_shard', [
     'minecraft:blaze_powder',
-    'iter_rpg:ametrine_shard',
+    'iter_rpg:ametrine_nugget',
     'minecraft:blaze_powder',
     'minecraft:blaze_powder'
   ]);
@@ -2287,17 +2287,17 @@ ServerEvents.recipes(event => {
 
   ]).damageIngredient('#kubejs:saws', 1)*/
 
-  event.shapeless('3x enlightened_end:congealed_planks', [
+  /* event.shapeless('3x enlightened_end:congealed_planks', [
     '#enlightened_end:seldge_logs',
     '#kubejs:saws',
 
-  ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1) */
 
-  event.shapeless('3x enlightened_end:ebony_planks', [
+  /* event.shapeless('3x enlightened_end:ebony_planks', [
     'enlightened_end:ebony_stalk_bundle',
     '#kubejs:saws',
 
-  ]).damageIngredient('#kubejs:saws', 1)
+  ]).damageIngredient('#kubejs:saws', 1) */
 
   /*event.shapeless('3x upgrade_aquatic:driftwood_planks', [
     '#upgrade_aquatic:driftwood_logs',
@@ -2526,33 +2526,25 @@ ServerEvents.recipes(event => {
   );
 
 
-  
+
 
 });
 ServerEvents.recipes(e => {
-    e.custom({
-        type: 'vinery:wine_fermentation',
-        ingredients: [
-            { item: 'minecraft:glow_berries' },
-            { tag: 'minecraft:grapejuice_white' }
-        ],
-        result: { item: 'kubejs:white_wine' }
-    })
+  e.custom({
+    type: 'vinery:wine_fermentation',
+    ingredients: [
+      { item: 'minecraft:glow_berries' },
+      { tag: 'minecraft:grapejuice_white' }
+    ],
+    result: { item: 'kubejs:white_wine' }
+  })
 })
-
 ItemEvents.crafted(event => {
-  const { item, player, server } = event
-  let pData = player.persistentData
-  if (pData.craftsaw != 1) { return }
-  pData.craftsaw = 0;
+  const { item, player, player: { persistentData, x, y, z }, server } = event
+  if (persistentData.craftsaw != 1) return
+  persistentData.craftsaw = 0
   server.schedule(2000, () => {
-
-    pData.craftsaw = 1;
-  });
-  server.runCommandSilent(`execute as ${player.username} run playsound minecraft:craftsaw ambient @s ${player.x} ${player.y} ${player.z} 0.5 1`)
-
-
+    persistentData.craftsaw = 1;
+  })
+  server.runCommandSilent(`execute as ${player.username} run playsound minecraft:craftsaw ambient @s ${x} ${y} ${z} 0.5 1`)
 })
-
-
-

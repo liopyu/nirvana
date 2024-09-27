@@ -72,7 +72,6 @@ BlockEvents.rightClicked(event => {
     }
 
     const blockPlankMap = {
-        'minecraft:planks': 'minecraft:stick',
         'minecraft:stripped_oak_log': 'minecraft:oak_planks',
         'minecraft:stripped_spruce_log': 'minecraft:spruce_planks',
         'minecraft:stripped_birch_log': 'minecraft:birch_planks',
@@ -104,6 +103,15 @@ BlockEvents.rightClicked(event => {
 
     const blockId = block.id;
     const plankId = blockPlankMap[blockId];
+    if (block.hasTag('minecraft:planks')) {
+        server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.hit block @s ${player.x} ${player.y} ${player.z} 1 1`)
+        player.swing()
+        if (Math.random() >= 0.5) {
+            block.set('air')
+            event.player.damageHeldItem('main_hand', 1)
+            block.popItemFromFace('2x minecraft:stick', "up")
+        }
+    }
     if (block.hasTag('ars_nouveau:stripped_logs')) {
         server.runCommandSilent(`execute as ${player.username} run playsound minecraft:block.wood.place block @s ${player.x} ${player.y} ${player.z} 1 1`)
         player.swing()

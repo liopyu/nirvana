@@ -1,52 +1,13 @@
 {
 	"basics": {
-		"favorites": [
-			"{data:{Count:1b,id:\"weirdmobs:wardendragon_helmet\",tag:{Damage:0},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:stone_brick_slab\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:exposed_cut_copper_stairs\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:chiseled_stone_bricks\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:redstone_ore\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:brick_slab\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:diamond_leggings\",tag:{Damage:0},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:diamond_boots\",tag:{Damage:0},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:cobbled_deepslate_wall\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"ars_nouveau:spell_turret\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:vindicator_spawn_egg\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:exposed_cut_copper_slab\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"valhelsia_furniture:white_oak_table\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:weathered_cut_copper\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:warped_planks\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:enchanted_book\",tag:{StoredEnchantments:[{id:\"minecraft:binding_curse\",lvl:1s}]},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:infested_chiseled_stone_bricks\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:crafting_table\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"mekanism:elite_sawing_factory\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:waxed_weathered_cut_copper_slab\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"create:speedometer\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:mossy_cobblestone_wall\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:bread\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:birch_sapling\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:oak_log\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:flint_and_steel\",tag:{Damage:0},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"kubejs:iron_saw\",tag:{Damage:4,Reforged:1b},type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:crimson_fungus\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"alcocraftplus:dry_seeds\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:wet_sponge\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:stick\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:spruce_planks\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:raw_gold_block\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:wheat_seeds\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:spruce_sapling\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:diamond_block\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"mutantmonsters:mutant_skeleton_shoulder_pad\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Count:1b,id:\"minecraft:andesite\",type:\"minecraft:item\"},type:\"roughlyenoughitems:entry_stack\"}",
-			"{data:{Ambient:0b,Amplifier:0b,CurativeItems:[{Count:1b,id:\"minecraft:milk_bucket\"}],Duration:600,Id:16,ShowIcon:1b,ShowParticles:1b,\"forge:id\":\"minecraft:night_vision\",type:\"minecraft:effect\"},type:\"roughlyenoughitems:entry_stack\"}"
-		],
+		"favorites": [],
 		"hiddenFavorites": [],
 		"displayHistory": [],
-		// Declares whether cheating mode is on.
 		"cheating": false,
 		"favoritesEnabled": true,
+		"reduceMotion": false,
 		"keyBindings": {
+			"useNativeKeybinds": false,
 			"recipeKeybind": {
 				"keyCode": "key.keyboard.r",
 				"modifier": 0
@@ -90,26 +51,53 @@
 		},
 		// Declares whether REI is visible.
 		"overlayVisible": true,
-		"cheatingStyle": "GRAB",
-		"motion": {
-			"favoritesAnimation": true
-		}
+		"cheatingStyle": "GRAB"
+	},
+	"appearance": {
+		"recipeScreenType": "ORIGINAL",
+		// Declares the appearance of REI windows.
+		"theme": "DARK",
+		"layout": {
+			// Declares the position of the search field.
+			"searchFieldLocation": "CENTER",
+			// Declares the position of the config button.
+			"configButtonLocation": "LOWER",
+			// Declares whether the craftable filter button is enabled.
+			"showCraftableOnlyButton": true
+		},
+		// Declares the appearance of recipe's border.
+		"recipeBorder": "DEFAULT",
+		// Declares whether entry panel is scrolled.
+		"scrollingEntryListWidget": false,
+		// Declares whether entry panel should be invisible when not searching
+		"hideEntryPanelIfIdle": false,
+		"rainbow": false,
+		"horizontalEntriesBoundaries": 0.7,
+		"verticalEntriesBoundaries": 1.0,
+		"horizontalEntriesBoundariesColumns": 50,
+		"verticalEntriesBoundariesRows": 1000,
+		"horizontalEntriesBoundariesAlignment": 1.0,
+		"verticalEntriesBoundariesAlignment": 0.5,
+		"favoritesHorizontalEntriesBoundaries": 1.0,
+		"favoritesHorizontalEntriesBoundariesColumns": 50,
+		"syntaxHighlightingMode": "COLORFUL",
+		"isFocusModeZoomed": false
+	},
+	"functionality": {
+		"inputMethod": null,
+		// Declares whether REI should remove the recipe book.
+		"disableRecipeBook": false,
+		// Declares whether mob effects should be on the left side instead of the right side.
+		"leftSideMobEffects": false,
+		// Declares whether subsets is enabled.
+		"isSubsetsEnabled": false,
+		"allowInventoryHighlighting": true,
+		"itemCheatingMode": "REI_LIKE"
 	},
 	"advanced": {
-		"filtering": {
-			"shouldFilterDisplays": true,
-			"filteringRules": [
-				"{id:\"roughlyenoughitems:manual\",rule:{}}",
-				"{id:\"roughlyenoughitems:basic\",rule:{}}",
-				"{id:\"roughlyenoughitems:hidden_from_recipe_viewers\",rule:{}}"
-			],
-			"filteringQuickCraftCategories": { },
-			"filteredStacks": []
-		},
-		"enableJeiCompatibilityLayer": true,
 		"tooltips": {
 			// Declares whether REI should append mod names to entries.
-			"appendModNames": false,
+			"appendModNames": true,
 			// Declares whether favorites tooltip should be displayed.
 			"displayFavoritesTooltip": false,
 			"displayIMEHints": true
@@ -143,11 +131,11 @@
 			// Declares whether search time should be debugged.
 			"debugSearchTimeRequired": false,
 			// Declares whether REI should search async.
-			"asyncSearch": false,
+			"asyncSearch": true,
 			// Declares how many entries should be grouped one async search.
 			"asyncSearchPartitionSize": 100,
 			"patchAsyncThreadCrash": true,
-			"tooltipSearch": "PREFIX",
+			"tooltipSearch": "ALWAYS",
 			"tagSearch": "PREFIX",
 			"identifierSearch": "ALWAYS",
 			"modSearch": "PREFIX"
@@ -168,43 +156,21 @@
 			"registerRecipesInAnotherThread": true,
 			"newFastEntryRendering": true,
 			"cachingFastEntryRendering": false,
-			"cachingDisplayLookup": true
-		}
-	},
-	"appearance": {
-		"recipeScreenType": "ORIGINAL",
-		// Declares the appearance of REI windows.
-		"theme": "DARK",
-		"layout": {
-			// Declares the position of the search field.
-			"searchFieldLocation": "CENTER",
-			// Declares the position of the config button.
-			"configButtonLocation": "LOWER",
-			// Declares whether the craftable filter button is enabled.
-			"showCraftableOnlyButton": true
+			"cachingDisplayLookup": true,
+			"categorySettings": {
+				"filteringQuickCraftCategories": { },
+				"categoryOrdering": [],
+				"hiddenCategories": []
+			}
 		},
-		// Declares the appearance of recipe's border.
-		"recipeBorder": "DEFAULT",
-		// Declares whether entry panel is scrolled.
-		"scrollingEntryListWidget": false,
-		"horizontalEntriesBoundaries": 0.7,
-		"verticalEntriesBoundaries": 1.0,
-		"horizontalEntriesBoundariesColumns": 50,
-		"verticalEntriesBoundariesRows": 1000,
-		"favoritesHorizontalEntriesBoundaries": 1.0,
-		"favoritesHorizontalEntriesBoundariesColumns": 50,
-		"syntaxHighlightingMode": "COLORFUL",
-		"isFocusModeZoomed": false
-	},
-	"functionality": {
-		"inputMethod": null,
-		// Declares whether REI should remove the recipe book.
-		"disableRecipeBook": false,
-		// Declares whether mob effects should be on the left side instead of the right side.
-		"leftSideMobEffects": false,
-		// Declares whether subsets is enabled.
-		"isSubsetsEnabled": false,
-		"allowInventoryHighlighting": true,
-		"itemCheatingMode": "REI_LIKE"
+		"filtering": {
+			"filteredStacks": [],
+			"shouldFilterDisplays": true,
+			"filteringRules": [
+				"{id:\"roughlyenoughitems:manual\",rule:{}}",
+				"{id:\"roughlyenoughitems:basic\",rule:{}}",
+				"{id:\"roughlyenoughitems:hidden_from_recipe_viewers\",rule:{}}"
+			]
+		}
 	}
 }

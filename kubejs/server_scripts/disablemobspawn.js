@@ -21,7 +21,7 @@ BlockEvents.broken(event => {
     const { x, y, z } = block
     if (block.id == 'minecraft:spawner') {
         let xp = block.createEntity("minecraft:experience_orb")
-        xp.mergeNbt(`{Value:35,Age:0,Invulnerable:0}`)
+        xp.mergeNbt(`{Value:35,Age:0,Invulnerable:0b}`)
         xp.spawn()
     }
 })

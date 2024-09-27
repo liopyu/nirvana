@@ -132,7 +132,7 @@ PlayerEvents.tick(event => {
     }
 })
 //Debugging Stuff
-/*ItemEvents.rightClicked('minecraft:diamond_sword', event => {
+/* ItemEvents.rightClicked('minecraft:diamond_sword', event => {
     let pData = event.player.persistentData
     event.player.tell(event.player.persistentData.fsx)
     event.player.tell(event.player.persistentData.fsy)
@@ -143,7 +143,7 @@ PlayerEvents.tick(event => {
     event.player.tell(pData.firstsleep)
     pData.firstsleep = 0
     pData.sleeptimer = 0
-})*/
+}) */
 PlayerEvents.loggedIn(event => {
     let pData = event.player.persistentData
     if (pData.firstsleep == 1) return;

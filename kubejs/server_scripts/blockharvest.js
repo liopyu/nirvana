@@ -66,8 +66,8 @@ ItemEvents.rightClicked(event => {
 })
 BlockEvents.placed(event => {
     const { server, block, player, player: { mainHandItem, offHandItem, persistentData } } = event
-    let offhand = player.getHeldItem('off_hand');
-    let mainhand = player.getHeldItem('main_hand');
+    let offhand = player.getHeldItem('off_hand')
+    let mainhand = player.getHeldItem('main_hand')
     let apply = (item1, item2, result) => {
         if ((mainHandItem.hasTag(item1) && offHandItem.id == item2)) {
             if (offhand.count <= 0 || mainhand.count <= 0) { return }

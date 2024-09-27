@@ -1,7 +1,7 @@
 // priority: 100
 ServerEvents.loaded(event => {
-    const {server,server: {persistentData}} = event
-    if(!persistentData.servertimer) persistentData.servertimer = 0
+    const { server, server: { persistentData } } = event
+    if (!persistentData.servertimer) persistentData.servertimer = 0
     if (!persistentData.firstLoad) {
         server.runCommandSilent(`scoreboard objectives add aiming dummy`)
         server.runCommandSilent(`scoreboard objectives add athletic dummy`)
@@ -108,18 +108,18 @@ ServerEvents.loaded(event => {
         server.schedule(10, () => { server.runCommandSilent('scoreboard players set lesslaggyy lightningattack 7') });
         server.schedule(10, () => { server.runCommandSilent('scoreboard players set randolightning lightningattack2 350') });
         persistentData.firstLoad = true
-      }
-      if (persistentData.firstLoad && !persistentData.secondLoad) {
-      server.runCommandSilent(`function firstload:tht`)
-      server.runCommandSilent('function improved_pickaxes:setup');
-      persistentData.secondLoad = true
-      }
-  })
+    }
+    if (persistentData.firstLoad && !persistentData.secondLoad) {
+        //server.runCommandSilent(`function firstload:tht`)
+        server.runCommandSilent('function improved_pickaxes:setup');
+        persistentData.secondLoad = true
+    }
+})
 ServerEvents.tick(event => {
-    const {server,server: {persistentData}} = event
+    const { server, server: { persistentData } } = event
     let sData = persistentData
     sData.servertimer = (++sData.servertimer) % 20
-    if(sData.servertimer != 0) return
+    if (sData.servertimer != 0) return
     //Bossbars
     server.runCommandSilent(`execute as @e[type=mutantmonsters:mutant_skeleton,tag=lich_tower_guardian2] at @s run bossbar set lichtowerguardian2 players @a[distance=..30]`)
     server.runCommandSilent(`execute store result bossbar lichtowerguardian2 max run attribute @e[tag=lich_tower_guardian2,limit=1] generic.max_health get`)
@@ -157,8 +157,8 @@ ServerEvents.tick(event => {
     server.runCommandSilent(`execute unless entity @e[type=born_in_chaos_v1:skeleton_thrasher,tag=thrasher_tower_guardian,limit=1] run bossbar set thrasher_tower_guardian visible false`)
     server.runCommandSilent(`execute if entity @e[type=born_in_chaos_v1:skeleton_thrasher,tag=thrasher_tower_guardian,limit=1] run bossbar set thrasher_tower_guardian visible true`)
 
-    
-   //Spawn Structure Mobs/Bosses
+
+    //Spawn Structure Mobs/Bosses
     server.runCommandSilent(`execute as @e[type=minecraft:silverfish,tag=trader] run kill @s`)
     server.runCommandSilent(`execute as @e[type=minecraft:bat,tag=blazeguardian] run kill @s`)
     server.runCommandSilent(`kill @e[type=minecraft:bat,tag=slime_tower_guardian_spawn]`)
@@ -171,7 +171,7 @@ ServerEvents.tick(event => {
 })
 
 ServerEvents.tick((event) => {
-    const {server,server: {persistentData}} = event
+    const { server, server: { persistentData } } = event
     //Normal Tick Functions
 
     server.runCommandSilent('execute unless score #lio spawncomplete matches 1 run function disablenether:run_once');
@@ -208,8 +208,8 @@ ServerEvents.tick((event) => {
     server.runCommandSilent('execute if score lesslagger lightningattack matches 10 run execute as @e[type=area_effect_cloud,tag=FLDD] at @s run function particles3:particles/animate');
     server.runCommandSilent('execute if score lesslagger lightningattack matches 13 run execute as @e[type=area_effect_cloud,tag=FLDD] at @s run function particles2:particles/animate');
     server.runCommandSilent('execute if score lesslagger lightningattack matches 14 run execute as @e[type=area_effect_cloud,tag=FLDD] at @s run function particles3:particles/animate');
-    server.runCommandSilent('execute if score lesslagger lightningattack matches 15 run execute as @e[type=area_effect_cloud,tag=FLDD] at @s run function particles2:particles/animate');        
-    
+    server.runCommandSilent('execute if score lesslagger lightningattack matches 15 run execute as @e[type=area_effect_cloud,tag=FLDD] at @s run function particles2:particles/animate');
+
     //One Player Sleep Function
 
     server.runCommandSilent(`execute as @a if score @s TiempoEnCama matches 1 at @s if block ~ ~0.1 ~ #minecraft:beds run time add 5.3s`)

@@ -59,6 +59,20 @@
 				vex = true
 				ocelot = true
 				lightning_bolt = true
+				skeleton_horse = true
+				cow = true
+				glow_squid = true
+				axolotl = true
+				pufferfish = true
+				elder_guardian = true
+				guardian = true
+				ender_pearl = true
+				fox = true
+				witch = true
+				zombie_horse = true
+				glow_item_frame = true
+				evoker = true
+				allay = true
 
 			[light_sources.settings.entities.alexsmobs]
 				fly = true
@@ -79,6 +93,17 @@
 				raccoon = true
 				kangaroo = true
 				elephant = true
+				flying_fish = true
+				centipede_head = true
+				centipede_body = true
+				centipede_tail = true
+				skunk = true
+				terrapin = true
+				catfish = true
+				gorilla = true
+				seal = true
+				hummingbird = true
+				orca = true
 
 			[light_sources.settings.entities.ars_nouveau]
 				starbuncle = true
@@ -87,6 +112,10 @@
 				drygmy = true
 				wilden_hunter = true
 				gift_starby = true
+				wilden_guardian = true
+				summon_wolf = true
+				spike = true
+				vexing_weald_walker = true
 
 			[light_sources.settings.entities.iter_rpg]
 				goblin_warrior = true
@@ -106,6 +135,7 @@
 				demonsoul = true
 				demonspine = true
 				projectile_fireball_projectile = true
+				scallop = true
 
 			[light_sources.settings.entities.gothic]
 				scavenger = true
@@ -138,6 +168,10 @@
 				pixie = true
 				hydra_multipart = true
 				hydra = true
+				ghost = true
+				multipart = true
+				cyclops = true
+				cylcops_multipart = true
 
 			[light_sources.settings.entities.medieval_craft_weapons]
 				archer = true
@@ -146,6 +180,7 @@
 				romanlegionary = true
 				heavyknight = true
 				viking_1 = true
+				viking_2 = true
 
 			[light_sources.settings.entities.born_in_chaos_v1]
 				door_knight = true
@@ -188,6 +223,16 @@
 				firelight = true
 				maggot = true
 				spirit_guide_assistant = true
+				glutton_fish = true
+				firelight_not_despawn = true
+				felsteed = true
+				sir_pumpkinhead_without_horse = true
+				projectile_pumpkin_staff_2 = true
+				sir_the_headless = true
+				pumpkinhead = true
+				riding_felsteed = true
+				thornshell_crab = true
+				decaying_zombie_not_despawn = true
 
 			[light_sources.settings.entities.scorpions]
 				emperor_scorpion = true
@@ -202,11 +247,24 @@
 			[light_sources.settings.entities.panthalassa]
 				kronosaurus = true
 				anglerfish = true
+				thalassomedon = true
+				giant_orthocone = true
+				anomalocaris = true
+				coelacanth = true
+				ceratodus = true
+				helicoprion = true
+				mosasaurus = true
+				basilosaurus = true
+				acrolepis = true
+				archelon = true
 
 			[light_sources.settings.entities.quark]
 				shiba = true
 				glass_frame = true
 				foxhound = true
+				forgotten = true
+				toretoise = true
+				stoneling = true
 
 			[light_sources.settings.entities.dynamictrees]
 				falling_tree = true
@@ -241,16 +299,35 @@
 				assimilated_witch = true
 				assimilated_pillager = true
 				assimilated_villager = true
+				human_stage_2 = true
+				assimilated_roamer = true
+				assimilated_cow = true
+				assimilated_horse = true
+				assimilated_jockey = true
+				assimilated_sheep = true
 
 			[light_sources.settings.entities.theabyss]
 				brain_walker = true
 				slime_spider = true
 				end_spider = true
 				guard = true
+				infected_wolf = true
+				glow_pug = true
+				infceted_cow = true
+				powered_wolf = true
+				mud_zombie = true
+				raptor = true
+				infected_spider = true
+				infected_zombie = true
+				shattered_zombie = true
+				jelly_fish = true
+				ralu_fish = true
+				laro_fish = true
 
 			[light_sources.settings.entities.mutantmonsters]
 				mutant_skeleton = true
 				body_part = true
+				mutant_creeper = true
 
 			[light_sources.settings.entities.doom]
 				zombieman = true
@@ -314,4 +391,10 @@
 
 			[light_sources.settings.entities.vinery]
 				mule = true
+
+			[light_sources.settings.entities.artifacts]
+				mimic = true
+
+			[light_sources.settings.entities.enhancedai]
+				thrown_web = true
 

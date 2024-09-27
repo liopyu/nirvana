@@ -60,7 +60,6 @@
 				12725,
 				13361,
 				14029
-				
 			]
 		}
 	},
@@ -381,18 +380,6 @@
 							"block": "stalwart_dungeons:chorundum_ore"
 						}
 					},
-					"ametrine_ore": {
-						"type": "block",
-						"data": {
-							"block": "iter_rpg:ametrine_ore"
-						}
-					},
-					"deepslate_ametrine_ore": {
-						"type": "block",
-						"data": {
-							"block": "iter_rpg:deepslate_ametrine_ore"
-						}
-					},
 					"magmanum_ore": {
 						"type": "block",
 						"data": {
@@ -411,7 +398,6 @@
 							"block": "enlightened_end:bismuth_ore"
 						}
 					}
-					
 				},
 				"experience": [
 					{
@@ -435,10 +421,9 @@
 						"expression": "20"
 					},
 					{
-						"condition": "!silk_touch & (bismuth_ore | malachite_ore | magmanum_ore | ametrine_ore | diamond_ore | emerald_ore | certus_quartz_large)",
+						"condition": "!silk_touch & (bismuth_ore | malachite_ore | magmanum_ore | diamond_ore | emerald_ore | certus_quartz_large)",
 						"expression": "40"
 					},
-
 					{
 						"condition": "!silk_touch & (deepslate_coal_ore | deepslate_copper_ore)",
 						"expression": "8"
@@ -452,14 +437,13 @@
 						"expression": "25"
 					},
 					{
-						"condition": "!silk_touch & (deepslate_ametrine_ore | chorundum_ore | tungsten_ore | certus_quartz_cluster | deepslate_diamond_ore | deepslate_emerald_ore)",
+						"condition": "!silk_touch & (chorundum_ore | tungsten_ore | certus_quartz_cluster | deepslate_diamond_ore | deepslate_emerald_ore)",
 						"expression": "45"
 					},
 					{
 						"condition": "!silk_touch & (emerald_variant | iron_variant | gold_variant | diamond_variant | incorythe_ore | aberythe_ore | glacerythe_ore | ignisithe_ore | garnite_ore | loran_ore | fusion_ore)",
 						"expression": "50"
 					}
-				
 				]
 			}
 		}

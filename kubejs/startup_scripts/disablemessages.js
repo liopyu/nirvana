@@ -36,3 +36,5 @@ global.jump = event => {
     });
     entity.level.server.runCommandSilent(`execute as ${entity.username} run playsound environs:jump player @s ${entity.x} ${entity.y} ${entity.z} 0.5 1`)
 }
+
+

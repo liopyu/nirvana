@@ -12,8 +12,6 @@ StartupEvents.registry('item', event => {
 	event.create('ocean_dragon_ring').displayName('§6Ring of Ocean Dragons')
 	event.create('titan_ring').displayName('§6Ring of Titans')
 	event.create('magicmirror:magicmirror').displayName('Magic Mirror')
-
-
 })
 ItemEvents.modification(event => {
 
@@ -42,8 +40,6 @@ BlockEvents.modification(e => {
 	})
 })
 
-
-
 StartupEvents.registry('block', event => {
 	// Register new items here
 	event.create('pebbles:andesite_pebble').displayName('Andesite Pebble')
@@ -59,8 +55,6 @@ StartupEvents.registry('block', event => {
 		.requiresTool(true)
 		.defaultCutout()
 	//.box(x9, y8, z5, x10, y9, z9)
-
-
 
 	event.create('charred_grass').displayName('Charred Grass')
 		.soundType('rooted_dirt')

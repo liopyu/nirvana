@@ -39,19 +39,22 @@ global.firstsleep = event => {
         }
     }
 }
-ForgeEvents.onEvent('net.minecraftforge.event.entity.player.PlayerWakeUpEvent', event => {
+ForgeEvents.onEvent('net.minecraftforge.event.level.SleepFinishedTimeEvent', event => {
     global.wakeup(event)
 })
+Java.loadClass('net.minecraftforge.event.level.SleepFinishedTimeEvent')
 /**
  * 
- * @param {Internal.PlayerWakeUpEvent} event 
+ * @param {Internal.SleepFinishedTimeEvent} event 
  * @returns 
  */
 global.wakeup = event => {
-    let player = event.entity;
-    if (!event.entity.isPlayer()) return
-    //if (player.server == null) return
-    player.server?.runCommandSilent(`scoreboard players reset ${player.username} TiempoEnCama`)
-    player.server?.runCommandSilent(`weather clear 1800`)
-
+    try {
+        const { level } = event
+        let server = level.server
+        server.runCommandSilent(`scoreboard players reset ${player.username} TiempoEnCama`)
+        server.runCommandSilent(`weather clear 1800`)
+    } catch (error) {
+        console.log(error)
+    }
 }

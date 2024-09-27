@@ -178,7 +178,7 @@ import stdlib.List;
 <tag:blocks:minecraft:wooden_doors>.add(<block:theabyss:vigilant_door>);
 <tag:blocks:minecraft:wooden_doors>.add(<block:born_in_chaos_v1:scorched_planks_door>);
 <tag:blocks:minecraft:wooden_doors>.add(<block:iter_rpg:sacred_door>);
-<tag:blocks:minecraft:wooden_doors>.add(<block:enlightened_end:congealed_door>);
+//<tag:blocks:minecraft:wooden_doors>.add(<block:enlightened_end:congealed_door>);
 //<tag:blocks:minecraft:wooden_doors>.add(<block:upgrade_aquatic:glass_door>);
 <tag:blocks:minecraft:wooden_doors>.add(<block:unusualend:chorus_nest_planks_door>);
 
